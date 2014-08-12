@@ -1,0 +1,20 @@
+language: ruby
+rvm:
+  - 1.8.7
+  - 1.9.3
+before_script:
+  - "[ '2.6.9' = $PUPPET_VERSION ] && git clone git://github.com/puppetlabs/puppetlabs-create_resources.git spec/fixtures/modules/create_resources || true"
+after_script:
+script:
+  - "rake lint"
+  - "rake spec"
+env:
+  - PUPPET_VERSION=2.7.13
+  - PUPPET_VERSION=2.6.9
+  - PUPPET_VERSION=3.1.1
+notifications:
+  email: thomas.vandoren@gmail.com
+gemfile: .gemfile
+matrix:
+  allow_failures:
+    - env: PUPPET_VERSION=2.6.9

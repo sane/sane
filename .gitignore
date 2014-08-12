@@ -1,0 +1,26 @@
+#client stuff
+client/vendor/
+client/node_modules/
+client/tmp/
+
+# Server stuff
+server/node_modules/
+server/.tmp/
+
+# PDFs
+server/uploads/
+
+.vagrant/
+# Ignore configuration and automatically generated cruft
+dbconfig.php
+sitemap.xml
+*.log
+.sass-cache
+
+# Operating system files
+.Spotlight-V100
+.Trashes
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db

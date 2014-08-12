@@ -1,0 +1,12 @@
+//Put your own global variables in here
+@import 'variables';
+//Overwrite any foundation settings you want to overwrite
+@import 'settings';
+
+@import 'bower_components/foundation/scss/normalize';
+@import 'foundation';
+//Put your own mixins in here
+@import 'mixins';
+
+//Import all the scss files you want to import here
+@import 'base';

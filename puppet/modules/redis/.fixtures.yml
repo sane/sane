@@ -1,0 +1,6 @@
+fixtures:
+  repositories:
+    wget: git://github.com/maestrodev/puppet-wget.git
+    gcc:  git://github.com/puppetlabs/puppetlabs-gcc.git
+  symlinks:
+    "redis": "#{source_dir}"
