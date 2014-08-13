@@ -5,6 +5,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    hostUrl: 'http://localhost:1337',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -31,7 +32,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.hostUrl = '';
   }
 
   return ENV;

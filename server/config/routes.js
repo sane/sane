@@ -48,6 +48,6 @@ module.exports.routes = {
   ***************************************************************************/
 
   //This always needs to be at the very bottom because routes are matched in order by Sails
-  //'/*': 'AppController.index'
+  //'/*': 'AppController.serve'
 
 };
