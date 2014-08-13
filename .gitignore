@@ -1,14 +1,8 @@
 #client stuff
-client/vendor/
-client/node_modules/
-client/tmp/
+# See client/.gitignore
 
 # Server stuff
-server/node_modules/
-server/.tmp/
-
-# PDFs
-server/uploads/
+# See server/.gitignore
 
 .vagrant/
 # Ignore configuration and automatically generated cruft
