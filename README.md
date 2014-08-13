@@ -7,7 +7,7 @@ So what exactly does this kit include?
 
 * A sane folder structure so you can develop Server and client seperately, but they integrate smoothly
 * A [SailsJS Vagrant Box](https://github.com/Globegitter/vagrant-sailsjs) coming with [forever](https://github.com/nodejitsu/forever), MongoDB, MySQL and Redis all set-up to just work.
-* Using [ember-cli](https://github.com/stefanpenner/ember-cli) in the `client` folder, already set-up, using the latest 0.0.41 dev version. In addition we are already including sass and foundation to get started quicker with frontend styling.
+* Using [ember-cli](https://github.com/stefanpenner/ember-cli) in the `client` folder, already set-up, using the latest 0.0.41 dev version (See https://github.com/stefanpenner/ember-cli#working-with-master). In addition we are already including sass and foundation to get started quicker with frontend styling.
 
 To find out a bit more about the background and how they work together, you can take a look at my talk:
 [http://talks.artificial.io/sailing-with-ember/
