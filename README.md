@@ -1,15 +1,15 @@
 # Sails-Ember Starter Kit
 
 ##Overview
-Sails-Ember Starter Kit is meant to get you started with rapid Web App prototyping and development. It includes, what are in our opinion the best tools for backend and frontend development. They are supposed to save you immense time, make development smoother and deliver the best results that work great across multiple devices.
+Sails-Ember Starter Kit will help you started with rapid Web App prototyping and development. It includes, what are in our opinion the best tools for backend and frontend development. They will save you an immense amount of time, make development smoother and deliver the best results that work optimally across multiple devices.
 
 So what exactly does this kit include?
 
-* A sane folder structure so you can develop Server and client seperately, but they integrate smoothly
-* A [SailsJS Vagrant Box](https://github.com/Globegitter/vagrant-sailsjs) coming with [forever](https://github.com/nodejitsu/forever), MongoDB, MySQL and Redis all set-up to just work.
-* Using [ember-cli](https://github.com/stefanpenner/ember-cli) in the `client` folder, already set-up, using the latest 0.0.41 dev version (See https://github.com/stefanpenner/ember-cli#working-with-master). In addition we are already including sass and foundation to get started quicker with frontend styling.
+* A sensible folder structure so you can develop Server and client seperately, but they integrate smoothly
+* A [SailsJS Vagrant Box](https://github.com/Globegitter/vagrant-sailsjs) coming with [forever](https://github.com/nodejitsu/forever), MongoDB, MySQL and Redis all set-up to work properly.
+* Using [ember-cli](https://github.com/stefanpenner/ember-cli) in the `client` folder, already set-up, using the latest 0.0.41 dev version (See https://github.com/stefanpenner/ember-cli#working-with-master). In addition we are already including sass and foundation to get started more quickly with frontend styling.
 
-To find out a bit more about the background and how they work together, you can take a look at my talk:
+To find out more about Sails and Ember and how they work together, you can take a look at my talk:
 [http://talks.artificial.io/sailing-with-ember/
 ](http://talks.artificial.io/sailing-with-ember/)
 
@@ -23,7 +23,7 @@ To find out a bit more about the background and how they work together, you can 
 
 
 ##Deployment
-Deployment is still the main pain of this project. It works but there are a lot of manual steps to be done:
+Deployment is still the biggest pain of this project. It works but there are a lot of manual steps to be done:
 
 * Run `ember build --environment=production` in the `client` folder. Then ` cp -rf dist/* ../server/assets/` to copy all the static content to your sails-server
 * Currently, if you want `locationType: auto` to fully work, you have to manually copy over the contents from the `index.html` to `server/views/index.ejs` and define the same routes that are defined in the ember-router in `server/config/routes.js`, pointing to the index view. There seems to be a bug in sails that makes this step more complicated that it needs to be and we can hopefully fix that asap.
