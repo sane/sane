@@ -28,7 +28,10 @@ Deployment is still the biggest pain of this project. It works but there are a l
 * Run `ember build --environment=production` in the `client` folder. Then ` cp -rf dist/* ../server/assets/` to copy all the static content to your sails-server
 * Currently, if you want `locationType: auto` to fully work, you have to manually copy over the contents from the `index.html` to `server/views/index.ejs` and define the same routes that are defined in the ember-router in `server/config/routes.js`, pointing to the index view. There seems to be a bug in sails that makes this step more complicated that it needs to be and we can hopefully fix that asap.
 
-If you are interested in some other deployment strategies watch this great talk by Luke Melia: [https://www.youtube.com/watch?v=QZVYP3cPcWQ](https://www.youtube.com/watch?v=QZVYP3cPcWQ)
+If you are interested in some other deployment strategies you can look at this tutorial:
+[http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/](http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/)
+based on this talk:
+[https://www.youtube.com/watch?v=QZVYP3cPcWQ](https://www.youtube.com/watch?v=QZVYP3cPcWQ)
 This strategy can be taken over, pretty much the same way to your Sails Project.
 
 ##Contribution
