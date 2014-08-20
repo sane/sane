@@ -35,6 +35,13 @@ module.exports = {
   //  methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
   //  headers: false
   //},
+  
+  //Deactivate some default routes for production, for security reasons
+  blueprints: {
+    //Uncomment if you want to disable action routes
+    //actions: false,
+    shortcuts: false
+  }
 
   /***************************************************************************
    * Set the port in the production environment to 80                        *
