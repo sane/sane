@@ -18,8 +18,23 @@ module.exports = {
    ***************************************************************************/
 
   // models: {
-  //   connection: 'someMysqlServer'
+  //  connection: 'someMysqlServer'
+  //  migrate: 'safe';
   // },
+
+  /***************************************************************************
+   * Uncomment to set the CORS Setting for your App in the production        *
+   * environment (see config/cors.js )                                       *
+   ***************************************************************************/
+
+  //Uncomment this if you want CORS deactivated for production
+  //cors: {
+  //  allRoutes: false,
+  //  origin: '*',
+  //  credentials: false,
+  //  methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
+  //  headers: false
+  //},
 
   /***************************************************************************
    * Set the port in the production environment to 80                        *
