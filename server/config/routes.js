@@ -32,10 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'index' }
-  //Currently you have to match all the routes here match your ember routes and serve AppController.index
-  //This will hopefully be fixed in a future version
-  //'/': 'AppController.serve'
+  //'/': { view: 'index' }
 
   /***************************************************************************
   *                                                                          *
@@ -47,7 +44,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  //This always needs to be at the very bottom because routes are matched in order by Sails
-  //'/*': 'AppController.serve'
+  //This automatically serves all routes over to ember (which has to be initialized through the views/index.ejs)
+  //This needs to be at the very bottom if you want to server other routes through Sails, because they are matched in order
+  '/*': { controller: 'App', action: 'serve', skipAssets: true }
 
 };

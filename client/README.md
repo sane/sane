@@ -1,10 +1,10 @@
 # Client
 
-This README outlines the details of collaborating on this Ember application.
+This README outlines the details of collaborating on this [Ember](http://emberjs.com/) application.
 
 ## Installation
 
-* `git clone` this repository
+* Make sure `ember-cli` is installed via `npm install -g ember-cli`
 * `npm install`
 * `bower install`
 

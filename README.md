@@ -25,8 +25,10 @@ To find out more about Sails and Ember and how they work together, you can take 
 ##Deployment
 Deployment is still the biggest pain of this project. It works but there are a lot of manual steps to be done:
 
-* Run `ember build --environment=production` in the `client` folder. Then ` cp -rf dist/* ../server/assets/` to copy all the static content to your sails-server
-* Currently, if you want `locationType: auto` to fully work, you have to manually copy over the contents from the `index.html` to `server/views/index.ejs` and define the same routes that are defined in the ember-router in `server/config/routes.js`, pointing to the index view. There seems to be a bug in sails that makes this step more complicated that it needs to be and we can hopefully fix that asap.
+* Run `ember build --environment=production` in the `client` folder. Then ` cp -rf dist/* ../server/assets/` and  `cp -f dist/index.html ../server/views/index.ejs' to copy all the static content to your sails-server
+* The first command makes sure that all the assets are copied over, so Sails can serve them.
+* The second command makes sure that Sails can serve the whole app to Ember (All routes serve as default the index.ejs which then lets Ember simply take over).
+* If you are using Sails just as an internal API, make sure that CORS is deactivated for production environment.
 
 If you are interested in some other deployment strategies you can look at this tutorial:
 [http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/](http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/)
