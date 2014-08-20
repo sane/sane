@@ -23,12 +23,12 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 
 ##Deployment
-Deployment is still the biggest pain of this project. It works but there are a lot of manual steps to be done:
+Deployment works quite well now but still has a few manual steps
 
-* Run `ember build --environment=production` in the `client` folder. Then ` cp -rf dist/* ../server/assets/` and  `cp -f dist/index.html ../server/views/index.ejs' to copy all the static content to your sails-server
-* The first command makes sure that all the assets are copied over, so Sails can serve them.
-* The second command makes sure that Sails can serve the whole app to Ember (All routes serve as default the index.ejs which then lets Ember simply take over).
+* Run `ember build --environment=production` in the `client` folder. Then ` cp -rf dist/* ../server/assets/` and  `cp -f dist/index.html ../server/views/index.ejs` to copy all the static content to your sails-server
+  * This makes sure that all the static assets are copied over and Sails can serve the index.ejs/the Ember App on all other routes, so Ember can take full control
 * If you are using Sails just as an internal API, make sure that CORS is deactivated in your production environment.
+* To start your app just run `forever start app.js --prod`. As long as you only update your ember-app you don't have to do a anything anymore. If you are making changes to the Server itself, any of the controllers, etc. you do have to restart your server.
 
 If you are interested in some other deployment strategies you can look at this tutorial:
 [http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/](http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/)
