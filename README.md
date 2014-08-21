@@ -15,20 +15,19 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 ##Quickstart
 * Clone this project
-* To get the server up: Run `vagrant up`, then `vagrant ssh` and cd into `~/server`, run `npm install` and code away
+* To get the server up: Run `vagrant up`, once it's all done `vagrant ssh`, cd into `~/server` and run `npm install`
 * Run `sails lift` to get the server started on `localhost:1337`
-* In the `client` folder run `npm install` and `bower install`
+* In the `client` folder run `npm install && bower install`
 * Run `ember serve` to get the dev server with auto-reload running on `localhost:4200`
 * So in dev-mode simply think of your ember app as you would of any other client, for example an Android app.
 
 
 ##Deployment
-Deployment works quite well now but still has a few manual steps
+Deploying your Ember app is as simple as running this command: `ember build --environment=production && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs`.  
+  That's it. Sails picks up all the changes to the app automatically. It is configured to serve the Ember App on all routes, apart from the `api/**` routes, so Ember itself can take full control of handling error routes, etc.  
+You can run the server in production with `forever start app.js --prod`, which serves the app on port 80.  
 
-* Run `ember build --environment=production` in the `client` folder. Then ` cp -rf dist/* ../server/assets/` and  `cp -f dist/index.html ../server/views/index.ejs` to copy all the static content, as well as the Ember App itself to your sails-server
-  * Sails is configured to serve the index.ejs/the Ember App on all routes, so Ember can take full control of handling error routes, etc.
-* If you are using Sails just as an internal API, make sure that CORS is deactivated in your production environment.
-* To start your app just run `forever start app.js --prod`. As long as you just update your ember-app you don't have to do a anything. If, on the other hand, you are making changes to the Server itself, any of the controllers, etc. you do have to restart your server.
+For more information on deploying your sails app check out [http://sailsjs.org/#/documentation/concepts/Deployment](http://sailsjs.org/#/documentation/concepts/Deployment), as well as the config file in `server/config/env/production.js`.  
 
 If you are interested in some other deployment strategies you can look at this tutorial:
 [http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/](http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/)
