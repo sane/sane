@@ -47,6 +47,10 @@ module.exports.routes = {
   //This automatically serves all routes, apart from /api/** routes to ember 
   //(which will be initialized through the views/index.ejs). This needs to be 
   //at the very bottom if you want to server other routes through Sails, because they are matched in order
-  '/*': { controller: 'App', action: 'serve', skipAssets: true, skipRegex: /^\/api\/.*$/ }
+  //'/*': { controller: 'App', action: 'serve', skipAssets: true, skipRegex: /^\/api\/.*$/ }
+  
+  //Not unfortunately if you serve the index.ejs view via a controller you have to restart the server
+  //when the view gets updated, so we are serving the view straight away for easier deployment:
+  '/*': { view: 'index', skipAssets: true, skipRegex: /^\/api\/.*$/ }
 
 };
