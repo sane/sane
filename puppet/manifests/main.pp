@@ -98,15 +98,15 @@ class node-js {
 
   exec { "npm-sails" :
       cwd => "/vagrant",
-      command => "sudo npm install -g sails@beta",
+      command => "sudo npm install -g sails",
       #onlyif => ["test -d /vagrant/node_modules"],
       #path => ["/bin", "/usr/bin"],
       require => Package['nodejs']
   }
 
-  exec { "npm-forever" :
+  exec { "npm-pm2" :
       cwd => "/vagrant",
-      command => "sudo npm install -g forever",
+      command => "sudo npm install pm2 -g --unsafe-perm",
       #onlyif => ["test -d /vagrant/node_modules"],
       #path => ["/bin", "/usr/bin"],
       require => Package['nodejs']
