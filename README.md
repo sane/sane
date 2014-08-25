@@ -25,8 +25,8 @@ To find out more about Sails and Ember and how they work together, you can take 
 ##Deployment
 Deploying your Ember app is as simple as running this command: `ember build --environment=production && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs`.  
   That builds the app and copies it over to be included with Sails. For the Server to pick up the changes you have to run `pm2 restart app -x` which completely restarts the server. It is configured to serve the Ember App on all routes, apart from the `api/**` routes, so Ember itself can take full control of handling error routes, etc.  
-You can run the server in production with `env NODE_ENV='production' pm2 start app.js -x`, which serves the app on port 80.  
-**Note:** If you are using Node v0.11.x you can run `env NODE_ENV='production' pm2 start app.js` (without the `-x`) and then you you just need `pm2 reload app` to 'restart' the server with 0s downtime.
+You can run the server in production with `pm2 start app.js -x -- --prod`, which serves the app on port 80.  
+**Note:** If you are using Node v0.11.x you can run `pm2 start app.js -- --prod` (without the `-x`) and then you just need `pm2 reload app` to 'restart' the server with 0s downtime.
 
 For more information on deploying your sails app check out [http://sailsjs.org/#/documentation/concepts/Deployment](http://sailsjs.org/#/documentation/concepts/Deployment), as well as the config file in `server/config/env/production.js`.  
 
