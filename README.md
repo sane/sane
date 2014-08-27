@@ -7,7 +7,7 @@ So what exactly does this kit include?
 
 * A sensible folder structure so you can develop Server and client seperately, but they integrate smoothly
 * A [SailsJS Vagrant Box](https://github.com/Globegitter/vagrant-sailsjs) coming with [PM2](https://github.com/Unitech/PM2), MongoDB, MySQL and Redis all set-up to work properly.
-* Using [ember-cli](https://github.com/stefanpenner/ember-cli) in the `client` folder, already set-up, using the latest 0.0.41 dev version (See https://github.com/stefanpenner/ember-cli#working-with-master). In addition we are already including sass and foundation to get started more quickly with frontend styling.
+* Using [ember-cli](https://github.com/stefanpenner/ember-cli) in the `client` folder, already set-up, using the latest 0.0.42 version. In addition we are already including sass and foundation to get started quickly with frontend styling.
 
 To find out more about Sails and Ember and how they work together, you can take a look at my talk
 [http://vimeo.com/103711300](http://vimeo.com/103711300) and slides [http://talks.artificial.io/sailing-with-ember/
@@ -23,12 +23,12 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 
 ##Deployment
-Deploying your Ember app is as simple as running this command: `ember build --environment=production && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs`.  
-  That builds the app and copies it over to be included with Sails. For the Server to pick up the changes you have to run `pm2 restart app -x` which completely restarts the server. It is configured to serve the Ember App on all routes, apart from the `api/**` routes, so Ember itself can take full control of handling error routes, etc.  
-You can run the server in production with `pm2 start app.js -x -- --prod`, which serves the app on port 80.  
+Deploying your Ember app is as simple as running this command: `ember build --environment=production && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs`.
+  That builds the app and copies it over to be included with Sails. For the Server to pick up the changes you have to run `pm2 restart app -x` which completely restarts the server. It is configured to serve the Ember App on all routes, apart from the `api/**` routes, so Ember itself can take full control of handling error routes, etc.
+You can run the server in production with `pm2 start app.js -x -- --prod`, which serves the app on port 80.
 **Note:** If you are using Node v0.11.x you can run `pm2 start app.js -- --prod` (without the `-x`) and then you just need `pm2 reload app` to 'restart' the server with 0s downtime.
 
-For more information on deploying your sails app check out [http://sailsjs.org/#/documentation/concepts/Deployment](http://sailsjs.org/#/documentation/concepts/Deployment), as well as the config file in `server/config/env/production.js`.  
+For more information on deploying your sails app check out [http://sailsjs.org/#/documentation/concepts/Deployment](http://sailsjs.org/#/documentation/concepts/Deployment), as well as the config file in `server/config/env/production.js`.
 
 If you are interested in some other deployment strategies you can look at this tutorial:
 [http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/](http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/)
