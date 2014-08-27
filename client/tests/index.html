@@ -33,15 +33,14 @@
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
 
-    <script>
-      window.ClientENV = {{ENV}};
-      window.EmberENV = window.ClientENV.EmberENV;
-    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/test-support.js"></script>
     <script src="assets/client.js"></script>
     <script src="testem.js"></script>
     <script>
+      window.ClientENV = require('client/config/environment')['default'];
+      window.EmberENV = window.ClientENV.EmberENV;
+
       require('client/tests/test-helper');
     </script>
     <script src="assets/test-loader.js"></script>
