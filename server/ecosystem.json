@@ -1,0 +1,32 @@
+{
+  "apps" : [{
+    "name"      : "SANE App",
+    "script"    : "app.js",
+    "env": {
+      "COMMON_VARIABLE": "true"
+    },
+    "env_production" : {
+      "NODE_ENV": "production"
+    }
+  }],
+  "deploy" : {
+    "production" : {
+      "user" : "root",
+      "host" : "178.62.11.224",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:artificialio/sane.git",
+      "path" : "/root/apps/sane/production",
+      "pre-deploy" : "bash cd ../client ember build --environment=production && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs",
+      "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env production"
+    },
+    "development" : {
+      "user" : "root",
+      "host" : "178.62.11.224",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:artificialio/sane.git",
+      "path" : "/root/apps/sane/development",
+      "pre-deploy" : "bash cd ../client && ember build --environment=development && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs",
+      "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env development"
+    }
+  }
+}
