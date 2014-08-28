@@ -11,16 +11,16 @@
   }],
   "deploy" : {
     "production" : {
-      "user" : "root",
-      "host" : "178.62.11.224",
+      "user" : "user",
+      "host" : "",
       "ref"  : "origin/master",
       "repo" : "git@github.com:artificialio/sane.git",
       "path" : "/root/apps/sane/production/",
       "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env production"
     },
     "development" : {
-      "user" : "root",
-      "host" : "178.62.11.224",
+      "user" : "user",
+      "host" : "",
       "ref"  : "origin/master",
       "repo" : "git@github.com:artificialio/sane.git",
       "path" : "/root/apps/sane/development/",
