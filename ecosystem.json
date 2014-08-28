@@ -11,20 +11,20 @@
   }],
   "deploy" : {
     "production" : {
-      "user" : "user",
-      "host" : "",
+      "user" : "root",
+      "host" : "178.62.11.224",
       "ref"  : "origin/master",
       "repo" : "git@github.com:artificialio/sane.git",
       "path" : "/root/apps/sane/production/",
-      "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env production"
+      "post-deploy" : "cd server; and npm install; and pm2 startOrRestart ecosystem.json -x --env production"
     },
     "development" : {
-      "user" : "user",
-      "host" : "",
+      "user" : "root",
+      "host" : "178.62.11.224",
       "ref"  : "origin/master",
       "repo" : "git@github.com:artificialio/sane.git",
       "path" : "/root/apps/sane/development/",
-      "post-deploy" : "pm2 startOrRestart ecosystem.json -x --env development"
+      "post-deploy" : "cd server; and npm install; and pm2 startOrRestart ecosystem.json -x --env development"
     }
   }
 }
