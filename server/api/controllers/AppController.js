@@ -4,7 +4,7 @@
  * @description :: Server-side logic for managing apps
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
-var fs = fs = require('fs');
+var fs = require('fs');
 
 module.exports = {
   /**

@@ -1,7 +1,7 @@
 {
   "apps" : [{
     "name"      : "SANE App",
-    "script"    : "./server/app.js",
+    "script"    : "app.js",
     "env": {
       "COMMON_VARIABLE": "true"
     },
@@ -11,20 +11,20 @@
   }],
   "deploy" : {
     "production" : {
-      "user" : "",
-      "host" : "",
+      "user" : "user",
+      "host" : "0.0.0.0",
       "ref"  : "origin/master",
       "repo" : "git@github.com:artificialio/sane.git",
-      "path" : "/root/apps/sane/production/",
-      "post-deploy" : "cd server; and npm install; and pm2 startOrRestart ecosystem.json -x --env production"
+      "path" : "/home/user/apps/sane/production/",
+      "post-deploy" : "cd client && npm install && bower install && ember build --environment=production && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs && rm -rf dist/ && rm -rf tmp/ && cd ../server && npm install && pm2 startOrRestart ../ecosystem.json --env production"
     },
     "development" : {
-      "user" : "",
-      "host" : "",
+      "user" : "user",
+      "host" : "0.0.0.0",
       "ref"  : "origin/master",
       "repo" : "git@github.com:artificialio/sane.git",
-      "path" : "/root/apps/sane/development/",
-      "post-deploy" : "cd server; and npm install; and pm2 startOrRestart ecosystem.json -x --env development"
+      "path" : "/home/user/apps/sane/development/",
+      "post-deploy" : "cd client && npm install && bower install && ember build --environment=development && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs && rm -rf dist/ && rm -rf tmp/ && cd ../server && npm install && pm2 startOrRestart ../ecosystem.json --env development"
     }
   }
 }
