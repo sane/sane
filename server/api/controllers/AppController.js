@@ -17,5 +17,23 @@ module.exports = {
    */
   serve: function(req, res) {
     return res.view('index');
+  },
+
+  /**
+   * `AppController.serveIndex()`
+   * Serves your Ember App directly from the assets/index.html
+   *
+   * This code still needs to be tested properly, but could mean you don't need to restart
+   * your server for any ember-app updates
+   */
+  serveIndex: function(req, res) {
+    var emberApp = __dirname + '/../../assets/index.html';
+    fs.exists(emberApp + '', function (exists) {
+      if (!exists) {
+        return res.notFound('The requested file does not exist.');
+      }
+
+      fs.createReadStream(emberApp).pipe(res);
+    });
   }
 };
