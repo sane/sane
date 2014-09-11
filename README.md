@@ -23,6 +23,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 
 ##Deployment
+**Note:** We have quite considerably improved and automated the deployment experience using [PM2 Deploy](https://github.com/Unitech/pm2#deployment). Have a look into the `ecosystem.json`. The readme will be updated soon.
 * `pm2 start app.js -x -- --prod` in `/server` starts sails in production mode on port 80
 * `ember build --environment=production && cp -rf dist/* ../server/assets/ && cp -f dist/index.html ../server/views/index.ejs`.  
    * That builds the app and copies it over to be included with Sails.
@@ -35,7 +36,7 @@ The Server is configured to serve the Ember App on all routes, apart from the `a
 For more information on deployment and different strategies check out:  
 * The [Sails Documentation](http://sailsjs.org/#/documentation/concepts/Deployment) to read up about some fundamentals
 * [PM2 Deploy](https://github.com/Unitech/pm2#deployment) gives you some nice command line tools to ease deployment
-* [grunt-autobots](https://github.com/achambers/grunt-autobots) for deployment via Redis and Amazon S3
+* [Ember-CLI Deploy](https://github.com/achambers/ember-cli-deploy) for deployment via Redis and Amazon S3
 
 
 ##Thanks
