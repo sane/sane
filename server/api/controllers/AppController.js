@@ -9,24 +9,15 @@ var fs = require('fs');
 module.exports = {
   /**
    * `AppController.serve()`
-   * Serves your Ember App
-   *
-   * Add some custom code before delivering the view if you want
-   * You could us this to serve different ember apps to differen people for example
-   * This can be useful for limited feature roll-out or A/B Testing
-   */
-  serve: function(req, res) {
-    return res.view('index');
-  },
-
-  /**
-   * `AppController.serveIndex()`
    * Serves your Ember App directly from the assets/index.html
    *
-   * This code still needs to be tested properly, but could mean you don't need to restart
-   * your server for any ember-app updates
+   * Add some custom code before delivering the app if you want
+   * You could add some analytics, or use this to serve different
+   * ember apps to differen people.
+   * That can be useful for limited feature roll-out or A/B Testing, etc.
+   *
    */
-  serveIndex: function(req, res) {
+  serve: function(req, res) {
     var emberApp = __dirname + '/../../assets/index.html';
     fs.exists(emberApp + '', function (exists) {
       if (!exists) {
@@ -36,4 +27,13 @@ module.exports = {
       fs.createReadStream(emberApp).pipe(res);
     });
   }
+
+  /**
+   * `AppController.serveView()`
+   * Serves your Ember App through the index.ejs, otherwise same as above
+   *
+   */
+  serveView: function(req, res) {
+    return res.view('index');
+  },
 };
