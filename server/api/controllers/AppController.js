@@ -26,7 +26,7 @@ module.exports = {
 
       fs.createReadStream(emberApp).pipe(res);
     });
-  }
+  }, 
 
   /**
    * `AppController.serveView()`
