@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Client Tests</title>
+    <title>Latest Tests</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{BASE_TAG}}
+    {{content-for 'head'}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/client.css">
+    <link rel="stylesheet" href="assets/latest.css">
     <link rel="stylesheet" href="assets/test-support.css">
     <style>
       #ember-testing-container {
@@ -33,17 +33,10 @@
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
 
-    <script>
-      window.ClientENV = {{ENV}};
-      window.EmberENV = window.ClientENV.EmberENV;
-    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/test-support.js"></script>
-    <script src="assets/client.js"></script>
+    <script src="assets/latest.js"></script>
     <script src="testem.js"></script>
-    <script>
-      require('client/tests/test-helper');
-    </script>
     <script src="assets/test-loader.js"></script>
   </body>
 </html>
