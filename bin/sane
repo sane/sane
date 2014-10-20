@@ -1,0 +1,75 @@
+#!/usr/bin/env node
+
+// Provide a title to the process in `ps`
+process.title = 'sane';
+
+var program = require('commander');
+require('shelljs/global');
+
+if (!which('fig') || !which('ember')) {
+  console.log('Exitting now.');
+  echo('sane requires the latest ember (npm install -g ember-cli) and fig (see: http://www.fig.sh/) to be installed.');
+  exit(1);
+}
+
+program
+  .version('0.0.1')
+  .usage('<keywords>')
+  .option('-v', 'output the version number');
+
+program.on('--help', function(){
+  console.log('  Available commands:');
+  console.log('');
+  console.log('sane new <projectname>');
+  console.log('    Creates a new folder and sets up the sails-ember app');
+  console.log('');
+});
+
+program.parse(process.argv);
+
+//Executes the command. Exits with errorMessage on failed execution
+function execAbort(cmd, errorMessage) {
+  errorMessage = errorMessage || 'Error: command ' + cmd + ' failed.';
+  if (exec(cmd).code !== 0) {
+    echo(errorMessage);
+    exit(1);
+  }
+}
+
+if(!program.args.length) {
+  program.help();
+} else {
+    var fs = require('fs');
+    //console.log('Keywords: ' + program.args);
+    if (program.args[0] === 'help') {
+      program.help();
+    }
+
+    if (program.args[0] === 'new') {
+      console.log('Program names:');
+      if (exec('mkdir ' + program.args[1]).code !== 0) {
+        echo('Error: Creating a new folder failed.');
+        exit(1);
+      }
+
+      echo('Setting up Docker and Sails Server.');
+
+      cd(program.args[1]);
+      var sanePath = which('sane');
+      fs.writeFileSync('fig.yml', fs.readFileSync(sanePath.slice(0, -4) + fs.readlinkSync(sanePath).slice(0, -4) + '../fig.yml'));
+      if (exec('fig run server sails new .').code !== 0) {
+        echo('Error: Creating a new sails project failed');
+        exit(1);
+      }
+
+      execAbort('fig run server npm i sails-generate-ember-blueprints --save');
+      execAbort('fig run server npm i --save lodash');
+      execAbort('fig run server npm i --save pluralize');
+      execAbort('fig run server sails generate ember-blueprints');
+
+      if (exec('ember new client').code !== 0) {
+        echo('Error: Creating a new Ember Project failed');
+        exit(1);
+      }
+    }
+  }

@@ -1,0 +1,35 @@
+{
+  "name": "sane",
+  "version": "0.0.1",
+  "description": "A command-line tool for creating full stack sails-ember applications using docker & fig",
+  "main": "lib/cli/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "sane": "./bin/sane"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artificialio/sane"
+  },
+  "keywords": [
+    "ember",
+    "ember.js",
+    "sails",
+    "sails.js",
+    "full-stack",
+    "javascript",
+    "cli"
+  ],
+  "author": "Markus Padourek <markus.padourek@gmail.com> (http://artificial.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artificialio/sane/issues"
+  },
+  "homepage": "https://github.com/artificialio/sane",
+  "dependencies": {
+    "commander": "~2.4.0",
+    "shelljs": "~0.3.0"
+  }
+}
