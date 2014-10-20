@@ -1,6 +1,16 @@
 # SANE Stack
 
-**NOTE: This is a complete rewrite with Docker and having a very basic cli, just to make it as simple as `sane new project` to set up a complete project. This is still a very early prototype, but should be functional. Start the sails server via `fig up` (in the root directory) and ember server via `ember server` in the client directory.**
+**NOTE: This is a complete rewrite with Docker and having a very basic cli, just to make it as simple as `sane new project` to set up a complete project. This is still a very early prototype, but should be functional.*
+
+To get started:
+* `git clone -b 2.0 git@github.com:artificialio/sane.git`
+* `cd sane`
+* `npm install -g .` (Only tested with npm >=2.0.0)
+* `sane new project`
+* `fig run server sails generate api user` to run sails commands in the container
+* `fig up` to start the server
+In a new tab:
+* `cd client && ember server` to start the ember server
 
 ##Overview
 SANE - A [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/) Starter Kit that will help you get started with rapid Web App prototyping and development. It includes, what are in our opinion the best tools for backend and frontend development. They will save you an immense amount of time, make development smoother and deliver the best results that work optimally across multiple devices.
