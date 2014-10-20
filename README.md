@@ -9,6 +9,7 @@ To get started:
 * `sane new project`
 * `fig run server sails generate api user` to run sails commands in the container
 * `fig up` to start the server
+
 In a new tab:
 * `cd client && ember server` to start the ember server
 
