@@ -1,8 +1,8 @@
 {
   "name": "sane",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A command-line tool for creating full stack sails-ember applications using docker & fig",
-  "main": "lib/cli/index.js",
+  "main": "bin/sane",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,9 @@
     "sails.js",
     "full-stack",
     "javascript",
-    "cli"
+    "cli",
+    "docker",
+    "fig"
   ],
   "author": "Markus Padourek <markus.padourek@gmail.com> (http://artificial.io/)",
   "license": "MIT",
