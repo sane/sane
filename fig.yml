@@ -1,7 +1,9 @@
+{{#if database}}
 db:
-  image: postgres #Can also be mysql, mongo, etc.
+  image: {{database}} #postgres, mysql, mongo
   ports:
-    - "5432:5432" #for mysql "3306:3306", for mongo "27017:27017", etc
+    - "{{port}}:{{port}}" #for postgres "5432:5432", for mysql "3306:3306", for mongo "27017:27017", etc
+{{/if}}
 server:
   image: artificial/docker-sails
   command: sails lift
@@ -9,8 +11,10 @@ server:
     - server/:/server
   ports:
     - "1337:1337"
+{{#if database}}
   links:
     - db
+{{/if}}
   #For a future version
   #environment:
   #  - VIRTUAL_HOST=sails

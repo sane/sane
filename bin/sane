@@ -5,27 +5,15 @@ process.title = 'sane';
 
 var program = require('commander');
 require('shelljs/global');
+var fs = require('fs-extra');
+var walkSync = require('walk-sync');
+var path = require('path');
+var hbs = require('handlebars');
+require('string.prototype.endswith');
 
-if (!which('fig') || !which('ember')) {
-  console.log('Exitting now.');
-  echo('sane requires the latest ember (npm install -g ember-cli) and fig (see: http://www.fig.sh/) to be installed.');
-  exit(1);
-}
-
-program
-  .version('0.0.1')
-  .usage('<keywords>')
-  .option('-v', 'output the version number');
-
-program.on('--help', function(){
-  console.log('  Available commands:');
-  console.log('');
-  console.log('sane new <projectname>');
-  console.log('    Creates a new folder and sets up the sails-ember app');
-  console.log('');
-});
-
-program.parse(process.argv);
+// String.prototype.beginsWith = function (string) {
+//     return(this.indexOf(string) === 0);
+// };
 
 //Executes the command. Exits with errorMessage on failed execution
 function execAbort(cmd, errorMessage) {
@@ -36,40 +24,128 @@ function execAbort(cmd, errorMessage) {
   }
 }
 
+//Gets all the necessary files to copy over
+function filteredTemplates(folderPath){
+  var walked = walkSync(path.join(folderPath, 'templates'));
+
+  //Only leave js files (plus their relative path) in the walked array
+  var walkedJsFiles = walked.filter(function(element){
+    return element.endsWith('.js');
+  });
+
+  //Filter out the right models file
+  walkedJsFiles = walkedJsFiles.filter(function(fileName){
+    if(fileName.indexOf('_models') > 0){
+      return fileName.endsWith(program.database + '.js');
+    } else {
+      return true;
+    }
+  });
+
+  return walkedJsFiles;
+}
+
+function renameTemplate(templateName){
+  if((templateName.split('.').length - 1) === 2){
+    //Remove the _ (first chracter) and everything between the two dots, including one dot
+    var firstChar = templateName.indexOf('_');
+    var firstDot = templateName.indexOf('.');
+    var secondDot = templateName.indexOf('.', firstDot + 1);
+    return templateName.slice(0, firstChar) + templateName.slice(firstChar + 1, firstDot) + templateName.slice(secondDot);
+  } else {
+    return templateName;
+  }
+}
+
+if (!which('fig') || !which('ember')) {
+  console.log('Exitting now.');
+  echo('sane requires the latest ember (npm install -g ember-cli) and fig (see: http://www.fig.sh/) to be installed.');
+  exit(1);
+}
+
+program
+.version('0.0.1')
+.usage('<keywords>')
+.option('-v', 'output the version number')
+.option('-d, --database [type]', 'Choose which database to install (Options: disk, mongo, mysql, postgres)', 'disk');
+
+program.on('--help', function(){
+  console.log('  Available commands:');
+  console.log('');
+  console.log('sane new <projectname>');
+  console.log('    Creates a new folder and sets up the sails-ember app');
+  console.log('');
+  console.log('    --database, -db Options: disk (default), mongo, mysql, postgres');
+});
+
+program.parse(process.argv);
+
 if(!program.args.length) {
   program.help();
 } else {
-    var fs = require('fs');
-    //console.log('Keywords: ' + program.args);
-    if (program.args[0] === 'help') {
-      program.help();
-    }
+  var walkOptions = {
+    followLinks: false
+  };
 
-    if (program.args[0] === 'new') {
-      console.log('Program names:');
-      if (exec('mkdir ' + program.args[1]).code !== 0) {
-        echo('Error: Creating a new folder failed.');
-        exit(1);
-      }
+  //path always refers to where sane is installed
+  var binaryPath = which('sane');
+  var sanePath = binaryPath.slice(0, -4) + fs.readlinkSync(binaryPath).slice(0, -4) + '../';
 
-      echo('Setting up Docker and Sails Server.');
+  //root always refers to the project
+  var projectRoot = __dirname;
+  var serverRoot = path.join(projectRoot, 'server');
 
-      cd(program.args[1]);
-      var sanePath = which('sane');
-      fs.writeFileSync('fig.yml', fs.readFileSync(sanePath.slice(0, -4) + fs.readlinkSync(sanePath).slice(0, -4) + '../fig.yml'));
-      if (exec('fig run server sails new .').code !== 0) {
-        echo('Error: Creating a new sails project failed');
-        exit(1);
-      }
 
-      execAbort('fig run server npm i sails-generate-ember-blueprints --save');
-      execAbort('fig run server npm i --save lodash');
-      execAbort('fig run server npm i --save pluralize');
-      execAbort('fig run server sails generate ember-blueprints');
-
-      if (exec('ember new client').code !== 0) {
-        echo('Error: Creating a new Ember Project failed');
-        exit(1);
-      }
-    }
+  if (program.args[0] === 'help') {
+    program.help();
   }
+
+  if (program.args[0] === 'new') {
+
+    //Creates the new folder
+    execAbort('mkdir ' + program.args[1], 'Error: Creating a new folder failed.')
+    //Change to that directory
+    cd(program.args[1]);
+
+    echo('Setting up Docker and Sails Server.');
+
+    //Copying fig.yml over and setting up new server
+    var figDatabase = null;
+    var figPort = 0;
+    if (program.database !== 'disk'){
+      figDatabase = program.database;
+    }
+    switch (program.database) {
+      case 'mysql':
+        figPort = 3306;
+        break;
+      case 'postgres':
+        figPort = 5432;
+        break;
+      case 'mongo':
+        figPort = 27017;
+        break;
+    }
+    var figVariables = { database: figDatabase, port: figPort  };
+    var template = hbs.compile(fs.readFileSync(sanePath + 'fig.yml', 'utf8'));
+    fs.writeFileSync('fig.yml', template(figVariables));
+    exit(1);
+    execAbort('fig run server sails new .', 'Error: Creating a new sails project failed')
+
+    echo('Docker configured. Setting up ember dependencies.');
+    execAbort('fig run server npm i sails-generate-ember-blueprints --save');
+    execAbort('fig run server npm i --save lodash');
+    execAbort('fig run server npm i --save pluralize');
+    execAbort('fig run server sails generate ember-blueprints');
+
+    //Creating new ember project
+    execAbort('ember new client', 'Error: Creating a new Ember Project failed')
+
+    //copy over prepared files
+    var templates = filteredTemplates(sanePath);
+    for (var i = 0; i < templates.length; i++) {
+      //templates[i].lastIndexOf('/');
+      fs.outputFileSync(renameTemplate(templates[i]), fs.readFileSync(path.join(sanePath, 'templates', templates[i])));
+    };
+  }
+}
