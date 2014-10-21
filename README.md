@@ -1,5 +1,7 @@
 # SANE Stack
 
+**Note:** Sane is currently being rewritten using Docker and providing a cli. Look at Branch [2.0](https://github.com/artificialio/sane/tree/2.0) for all further development
+
 ##Overview
 SANE - A [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/) Starter Kit that will help you get started with rapid Web App prototyping and development. It includes, what are in our opinion the best tools for backend and frontend development. They will save you an immense amount of time, make development smoother and deliver the best results that work optimally across multiple devices.
 
