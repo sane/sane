@@ -1,6 +1,6 @@
 # SANE Stack
 
-**NOTE: This is a complete rewrite with Docker and having a very basic cli, just to make it as simple as `sane new project` to set up a complete project. This is still a very early prototype, but should be functional.*
+**NOTE: This is a complete rewrite with Docker and having a very basic cli, just to make it as simple as `sane new project` to set up a complete project. This is still a very early prototype, but should be mostly functional.**
 
 To get started:
 * Make sure you have [Boot2docker >=1.3.0](https://github.com/boot2docker/osx-installer/releases), [Fig >=1.0.0](http://www.fig.sh/install.html) and [ember-cli](http://www.ember-cli.com/) installed
