@@ -43,9 +43,9 @@ module.exports.connections = {
   mysqlContainer: {
     adapter: 'sails-mysql',
     host: 'db',
-    user: 'YOUR_MYSQL_USER',
-    password: 'YOUR_MYSQL_PASSWORD',
-    database: 'YOUR_MYSQL_DB'
+    user: 'root', //specified in the fig.yml
+    password: 'password', //specified in the fig.yml
+    database: 'sane' //specified in the fig.yml
   },
 
   /***************************************************************************

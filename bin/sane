@@ -112,12 +112,14 @@ if(!program.args.length) {
     //Copying fig.yml over and setting up new server
     var figDatabase = null;
     var figPort = 0;
+    var figIsMysql = false;
     if (program.database !== 'disk'){
       figDatabase = program.database;
     }
     switch (program.database) {
       case 'mysql':
         figPort = 3306;
+        isMysql = true;
         break;
       case 'postgres':
         figPort = 5432;
@@ -126,7 +128,7 @@ if(!program.args.length) {
         figPort = 27017;
         break;
     }
-    var figVariables = { database: figDatabase, port: figPort  };
+    var figVariables = { database: figDatabase, port: figPort, isMysql: figIsMysql};
     var template = hbs.compile(fs.readFileSync(sanePath + 'fig.yml', 'utf8'));
     fs.writeFileSync('fig.yml', template(figVariables));
     exit(1);
