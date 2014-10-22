@@ -56,7 +56,7 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  mongodbContainer: {
+  mongoContainer: {
     adapter: 'sails-mongo',
     host: 'db',
     port: 27017,

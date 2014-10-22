@@ -20,6 +20,9 @@ function execAbort(cmd, errorMessage) {
   errorMessage = errorMessage || 'Error: command ' + cmd + ' failed.';
   if (exec(cmd).code !== 0) {
     echo(errorMessage);
+    //Note: Implement --force flag.
+    //echo('Exiting. If you want to ignore that error provide the --force flag.');
+    echo('Please report this error to https://github.com/artificialio/sane/issues.');
     exit(1);
   }
 }
@@ -103,23 +106,29 @@ if(!program.args.length) {
   if (program.args[0] === 'new') {
 
     //Creates the new folder
-    execAbort('mkdir ' + program.args[1], 'Error: Creating a new folder failed.')
+    execAbort('mkdir ' + program.args[1], 'Error: Creating a new folder failed. Check if ' + program.args[1] + ' already exists.');
     //Change to that directory
     cd(program.args[1]);
 
-    echo('Setting up Docker and Sails Server.');
+    echo('Setting up your Sails Container.');
 
     //Copying fig.yml over and setting up new server
     var figDatabase = null;
     var figPort = 0;
     var figIsMysql = false;
+    if (program.database === 'mongodb') {
+      program.database = 'mongo';
+    }
+    if (program.database === 'postgresql') {
+      program.database  = 'postgres';
+    }
     if (program.database !== 'disk'){
       figDatabase = program.database;
     }
     switch (program.database) {
       case 'mysql':
         figPort = 3306;
-        isMysql = true;
+        figIsMysql = true;
         break;
       case 'postgres':
         figPort = 5432;
@@ -133,11 +142,18 @@ if(!program.args.length) {
     fs.writeFileSync('fig.yml', template(figVariables));
     execAbort('fig run server sails new .', 'Error: Creating a new sails project failed')
 
-    echo('Docker configured. Setting up ember dependencies.');
+    echo('Installing sails dependencies.');
     execAbort('fig run server npm i sails-generate-ember-blueprints --save');
     execAbort('fig run server npm i --save lodash');
     execAbort('fig run server npm i --save pluralize');
     execAbort('fig run server sails generate ember-blueprints');
+
+    //install the right database adapter
+    if (program.database === 'postgres') {
+      execAbort('fig run server npm i --save sails-postgresql');
+    } else if (program.database !== 'disk') {
+      execAbort('fig run server npm i --save sails-' + program.database);
+    }
 
     //Creating new ember project
     execAbort('ember new client', 'Error: Creating a new Ember Project failed')
