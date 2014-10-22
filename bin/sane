@@ -131,7 +131,6 @@ if(!program.args.length) {
     var figVariables = { database: figDatabase, port: figPort, isMysql: figIsMysql};
     var template = hbs.compile(fs.readFileSync(sanePath + 'fig.yml', 'utf8'));
     fs.writeFileSync('fig.yml', template(figVariables));
-    exit(1);
     execAbort('fig run server sails new .', 'Error: Creating a new sails project failed')
 
     echo('Docker configured. Setting up ember dependencies.');
