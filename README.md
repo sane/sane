@@ -12,7 +12,7 @@ To get started:
 * `fig up` to start the sails container/server
 
 In a new tab:
-* `cd client && ember server` to start the ember server
+* `cd client && ember server --proxy http://192.168.59.103:1337` to start the ember server
 
 ##Overview
 SANE - A [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/) CLI that will help you get started with rapid Web App prototyping and development. It includes, what are in our opinion the best tools for backend and frontend development. They will save you an immense amount of time, make development smoother and deliver the best results that work optimally across multiple devices.
