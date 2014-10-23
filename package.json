@@ -1,6 +1,6 @@
 {
   "name": "sane",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A command-line tool for creating full stack sails-ember applications using docker & fig",
   "main": "bin/sane",
   "scripts": {
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/artificialio/sane",
   "dependencies": {
+    "chalk": "^0.5.1",
     "commander": "~2.4.0",
     "fs-extra": "~0.12.0",
     "handlebars": "~2.0.0",
