@@ -11,6 +11,7 @@ To get started:
 * Make sure you have [Docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit) (Linux) or [Boot2docker >=1.3.0](https://github.com/boot2docker/osx-installer/releases) (Mac OS X/Windows), [Fig >=1.0.0](http://www.fig.sh/install.html) and [ember-cli](http://www.ember-cli.com/) installed
 * `npm install -g sane-cli`
 * `sane new project` or specifiy mongo, postgres, mysql: `sane new project -d postgres`
+* `cd project`
 * `fig run server sails generate api user` to run sails commands in the container
 * `fig up` to start the sails container/server
 
