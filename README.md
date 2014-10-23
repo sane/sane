@@ -1,4 +1,5 @@
 # SANE Stack
+**NOTE: The Vagrant version is now official deprecated and superseded by sane-cli with docker and fig.**
 
 ##Overview
 SANE - A [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/) Starter Kit that will help you get started with rapid Web App prototyping and development. It includes, what are in our opinion the best tools for backend and frontend development. They will save you an immense amount of time, make development smoother and deliver the best results that work optimally across multiple devices.
