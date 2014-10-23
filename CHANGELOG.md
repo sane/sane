@@ -2,4 +2,6 @@
 
 ### master
 
-* [FEATURE] added basic CLI available via `npm install -g`
+### 0.0.3
+
+* [FEATURE] added a basic CLI that can set up a Sails Container with Fig and a separate ember project, linking them together.
