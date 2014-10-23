@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/artificialio/sane/issues"
   },
-  "homepage": "https://github.com/artificialio/sane",
+  "homepage": "http://artificialio.github.io/sane/",
   "dependencies": {
     "chalk": "^0.5.1",
     "commander": "~2.4.0",
