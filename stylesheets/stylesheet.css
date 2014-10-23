@@ -89,6 +89,11 @@ header h2 {
   letter-spacing: 0;
 }
 
+header h2 a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .inner {
   position: relative;
   width: 940px;
