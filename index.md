@@ -6,7 +6,7 @@ layout: index
 
 **NOTE: This is still under heavy development, a lot of features are still being added, but it should already be functional.**
 
-To get started:
+##Get Started
 
 * Make sure you have [Docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit) (Linux) or [Boot2docker >=1.3.0](https://github.com/boot2docker/osx-installer/releases) (Mac OS X/Windows), [Fig >=1.0.0](http://www.fig.sh/install.html) and [ember-cli](http://www.ember-cli.com/) installed
 * `npm install -g sane-cli`
