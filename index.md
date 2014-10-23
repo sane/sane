@@ -4,9 +4,10 @@ layout: index
 
 # SANE Stack
 
-**NOTE: This is a complete rewrite with Docker and having a very basic cli, just to make it as simple as `sane new project` to set up a complete project. This is still a very early prototype, but should be mostly functional.**
+**NOTE: This is still under heavy development, a lot of features are still being added, but it should already be functional.**
 
 To get started:
+
 * Make sure you have [Docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit) (Linux) or [Boot2docker >=1.3.0](https://github.com/boot2docker/osx-installer/releases) (Mac OS X/Windows), [Fig >=1.0.0](http://www.fig.sh/install.html) and [ember-cli](http://www.ember-cli.com/) installed
 * `npm install -g sane-cli`
 * `sane new project` or specifiy mongo, postgres, mysql: `sane new project -d postgres`
@@ -14,6 +15,7 @@ To get started:
 * `fig up` to start the sails container/server
 
 In a new terminal tab/window:
+
 * `cd client && ember server --proxy http://192.168.59.103:1337` to start the ember server
 
 ##Overview
