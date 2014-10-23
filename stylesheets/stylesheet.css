@@ -94,6 +94,10 @@ header h2 a {
   text-decoration: underline;
 }
 
+strong {
+  font-weight: 600;
+}
+
 .inner {
   position: relative;
   width: 940px;

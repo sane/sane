@@ -2,9 +2,7 @@
 layout: index
 ---
 
-# SANE Stack
-
-**NOTE: This is still under heavy development, a lot of features are still being added, but it should already be functional.**
+**NOTE: SANE Stack is still under heavy development, a lot of features are still being added. Having said that it is already functional and can be tried out.**
 
 ##Get Started
 
