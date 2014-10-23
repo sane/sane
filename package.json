@@ -1,5 +1,5 @@
 {
-  "name": "sane",
+  "name": "sane-cli",
   "version": "0.0.3",
   "description": "A command-line tool for creating full stack sails-ember applications using docker & fig",
   "main": "bin/sane",
@@ -14,11 +14,14 @@
     "url": "https://github.com/artificialio/sane"
   },
   "keywords": [
+    "sane",
+    "sane-cli",
     "ember",
     "ember.js",
     "sails",
     "sails.js",
     "full-stack",
+    "fullstack",
     "javascript",
     "cli",
     "docker",
