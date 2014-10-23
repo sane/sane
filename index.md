@@ -38,7 +38,8 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 In the meantime find the old deployment readme (ignoring any of the Docker setup completely):
 
-* You can use `pm2 start app.js -- --prod` in `/server` to starts sails in production mode on port 80
+* `npm i -g pm2`
+* Then you can use `pm2 start app.js -- --prod` in `/server` to starts sails in production mode on port 80
 * `ember build --environment=production --output-path=../server/assets/`.
    * That builds the app and copies it over to be included with Sails.
    * `pm2 restart app` so Node can pick up the latest changes
