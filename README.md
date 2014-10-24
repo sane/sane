@@ -7,7 +7,7 @@ To get started:
 * `npm install -g sane-cli`
 * `sane new project` or specifiy mongo, postgres, mysql: `sane new project -d postgres`
 * `fig run server sails generate api user` to run sails commands in the container
-* `fig up` to start the sails container/server
+* `fig up` to start the sails container/server on `http://192.168.59.103:1337` (can be depending on your Docker setup)
 
 In a new terminal tab/window:
 * `cd client && ember server --proxy http://192.168.59.103:1337` to start the ember server
