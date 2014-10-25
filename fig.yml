@@ -10,7 +10,7 @@ db:
   {{/if}}
 {{/if}}
 server:
-  image: artificial/docker-sails
+  image: artificial/docker-sails:stable
   command: sails lift
   volumes:
     - server/:/server
