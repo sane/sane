@@ -34,10 +34,12 @@
   },
   "homepage": "http://artificialio.github.io/sane/",
   "dependencies": {
+    "bluebird": "^2.3.6",
     "chalk": "^0.5.1",
     "commander": "~2.4.0",
     "fs-extra": "~0.12.0",
     "handlebars": "~2.0.0",
+    "pleasant-progress": "^1.0.2",
     "shelljs": "~0.3.0",
     "string.prototype.endswith": "~0.2.0",
     "walk-sync": "~0.1.3"
