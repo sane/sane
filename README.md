@@ -4,12 +4,10 @@
 
 To get started:
 * Make sure you have [Docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit) (Linux) or [Boot2docker >=1.3.0](https://github.com/boot2docker/osx-installer/releases) (Mac OS X/Windows), [Fig >=1.0.0](http://www.fig.sh/install.html) and [ember-cli](http://www.ember-cli.com/) installed
-* `git clone -b 2.0 git@github.com:artificialio/sane.git`
-* `cd sane`
-* `npm install -g .` (Only tested with npm >=2.0.0)
+* `npm install -g sane-cli`
 * `sane new project` or specifiy mongo, postgres, mysql: `sane new project -d postgres`
 * `fig run server sails generate api user` to run sails commands in the container
-* `fig up` to start the sails container/server
+* `fig up` to start the sails container/server on `http://192.168.59.103:1337` (can be depending on your Docker setup)
 
 In a new terminal tab/window:
 * `cd client && ember server --proxy http://192.168.59.103:1337` to start the ember server
