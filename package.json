@@ -34,6 +34,7 @@
   },
   "homepage": "http://artificialio.github.io/sane/",
   "dependencies": {
+    "async": "^0.9.0",
     "bluebird": "^2.3.6",
     "chalk": "^0.5.1",
     "commander": "~2.4.0",
