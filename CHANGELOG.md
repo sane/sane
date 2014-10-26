@@ -3,7 +3,7 @@
 ### master
 
 ### 0.0.5
-* [ENHANCEMENT] Added pleasent-progress for better output of setup progress
+* [ENHANCEMENT] Added pleasent-progress for better output of setup progress #11
 
 ### 0.0.4
 
