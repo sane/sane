@@ -36,11 +36,11 @@ program
 
 //TODO: up command - need to look into, how to unify logs.
 //Other than that it is just a simple substitue for 'fig up && cd client && ember server --proxy http://192.168.59.103:1337'
-// program
-//   .command('up')
-//   .alias('serve')
-//   .description('Starts the Sails and Ember server with a unified log.')
-//   .action(function() { commands.up() });
+program
+  .command('up')
+  .alias('serve')
+  .description('Starts the Sails and Ember server with a unified log.')
+  .action(function() { commands.up() });
 
 //TODO: generate command - should simply call:
 // fig run server sails generate model <name> [options...]
