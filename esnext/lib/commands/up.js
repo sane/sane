@@ -5,7 +5,7 @@ function timeout(ms) {
 async function f() {
   console.log(1);
   await timeout(1000);
-  console.log(2);
+  console.log(6);
   await timeout(1000);
   console.log(3);
 }
