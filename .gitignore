@@ -20,3 +20,6 @@ sitemap.xml
 .DS_Store?
 ehthumbs.db
 Thumbs.db
+
+#Broccoli folder
+tmp
