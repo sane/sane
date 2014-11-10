@@ -1,7 +1,11 @@
 # SANE Stack Changelog
 
 ### master
-* [ENHANCEMENT] Updated [commandter.js](https://github.com/tj/commander.js) to 2.5.0
+
+### 0.0.6
+* [ENHANCEMENT] Updated [commander.js](https://github.com/tj/commander.js) to 2.5.0
+* [FEATURE] added `--verbose` flag to `sane new` command to display more output for debugging purposes
+* [BUGFIX] Fixed an issue that the setup would never complete if no db (or disk) was given
 
 ### 0.0.5
 * [ENHANCEMENT] Added pleasent-progress for better output of setup progress [#11](https://github.com/artificialio/sane/issues/11)

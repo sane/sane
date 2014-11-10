@@ -32,6 +32,7 @@ program
   .alias('n')
   .description('Creates a new sane project. Choose database via -d disk(default)|mongo|mysql|postgres')
   .option('-d, --database [type]', 'Options: disk (default), mongo, mysql, postgres', 'disk')
+  .option('-v, --verbose', 'Show more detailed command output.')
   .action(function(name, options) { commands.new(name, options) });
 
 //TODO: up command - need to look into, how to unify logs.
