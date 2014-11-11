@@ -50,35 +50,43 @@ function prepareTemplate(name, option) {
 
 module.exports = async function newProject(name, options) {
   options.database = normalizeOption(options.database);
+  var silent = true;
+  if (options.verbose) {
+    silent = false;
+  }
 
   //Creates the new folder
-  execAbort.sync('mkdir ' + name, 'Error: Creating a new folder failed. Check if the folder \'' + name + '\' already exists.');
+  execAbort.sync('mkdir ' + name,
+    'Error: Creating a new folder failed. Check if the folder \'' + name + '\' already exists.',
+    silent);
   //change directories into projectRoot
   cd(name);
 
   fs.writeFileSync(path.join('fig.yml'), prepareTemplate('fig.yml', options.database));
 
-  await execAbort.async('fig run server sails new .', 'Error: Creating a new sails project failed',
+  await execAbort.async('fig run server sails new .',
+    silent,
+    'Error: Creating a new sails project failed',
     'Setting up Sails project and downloading latest Docker Containers. Give it some time',
     'Sails container successfully created.');
 
   var progress = new PleasantProgress();
   progress.start(chalk.green('Installing Sails dependencies'));
 
-  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save');
-  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save');
-  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save');
+  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save', silent);
+  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save', silent);
+  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save', silent);
 
   if (options.database === 'postgres') {
-    await execAbort.async('fig run server npm i --save sails-postgresql');
+    await execAbort.async('fig run server npm i --save sails-postgresql', silent);
   } else if (options.database !== 'disk') {
-    await execAbort.async('fig run server npm i --save sails-' + options.database);
+    await execAbort.async('fig run server npm i --save sails-' + options.database, silent);
   }
 
   progress.stop();
   console.log(chalk.green('Sails dependencies successfully installed.'));
   //Creating new ember project
-  await execAbort.async('ember new client', 'Error: Creating a new Ember Project failed',
+  await execAbort.async('ember new client', silent, 'Error: Creating a new Ember Project failed',
     'Creating Ember Project, installing bower and npm dependencies',
     'Ember Project successfully created.');
 
