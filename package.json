@@ -36,7 +36,6 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "commander": "~2.5.0",
-    "esnext": "^0.13.0",
     "fs-extra": "~0.12.0",
     "handlebars": "~2.0.0",
     "pleasant-progress": "^1.0.2",
@@ -49,6 +48,7 @@
   "devDependencies": {
     "broccoli": "^0.13.2",
     "broccoli-esnext": "^0.5.0",
-    "broccoli-static-compiler": "^0.2.1"
+    "broccoli-static-compiler": "^0.2.1",
+    "esnext": "^0.13.0"
   }
 }
