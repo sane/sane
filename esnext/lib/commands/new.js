@@ -9,6 +9,7 @@ var templatesEndingWith = require('../tasks/templatesEndingWith');
 var renameTemplate = require('../tasks/renameTemplate');
 var PleasantProgress = require('pleasant-progress');
 var chalk = require('chalk');
+require('shelljs/global');
 
 
 function normalizeOption(option) {
@@ -55,6 +56,15 @@ module.exports = async function newProject(name, options) {
     silent = false;
   }
 
+  var figRun = '';
+  var installMsg = 'Setting up Sails project locally.';
+  var successMsg = 'project';
+  if (options.docker) {
+    figRun = 'fig run server ';
+    installMsg = 'Setting up Sails project and downloading latest Docker Containers. Give it some time';
+    successMsg = 'container';
+  }
+
   //Creates the new folder
   execAbort.sync('mkdir ' + name,
     'Error: Creating a new folder failed. Check if the folder \'' + name + '\' already exists.',
@@ -64,23 +74,35 @@ module.exports = async function newProject(name, options) {
 
   fs.writeFileSync(path.join('fig.yml'), prepareTemplate('fig.yml', options.database));
 
-  await execAbort.async('fig run server sails new .',
+  //if docker is not set manually create the server folder and cd in
+  if (!options.docker) {
+    mkdir('server');
+    cd('server');
+  }
+
+  await execAbort.async(figRun + 'sails new .',
     silent,
     'Error: Creating a new sails project failed',
-    'Setting up Sails project and downloading latest Docker Containers. Give it some time',
-    'Sails container successfully created.');
+    installMsg,
+    'Sails ' + successMsg + ' successfully created.');
 
   var progress = new PleasantProgress();
   progress.start(chalk.green('Installing Sails dependencies'));
 
-  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save', silent);
-  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save', silent);
-  await execAbort.async('fig run server npm i sails-generate-ember-blueprints --save', silent);
+  await execAbort.async(figRun + 'npm i sails-generate-ember-blueprints --save', silent);
+  await execAbort.async(figRun + 'npm i lodash --save', silent);
+  await execAbort.async(figRun + 'npm i pluralize --save', silent);
+  await execAbort.async(figRun + 'sails generate ember-blueprints', silent);
 
   if (options.database === 'postgres') {
-    await execAbort.async('fig run server npm i --save sails-postgresql', silent);
+    await execAbort.async(figRun + 'npm i --save sails-postgresql', silent);
   } else if (options.database !== 'disk') {
-    await execAbort.async('fig run server npm i --save sails-' + options.database, silent);
+    await execAbort.async(figRun + 'npm i --save sails-' + options.database, silent);
+  }
+
+  //cd back out again
+  if (!options.docker) {
+    cd('..');
   }
 
   progress.stop();
