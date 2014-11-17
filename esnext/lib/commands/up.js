@@ -2,67 +2,54 @@ var spawn = require('child_process').spawn;
 var chalk = require('chalk');
 var EOL = require('os').EOL;
 
-// function timeout(ms) {
-//   return new Promise((res) => setTimeout(res, ms));
-// }
-
-// async function f() {
-//   console.log(1);
-//   await timeout(1000);
-//   console.log(6);
-//   await timeout(1000);
-//   console.log(3);
-// }
-
-function printLines(data, prepend, isError) {
-  isError = isError || false;
+/*
+ * @params
+ *    data - Buffer Object to print
+ *    prepend - string to prepend to each line of output
+ *              used so user can identify which command printed that line
+ *    color - which color to print (cyan, blue, green, magenta, yellow, red)
+ *    outputMode - log or error
+ *
+ */
+function printLines(data, prepend, color, outputMode) {
+  color = color || 'green';
+  outputMode = outputMode || 'out';
   var outLines = data.toString().split(EOL);
   for (var line of outLines) {
-    if (isError) {
-      if (prepend === 'Client') {
-        console.error(chalk.green(prepend + ': ') + line);
-      } else {
-        console.error(chalk.blue(prepend + ': ') + line);
-      }
-    } else {
-      if (prepend === 'Client') {
-        console.log(chalk.green(prepend + ': ') + line);
-      } else {
-        console.log(chalk.blue(prepend + ': ') + line);
-      }
-    }
+    //dynamically console.log/.error as well as color-change
+    console['outputMode'](chalk[color](prepend + ': ') + line);
   }
 }
 
+//Note(markus): When starting to use fig this might not work
+//see http://stackoverflow.com/questions/14332721/node-js-spawn-child-process-and-get-terminal-output-instantaneously
+function runAndOutput(cmd, parameters, cwd) {
+  var cmd = spawn(cmd, parameters, { cwd: cwd, env: process.env });
+
+  var prepened = 'Server';
+  var color = 'blue';
+
+  if (cmd === 'ember') {
+    prepened = 'Client';
+    color = 'green';
+  }
+
+  // use event hooks to provide a callback to execute when data are available:
+  cmd.stdout.on('data', function(data) {
+    printLines(data, prepened, color);
+  });
+
+  cmd.stderr.on('data', function (data) {
+    printLines(data, prepend, color, 'error');
+  });
+
+  cmd.on('exit', function (code) {
+    console.log(cmd + ' process exited with code ' + code);
+  });
+}
 
 
 module.exports = function up() {
-  var sails = spawn('sails', ['lift'], { cwd: 'server', env: process.env });
-  // use event hooks to provide a callback to execute when data are available:
-  sails.stdout.on('data', function(data) {
-    printLines(data, 'Server');
-  });
-
-  sails.stderr.on('data', function (data) {
-    printLines(data, 'Server', true);
-  });
-
-  sails.on('exit', function (code) {
-    console.log('Server process exited with code ' + code);
-  });
-
-  //'--proxy 192.168.59.103:1337'
-  var ember = spawn('ember', ['serve', '--proxy', '127.0.0.1:1337'], { cwd: 'client', env: process.env });
-  // use event hooks to provide a callback to execute when data are available:
-  ember.stdout.on('data', function(data) {
-    printLines(data, 'Client');
-  });
-
-  ember.stderr.on('data', function (data) {
-    printLines(data, 'Client', true);
-  });
-
-  ember.on('exit', function (code) {
-    console.log('Client process exited with code ' + code);
-  });
+  runAndOutput('sails', ['lift'], 'server');
+  runAndOutput('ember', ['serve', '--proxy', '127.0.0.1:1337'], 'client');
 }
