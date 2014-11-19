@@ -13,37 +13,50 @@ var EOL = require('os').EOL;
  */
 function printLines(data, prepend, color, outputMode) {
   color = color || 'green';
-  outputMode = outputMode || 'out';
-  var outLines = data.toString().split(EOL);
+  outputMode = outputMode || 'log';
+  data = data.toString()
+  data = data.replace(/\r\n/g, '\n');
+  data = data.replace(/\r/g, '\n');
+
+  //a workaround, since .split adds an empty array element if the string ends with a newline
+  if (data.endsWith('\n')) {
+    data = data.slice(0, -1)
+  }
+
+  var outLines = data.split(/\n/);
   for (var line of outLines) {
+    // line = line.replace(/\n/g, '');
+    // line = line.replace(/(\r\n|\n|\r)/gm,'');
     //dynamically console.log/.error as well as color-change
-    console['outputMode'](chalk[color](prepend + ': ') + line);
+    // console[outputMode](chalk[color](prepend + ': ') + line);
+    console[outputMode](chalk[color](prepend + ': ') + line);
+    // process.stdout.write(chalk[color](prepend + ': ') + line);
   }
 }
 
 //Note(markus): When starting to use fig this might not work
 //see http://stackoverflow.com/questions/14332721/node-js-spawn-child-process-and-get-terminal-output-instantaneously
 function runAndOutput(cmd, parameters, cwd) {
-  var cmd = spawn(cmd, parameters, { cwd: cwd, env: process.env });
+  var runningCmd = spawn(cmd, parameters, { cwd: cwd, env: process.env });
 
-  var prepened = 'Server';
+  var prepend = 'Server';
   var color = 'blue';
 
   if (cmd === 'ember') {
-    prepened = 'Client';
+    prepend = 'Client';
     color = 'green';
   }
 
   // use event hooks to provide a callback to execute when data are available:
-  cmd.stdout.on('data', function(data) {
-    printLines(data, prepened, color);
+  runningCmd.stdout.on('data', function(data) {
+    printLines(data, prepend, color);
   });
 
-  cmd.stderr.on('data', function (data) {
+  runningCmd.stderr.on('data', function (data) {
     printLines(data, prepend, color, 'error');
   });
 
-  cmd.on('exit', function (code) {
+  runningCmd.on('exit', function (code) {
     console.log(cmd + ' process exited with code ' + code);
   });
 }
