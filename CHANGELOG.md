@@ -2,7 +2,8 @@
 
 ### master
 * [ENHANCEMENT] Made installation of Docker optional to get quick dev setup running.
-* [FEATURE] Added basic `sane up` command only compatible without Docker so far.
+* [FEATURE] Added basic `sane up` command. To start with docker add `--docker` flag
+* [FEAURE] Added possibility to add a .sane-cli in your project root and/or home directory so you don't have to specifiy cli options such as --docker with each command
 
 ### 0.0.6
 * [ENHANCEMENT] Updated [commander.js](https://github.com/tj/commander.js) to 2.5.0
