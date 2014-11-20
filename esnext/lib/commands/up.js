@@ -14,55 +14,56 @@ var EOL = require('os').EOL;
 function printLines(data, prepend, color, outputMode) {
   color = color || 'green';
   outputMode = outputMode || 'log';
-  data = data.toString()
+  data = data.toString();
   data = data.replace(/\r\n/g, '\n');
   data = data.replace(/\r/g, '\n');
 
   //a workaround, since .split adds an empty array element if the string ends with a newline
   if (data.endsWith('\n')) {
-    data = data.slice(0, -1)
+    data = data.slice(0, -1);
   }
 
   var outLines = data.split(/\n/);
   for (var line of outLines) {
-    // line = line.replace(/\n/g, '');
-    // line = line.replace(/(\r\n|\n|\r)/gm,'');
-    //dynamically console.log/.error as well as color-change
-    // console[outputMode](chalk[color](prepend + ': ') + line);
-    console[outputMode](chalk[color](prepend + ': ') + line);
-    // process.stdout.write(chalk[color](prepend + ': ') + line);
+    console[outputMode](chalk[color](prepend + '| ') + line);
   }
 }
 
 //Note(markus): When starting to use fig this might not work
 //see http://stackoverflow.com/questions/14332721/node-js-spawn-child-process-and-get-terminal-output-instantaneously
-function runAndOutput(cmd, parameters, cwd) {
-  var runningCmd = spawn(cmd, parameters, { cwd: cwd, env: process.env });
+function runAndOutput(cmd, parameters, options) {
+  var runningCmd = spawn(cmd, parameters, options);
 
-  var prepend = 'Server';
+  var prepend = 'server   ';
   var color = 'blue';
 
   if (cmd === 'ember') {
-    prepend = 'Client';
+    prepend = 'client   ';
     color = 'green';
   }
 
-  // use event hooks to provide a callback to execute when data are available:
-  runningCmd.stdout.on('data', function(data) {
-    printLines(data, prepend, color);
-  });
+  if (!options.stdio) {
+    // use event hooks to provide a callback to execute when data are available:
+    runningCmd.stdout.on('data', function(data) {
+      printLines(data, prepend, color);
+    });
 
-  runningCmd.stderr.on('data', function (data) {
-    printLines(data, prepend, color, 'error');
-  });
+    runningCmd.stderr.on('data', function (data) {
+      printLines(data, prepend, color, 'error');
+    });
 
-  runningCmd.on('exit', function (code) {
-    console.log(cmd + ' process exited with code ' + code);
-  });
+    runningCmd.on('exit', function (code) {
+      console.log(cmd + ' process exited with code ' + code);
+    });
+  }
 }
 
 
-module.exports = function up() {
-  runAndOutput('sails', ['lift'], 'server');
-  runAndOutput('ember', ['serve', '--proxy', '127.0.0.1:1337'], 'client');
+module.exports = function up(options) {
+  if (options.docker) {
+    runAndOutput('fig', ['up'], { stdio: 'inherit', env: process.env });
+  } else {
+    runAndOutput('sails', ['lift'], { cwd: 'server', env: process.env });
+  }
+  runAndOutput('ember', ['serve', '--proxy', '127.0.0.1:1337'], { cwd: 'client', env: process.env });
 }
