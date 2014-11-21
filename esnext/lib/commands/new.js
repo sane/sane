@@ -10,7 +10,8 @@ var renameTemplate = require('../tasks/renameTemplate');
 var PleasantProgress = require('pleasant-progress');
 var chalk = require('chalk');
 var checkEnvironment = require('../tasks/checkEnvironment');
-// var spawn = require('child_process').spawn;
+var spawnPromise = require('child-process-promise').spawn;
+var execPromise = require('child-process-promise').exec;
 require('shelljs/global');
 require('es6-shim');
 
@@ -117,21 +118,26 @@ module.exports = async function newProject(name, options) {
 
   //TODO(markus): If we use spawn with stdio inherit we can print the proper output for fog
   //should also fix the ember-cli output
-  //var fig = spawn('fig', ['run', 'server', 'sails', 'new', '.'], { stdio: 'inherit', env: process.env });
+  console.log(chalk.green('Setting up Sails Container:'));
 
-  // fig.on('exit', function (code) {
-  //   console.log('Fig process exited with code ' + code);
-  // });
+  //TODO(markus): Work on a solution without the if
+  if (options.docker) {
+    await spawnPromise('fig', ['run', 'server', 'sails', 'new', '.'], { stdio: 'inherit', env: process.env });
+  } else {
+    //command without docker
+    await spawnPromise('sails', ['new', '.'], { stdio: 'inherit', env: process.env });
+  }
 
-  await execAbort.async(figRun + 'sails new .',
-    silent,
-    'Error: Creating a new sails project failed',
-    installMsg,
-    'Sails ' + successMsg + ' successfully created.');
+  // await execAbort.async(figRun + 'sails new .',
+  //   silent,
+  //   'Error: Creating a new sails project failed',
+  //   installMsg,
+  //   'Sails ' + successMsg + ' successfully created.');
 
   var progress = new PleasantProgress();
   progress.start(chalk.green('Installing Sails dependencies'));
 
+  //TODO(markus): Think about using spawn with stdio: inherit
   await execAbort.async(figRun + 'npm i sails-generate-ember-blueprints --save', silent);
   await execAbort.async(figRun + 'npm i lodash --save', silent);
   await execAbort.async(figRun + 'npm i pluralize --save', silent);
@@ -151,17 +157,12 @@ module.exports = async function newProject(name, options) {
   progress.stop();
   console.log(chalk.green('Sails dependencies successfully installed.'));
   //Creating new ember project
-  await execAbort.async('ember new client', silent, 'Error: Creating a new Ember Project failed',
-    'Creating Ember Project, installing bower and npm dependencies',
-    'Ember Project successfully created.');
+  // await execAbort.async('ember new client', silent, 'Error: Creating a new Ember Project failed',
+  //   'Creating Ember Project, installing bower and npm dependencies',
+  //   'Ember Project successfully created.');
 
   //TODO(markus): Tis fixes any output issues ember-cli is having
-  // var ember = spawn('ember', ['new', 'client'], { stdio: 'inherit', env: process.env });
-
-  // ember.on('exit', function (code) {
-  //   process.exit(1);
-  // });
-
+  await spawnPromise('ember', ['new', 'client'], { stdio: 'inherit', env: process.env });
 
   //copy over prepared files
   var templates = templatesEndingWith(projectMeta.sanePath(), '_models', options.database);
