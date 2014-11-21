@@ -15,12 +15,6 @@ var commands = require('../lib/commands');
 //load config/default parameters from .sane-cli file in current and home directory
 var config = new Yam('sane-cli').getAll();
 
-if (!which('fig') || !which('ember')) {
-  console.log('sane requires ember-cli (npm install -g ember-cli) and fig (see: http://www.fig.sh/) to be installed.');
-  console.log('Exitting now.');
-  exit(1);
-}
-
 program
   .version(projectMeta.version())
   .usage('<command>');

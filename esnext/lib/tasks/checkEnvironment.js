@@ -22,17 +22,17 @@ var self = {
     return true;
   },
   dockerRunning: function() {
-    if (exec('docker info').code !== 0) {
+    if (exec('docker info', { silent: true }).code !== 0) {
       return false;
     }
 
     if (['win32', 'darwin'].indexOf(process.platform) > -1) {
-      if (exec('boot2docker info').code !== 0) {
+      if (exec('boot2docker info', { silent: true }).code !== 0) {
         return false;
       }
     }
     return true;
-  }
+  },
   emberExists: function() {
     if (!which('ember')) {
       return false;
@@ -45,7 +45,7 @@ var self = {
     }
     return true;
   },
-  dockerIp: function() {
+  getDockerIp: function() {
     if( self.dockerExists() && self.dockerRunning() ) {
       var ip = process.env.DOCKER_HOST;
       //expects DOCKER_HOST to be of format: 'tcp://0.0.0.0:0'
@@ -55,7 +55,7 @@ var self = {
         return ip;
       }
     }
-    return null;
+    return '';
   }
 };
 

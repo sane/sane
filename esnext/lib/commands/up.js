@@ -1,6 +1,10 @@
 var spawn = require('child_process').spawn;
+// var exec = require('child-process-promise').exec;
+// var spawnPromise = require('child-process-promise').spawn;
 var chalk = require('chalk');
 var EOL = require('os').EOL;
+var checkEnvironment = require('../tasks/checkEnvironment');
+require('es6-shim');
 
 /*
  * @params
@@ -51,20 +55,34 @@ function runAndOutput(cmd, parameters, options) {
     runningCmd.stderr.on('data', function (data) {
       printLines(data, prepend, color, 'error');
     });
-
-    runningCmd.on('exit', function (code) {
-      console.log(cmd + ' process exited with code ' + code);
-    });
   }
+
+  //Doesn't do anything
+  // runningCmd.on('exit', function (code) {
+  //   console.log(cmd + ' process exited with code ' + code);
+  // });
 }
 
 //TODO(markus): Show docker IP when using fig
 //Add morgan to Sails
-module.exports = function up(options) {
+module.exports = async function up(options) {
+  var emberProxy = '127.0.0.1';
   if (options.docker) {
+    //TODO(markus): When 'sane up' was used and user switches to 'sane up --docker' there seem to be some issues
+    // with node_modules (server starting slow or not starting at all), which can be fixed by clearing and reinstalling
+    //running this on every fig up seems a bit wasteful. Try to find an automatic way that only needs to run once.
+    // await spawnPromise('fig', ['run', 'server', 'rm', '-rf', 'node_modules'], { stdio: 'inherit', env: process.env });
+    // await spawnPromise('fig', ['run', 'server', 'npm', 'i'], { stdio: 'inherit', env: process.env });
+    emberProxy = checkEnvironment.getDockerIp();
+    if (emberProxy.length < 7) {
+      console.log('Error with your $DOCKER_HOST \'' + process.env.DOCKER_HOST + '\'. Also check if there are any issues with docker/boot2docker/fig.');
+      process.exit(1);
+    }
+    console.log('Sails Server starting at ' + chalk.underline(`http:\/\/${checkEnvironment.getDockerIp()}:1337`) + '\n');
     runAndOutput('fig', ['up'], { stdio: 'inherit', env: process.env });
   } else {
+    //Note(markus):The opposite of above's TODO seems to work fine. If 'sane up --docker' is run and then sane up
     runAndOutput('sails', ['lift'], { cwd: 'server', env: process.env });
   }
-  runAndOutput('ember', ['serve', '--proxy', '127.0.0.1:1337'], { cwd: 'client', env: process.env });
+  runAndOutput('ember', ['serve', '--proxy', `${emberProxy}:1337`], { cwd: 'client', env: process.env });
 }

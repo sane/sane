@@ -35,6 +35,7 @@
   "homepage": "http://artificialio.github.io/sane/",
   "dependencies": {
     "chalk": "^0.5.1",
+    "child-process-promise": "^1.0.0",
     "commander": "~2.5.0",
     "es6-shim": "^0.20.4",
     "fs-extra": "~0.12.0",
