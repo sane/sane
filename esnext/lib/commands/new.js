@@ -9,6 +9,7 @@ var templatesEndingWith = require('../tasks/templatesEndingWith');
 var renameTemplate = require('../tasks/renameTemplate');
 var PleasantProgress = require('pleasant-progress');
 var chalk = require('chalk');
+var checkEnvironment = require('../tasks/checkEnvironment');
 // var spawn = require('child_process').spawn;
 require('shelljs/global');
 require('es6-shim');
@@ -62,11 +63,28 @@ module.exports = async function newProject(name, options) {
   var installMsg = 'Setting up Sails project locally.';
   var successMsg = 'project';
 
+  if (!checkEnvironment.emberExists()) {
+    console.log('sane requires the latest ember-cli to be installed. Run npm install -g ember-cli.');
+    console.log('Exitting now.');
+    process.exit(1);
+  }
+
   //--docker is set
   if (options.docker) {
     figRun = 'fig run server ';
     installMsg = 'Setting up Sails project and downloading latest Docker Containers. Give it some time';
     successMsg = 'container';
+    if (!checkEnvironment.dockerExists()) {
+      console.log('sane requires the latest docker/boot2docker/fig to be installed. Check https://github.com/artificialio/sane/blob/master/README.md for more details.');
+      console.log('Exitting now.');
+      process.exit(1);
+    }
+  } else {
+    if (!checkEnvironment.sailsExists()) {
+      console.log('sane requires the latest sails to be installed. Run npm install -g ember-cli.');
+      console.log('Exitting now.');
+      process.exit(1);
+    }
   }
 
   //Creates the new folder
