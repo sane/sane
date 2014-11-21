@@ -56,12 +56,12 @@ program
 // fig run server sails generate model <name> [options...]
 // fig run server sails generate controller <name>
 // cd client && ember g resource <name> [options]
-//   //only supported with latest master version of commander.js
-//   //.command('generate <blueprint> <name> [options...]')
-//   .command('generate')
-//   .alias('g')
-//   .description('Generates new code for client and server from blueprints')
-//   .action(function(blueprint, name, options){ commands.generate(blueprint, name, options) });
+program
+  .command('generate <blueprint> [name] [attributes...]')
+  .option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
+  .alias('g')
+  .description('Generates new code for client and server from blueprints')
+  .action(function(blueprint, name, attributes){ commands.generate(blueprint, name, attributes) });
 
 //TODO: sync command: Farily complex. Needs to check which models exist on the client-side, which on the server-side
 // and then create all the one that don't exist on either side and the rest make sure they are the same.

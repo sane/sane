@@ -3,7 +3,7 @@
 **NOTE: This project, while exciting, is still a very early prototype. I may be unstable and still has a lot of features to come, but the basics should be mostly functional. Every tester here is welcome.**
 
 To get started:
-* Make sure you have [Docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit) (Linux) or [Boot2docker >=1.3.0](https://github.com/boot2docker/osx-installer/releases) (Mac OS X/Windows), [Fig >=1.0.0](http://www.fig.sh/install.html) and [ember-cli](http://www.ember-cli.com/) installed
+* Make sure you have [Docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit) (Linux) or [Boot2docker >=1.3.1](https://github.com/boot2docker/osx-installer/releases) (Mac OS X/Windows), [Fig >=1.0.0](http://www.fig.sh/install.html) and [ember-cli](http://www.ember-cli.com/) installed
 * `npm install -g sane-cli`
 * * If you are on the Mac, make sure boot2docker is running and your DOCKER environemnt variables are set correctly
 * `sane new project` or specify to install docker with mongo, postgres or mysql: `sane new project -d postgres --docker`
