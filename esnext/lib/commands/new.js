@@ -12,6 +12,7 @@ var chalk = require('chalk');
 var checkEnvironment = require('../tasks/checkEnvironment');
 var spawnPromise = require('child-process-promise').spawn;
 var execPromise = require('child-process-promise').exec;
+var projectMeta = require('../projectMeta');
 require('shelljs/global');
 require('es6-shim');
 
@@ -53,6 +54,28 @@ function prepareTemplate(name, option) {
   return template(figVariables);
 }
 
+/*
+ * Make sure the executed commands work with docker enabled/disabled
+ */
+function dockerExec(cmd, runsWithDocker, silent) {
+  if (silent === undefined) {
+    silent = false;
+  }
+  var options = { stdio: 'inherit', env: process.env };
+  if (silent) {
+    options = { env: process.env };
+  }
+  if (runsWithDocker) {
+    var cmdMain = 'fig';
+    var cmdArgs = ['run', 'server'].concat(cmd.split(' '));
+  } else {
+    var cmdMain = cmd.split(' ')[0];
+    var cmdArgs = cmd.split(' ').slice(1);
+  }
+
+  return spawnPromise(cmdMain, cmdArgs, options);
+}
+
 module.exports = async function newProject(name, options) {
   options.database = normalizeOption(options.database);
   var silent = true;
@@ -61,8 +84,9 @@ module.exports = async function newProject(name, options) {
   }
 
   var figRun = '';
+  var figCmd = false;
   var installMsg = 'Setting up Sails project locally.';
-  var successMsg = 'project';
+  // var successMsg = 'project';
 
   if (!checkEnvironment.emberExists()) {
     console.log('sane requires the latest ember-cli to be installed. Run npm install -g ember-cli.');
@@ -72,9 +96,7 @@ module.exports = async function newProject(name, options) {
 
   //--docker is set
   if (options.docker) {
-    figRun = 'fig run server ';
-    installMsg = 'Setting up Sails project and downloading latest Docker Containers. Give it some time';
-    successMsg = 'container';
+    installMsg = 'Setting up Sails project and downloading latest Docker Containers.';
     if (!checkEnvironment.dockerExists()) {
       console.log('sane requires the latest docker/boot2docker/fig to be installed. Check https://github.com/artificialio/sane/blob/master/README.md for more details.');
       console.log('Exitting now.');
@@ -87,6 +109,8 @@ module.exports = async function newProject(name, options) {
       process.exit(1);
     }
   }
+
+  console.log(`Sane version: ${projectMeta.version()}\n`);
 
   //Creates the new folder
   execAbort.sync('mkdir ' + name,
@@ -118,15 +142,11 @@ module.exports = async function newProject(name, options) {
 
   //TODO(markus): If we use spawn with stdio inherit we can print the proper output for fog
   //should also fix the ember-cli output
-  console.log(chalk.green('Setting up Sails Container:'));
+  console.log(chalk.green(installMsg));
 
-  //TODO(markus): Work on a solution without the if
-  if (options.docker) {
-    await spawnPromise('fig', ['run', 'server', 'sails', 'new', '.'], { stdio: 'inherit', env: process.env });
-  } else {
-    //command without docker
-    await spawnPromise('sails', ['new', '.'], { stdio: 'inherit', env: process.env });
-  }
+  process.stdout.write(`sails version: ${exec('sails version', { silent: true }).output}`);
+
+  await dockerExec('sails new .', options.docker);
 
   // await execAbort.async(figRun + 'sails new .',
   //   silent,
@@ -135,19 +155,26 @@ module.exports = async function newProject(name, options) {
   //   'Sails ' + successMsg + ' successfully created.');
 
   var progress = new PleasantProgress();
-  progress.start(chalk.green('Installing Sails dependencies'));
+  progress.start(chalk.green('Istalling Sails packages for tooling via npm.'));
+  // console.log(chalk.green('Installing Sails dependencies.'));
 
   //TODO(markus): Think about using spawn with stdio: inherit
-  await execAbort.async(figRun + 'npm i sails-generate-ember-blueprints --save', silent);
-  await execAbort.async(figRun + 'npm i lodash --save', silent);
-  await execAbort.async(figRun + 'npm i pluralize --save', silent);
-  await execAbort.async(figRun + 'sails generate ember-blueprints', silent);
+  // await execAbort.async(figRun + 'npm i sails-generate-ember-blueprints --save', silent);
+  // await execAbort.async(figRun + 'npm i lodash --save', silent);
+  // await execAbort.async(figRun + 'npm i pluralize --save', silent);
+  // await execAbort.async(figRun + 'sails generate ember-blueprints', silent);
+  // await dockerExec('npm i sails-generate-ember-blueprints --save', options.docker, silent);
+  // await dockerExec('npm i lodash --save', options.docker, silent);
+  // await dockerExec('npm i pluralize --save', options.docker, silent);
+  // await dockerExec('sails generate ember-blueprints', options.docker, silent);
 
-  if (options.database === 'postgres') {
-    await execAbort.async(figRun + 'npm i --save sails-postgresql', silent);
-  } else if (options.database !== 'disk') {
-    await execAbort.async(figRun + 'npm i --save sails-' + options.database, silent);
-  }
+  // if (options.database === 'postgres') {
+  //   // await execAbort.async(figRun + 'npm i --save sails-postgresql', silent);
+  //   await dockerExec('npm i --save sails-postgresql', options.docker, silent);
+  // } else if (options.database !== 'disk') {
+  //   // await execAbort.async(figRun + 'npm i --save sails-' + options.database, silent);
+  //   await dockerExec('npm i --save sails-' + options.database, options.docker, silent);
+  // }
 
   //cd back out again
   if (!options.docker) {
@@ -155,14 +182,15 @@ module.exports = async function newProject(name, options) {
   }
 
   progress.stop();
-  console.log(chalk.green('Sails dependencies successfully installed.'));
+  console.log(chalk.green('Installed Sails packages for tooling via npm.') + '\n');
   //Creating new ember project
   // await execAbort.async('ember new client', silent, 'Error: Creating a new Ember Project failed',
   //   'Creating Ember Project, installing bower and npm dependencies',
   //   'Ember Project successfully created.');
 
-  //TODO(markus): Tis fixes any output issues ember-cli is having
-  await spawnPromise('ember', ['new', 'client'], { stdio: 'inherit', env: process.env });
+  console.log(chalk.green('Setting up Ember project locally.'));
+  process.stdout.write('ember-cli ');
+  await spawnPromise('ember', ['new', 'client', '--skip-git'], { stdio: 'inherit', env: process.env });
 
   //copy over prepared files
   var templates = templatesEndingWith(projectMeta.sanePath(), '_models', options.database);
@@ -171,5 +199,5 @@ module.exports = async function newProject(name, options) {
     var templateOutPath = renameTemplate(templates[i]);
     fs.outputFileSync(templateOutPath, fs.readFileSync(templateInPath));
   }
-  console.log(chalk.green('SANE Project \'' + name + '\' successfully created.'));
+  console.log(chalk.green('Sane Project \'' + name + '\' successfully created.'));
 };
