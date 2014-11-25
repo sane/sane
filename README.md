@@ -2,7 +2,7 @@
 
 **NOTE: This project, while exciting, is still a very early prototype. I may be unstable and still has a lot of features to come, but the basics should be mostly functional. Every tester here is welcome.**
 
-Sane - A [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/) CLI that will help you get started with rapid Web App prototyping and development. It takes two of the best frameworks for backend and frontend development, makes them easily work together and let you focus on just implementing your next crossplatform fullstack app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
+Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
 
 Quickstart:
 * `npm install -g sails ember-cli sane-cli`
