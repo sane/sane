@@ -72,6 +72,6 @@ program.on('--help', function(){
 
 program.parse(process.argv);
 
-if(!program.args.length) {
+if(!program.args.length || program.args[0] === 'help') {
   program.help();
 }
