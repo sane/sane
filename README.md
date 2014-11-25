@@ -1,6 +1,6 @@
 # SANE Stack
 
-**NOTE: This project, while exciting, is still a very early prototype. I may be unstable and still has a lot of features to come, but the basics should be mostly functional. Every tester here is welcome.**
+**NOTE: This project, while exciting, is still an early prototype. While being mostly stable it is still being iterated with feature changes and improvements fairly regularly.**
 
 Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
 
@@ -14,7 +14,7 @@ Quickstart:
 ##Overview of the cli
 
 * It creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly
-* Sets up a [SailsJS Container](https://github.com/artificialio/docker-sails), with a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production
+* Sets up Sails locally, or a [SailsJS Container](https://github.com/artificialio/docker-sails), with a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production
 * Using the latest [ember-cli](https://github.com/stefanpenner/ember-cli) version you have installed to set up an ember-frontend in a `client` sub-folder. If you want to quickly get started with frontend-styling, check out our [Foundation-SASS plugin](https://github.com/artificialio/ember-cli-foundation-sass)
 
 To find out more about Sails and Ember and how they work together, you can take a look at my talk
