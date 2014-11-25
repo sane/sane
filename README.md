@@ -6,9 +6,9 @@ Sane - A [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/) CLI that 
 
 Quickstart:
 * `npm install -g sails ember-cli sane-cli`
-* `sane new project` or specify to install docker with mongo, postgres or mysql: `sane new project -d postgres --docker`
-* `sane generate resource user name:string age:number` to run sails commands in the container
-* `sane up` to start the sails container/server as well as the ember dev server. `http://192.168.59.103:1337` (can be depending on your Docker setup)
+* `sane new project` or with docker and mongo, postgres or mysql: `sane new project -d postgres --docker`
+* `sane generate resource user name:string age:number` to generate a new API on the backend and models on the frontend
+* `sane up` to start the sails container/server as well as the ember dev server.
 
 
 ##Overview of the cli
