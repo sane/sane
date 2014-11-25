@@ -34,15 +34,23 @@
   },
   "homepage": "http://artificialio.github.io/sane/",
   "dependencies": {
-    "async": "^0.9.0",
-    "bluebird": "^2.3.6",
     "chalk": "^0.5.1",
+    "child-process-promise": "^1.0.0",
     "commander": "~2.5.0",
+    "es6-shim": "^0.20.4",
     "fs-extra": "~0.12.0",
     "handlebars": "~2.0.0",
     "pleasant-progress": "^1.0.2",
+    "regenerator": "^0.7.2",
     "shelljs": "~0.3.0",
-    "string.prototype.endswith": "~0.2.0",
-    "walk-sync": "~0.1.3"
+    "walk-sync": "~0.1.3",
+    "yam": "0.0.17"
+  },
+  "devDependencies": {
+    "broccoli": "^0.13.2",
+    "broccoli-esnext": "^0.5.0",
+    "broccoli-static-compiler": "^0.2.1",
+    "esnext": "^0.13.0",
+    "mocha": "^2.0.1"
   }
 }
