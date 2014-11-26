@@ -1,5 +1,7 @@
 # SANE Stack
 
+[![npm version](https://badge.fury.io/js/sane-cli.svg)](http://badge.fury.io/js/sane-cli) [![Dependency Status](https://david-dm.org/artificialio/sane-cli.svg)](https://david-dm.org/artificialio/sane-cli)
+
 **NOTE: This project, while exciting, is still an early prototype. While being mostly stable it is still being iterated with feature changes and improvements fairly regularly.**
 
 Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
