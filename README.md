@@ -1,6 +1,6 @@
 # SANE Stack
 
-[![npm version](http://img.shields.io/npm/v/sane-cli.svg?style=flat)] (https://npmjs.org/package/sane-cli) [![Dependency Status](https://img.shields.io/david/artificialio/sane-cli.svg?style=flat)](https://david-dm.org/artificialio/sane-cli)
+[![npm version](http://img.shields.io/npm/v/sane-cli.svg?style=flat)] (https://npmjs.org/package/sane-cli) [![Dependency Status](https://img.shields.io/david/artificialio/sane.svg?style=flat)](https://david-dm.org/artificialio/sane)
 
 **NOTE: This project, while exciting, is still an early prototype. While being mostly stable it is still being iterated with feature changes and improvements fairly regularly.**
 
