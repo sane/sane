@@ -1,6 +1,9 @@
 # SANE Stack Changelog
 
-### master
+###master
+* [ENHANCEMENT] Updated [es6-shim](https://github.com/paulmillr/es6-shim) to 0.21.0
+
+### 0.0.8
 * [ENHANCEMENT] Made installation of Docker optional to get quick dev setup running.
 * [FEATURE] Added basic `sane up` command. To start with docker add `--docker` flag
 * [FEAURE] Added possibility to add a .sane-cli in your project root and/or home directory so you don't have to specifiy cli options such as --docker with each command
