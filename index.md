@@ -7,7 +7,7 @@ layout: index
 Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
 
 ##Quickstart
-* `npm install -g sails ember-cli sane-cli
+* `npm install -g sails ember-cli sane-cli`
 * `sane new project` creates a local project with [sails-disk](https://github.com/balderdashy/sails-disk). To install with [Docker](https://www.docker.com/) and production databases see [Options](#options).
 * `sane generate resource user name:string age:number` to generate a new API on the backend and models on the frontend
 * `sane up` to start the sails container/server as well as the ember dev server.
@@ -28,7 +28,11 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 `sane new project [--docker] [-d mongo|postgres|mysql]`
 
-* `--docker` sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide simple container management. **Why Docker?** Completely automates the setup with installing dependencies. You can develop with a production environment that is easily deployable.
+* `--docker` sets up your whole backend envrionment using [[fig](http://www.fig.sh/) ]to provide simple container management. 
+
+**Note:** Make sure you have [fig](http://www.fig.sh/install.html) installed, as well as [boot2docker](http://boot2docker.io/) if you are on Mac or Windows. For Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
+
+**Why Docker?** Completely automates the setup with installing dependencies. You can develop with a production environment that is easily deployable.
 * `-d`: Installs the choosen database adapter for sails. If `--docker` is active it also installs the right container. 
 
 `sane up [--docker]`
