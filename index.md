@@ -32,7 +32,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 **Note:** Make sure you have [fig](http://www.fig.sh/install.html) installed, as well as [boot2docker](http://boot2docker.io/) if you are on Mac or Windows. For Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
 
-**Why Docker?** Completely automates the setup with installing dependencies. You can develop with a production environment that is easily deployable.
+**Why Docker?** It completely automates the setup with installing dependencies. You can develop with a production environment that is easily deployable.
 * `-d`: Installs the choosen database adapter for sails. If `--docker` is active it also installs the right container. 
 
 `sane up [--docker]`
@@ -40,7 +40,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 * `--docker` is needed if you want to run the commands using fig.
 
-`.sane-cli`: Is a file in your root folder that contains all default parameters, so you can have `docker` set as default and don't have to run it manually with each command.
+`.sane-cli`: A file located in your root folder that contains all default parameters so you can have `docker` set as default and don't have to run it manually with each command.
 
 
 ##Deployment
