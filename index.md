@@ -2,33 +2,41 @@
 layout: index
 ---
 
-**NOTE: SANE Stack is still under heavy development, a lot of features are still being added. Having said that it is already functional and can be tried out.**
+**NOTE: This project, while exciting, is still an early prototype. While being mostly stable it is still being iterated with feature changes and improvements fairly regularly.**
 
-##Get Started
+Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
 
-* Make sure you have [Docker](https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit) (Linux) or [Boot2docker >=1.3.0](https://github.com/boot2docker/osx-installer/releases) (Mac OS X/Windows), [Fig >=1.0.0](http://www.fig.sh/install.html) and [ember-cli](http://www.ember-cli.com/) installed
-* `npm install -g sane-cli`
-* `sane new project` or specifiy mongo, postgres, mysql: `sane new project -d postgres`
-* `cd project`
-* `fig run server sails generate api user` to run sails commands in the container
-* `fig up` to start the sails container/server
+##Quickstart
+* `npm install -g sails ember-cli sane-cli
+* `sane new project` creates a local project with [sails-disk](https://github.com/balderdashy/sails-disk). To install with [Docker](https://www.docker.com/) and production databases see [Options](#options).
+* `sane generate resource user name:string age:number` to generate a new API on the backend and models on the frontend
+* `sane up` to start the sails container/server as well as the ember dev server.
+* You are good to go.
 
-In a new terminal tab/window:
 
-* `cd client && ember server --proxy http://192.168.59.103:1337` to start the ember server
-
-##Overview
-SANE - A [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/) CLI that will help you get started with rapid Web App prototyping and development. It includes, what are in our opinion the best tools for backend and frontend development. They will save you an immense amount of time, make development smoother and deliver the best results that work optimally across multiple devices.
-
-So what exactly does this cli do?
+## Overview of the cli
 
 * It creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly
 * Sets up a [SailsJS Container](https://github.com/artificialio/docker-sails), with a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production
-* Using the latest [ember-cli](https://github.com/stefanpenner/ember-cli) version you have installed to set up an ember-frontend in a `client` sub-folder. If you want to quickly get started with frontend-styling, check out our [Foundation-SASS plugin](https://github.com/artificialio/ember-cli-foundation-sass)
+* Using the latest [ember-cli](https://github.com/stefanpenner/ember-cli) version you have installed to set up an ember-frontend in a `client` sub-folder.
 
 To find out more about Sails and Ember and how they work together, you can take a look at my talk
 [http://vimeo.com/103711300](http://vimeo.com/103711300) and slides [http://talks.artificial.io/sailing-with-ember/
 ](http://talks.artificial.io/sailing-with-ember/)
+
+## Options
+
+`sane new project [--docker] [-d mongo|postgres|mysql]`
+
+* `--docker` sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide simple container management. **Why Docker?** Completely automates the setup with installing dependencies. You can develop with a production environment that is easily deployable.
+* `-d`: Installs the choosen database adapter for sails. If `--docker` is active it also installs the right container. 
+
+`sane up [--docker]`
+`sane g api|resource [--docker]`
+
+* `--docker` is needed if you want to run the commands using fig.
+
+`.sane-cli`: Is a file in your root folder that contains all default parameters, so you can have `docker` set as default and don't have to run it manually with each command.
 
 
 ##Deployment
