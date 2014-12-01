@@ -2,7 +2,8 @@ var spawn = require('child_process').spawn;
 // var exec = require('child-process-promise').exec;
 // var spawnPromise = require('child-process-promise').spawn;
 var chalk = require('chalk');
-var EOL = require('os').EOL;
+var {EOL} = require('os');
+//With ES6 the same as var EOL = require('os').EOL;
 var checkEnvironment = require('../tasks/checkEnvironment');
 require('es6-shim');
 

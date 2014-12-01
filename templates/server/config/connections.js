@@ -40,9 +40,20 @@ module.exports.connections = {
   * Run: npm install sails-mysql                                             *
   *                                                                          *
   ***************************************************************************/
+
+  //If you are using the --docker flag:
   mysqlContainer: {
     adapter: 'sails-mysql',
     host: 'db',
+    user: 'root', //specified in the fig.yml
+    password: 'password', //specified in the fig.yml
+    database: 'sane' //specified in the fig.yml
+  },
+
+  //If you choose the local setup
+  mysqlLocal: {
+    adapter: 'sails-mysql',
+    host: 'localhost',
     user: 'root', //specified in the fig.yml
     password: 'password', //specified in the fig.yml
     database: 'sane' //specified in the fig.yml
@@ -56,9 +67,21 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
+
+  //If you are using the --docker flag:
   mongoContainer: {
     adapter: 'sails-mongo',
     host: 'db',
+    port: 27017,
+    // user: 'username',
+    // password: 'password',
+    // database: 'your_mongo_db_name_here'
+  },
+
+  //If you choose the local setup
+  mongoLocal: {
+    adapter: 'sails-mongo',
+    host: 'localhost',
     port: 27017,
     // user: 'username',
     // password: 'password',
@@ -74,9 +97,20 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
+
+  //If you are using the --docker flag:
   postgresContainer: {
     adapter: 'sails-postgresql',
     host: 'db',
+    user: 'postgres',
+    password: '',
+    database: 'postgres'
+  }
+
+  //If you choose the local setup
+  postgresLocal: {
+    adapter: 'sails-postgresql',
+    host: 'localhost',
     user: 'postgres',
     password: '',
     database: 'postgres'
