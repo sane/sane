@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+require('shelljs/global')
+var chalk = require('chalk');
+// var prompt = require('prompt');
+var question = require('readline-sync').question;
+//check if sails and ember-cli are installed and install if necessary. For postinstall hook.
+
+if (!which('sailse')) {
+  // prompt.start();
+  console.log('You have \'sails\' (' + chalk.underline('https:\/\/www.npmjs.org\/package\/sails') + ') missing globally.');
+  var answer = question(chalk.gray('Do you want to install it now? (y/n):') + '  (y) ');
+
+  if (['y', 'Y'].indexOf(answer) > -1) {
+    if (exec('npm i -g sails').code !== 0) {
+
+    }
+  } else if(['n', 'N'].indexOf(answer) > -1) {
+
+  } else {
+
+  }
+
+  // prompt.get([{
+  //     name: 'Do you want to install it? (y/n)',
+  //     default: 'y',
+  //     type: 'string',
+  //     conform: function (value) {
+  //       // console.log(['y', 'n', 'Y', 'N', 'yes', 'no'].indexOf(value));
+  //       return ['y', 'n', 'Y', 'N', 'yes', 'no'].indexOf(value) > -1;
+  //     }
+  //   }],  function (err, result) {
+  //     console.log(result[Object.keys(result)[0]]);
+  //     if (['y', 'n', 'Y', 'N', 'yes', 'no'].indexOf(result[Object.keys(result)[0]]))
+  //   });
+}
+
+// if (!which('ember')) {
+//   console.log('Detected missing global dependency: ember-cli');
+//   //Want to install now?
+//   exec('npm i -g ember-cli')
+// }
+
+// console.log(chalk.green('Thank you, dependency check completed. Now go and enjoy your shiny new fullstack app.'));
