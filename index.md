@@ -2,9 +2,9 @@
 layout: index
 ---
 
-**NOTE: This project, while exciting, is still an early prototype. While being mostly stable it is still being iterated with feature changes and improvements fairly regularly.**
+**NOTE: This project, while exciting, is still an early prototype. It is mostly stable but is being iterated with feature changes and improvements quite quickly.**
 
-Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
+Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the complications of setting up the backend and frontend environment, embracing convention-over-configuration, so you can focus just on shipping your app. Additionally this cli supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and making deployment easy.
 
 ##Quickstart
 * `npm install -g sails ember-cli sane-cli`
@@ -28,27 +28,29 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 `sane new project [--docker] [-d mongo|postgres|mysql]`
 
-* `--docker` sets up your whole backend envrionment using [[fig](http://www.fig.sh/) ]to provide simple container management. 
+* `--docker` sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide simple container management.
 
-**Note:** Make sure you have [fig](http://www.fig.sh/install.html) installed, as well as [boot2docker](http://boot2docker.io/) if you are on Mac or Windows. For Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
+**Note:** Make sure you have [fig](http://www.fig.sh/install.html) installed. If you are on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
 
-**Why Docker?** It completely automates the setup with installing dependencies. You can develop with a production environment that is easily deployable.
-* `-d`: Installs the choosen database adapter for sails. If `--docker` is active it also installs the right container. 
+**Why Docker?** It fully automates the setup of server dependenvies and you can now develop in your production environment that you can deploy to your server as-is.
+
+* `-d`: Installs the choosen database adapter for sails. If `--docker` is active it installs the database via the right container.
 
 `sane up [--docker]`
 `sane g api|resource [--docker]`
 
-* `--docker` is needed if you want to run the commands using fig.
+* `--docker` is needed if you want to run the commands using docker/fig.
 
-`.sane-cli`: A file located in your root folder that contains all default parameters so you can have `docker` set as default and don't have to run it manually with each command.
+`.sane-cli`: A file located in your root folder that contains all default parameters. You can user it to have `--docker` set as default for each `sane` command you run.
 
 
 ##Deployment
-**Note: This is still very much work in progress. We are planning to add an automated nginx container which will make it easy to instantly deploy the containerized app without any changes to the environment.**
+**Note: This is still very much work in progress. We are planning to add an automated nginx container which will make it easy to instantly deploy the containerized app to your server.**
 
-In the meantime find the old deployment readme (ignoring any of the Docker setup completely):
+In the meantime find the old deployment readme (ignoring any of the possible Docker setup):
 
-* `npm i -g pm2`
+* Make sure you have `npm i -g pm2` installed on your server
+* Simply clone your app on the server
 * Then you can use `pm2 start app.js -- --prod` in `/server` to starts sails in production mode on port 80
 * `ember build --environment=production --output-path=../server/assets/`.
    * That builds the app and copies it over to be included with Sails.
