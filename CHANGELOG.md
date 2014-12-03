@@ -1,7 +1,10 @@
 # SANE Stack Changelog
 
 ###master
+
+### 0.09
 * [ENHANCEMENT] Updated [es6-shim](https://github.com/paulmillr/es6-shim) to 0.21.0
+* [BUGFIX] Fixed setup of blueprints for ember-data, as well as the right database adapter. Would recommend to setup the project new, or run the following commands in the `server` folder: `npm i sails-generate-ember-blueprints --save`, `npm i lodash --save`, `npm i pluralize --save`, `sails generate ember-blueprints` and depending on your database: `npm i --save sails-mongo`
 
 ### 0.0.8
 * [ENHANCEMENT] Made installation of Docker optional to get quick dev setup running.

@@ -163,18 +163,18 @@ module.exports = async function newProject(name, options) {
   // await execAbort.async(figRun + 'npm i lodash --save', silent);
   // await execAbort.async(figRun + 'npm i pluralize --save', silent);
   // await execAbort.async(figRun + 'sails generate ember-blueprints', silent);
-  // await dockerExec('npm i sails-generate-ember-blueprints --save', options.docker, silent);
-  // await dockerExec('npm i lodash --save', options.docker, silent);
-  // await dockerExec('npm i pluralize --save', options.docker, silent);
-  // await dockerExec('sails generate ember-blueprints', options.docker, silent);
+  await dockerExec('npm i sails-generate-ember-blueprints --save', options.docker, silent);
+  await dockerExec('npm i lodash --save', options.docker, silent);
+  await dockerExec('npm i pluralize --save', options.docker, silent);
+  await dockerExec('sails generate ember-blueprints', options.docker, silent);
 
-  // if (options.database === 'postgres') {
-  //   // await execAbort.async(figRun + 'npm i --save sails-postgresql', silent);
-  //   await dockerExec('npm i --save sails-postgresql', options.docker, silent);
-  // } else if (options.database !== 'disk') {
-  //   // await execAbort.async(figRun + 'npm i --save sails-' + options.database, silent);
-  //   await dockerExec('npm i --save sails-' + options.database, options.docker, silent);
-  // }
+  if (options.database === 'postgres') {
+    // await execAbort.async(figRun + 'npm i --save sails-postgresql', silent);
+    await dockerExec('npm i --save sails-postgresql', options.docker, silent);
+  } else if (options.database !== 'disk') {
+    // await execAbort.async(figRun + 'npm i --save sails-' + options.database, silent);
+    await dockerExec('npm i --save sails-' + options.database, options.docker, silent);
+  }
 
   //cd back out again
   if (!options.docker) {

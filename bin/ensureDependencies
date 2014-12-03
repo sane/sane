@@ -1,25 +1,25 @@
 #!/usr/bin/env node
+// NOTE: WIP
+// require('shelljs/global')
+// var chalk = require('chalk');
+// // var prompt = require('prompt');
+// var question = require('readline-sync').question;
+// //check if sails and ember-cli are installed and install if necessary. For postinstall hook.
 
-require('shelljs/global')
-var chalk = require('chalk');
-// var prompt = require('prompt');
-var question = require('readline-sync').question;
-//check if sails and ember-cli are installed and install if necessary. For postinstall hook.
+// if (!which('sailse')) {
+//   // prompt.start();
+//   console.log('You have \'sails\' (' + chalk.underline('https:\/\/www.npmjs.org\/package\/sails') + ') missing globally.');
+//   var answer = question(chalk.gray('Do you want to install it now? (y/n):') + '  (y) ');
 
-if (!which('sailse')) {
-  // prompt.start();
-  console.log('You have \'sails\' (' + chalk.underline('https:\/\/www.npmjs.org\/package\/sails') + ') missing globally.');
-  var answer = question(chalk.gray('Do you want to install it now? (y/n):') + '  (y) ');
+//   if (['y', 'Y'].indexOf(answer) > -1) {
+//     if (exec('npm i -g sails').code !== 0) {
 
-  if (['y', 'Y'].indexOf(answer) > -1) {
-    if (exec('npm i -g sails').code !== 0) {
+//     }
+//   } else if(['n', 'N'].indexOf(answer) > -1) {
 
-    }
-  } else if(['n', 'N'].indexOf(answer) > -1) {
+//   } else {
 
-  } else {
-
-  }
+//   }
 
   // prompt.get([{
   //     name: 'Do you want to install it? (y/n)',
