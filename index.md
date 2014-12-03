@@ -10,8 +10,9 @@ Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sai
 * `npm install -g sails ember-cli sane-cli`
 * `sane new project` creates a local project with [sails-disk](https://github.com/balderdashy/sails-disk). To install with [Docker](https://www.docker.com/) and production databases see [Options](#options).
 * `sane generate resource user name:string age:number` to generate a new API on the backend and models on the frontend
-* `sane up` to start the sails container/server as well as the ember dev server.
-* You are good to go.
+* `sane up` to start the sails server on `localhost:1337` (not with docker though) as well as the ember dev server on `localhost:4200`.
+* So to work on your app you will work mostly, as normal with ember-cli, on `localhost:4200`.
+* You are now good to go.
 
 
 ## Overview of the cli
@@ -39,7 +40,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 `sane up [--docker]`, alias: `sane serve`   
 `sane generate api|resource [--docker]`, alias: `sane g`
 
-* `--docker` is needed if you want to run the commands using docker/fig.
+* `--docker` is needed if you want to run the commands using docker/fig. Your sails container usually starts on `192.168.59.103:1337`, but that depends on your `$DOCKER_HOST` environment variable.
 
 `.sane-cli`: A file located in your root folder that contains all default parameters. You can user it to have `--docker` set as default for each `sane` command you run.
 
