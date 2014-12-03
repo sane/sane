@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 
 // Provide a title to the process in `ps`
-process.title = 'sane'
+process.title = 'sane';
+console.log(__dirname);
+console.log(process.cwd());
 
-var program = require('commander')
+process.exit(1);
+
+var program = require('commander');
 var Yam = require('yam');
-require('shelljs/global')
+require('shelljs/global');
 //for ES6/7 functionality
-require("regenerator").runtime()
+require("regenerator").runtime();
 
 var projectMeta = require('../lib/projectMeta');
 var commands = require('../lib/commands');
