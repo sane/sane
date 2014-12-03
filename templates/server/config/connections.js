@@ -105,7 +105,7 @@ module.exports.connections = {
     user: 'postgres',
     password: '',
     database: 'postgres'
-  }
+  },
 
   //If you choose the local setup
   postgresLocal: {
