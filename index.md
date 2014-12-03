@@ -36,8 +36,8 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 * `-d`: Installs the choosen database adapter for sails. If `--docker` is active it installs the database via the right container.
 
-`sane up [--docker]`  
-`sane g api|resource [--docker]`
+`sane up [--docker]`, alias: `sane serve`   
+`sane generate api|resource [--docker]`, alias: `sane g`
 
 * `--docker` is needed if you want to run the commands using docker/fig.
 
