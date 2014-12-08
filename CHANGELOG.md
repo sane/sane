@@ -4,6 +4,9 @@
 * [ENHANCEMENT] Improved database setup for local setup
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
 
+### 0.0.10
+* [BUGFIX] fixed missing comma in connections.js
+
 ### 0.0.9
 * [ENHANCEMENT] Updated [es6-shim](https://github.com/paulmillr/es6-shim) to 0.21.0
 * [BUGFIX] Fixed setup of blueprints for ember-data, as well as the right database adapter. Would recommend to setup the project new, or run the following commands in the `server` folder: `npm i sails-generate-ember-blueprints --save`, `npm i lodash --save`, `npm i pluralize --save`, `sails generate ember-blueprints` and depending on your database: `npm i --save sails-mongo`
