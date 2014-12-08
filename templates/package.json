@@ -1,5 +1,5 @@
 {
-  "name": "sane-project",
+  "name": "{{name}}",
   "version": "0.0.1",
   "description": "A blank sane stack project.",
   "main": "index.js",
