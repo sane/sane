@@ -1,0 +1,14 @@
+{
+  "name": "sane-project",
+  "version": "0.0.1",
+  "description": "A blank sane stack project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Markus Padourek <markus.padourek@gmail.com> (http://artificial.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "sane-cli": "~0.0.10"
+  }
+}
