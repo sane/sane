@@ -6,8 +6,13 @@ process.title = 'sane';
 var program = require('commander');
 var Yam = require('yam');
 require('shelljs/global');
-//for ES6/7 functionality
-require("regenerator").runtime();
+
+//transforms all following require's to parse ES6/7 code
+require('traceur').require.makeDefault(function(filename) {
+  // don't transpile our dependencies, just our app
+  return filename.indexOf('node_modules') === -1;
+}, {asyncFunctions: true});
+
 
 var projectMeta = require('../lib/projectMeta');
 var commands = require('../lib/commands');
