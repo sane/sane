@@ -20,16 +20,16 @@ The full documentation is available at: http://artificialio.github.io/sane
 
 ##Development
 
-sane-cli is developed with ES6/7 functionality, using [esnext](https://github.com/esnext/esnext) to provide a cleaner code as well as a nice experience for us the developers. We are using [broccoli](https://github.com/broccolijs/broccoli) for compilation and you will mostly work in the `esnext` folder. The environment is quite easy to setup:
-* `npm install -g broccoli-cli` (see https://github.com/broccolijs/broccoli-cli for more info)
+sane-cli is developed with ES6/7 functionality, using [traceur](https://github.com/google/traceur-compiler) to provide a cleaner code as well as a nice experience for us the developers. All that is needed is in the `bin/sane` file, so you can't use ES6/7 syntax in the `sane` file itself, but in every other one.
+To get started
 * `git clone https://github.com/artificialio/sane.git`
-* `cd sane && npm install`
-* `broccoli build . --watch`
-* Start coding in the `esnext` folder and broccoli will automatically compile all your code and put it into the right folder
-* If you don't want to constantly watch you can also just run `broccoli build . --force`
+* `cd sane && npm install` to install the dependencies
+* `npm link` to make sure you can test the master version globally
+*
 
 ##Thanks
 Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-ember-blueprints](https://github.com/mphasize/sails-generate-ember-blueprints) which overwrites the default SailsJS JSON response to the one that Ember Data's `RESTAdapter` and `RESTSerializer` expects.
+Also thanks to [sails](https://github.com/balderdashy/sails) and especially [ember-cli](https://github.com/stefanpenner/ember-cli) for all the great efforts and from which I could learn a lot to get started with sane.
 
 ##License
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).

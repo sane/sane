@@ -5,11 +5,12 @@
 
 ### 0.0.11
 * [BUGFIX] Fixed & improved database setup and config
-* [ENHANCEMENT] Switched to [traceur](https://github.com/google/traceur-compiler) for easier development
+* [ENHANCEMENT] Switched to [traceur](https://github.com/google/traceur-compiler) for easier development and fewer dependencies
 * [ENHANCEMENT] Disabled grunt hook for sails per default which should reduce CPU usage
 * [ENHANCEMENT] Added package.json to root folder, preparing for having a local sane-cli in the future
 * [ENHANCEMENT] Added .editorconfig for better development consistency
-* [ENHANCEMENT] Added `--live-reload` option to `sane up` to proxy through to `ember-cli`
+* [FEATURE] Added `--live-reload` option to `sane up` to proxy through to `ember-cli`
+* [ENHANCEMENT] Added anonymous google analytics tracking for sane-cli usage that can be disabled in the .sane-cli via the `disableAnalytics` option
 
 ### 0.0.10
 * [BUGFIX] fixed missing comma in connections.js
