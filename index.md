@@ -67,27 +67,33 @@ For more information on deployment and different strategies check out:
 * [Hardening NodeJS](http://blog.argteam.com/coding/hardening-node-js-for-production-part-2-using-nginx-to-avoid-node-js-load/) for a proper Nginx setup
 
 ##Troubleshooting
-**Problem:**
+
+###Problem:
 Upon launching the server via `sane up` I get a `Fatal error: Unable to find local grunt.`
 
-**Solution:**
+###Solution:
 There are two possible solutions for this problem.
 
-*1. Delete the docker-containers*
+**1. Delete the docker-containers**
+
 ```
 fig stop
 fig rm --force -v
 sane up
 ```
+
 If that does not work, it is easiest to re-create the project.
 
-*2. Start the Ember-server manually once*
+**2. Start the Ember-server manually once**
+
 ```
 cd client
 ember serve
 ```
+
 wait until its loaded, then close the server.
 Go back to the project root and fire up sane.
+
 ```
 cd ..
 sane up
