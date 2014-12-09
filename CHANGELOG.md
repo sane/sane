@@ -1,8 +1,13 @@
 # SANE Stack Changelog
 
-###master
-* [ENHANCEMENT] Improved database setup for local setup
+### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
+
+### 0.0.11
+* [BUGFIX] Fixed & improved database setup and config
+* [ENHANCEMENT] Switched to [traceur](https://github.com/google/traceur-compiler) for easier development
+* [ENHANCEMENT] Disabled grunt hook for sails per default which should reduce CPU usage
+* [ENHANCEMENT] Added package.json to root folder, preparing for having a local sane-cli in the future
 
 ### 0.0.10
 * [BUGFIX] fixed missing comma in connections.js
