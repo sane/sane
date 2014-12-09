@@ -77,8 +77,9 @@ There are two possible solutions for this problem.
 ```
 fig stop
 fig rm --force -v
+sane up
 ```
-Now re-create the project
+If that does not work, it is easiest to re-create the project.
 
 *2. Start the Ember-server manually once*
 ```
