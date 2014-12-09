@@ -77,17 +77,17 @@ There are two possible solutions for this problem.
 **1. Delete the docker-containers**
 
 ```
-fig stop
-fig rm --force -v
+fig stop  
+fig rm --force -v 
 sane up
 ```
 
-If that does not work, it is easiest to re-create the project.
+If that by itself does not do the trick, try to re-create the project.
 
 **2. Start the Ember-server manually once**
 
 ```
-cd client
+cd client  
 ember serve
 ```
 
