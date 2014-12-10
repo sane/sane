@@ -41,22 +41,15 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
 
-  //If you are using the --docker flag:
-  mysqlContainer: {
+  //docker host uses db, otherwise use localhost or the IP of your db
+  //credentials for docker are defined in the fig.yml
+  //otherwise dependent on your setup
+  mysql: {
     adapter: 'sails-mysql',
-    host: 'db',
-    user: 'root', //specified in the fig.yml
-    password: 'password', //specified in the fig.yml
-    database: 'sane' //specified in the fig.yml
-  },
-
-  //If you choose the local setup
-  mysqlLocal: {
-    adapter: 'sails-mysql',
-    host: 'localhost',
-    user: 'root', //specified in the fig.yml
-    password: 'password', //specified in the fig.yml
-    database: 'sane' //specified in the fig.yml
+    host: '{{host}}',
+    user: 'root',
+    password: 'password',
+    database: 'sane'
   },
 
   /***************************************************************************
@@ -68,20 +61,12 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
 
-  //If you are using the --docker flag:
-  mongoContainer: {
+  //docker host uses db, otherwise use localhost or the IP of your db
+  //credentials for docker are defined in the fig.yml
+  //otherwise dependent on your setup
+  mongo: {
     adapter: 'sails-mongo',
-    host: 'db',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
-    // database: 'your_mongo_db_name_here'
-  },
-
-  //If you choose the local setup
-  mongoLocal: {
-    adapter: 'sails-mongo',
-    host: 'localhost',
+    host: '{{host}}',
     port: 27017,
     // user: 'username',
     // password: 'password',
@@ -98,24 +83,16 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
 
-  //If you are using the --docker flag:
-  postgresContainer: {
+  //docker host uses db, otherwise use localhost or the IP of your db
+  //credentials for docker are defined in the fig.yml
+  //otherwise dependent on your setup
+  postgres: {
     adapter: 'sails-postgresql',
-    host: 'db',
-    user: 'postgres',
-    password: '',
-    database: 'postgres'
-  },
-
-  //If you choose the local setup
-  postgresLocal: {
-    adapter: 'sails-postgresql',
-    host: 'localhost',
+    host: '{{host}}',
     user: 'postgres',
     password: '',
     database: 'postgres'
   }
-
 
   /***************************************************************************
   *                                                                          *

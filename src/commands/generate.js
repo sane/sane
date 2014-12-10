@@ -1,15 +1,13 @@
 var {spawn} = require('child_process');
 //with ES6 the same as: var spawn = require('child_process').spawn
 var chalk = require('chalk');
-require('es6-shim');
 var modelConversion = require('../tasks/modelConversion');
+var trackCommand = require('../tasks/trackCommand');
 
 var supportedBlueprints = ['api', 'resource'];
 
-module.exports = function generate(blueprint, name, attributes) {
-  console.log(blueprint);
-  console.log(name);
-  console.log(attributes);
+module.exports = function generate(blueprint, name, attributes, leek) {
+  trackCommand(`generate ${blueprint} ${name} ${attributes}`, {}, leek);
   if (supportedBlueprints.indexOf(blueprint) > -1) {
     if (name !== undefined) {
       var emberOptions = ['g', 'resource', name].concat(modelConversion.toEmber(attributes));

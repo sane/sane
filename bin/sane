@@ -1,23 +1,42 @@
 #!/usr/bin/env node
+'use strict';
 
 // Provide a title to the process in `ps`
 process.title = 'sane';
 
 var program = require('commander');
 var Yam = require('yam');
-require('shelljs/global');
-//for ES6/7 functionality
-require("regenerator").runtime();
+var packageConfig = require('../package.json');
 
-var projectMeta = require('../lib/projectMeta');
+var version = packageConfig.version;
+var name = packageConfig.name;
+var trackingCode = packageConfig.trackingCode;
+// require('shelljs/global');
+
+
+//transforms all following require's to parse ES6/7 code
+// require('traceur').require.makeDefault(function(filename) {
+//   // don't transpile our dependencies, just our app
+//   //The first check is if you develop locally, the second for the globally installed moduel
+//   return (filename.indexOf('node_modules') === -1) ||
+//   (filename.indexOf('/node_modules/sane-cli/') > -1 && filename.indexOf('/node_modules/sane-cli/node_modules') === -1);
+// }, {asyncFunctions: true});
+// require('traceur');
+require('6to5/polyfill');
+
+
 var commands = require('../lib/commands');
+var setUpTracking = require('../lib/helpers/setUpTracking');
 
 //load config/default parameters from .sane-cli file in current and home directory
-var config = new Yam('sane-cli').getAll();
+var config = new Yam('sane-cli');
+var leek = setUpTracking(trackingCode, name, version, config);
+
+config = config.getAll();
 
 program
-  .version(projectMeta.version())
-  .usage('<command>');
+.version(version)
+.usage('<command>');
 
 //TODO: help command - should work as an alias to --help but also sho help for subcommands
 // program
@@ -28,34 +47,35 @@ program
 
 //new command
 program
-  .command('new <name>')
-  .alias('n')
-  .description('Creates a new sane project. Choose database via -db disk(default)|mongo|mysql|postgres')
-  .option('-d, --database [type]', 'Options: disk (default), mongo, mysql, postgres', config.database || 'disk')
-  .option('-c, --docker [boolean]', 'Setup Sails server and dependencies within docker containers.', config.docker || false)
-  .option('-v, --verbose [boolean]', 'Show more detailed command output.', config.verbose || false)
-  .action(function(name, options) { commands.new(name, options) });
+.command('new <name>')
+.alias('n')
+.description('Creates a new sane project. Choose database via -db disk(default)|mongo|mysql|postgres')
+.option('-d, --database [type]', 'Options: disk (default), mongo, mysql, postgres', config.database || 'disk')
+.option('-c, --docker [boolean]', 'Setup Sails server and dependencies within docker containers.', config.docker || false)
+.option('-v, --verbose [boolean]', 'Show more detailed command output.', config.verbose || false)
+.action(function(name, options) { commands.new(name, options, leek) });
 
 // TODO: up command - need to look into, how to unify logs.
 // Other than that it is just a simple substitue for 'fig up && cd client && ember server --proxy http://192.168.59.103:1337'
 program
-  .command('up')
-  .option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
+.command('up')
+.option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
+.option('-l, --live-reload [boolean]', 'Controls the live-reload functionality for ember-cli', true)
   // .option('-v, --verbose', 'Show more detailed command output.')
   .alias('serve')
   .description('Starts the Sails and Ember server with a unified log.')
-  .action(function(options) { commands.up(options) });
+  .action(function(options) { commands.up(options, leek) });
 
 //TODO: generate command - should simply call:
 // fig run server sails generate model <name> [options...]
 // fig run server sails generate controller <name>
 // cd client && ember g resource <name> [options]
 program
-  .command('generate <blueprint> [name] [attributes...]')
-  .option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
-  .alias('g')
-  .description('Generates new code for client and server from blueprints')
-  .action(function(blueprint, name, attributes){ commands.generate(blueprint, name, attributes) });
+.command('generate <blueprint> [name] [attributes...]')
+.option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
+.alias('g')
+.description('Generates new code for client and server from blueprints')
+.action(function(blueprint, name, attributes){ commands.generate(blueprint, name, attributes, leek) });
 
 //TODO: sync command: Farily complex. Needs to check which models exist on the client-side, which on the server-side
 // and then create all the one that don't exist on either side and the rest make sure they are the same.
@@ -67,7 +87,7 @@ program
 //   .action(function(modelName){ commands.sync(modelName); });
 
 program.on('--help', function(){
-  console.log('version: ' + projectMeta.version());
+  console.log('version: ' + version);
 });
 
 program.parse(process.argv);

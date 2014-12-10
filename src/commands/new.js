@@ -5,8 +5,9 @@ var projectMeta = require('../projectMeta');
 var fs = require('fs-extra');
 var hbs = require('handlebars');
 var path = require('path');
-var templatesEndingWith = require('../tasks/templatesEndingWith');
+var getTemplates = require('../tasks/getTemplates');
 var renameTemplate = require('../tasks/renameTemplate');
+var trackCommand = require('../tasks/trackCommand');
 var PleasantProgress = require('pleasant-progress');
 var chalk = require('chalk');
 var checkEnvironment = require('../tasks/checkEnvironment');
@@ -14,7 +15,7 @@ var spawnPromise = require('child-process-promise').spawn;
 var execPromise = require('child-process-promise').exec;
 var projectMeta = require('../projectMeta');
 require('shelljs/global');
-require('es6-shim');
+// require('es6-shim');
 
 
 function normalizeOption(option) {
@@ -27,7 +28,7 @@ function normalizeOption(option) {
   return option;
 }
 
-function prepareTemplate(name, option) {
+function prepareFigTemplate(name, option) {
   var figDatabase = null;
   var figPort = 0;
   var figIsMysql = false;
@@ -48,10 +49,15 @@ function prepareTemplate(name, option) {
     figPort = 27017;
     break;
   }
+
   var figVariables = { database: figDatabase, port: figPort, isMysql: figIsMysql};
-  var template = fs.readFileSync(path.join(projectMeta.sanePath(), name), 'utf8');
+  return prepareTemplate(name, figVariables);
+}
+
+function prepareTemplate(name, variables) {
+  var template = fs.readFileSync(path.join(projectMeta.sanePath(), 'templates', name), 'utf8');
   template = hbs.compile(template);
-  return template(figVariables);
+  return template(variables);
 }
 
 /*
@@ -76,7 +82,24 @@ function dockerExec(cmd, runsWithDocker, silent) {
   return spawnPromise(cmdMain, cmdArgs, options);
 }
 
-module.exports = async function newProject(name, options) {
+function getMigrateType(database) {
+  var migrateType = 'safe';
+  switch (database) {
+    case 'mysql':
+      migrateType = 'alter';
+      break;
+    case 'postgres':
+      migrateType = 'alter';
+      break;
+    case 'mongo':
+      migrateType = 'safe';
+      break;
+  }
+
+  return migrateType;
+}
+
+module.exports = async function newProject(name, options, leek) {
   options.database = normalizeOption(options.database);
   var silent = true;
   if (options.verbose) {
@@ -110,6 +133,9 @@ module.exports = async function newProject(name, options) {
     }
   }
 
+  //All checks are done, log command to analytics, then start command
+  trackCommand(`new ${name}`, options, leek);
+
   console.log(`Sane version: ${projectMeta.version()}\n`);
 
   //Creates the new folder
@@ -119,7 +145,8 @@ module.exports = async function newProject(name, options) {
   //change directories into projectRoot
   cd(name);
 
-  fs.writeFileSync(path.join('fig.yml'), prepareTemplate('fig.yml', options.database));
+  fs.writeFileSync(path.join('fig.yml'), prepareFigTemplate('fig.yml', options.database));
+  fs.writeFileSync(path.join('package.json'), prepareTemplate('package.json', { name: name }));
 
   var cliConfig = {};
   for (var opt in options) {
@@ -129,6 +156,8 @@ module.exports = async function newProject(name, options) {
       && ['commands', 'options', 'parent'].indexOf(opt) === -1) {
       cliConfig[opt] = options[opt];
   }
+
+  cliConfig['disableAnalytics'] = false;
 }
 
   //creating a default .sane-cli based on the parameters used in the new command
@@ -192,12 +221,24 @@ module.exports = async function newProject(name, options) {
   process.stdout.write('ember-cli ');
   await spawnPromise('ember', ['new', 'client', '--skip-git'], { stdio: 'inherit', env: process.env });
 
-  //copy over prepared files
-  var templates = templatesEndingWith(projectMeta.sanePath(), '_models', options.database);
+  //copy over template files
+  var templates = getTemplates(projectMeta.sanePath());
   for (var i = 0; i < templates.length; i++) {
     var templateInPath = path.join(projectMeta.sanePath(), 'templates', templates[i]);
     var templateOutPath = renameTemplate(templates[i]);
-    fs.outputFileSync(templateOutPath, fs.readFileSync(templateInPath));
+    if (templates[i].indexOf('_models') > -1) {
+      fs.writeFileSync(templateOutPath, prepareTemplate(templates[i],
+        { database: options.database, migrateType: getMigrateType(options.database) }));
+    } else if (templates[i].indexOf('_connections') > -1) {
+      var host = 'localhost';
+      if (options.docker) {
+        host = 'db';
+      }
+      fs.writeFileSync(templateOutPath, prepareTemplate(templates[i],
+        { host: host }));
+    } else {
+      fs.outputFileSync(templateOutPath, fs.readFileSync(templateInPath));
+    }
   }
   console.log(chalk.green('Sane Project \'' + name + '\' successfully created.'));
 };

@@ -1,11 +1,12 @@
-var spawn = require('child_process').spawn;
+var {spawn} = require('child_process');
 // var exec = require('child-process-promise').exec;
 // var spawnPromise = require('child-process-promise').spawn;
 var chalk = require('chalk');
 var {EOL} = require('os');
 //With ES6 the same as var EOL = require('os').EOL;
 var checkEnvironment = require('../tasks/checkEnvironment');
-require('es6-shim');
+var trackCommand = require('../tasks/trackCommand');
+// require('es6-shim');
 
 /*
  * @params
@@ -66,8 +67,9 @@ function runAndOutput(cmd, parameters, options) {
 
 //TODO(markus): Show docker IP when using fig
 //Add morgan to Sails
-module.exports = async function up(options) {
+module.exports = async function up(options, leek) {
   var emberProxy = '127.0.0.1';
+  trackCommand('up', options, leek);
   if (options.docker) {
     //TODO(markus): When 'sane up' was used and user switches to 'sane up --docker' there seem to be some issues
     // with node_modules (server starting slow or not starting at all), which can be fixed by clearing and reinstalling
@@ -85,5 +87,5 @@ module.exports = async function up(options) {
     //Note(markus):The opposite of above's TODO seems to work fine. If 'sane up --docker' is run and then sane up
     runAndOutput('sails', ['lift'], { cwd: 'server', env: process.env });
   }
-  runAndOutput('ember', ['serve', '--proxy', `${emberProxy}:1337`], { cwd: 'client', env: process.env });
+  runAndOutput('ember', ['serve', '--proxy', `${emberProxy}:1337`, '--live-reload', options['live-reload']], { cwd: 'client', env: process.env });
 }

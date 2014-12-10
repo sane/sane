@@ -13,6 +13,7 @@ module.exports = {
 
       //if the given attribute does not have a colon, ignore
       if (attrArray.length > 1) {
+        //get the last element of the array
         var attrType = attrArray.pop();
         switch (attrType) {
           case 'text':
@@ -28,8 +29,7 @@ module.exports = {
             attrArray.push('date');
             break;
           case 'binary':
-            // TODO(markus): Need testing if boolean is a possibility
-            // attrArray.push('boolean');
+            attrArray.push('boolean');
             break;
           case 'array':
             //no proper equivalent on the ember side
