@@ -8,7 +8,7 @@ module.exports = {
   toEmber: function(attributes){
     //create a deep copy so the original element does not get overwritten
     var attributesCopy = attributes.slice(0);
-    for(i in attributesCopy) {
+    for(var i in attributesCopy) {
       var attrArray = attributesCopy[i].split(':');
 
       //if the given attribute does not have a colon, ignore
@@ -51,7 +51,7 @@ module.exports = {
   toSails: function(attributes){
     //create a deep copy so the original element does not get overwritten
     var attributesCopy = attributes.slice(0);
-    for(i in attributesCopy) {
+    for(var i in attributesCopy) {
       var attrArray = attributesCopy[i].split(':');
       //if the given attribute does not have a colon, ignore
       if (attrArray.length > 1) {

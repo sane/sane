@@ -3,6 +3,9 @@
 ### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
 
+### 0.0.12
+* [BUGFIX] Fixed `sane generate resource` command.
+
 ### 0.0.11
 * [BUGFIX] Fixed & improved database setup and config
 * [ENHANCEMENT] Switched to [traceur](https://github.com/google/traceur-compiler) for easier development and fewer dependencies
