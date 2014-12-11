@@ -1,11 +1,13 @@
+"use strict";
+
 //Executes the command. Exits with errorMessage on failed execution
-require('shelljs/global');
-var PleasantProgress = require('pleasant-progress');
-var chalk   = require('chalk');
+require("shelljs/global");
+var PleasantProgress = require("pleasant-progress");
+var chalk = require("chalk");
 
 module.exports = {
   sync: function(cmd, errorMessage, silent) {
-    errorMessage = errorMessage || 'Error: command ' + cmd + ' failed.';
+    errorMessage = errorMessage || "Error: command " + cmd + " failed.";
     if (silent === undefined) {
       silent = true;
     }
@@ -14,12 +16,12 @@ module.exports = {
       console.log(errorMessage);
       //Note: Implement --force flag.
       //echo('Exiting. If you want to ignore that error provide the --force flag.');
-      console.log('Please report this error to https://github.com/artificialio/sane/issues.');
-      console.log(chalk.yellow('\nFurther output from the run command:'));
+      console.log("Please report this error to https://github.com/artificialio/sane/issues.");
+      console.log(chalk.yellow("\nFurther output from the run command:"));
       console.log(execCmd.output);
       exit(1);
     }
-  }//,
+  } //,
   // async: function (cmd, silent, errorMessage, buildMessage, successMessage) {
   //   errorMessage = errorMessage || 'Error: command ' + cmd + ' failed.';
   //   if (silent === undefined) {
