@@ -12,7 +12,14 @@ var version = packageConfig.version;
 var name = packageConfig.name;
 var trackingCode = packageConfig.trackingCode;
 
-require('6to5/polyfill');
+
+//transforms all following require's to parse ES6/7 code
+require('traceur').require.makeDefault(function(filename) {
+// don't transpile our dependencies, just our app
+//The first check is if you develop locally, the second for the globally installed moduel
+  return (filename.indexOf('node_modules') === -1) ||
+    (filename.indexOf('/node_modules/sane-cli/') > -1 && filename.indexOf('/node_modules/sane-cli/node_modules') === -1);
+}, {asyncFunctions: true});
 
 
 var commands = require('../lib/commands');
@@ -51,6 +58,7 @@ program
 .command('up')
 .option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
 .option('-l, --live-reload [boolean]', 'Controls the live-reload functionality for ember-cli', true)
+.option('-p, --port-forward [boolean]', 'Forwards port to localhost with docker', false)
   // .option('-v, --verbose', 'Show more detailed command output.')
   .alias('serve')
   .description('Starts the Sails and Ember server with a unified log.')

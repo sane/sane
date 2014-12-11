@@ -1,8 +1,12 @@
 # SANE Stack Changelog
 
 ### master
-* [ENHANCEMENT] Updated `fs-extra` to 0.13.0
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
+
+### 0.0.13
+* [ENHANCEMENT] Updated `fs-extra` to 0.13.0
+* [ENHANCEMENT] Switched again to `traceur` so no compilation step is needed.
+* [FEATURE] Added new feature behind `sane up -p` flag, to forward docker IP to localhost (using boot2docker).
 
 ### 0.0.12
 * [BUGFIX] Fixed `sane generate resource` command.

@@ -20,13 +20,12 @@ The full documentation is available at: http://artificialio.github.io/sane
 
 ##Development
 
-sane-cli is developed with ES6/7 functionality, using [6to5](https://6to5.github.io/) to provide a cleaner code as well as a nice experience for us the developers. Right now there is a manual compile step, which will be removed soon/
+sane-cli is developed with ES6/7 functionality, using [traceur](https://github.com/google/traceur-compiler) to provide a cleaner code as well as a nice experience for us the developers.
 To get started:
-* `npm i -g 6to5`
 * `git clone https://github.com/artificialio/sane.git`
 * `cd sane && npm install` to install the dependencies
 * `npm link` to make sure you can test the master version globally
-* Work on the code in the `src/` folder and then run `6to5 src/ --out-dir lib --experimental to compile and test
+* If you write a new feature a test for it would be appreciated.
 
 ##Thanks
 Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-ember-blueprints](https://github.com/mphasize/sails-generate-ember-blueprints) which overwrites the default SailsJS JSON response to the one that Ember Data's `RESTAdapter` and `RESTSerializer` expects.
