@@ -68,6 +68,9 @@ For more information on deployment and different strategies check out:
 
 ##Troubleshooting
 
+###Docker/Fig issues
+If you generally have issues with your containers can try to remove all your docker containers via `docker rm 'docker ps --no-trunc -aq'` and then simply run `sane up --docker` (if it is not defaulted in your `.sane-cli`) to set up all the containers again.
+
 ###Problem:
 Upon launching the server via `sane up` I get a `Fatal error: Unable to find local grunt.`
 
