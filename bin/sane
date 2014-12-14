@@ -71,9 +71,10 @@ program
 program
 .command('generate <blueprint> [name] [attributes...]')
 .option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
+.option('-pod --pod [boolean]', 'Places newly generated resource in an Ember pod')
 .alias('g')
 .description('Generates new code for client and server from blueprints')
-.action(function(blueprint, name, attributes){ commands.generate(blueprint, name, attributes, leek) });
+.action(function(blueprint, name, attributes, options){ commands.generate(blueprint, name, attributes, options, leek) });
 
 //TODO: sync command: Farily complex. Needs to check which models exist on the client-side, which on the server-side
 // and then create all the one that don't exist on either side and the rest make sure they are the same.
