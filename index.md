@@ -73,10 +73,10 @@ For more information on deployment and different strategies check out:
 ###Docker/Fig issues
 If you generally have issues with your containers can try to remove all your docker containers via `docker rm 'docker ps --no-trunc -aq'` and then simply run `sane up --docker` (if it is not defaulted in your `.sane-cli`) to set up all the containers again.
 
-**Problem:**
+###Problem:
 After launching the ember server and backend via `sane up` and accessing the web application the ember server crashes with the error `Error: connect EHOSTUNREACH`.
 
-**Solution:**
+###Solution:
 Deleting and re-installing the global node modules and bower components may fix the problem.
 ```
 cd client
