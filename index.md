@@ -2,6 +2,8 @@
 layout: index
 ---
 
+[![npm version](http://img.shields.io/npm/v/sane-cli.svg?style=flat)](https://npmjs.org/package/sane-cli) [![Dependency Status](https://img.shields.io/david/artificialio/sane.svg?style=flat)](https://david-dm.org/artificialio/sane) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
+
 **NOTE: This project, while exciting, is still an early prototype. It is mostly stable but is being iterated with feature changes and improvements quite quickly.**
 
 Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the complications of setting up the backend and frontend environment, embracing convention-over-configuration, so you can focus just on shipping your app. Additionally this cli supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and making deployment easy.
@@ -67,6 +69,10 @@ For more information on deployment and different strategies check out:
 * [Hardening NodeJS](http://blog.argteam.com/coding/hardening-node-js-for-production-part-2-using-nginx-to-avoid-node-js-load/) for a proper Nginx setup
 
 ##Troubleshooting
+
+###Docker/Fig issues
+If you generally have issues with your containers can try to remove all your docker containers via `docker rm 'docker ps --no-trunc -aq'` and then simply run `sane up --docker` (if it is not defaulted in your `.sane-cli`) to set up all the containers again.
+
 **Problem:**
 After launching the ember server and backend via `sane up` and accessing the web application the ember server crashes with the error `Error: connect EHOSTUNREACH`.
 
@@ -79,26 +85,32 @@ npm i && bower i
 ```
 ___
 
-**Problem:**
+###Problem:
 Upon launching the server via `sane up` I get a `Fatal error: Unable to find local grunt.`
 
-**Solution:**
+###Solution:
 There are two possible solutions for this problem.
 
-*1. Delete the docker-containers*
-```
-fig stop
-fig rm --force -v
-```
-Now re-create the project
+**1. Delete the docker-containers**
 
-*2. Start the Ember-server manually once*
 ```
-cd client
+fig stop  
+fig rm --force -v 
+sane up
+```
+
+If that by itself does not do the trick, try to re-create the project.
+
+**2. Start the Ember-server manually once**
+
+```
+cd client  
 ember serve
 ```
+
 wait until its loaded, then close the server.
 Go back to the project root and fire up sane.
+
 ```
 cd ..
 sane up
