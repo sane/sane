@@ -68,6 +68,18 @@ For more information on deployment and different strategies check out:
 
 ##Troubleshooting
 **Problem:**
+After launching the ember server and backend via `sane up` and accessing the web application the ember server crashes with the error `Error: connect EHOSTUNREACH`.
+
+**Solution:**
+Deleting and re-installing the global node modules and bower components may fix the problem.
+```
+cd client
+rm -rf bower_components node_modules
+npm i && bower i
+```
+___
+
+**Problem:**
 Upon launching the server via `sane up` I get a `Fatal error: Unable to find local grunt.`
 
 **Solution:**
