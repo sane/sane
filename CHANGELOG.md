@@ -1,8 +1,27 @@
 # SANE Stack Changelog
 
-###master
-* [ENHANCEMENT] Improved database setup for local setup
+### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
+
+### 0.0.13
+* [ENHANCEMENT] Updated `fs-extra` to 0.13.0
+* [ENHANCEMENT] Switched again to `traceur` so no compilation step is needed.
+* [FEATURE] Added new feature behind `sane up -p` flag, to forward docker IP to localhost (using boot2docker).
+
+### 0.0.12
+* [BUGFIX] Fixed `sane generate resource` command.
+
+### 0.0.11
+* [BUGFIX] Fixed & improved database setup and config
+* [ENHANCEMENT] Switched to [traceur](https://github.com/google/traceur-compiler) for easier development and fewer dependencies
+* [ENHANCEMENT] Disabled grunt hook for sails per default which should reduce CPU usage
+* [ENHANCEMENT] Added package.json to root folder, preparing for having a local sane-cli in the future
+* [ENHANCEMENT] Added .editorconfig for better development consistency
+* [FEATURE] Added `--live-reload` option to `sane up` to proxy through to `ember-cli`
+* [ENHANCEMENT] Added anonymous google analytics tracking for sane-cli usage that can be disabled in the .sane-cli via the `disableAnalytics` option
+
+### 0.0.10
+* [BUGFIX] fixed missing comma in connections.js
 
 ### 0.0.9
 * [ENHANCEMENT] Updated [es6-shim](https://github.com/paulmillr/es6-shim) to 0.21.0
