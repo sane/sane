@@ -7,6 +7,8 @@ process.title = 'sane';
 var program = require('commander');
 var Yam = require('yam');
 var packageConfig = require('../package.json');
+var chalk = require('chalk');
+// var Promise = require('bluebird');
 
 var version = packageConfig.version;
 var name = packageConfig.name;
@@ -50,7 +52,11 @@ program
 .option('-d, --database [type]', 'Options: disk (default), mongo, mysql, postgres', config.database || 'disk')
 .option('-c, --docker [boolean]', 'Setup Sails server and dependencies within docker containers.', config.docker || false)
 .option('-v, --verbose [boolean]', 'Show more detailed command output.', config.verbose || false)
-.action(function(name, options) { commands.new(name, options, leek) });
+.action(function(name, options) {
+  commands.new(name, options, leek).catch(function(error) {
+    console.log(chalk.red(error.message));
+  });
+});
 
 // TODO: up command - need to look into, how to unify logs.
 // Other than that it is just a simple substitue for 'fig up && cd client && ember server --proxy http://192.168.59.103:1337'
