@@ -66,6 +66,44 @@ For more information on deployment and different strategies check out:
 * [Ember-CLI Deploy](https://github.com/achambers/ember-cli-deploy) for deployment via Redis and Amazon S3
 * [Hardening NodeJS](http://blog.argteam.com/coding/hardening-node-js-for-production-part-2-using-nginx-to-avoid-node-js-load/) for a proper Nginx setup
 
+##Troubleshooting
+**Problem:**
+After launching the ember server and backend via `sane up` and accessing the web application the ember server crashes with the error `Error: connect EHOSTUNREACH`.
+
+**Solution:**
+Deleting and re-installing the global node modules and bower components may fix the problem.
+```
+cd client
+rm -rf bower_components node_modules
+npm i && bower i
+```
+___
+
+**Problem:**
+Upon launching the server via `sane up` I get a `Fatal error: Unable to find local grunt.`
+
+**Solution:**
+There are two possible solutions for this problem.
+
+*1. Delete the docker-containers*
+```
+fig stop
+fig rm --force -v
+```
+Now re-create the project
+
+*2. Start the Ember-server manually once*
+```
+cd client
+ember serve
+```
+wait until its loaded, then close the server.
+Go back to the project root and fire up sane.
+```
+cd ..
+sane up
+```
+
 
 ##Thanks
 Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-ember-blueprints](https://github.com/mphasize/sails-generate-ember-blueprints) which overwrites the default SailsJS JSON response to the one that Ember Data's `RESTAdapter` and `RESTSerializer` expects.
