@@ -1,7 +1,7 @@
 {
   "name": "sane-cli",
   "version": "0.0.13",
-  "trackingCode": "UA-46963158-9",
+  "trackingCode": "UA-46963158-10",
   "description": "A command-line tool for creating full stack sails-ember applications using docker & fig",
   "main": "bin/sane",
   "scripts": {
@@ -39,7 +39,7 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "child-process-promise": "^1.0.0",
-    "commander": "~2.5.0",
+    "commander": "~2.5.1",
     "configstore": "^0.3.1",
     "fs-extra": "~0.13.0",
     "handlebars": "~2.0.0",
@@ -55,8 +55,11 @@
   "devDependencies": {
     "chai": "^1.9.1",
     "chai-as-promised": "^4.1.1",
+    "glob": "4.0.5",
+    "lodash-node": "^2.4.1",
     "mocha": "^2.0.1",
     "mocha-jshint": "0.0.9",
-    "glob": "4.0.5"
+    "rsvp": "^3.0.14",
+    "tmp-sync": "^1.0.1"
   }
 }

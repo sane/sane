@@ -26,10 +26,12 @@ To get started:
 * `cd sane && npm install` to install the dependencies
 * `npm link` to make sure you can test the master version globally
 * If you write a new feature a test for it would be appreciated.
+* Run `npm test` to run the test-suite
 
 ##Thanks
 Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-ember-blueprints](https://github.com/mphasize/sails-generate-ember-blueprints) which overwrites the default SailsJS JSON response to the one that Ember Data's `RESTAdapter` and `RESTSerializer` expects.
-Also thanks to [sails](https://github.com/balderdashy/sails) and especially [ember-cli](https://github.com/stefanpenner/ember-cli) for all the great efforts and from which I could learn a lot to get started with sane.
+Thanks to [sails](https://github.com/balderdashy/sails) for that great backend framework
+Thanks to [ember-cli](https://github.com/stefanpenner/ember-cli) contributors for all the great effort that has gone into this product and from which I have taken a lot of inspiration and code, especially in regards to testing.
 
 ##License
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).

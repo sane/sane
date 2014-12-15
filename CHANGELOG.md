@@ -2,6 +2,7 @@
 
 ### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
+* [BUGFIX] Changed tracking code to an GA App
 
 ### 0.0.13
 * [ENHANCEMENT] Updated `fs-extra` to 0.13.0
