@@ -25,8 +25,8 @@ To get started:
 * `git clone https://github.com/artificialio/sane.git`
 * `cd sane && npm install` to install the dependencies
 * `npm link` to make sure you can test the master version globally
-* If you write a new feature a test for it would be appreciated.
-* Run `npm test` to run the test-suite
+* If you add a new feature an according test would be appreciated
+* `npm test` to run the test-suite
 
 ##Thanks
 Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-ember-blueprints](https://github.com/mphasize/sails-generate-ember-blueprints) which overwrites the default SailsJS JSON response to the one that Ember Data's `RESTAdapter` and `RESTSerializer` expects.
