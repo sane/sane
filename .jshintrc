@@ -7,7 +7,10 @@
     "afterEach",
     "before",
     "after",
-    "-Promise"
+    "-Promise",
+    "which",
+    "exec",
+    "exit"
   ],
   "proto": true,
   "strict": true,

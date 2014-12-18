@@ -6,10 +6,9 @@ var assert         = require('../../helpers/assert');
 var newCommand     = require('../../../lib/commands/new');
 
 describe('new command', function() {
-  var command, name, options;
+  var options; //, command
 
   beforeEach(function() {
-    // name = 'testProject';
     options = {
       database: 'disk'
     };
@@ -46,10 +45,10 @@ describe('new command', function() {
 
   it('doesn\'t allow to create an application with a period in the name', async function() {
     try {
-      await newCommand('project.name', options)
+      await newCommand('i.love.dots', options);
       assert.ok(false, 'should have rejected with period in the application name');
     } catch (ex) {
-      assert.equal(ex.message, `sane currently does not support a projectname of 'project.name'.`);
+      assert.equal(ex.message, `Sane currently does not support a projectname of 'i.love.dots'.`);
     }
   });
 

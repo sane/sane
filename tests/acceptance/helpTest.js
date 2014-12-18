@@ -5,7 +5,7 @@ var path       = require('path');
 // var tmp        = require('tmp-sync');
 var assert     = require('../helpers/assert');
 var runCommand = require('../helpers/runCommand');
-var version = require('../../package.json').version
+var version = require('../../package.json').version;
 
 var root       = process.cwd();
 // var tmproot    = path.join(root, 'tmp');

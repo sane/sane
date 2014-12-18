@@ -14,7 +14,7 @@ var mocha = new Mocha({
   reporter: 'spec'
 });
 
-var arg = process.argv[2];
+// var arg = process.argv[2];
 var root = 'tests/{unit,acceptance}';
 
 function addFiles(mocha, files) {
