@@ -44,16 +44,24 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 * `--docker` is needed if you want to run the commands using docker/fig. Your sails container usually starts on `192.168.59.103:1337`, but that depends on your `$DOCKER_HOST` environment variable.
 
-`.sane-cli`: A file located in your root folder that contains all default parameters. You can user it to have `--docker` set as default for each `sane` command you run.
+`.sane-cli`: A file located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run.
 
-##.sane-cli
-
-Most options cane be persisted into the `.sane-cli` file, which is defined in the json format, alsow allowing comments.
+The currecntly supportet options are:
 
 * `docker`
 * `database`
 * `verbose`
 * `disableAnalytics`
+
+**Example:**
+```js
+  {
+    "docker": true,
+    "database": "disk",
+    "verbose": false,
+    "disableAnalytics": false
+  }
+```
 
 ##Deployment
 **Note: This is still very much work in progress. We are planning to add an automated nginx container which will make it easy to instantly deploy the containerized app to your server.**
@@ -77,6 +85,9 @@ For more information on deployment and different strategies check out:
 * [Hardening NodeJS](http://blog.argteam.com/coding/hardening-node-js-for-production-part-2-using-nginx-to-avoid-node-js-load/) for a proper Nginx setup
 
 ##Troubleshooting
+
+###Installing sails npm packages
+If you are using docker you currently have to run `fig run server npm install <package>` in your root folder to correctly install an npm package for your sails container.
 
 ###Docker/Fig issues
 If you generally have issues with your containers can try to remove all your docker containers via `docker rm 'docker ps --no-trunc -aq'` and then simply run `sane up --docker` (if it is not defaulted in your `.sane-cli`) to set up all the containers again.
