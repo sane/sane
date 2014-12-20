@@ -38,7 +38,7 @@
   "homepage": "http://artificialio.github.io/sane/",
   "dependencies": {
     "chalk": "^0.5.1",
-    "child-process-promise": "^1.0.0",
+    "child-process-promise": "^1.0.1",
     "commander": "~2.5.1",
     "configstore": "^0.3.1",
     "fs-extra": "~0.13.0",
@@ -46,7 +46,7 @@
     "leek": "0.0.16",
     "node-uuid": "^1.4.2",
     "pleasant-progress": "^1.0.2",
-    "readline-sync": "^0.4.9",
+    "readline-sync": "^0.4.10",
     "shelljs": "~0.3.0",
     "traceur": "0.0.79",
     "walk-sync": "~0.1.3",
