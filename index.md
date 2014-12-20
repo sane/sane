@@ -54,8 +54,8 @@ The currecntly supportet options are:
 * `disableAnalytics`
 
 **Example:**
-```js
-  {
+```
+  { <br>
     "docker": true,
     "database": "disk",
     "verbose": false,
@@ -102,7 +102,7 @@ cd client
 rm -rf bower_components node_modules
 npm i && bower i
 ```
-___
+
 
 ###Problem:
 Upon launching the server via `sane up` I get a `Fatal error: Unable to find local grunt.`
