@@ -55,7 +55,7 @@ The currecntly supportet options are:
 
 **Example:**
 ```
-  { <br>
+  { \n
     "docker": true,
     "database": "disk",
     "verbose": false,
