@@ -96,7 +96,7 @@ If you generally have issues with your containers can try to remove all your doc
 After launching the ember server and backend via `sane up` and accessing the web application the ember server crashes with the error `Error: connect EHOSTUNREACH`.
 
 ###Solution:
-Deleting and re-installing the global node modules and bower components may fix the problem.
+Deleting and re-installing the global node modules and bower components may fix the problem:
 ```
 cd client
 rm -rf bower_components node_modules
@@ -111,7 +111,6 @@ Upon launching the server via `sane up` I get a `Fatal error: Unable to find loc
 There are two possible solutions for this problem.
 
 **1. Delete the docker-containers**
-
 ```
 fig stop
 fig rm --force -v
@@ -121,7 +120,6 @@ sane up
 If that by itself does not do the trick, try to re-create the project.
 
 **2. Start the Ember-server manually once**
-
 ```
 cd client
 ember serve
@@ -129,7 +127,6 @@ ember serve
 
 wait until its loaded, then close the server.
 Go back to the project root and fire up sane.
-
 ```
 cd ..
 sane up
