@@ -31,7 +31,7 @@ var setUpTracking = require('../lib/helpers/setUpTracking');
 var config = new Yam('sane-cli').getAll();
 var leek = setUpTracking(trackingCode, name, version, config);
 
-console.log(config);
+console.log(config.serverNames);
 process.exit(1);
 
 program
