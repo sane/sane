@@ -53,7 +53,7 @@ The currecntly supportet options are:
 * `verbose`
 * `disableAnalytics`
 
-**Example:**
+**Example:**  
 ```
   {
     "docker": true,
