@@ -46,6 +46,14 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 `.sane-cli`: A file located in your root folder that contains all default parameters. You can user it to have `--docker` set as default for each `sane` command you run.
 
+##.sane-cli
+
+Most options cane be persisted into the `.sane-cli` file, which is defined in the json format, alsow allowing comments.
+
+* `docker`
+* `database`
+* `verbose`
+* `disableAnalytics`
 
 ##Deployment
 **Note: This is still very much work in progress. We are planning to add an automated nginx container which will make it easy to instantly deploy the containerized app to your server.**
