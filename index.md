@@ -39,7 +39,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 * `-d`: Installs the choosen database adapter for sails. If `--docker` is active it installs the database via the right container.
 
-`sane up [--docker]`, alias: `sane serve`   
+`sane up [--docker]`, alias: `sane serve`  
 `sane generate api|resource [--docker]`, alias: `sane g`
 
 * `--docker` is needed if you want to run the commands using docker/fig. Your sails container usually starts on `192.168.59.103:1337`, but that depends on your `$DOCKER_HOST` environment variable.
@@ -55,7 +55,7 @@ The currecntly supportet options are:
 
 **Example:**
 ```
-  { \n
+  {
     "docker": true,
     "database": "disk",
     "verbose": false,
@@ -113,8 +113,8 @@ There are two possible solutions for this problem.
 **1. Delete the docker-containers**
 
 ```
-fig stop  
-fig rm --force -v 
+fig stop
+fig rm --force -v
 sane up
 ```
 
@@ -123,7 +123,7 @@ If that by itself does not do the trick, try to re-create the project.
 **2. Start the Ember-server manually once**
 
 ```
-cd client  
+cd client
 ember serve
 ```
 

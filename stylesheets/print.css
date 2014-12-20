@@ -89,6 +89,7 @@ code, pre {
 
 code {
   padding: 0 3px;
+  white-space: pre;
 }
 
 pre {
