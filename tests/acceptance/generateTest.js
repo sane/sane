@@ -1,25 +1,28 @@
 // /*jshint quotmark: false*/
 
-// 'use strict';
+'use strict';
 
+var path       = require('path');
 // var Promise          = require('../../lib/ext/promise');
 // var assertFile       = require('../helpers/assert-file');
 // var assertFileEquals = require('../helpers/assert-file-equals');
 // var conf             = require('../helpers/conf');
 // var ember            = require('../helpers/ember');
-// var fs               = require('fs-extra');
+var fs               = require('fs-extra');
 // var outputFile       = Promise.denodeify(fs.outputFile);
-// var path             = require('path');
+var path             = require('path');
 // var rimraf           = Promise.denodeify(require('rimraf'));
-// var root             = process.cwd();
-// var tmp              = require('tmp-sync');
-// var tmproot          = path.join(root, 'tmp');
+var root             = process.cwd();
+var sane      = path.join(root, 'bin', 'sane');
+var tmp              = require('tmp-sync');
+var tmproot          = path.join(root, 'tmp');
+var {execFile}       = require('child-process-promise');
 // var EOL              = require('os').EOL;
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 
 
-// describe('Acceptance: ember generate', function() {
-//   var tmpdir;
+describe('Acceptance: sane generate', function() {
+  var tmpdir;
 
 //   before(function() {
 //     BlueprintNpmTask.disableNPM();
@@ -31,26 +34,27 @@
 //     conf.restore();
 //   });
 
-//   beforeEach(function() {
-//     tmpdir = tmp.in(tmproot);
-//     process.chdir(tmpdir);
-//   });
+  beforeEach(function() {
+    tmpdir = tmp.in(tmproot);
+    process.chdir(tmpdir);
+  });
 
-//   afterEach(function() {
-//     this.timeout(10000);
+  afterEach(function() {
+    // this.timeout(10000);
 
-//     process.chdir(root);
-//     return rimraf(tmproot);
-//   });
+    process.chdir(root);
+    fs.removeSync(tmproot);
+    // return rimraf(tmproot);
+  });
 
-//   function initApp() {
-//     return ember([
-//       'init',
-//       '--name=my-app',
-//       '--skip-npm',
-//       '--skip-bower'
-//     ]);
-//   }
+  function initApp() {
+    return execFile(sane, [
+      'new',
+      '.',
+      '--skip-npm',
+      '--skip-bower'
+    ]);
+  }
 
 //   function generate(args) {
 //     var generateArgs = ['generate'].concat(args);
@@ -1124,4 +1128,4 @@
 //       });
 //     });
 //   });
-// });
+});

@@ -9,13 +9,13 @@ db:
     - MYSQL_DATABASE=sane
   {{/if}}
 {{/if}}
-server:
+{{serverName}}:
   #Right now docker-sails supports 3 different tags:
   #0.10.32 (node 0.10.32), stable (latest node 0.10.x), latest (latest node 0.11.x)
   image: artificial/docker-sails:stable
   command: sails lift
   volumes:
-    - server/:/server
+    - {{serverName}}/:/{{serverName}}
   ports:
     - "1337:1337"
 {{#if database}}

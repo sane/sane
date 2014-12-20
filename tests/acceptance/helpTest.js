@@ -9,7 +9,7 @@ var path       = require('path');
 var {assert} = require('chai');
 // var runCommand = require('../helpers/runCommand');
 var version = require('../../package.json').version;
-var runCommand = require('child-process-promise').exec;
+var {execFile} = require('child-process-promise');
 
 var root       = process.cwd();
 // var tmproot    = path.join(root, 'tmp');
@@ -28,8 +28,7 @@ describe('Acceptance: sane help', function() {
   // });
 
   it('displays commands, it\'s aliases and the correct cli version', async function() {
-    // this.timeout(10000);
-    var output = await runCommand('sane help');
+    var output = await execFile(sane, ['help']);
     output = output.stdout;
 
     assert.include(output, 'new|n');

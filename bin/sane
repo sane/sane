@@ -28,10 +28,11 @@ var commands = require('../lib/commands');
 var setUpTracking = require('../lib/helpers/setUpTracking');
 
 //load config/default parameters from .sane-cli file in current and home directory
-var config = new Yam('sane-cli');
+var config = new Yam('sane-cli').getAll();
 var leek = setUpTracking(trackingCode, name, version, config);
 
-config = config.getAll();
+console.log(config);
+process.exit(1);
 
 program
 .version(version)
@@ -52,6 +53,8 @@ program
 .option('-d, --database [type]', 'Options: disk (default), mongo, mysql, postgres', config.database || 'disk')
 .option('-c, --docker [boolean]', 'Setup Sails server and dependencies within docker containers.', config.docker || false)
 .option('-v, --verbose [boolean]', 'Show more detailed command output.', config.verbose || false)
+.option('--skip-npm [boolean]', 'Skips npm installation for ember-cli project creation', config.skipNpm || false)
+.option('--skip-bower [boolean]', 'Skips bower installation for ember-cli project creation', config.skipBower || false)
 .action(function(name, options) {
   commands.new(name, options, leek).catch(function(error) {
     console.log(chalk.red(error.message));
@@ -77,7 +80,7 @@ program
 program
 .command('generate <blueprint> [name] [attributes...]')
 .option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
-.option('-pod --pod [boolean]', 'Places newly generated resource in an Ember pod')
+.option('--pod [boolean]', 'Places newly generated resource in an Ember pod', config.pod || false)
 .alias('g')
 .description('Generates new code for client and server from blueprints')
 .action(function(blueprint, name, attributes, options){ commands.generate(blueprint, name, attributes, options, leek) });

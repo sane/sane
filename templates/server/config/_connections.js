@@ -86,7 +86,7 @@ module.exports.connections = {
   //docker host uses db, otherwise use localhost or the IP of your db
   //credentials for docker are defined in the fig.yml
   //otherwise dependent on your setup
-  postgres: {
+  postgresql: {
     adapter: 'sails-postgresql',
     host: '{{host}}',
     user: 'postgres',

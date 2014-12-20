@@ -59,6 +59,7 @@
     "lodash-node": "^2.4.1",
     "mocha": "^2.0.1",
     "mocha-jshint": "0.0.9",
+    "node-require-timings": "0.0.2",
     "rsvp": "^3.0.14",
     "tmp-sync": "^1.0.1"
   }
