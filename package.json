@@ -43,7 +43,7 @@
     "configstore": "^0.3.1",
     "fs-extra": "~0.13.0",
     "handlebars": "~2.0.0",
-    "leek": "git+ssh://git@github.com/Globegitter/leek.git#patch-1",
+    "leek": "~0.0.16",
     "node-uuid": "^1.4.2",
     "pleasant-progress": "^1.0.2",
     "readline-sync": "^0.4.10",
