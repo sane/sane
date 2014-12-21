@@ -89,6 +89,9 @@ For more information on deployment and different strategies check out:
 ###Installing sails npm packages
 If you are using docker you currently have to run `fig run server npm install <package>` in your root folder to correctly install an npm package for your sails container.
 
+###Linux Support
+The sane-cli should mostly support linux as-is. If you use docker however, make sure that your `DOCKER_HOST` variable is set so there is an IP to connect to rather than a unix socket.
+
 ###Docker/Fig issues
 If you generally have issues with your containers can try to remove all your docker containers via `docker rm 'docker ps --no-trunc -aq'` and then simply run `sane up --docker` (if it is not defaulted in your `.sane-cli`) to set up all the containers again.
 
