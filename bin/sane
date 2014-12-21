@@ -8,7 +8,6 @@ var program = require('commander');
 var Yam = require('yam');
 var packageConfig = require('../package.json');
 var chalk = require('chalk');
-// var Promise = require('bluebird');
 
 var version = packageConfig.version;
 var name = packageConfig.name;
@@ -30,9 +29,6 @@ var setUpTracking = require('../lib/helpers/setUpTracking');
 //load config/default parameters from .sane-cli file in current and home directory
 var config = new Yam('sane-cli').getAll();
 var leek = setUpTracking(trackingCode, name, version, config);
-
-console.log(config.serverNames);
-process.exit(1);
 
 program
 .version(version)

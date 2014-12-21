@@ -1,4 +1,4 @@
-// // 'use strict';
+'use strict';
 
 // var fs        = require('fs-extra');
 // var ember     = require('../helpers/ember');
@@ -6,12 +6,13 @@
 // var forEach   = require('lodash-node/compat/collections/forEach');
 // var walkSync  = require('walk-sync');
 // var Blueprint = require('../../lib/models/blueprint');
-// var path      = require('path');
-// var tmp       = require('../helpers/tmp');
-// var root      = process.cwd();
 // var util      = require('util');
 // var conf      = require('../helpers/conf');
 // var EOL       = require('os').EOL;
+var path         = require('path');
+var tmp          = require('tmp-sync');
+var root         = process.cwd();
+var {execFile}   = require('child-process-promise');
 
 // describe('Acceptance: ember new', function() {
 //   before(conf.setup);
@@ -54,6 +55,15 @@
 //   function confirmBlueprinted() {
 //     return confirmBlueprintedForDir('blueprints/app');
 //   }
+
+//   it('sane new testProject, where testProject does not yet exist, works and adds to server package.json', function() {
+//     return ember([
+//       'new',
+//       'foo',
+//       '--skip-npm',
+//       '--skip-bower'
+//     ]).then(confirmBlueprinted);
+//   });
 
 //   it('ember new foo, where foo does not yet exist, works', function() {
 //     return ember([
