@@ -1,23 +1,21 @@
 # Sane Stack
 
-A Javascript fullstack and cli that lets you rapidly create production-ready web applications using [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), giving you [Docker](https://www.docker.com/), generators support and much more.
+A Javascript Fullstack and CLI that lets you rapidly create production-ready web apps using [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), giving you [Docker](https://www.docker.com/) support, generators and more.
 
-**NOTE: This project, while exciting, is still an early prototype. It is mostly stable but is being iterated with feature changes and improvements quite quickly.**
-
-[![npm version](http://img.shields.io/npm/v/sane-cli.svg?style=flat)](https://npmjs.org/package/sane-cli) [![Dependency Status](https://img.shields.io/david/artificialio/sane.svg?style=flat)](https://david-dm.org/artificialio/sane) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
+[![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ##Quickstart
 * `npm install -g sails ember-cli sane-cli`
-* `sane new project` creates a local project with [sails-disk](https://github.com/balderdashy/sails-disk). To install with [Docker](https://www.docker.com/) and production databases see [Options](#options).
+* `sane new project` creates a local project with [sails-disk](https://github.com/balderdashy/sails-disk). To install with [Docker](https://www.docker.com/) and production databases see [Options](#sane-stack-options).
 * `sane generate resource user name:string age:number` to generate a new API on the backend and models on the frontend
-* `sane up` to start the sails server on `localhost:1337` (not with docker though) as well as the ember dev server on `localhost:4200`.
-* To work on your app you will work mostly, as normal with ember-cli, on `localhost:4200`.
+* `sane up` to start the sails server on `localhost:1337` as well as the ember dev server on `localhost:4200`.
+* To work on your frontend-app you work as you would normally do with ember-cli on `localhost:4200`.
 * You are now good to go.
 
 
-## Overview of the cli
+## Overview
 
-* It creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly
+* The cli creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly. To customize that see [.sane-cli](#sane-stack-.sane-cli)
 * Sets up a [SailsJS Container](https://github.com/artificialio/docker-sails), with a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production
 * Using the latest [ember-cli](https://github.com/stefanpenner/ember-cli) version you have installed to set up an ember-frontend in a `client` sub-folder.
 
@@ -42,6 +40,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 * `--docker` is needed if you want to run the commands using docker/fig. Your sails container usually starts on `192.168.59.103:1337`, but that depends on your `$DOCKER_HOST` environment variable.
 
+## .sane-cli
 `.sane-cli`: A file located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run.
 
 The currecntly supportet options are:
