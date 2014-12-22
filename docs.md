@@ -1,6 +1,6 @@
 # Sane Stack
 
-Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the complications of setting up the backend and frontend environment, embracing convention-over-configuration, so you can focus just on shipping your app. Additionally this cli supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and making deployment easy.
+A Javascript fullstack and cli that lets you rapidly create production-ready web applications using [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), giving you [Docker](https://www.docker.com/), generators support and much more.
 
 **NOTE: This project, while exciting, is still an early prototype. It is mostly stable but is being iterated with feature changes and improvements quite quickly.**
 
