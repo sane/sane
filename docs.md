@@ -32,6 +32,8 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 > Shows the help as well as the version of the cli.
 
+----
+
 `sane new project [--docker] [-d mongo|postgres|mysql|disk] [--verbose] [--skip-npm] [--skip-bower]`
 
 > Sets up a new server/client project depending on your flags or your `.sane-cli` in your home-folder. Defaults to local setup with [sails-disk](https://github.com/balderdashy/sails-disk) for quick prototyping.
