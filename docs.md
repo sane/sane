@@ -27,9 +27,12 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 ## Options
 
-### `sane`
+`sane`
 
 > Shows the help as well as the version of the cli.
+
+t
+------
 
 `sane new project [--docker] [-d mongo|postgres|mysql|disk] [--verbose] [--skip-npm] [--skip-bower]`
 
