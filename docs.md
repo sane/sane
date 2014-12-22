@@ -12,7 +12,7 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 * To work on your frontend-app you work as you would normally do with ember-cli on `localhost:4200`.
 * You are now good to go.
 
-**Note: Make sure you have [fig](http://www.fig.sh/install.html) installed. If you are on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
+**Note: If you use Docker, make sure you have [fig](http://www.fig.sh/install.html) installed. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
 
 
 ## Overview
@@ -27,29 +27,37 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 ## Options
 
+`sane`
+
+> Shows the help as well as the version of the cli.
+
 `sane new project [--docker] [-d mongo|postgres|mysql|disk] [--verbose] [--skip-npm] [--skip-bower]`
 
 > Sets up a new server/client project depending on your flags or your `.sane-cli` in your home-folder. Defaults to local setup with [sails-disk](https://github.com/balderdashy/sails-disk) for quick prototyping.
 
 `--docker` or `-D`
 
-> Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide simple container management.
+> Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide powerful container management.
 
-**Note:** Make sure you have [fig](http://www.fig.sh/install.html) installed. If you are on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
+**Note:** Make sure you have [fig](http://www.fig.sh/install.html) installed, on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
 
-* `--database <option>` or `-d`, options: `mongo|postgres|mysql|disk`, default: `disk`
+**Why Docker?** It fully automates the setup of server dependencies and you can now develop in your production environment that can be deployed to any server as-is.
 
-> Installs the right sails adapter. If used in combination with `--docker` automatically installs and sets up the chosen db and connection config.
+`--database <option>` or `-d`, options: `mongo|postgres|mysql|disk`, default: `disk`
 
-**Why Docker?** It fully automates the setup of server dependencies and you can now develop in your production environment that you can deploy to your server as-is.
+> Installs the right db-adapter. If used in combination with `--docker` automatically installs and sets up the chosen db and connection config.
 
-`sane up [--docker] [--live-reload]`, alias: `sane serve`  
+`sane up [--docker] [--live-reload]`, alias: `sane serve`
 
-> Boots up your sails server (default on `localhost:1337`) as well as your ember-cli server (default on `localhost:4200`) displaying a unified log.
+> Boots up your sails server (default: localhost:1337) as well as your ember-cli server (default: localhost:4200) displaying a unified log.
 
-`sane generate api|resource [--docker]`, alias: `sane g`
+`sane generate api|resource <name> [--pod] [attribute1:type1, attribute2:type2 ... ]`, alias: `sane g`
 
-* `--docker` is needed if you want to run the commands using docker/fig. Your sails container usually starts on `192.168.59.103:1337`, but that depends on your `$DOCKER_HOST` environment variable.
+> Generates a 'name' resource/api on the backend as well as the frontend, optionally include attributes with the specified types. Supports sails and ember-data models types. One the backend accessible at: **localhost:1337/api/v1/names**
+
+`--pod`
+
+> Supports the `pod` structure for ember-cli
 
 ## .sane-cli
 `.sane-cli`: A file located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run.
