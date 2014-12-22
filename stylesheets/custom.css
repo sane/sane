@@ -1,0 +1,16 @@
+  hr {
+    width: 50%;
+    clear: left;
+    float: left;
+    margin-left: 4%;
+    background-color: #ddd;
+    border: medium none;
+    height: 1px;
+  }
+
+@media (max-width: 768px) {
+  hr {
+    width: 90%;
+    float: none;
+  }
+}
