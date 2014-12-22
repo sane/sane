@@ -8,7 +8,7 @@
     height: 1px;
   }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   hr {
     width: 90%;
     float: none;
