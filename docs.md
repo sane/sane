@@ -12,6 +12,8 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 * To work on your frontend-app you work as you would normally do with ember-cli on `localhost:4200`.
 * You are now good to go.
 
+*Note: Make sure you have [fig](http://www.fig.sh/install.html) installed. If you are on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)*
+
 
 ## Overview
 
@@ -25,17 +27,21 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 ## Options
 
-`sane new project [--docker] [-d mongo|postgres|mysql]`
+`sane new project [--docker] [-d mongo|postgres|mysql|disk] [--verbose] [--skip-npm] [--skip-bower]`
 
->. Sets up a new project
+> Sets up a new server/client project depending on your flags or your `.sane-cli` in your home-folder. Defaults to local setup with [sails-disk](https://github.com/balderdashy/sails-disk) for quick prototyping.
 
-* `--docker` sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide simple container management.
+* `--docker` or `-D`
+
+> Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide simple container management.
 
 **Note:** Make sure you have [fig](http://www.fig.sh/install.html) installed. If you are on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
 
-**Why Docker?** It fully automates the setup of server dependenvies and you can now develop in your production environment that you can deploy to your server as-is.
+* `--database <option>` or `-d`, options: `mongo|postgres|mysql|disk`, default: `disk`
 
-* `-d`: Installs the choosen database adapter for sails. If `--docker` is active it installs the database via the right container.
+> Installs the right sails adapter. If used in combination with `--docker` automatically installs and sets up the chosen db and connection config.
+
+**Why Docker?** It fully automates the setup of server dependencies and you can now develop in your production environment that you can deploy to your server as-is.
 
 `sane up [--docker]`, alias: `sane serve`  
 `sane generate api|resource [--docker]`, alias: `sane g`
