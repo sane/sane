@@ -8,10 +8,11 @@
 // var util      = require('util');
 // var conf      = require('../helpers/conf');
 // var EOL       = require('os').EOL;
-var fs           = require('fs-extra');
+// var fs           = require('fs-extra');
 var path         = require('path');
 var tmp          = require('tmp-sync');
 var {execFile}   = require('child-process-promise');
+// var mock         = require('mock-fs');
 require('shelljs/global');
 
 var assertFile   = require('../helpers/assertFile');
@@ -34,12 +35,14 @@ describe('Acceptance: sane new', function() {
 //       });
 //   });
   beforeEach(function() {
+    // mock();
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
   });
 
   afterEach(function() {
     process.chdir(root);
+    // mock.restore;
     fs.removeSync(tmproot);
   });
 
