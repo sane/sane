@@ -15,9 +15,9 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 
 ## Overview
 
-* The cli creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly. To customize that see [.sane-cli](#sane-stack-.sane-cli)
-* Sets up a [SailsJS Container](https://github.com/artificialio/docker-sails), with a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production
-* Using the latest [ember-cli](https://github.com/stefanpenner/ember-cli) version you have installed to set up an ember-frontend in a `client` sub-folder.
+* The cli creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly. To customize the created folders see [.sane-cli](#sane-stack-sane-cli)
+* Sets up your SailsJS project either locally or with a [sails-container](https://github.com/artificialio/docker-sails) and a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production.
+* Using the [ember-cli](https://github.com/stefanpenner/ember-cli) you have globally installed to set up an ember-frontend in a `client` sub-folder.
 
 To find out more about Sails and Ember and how they work together, you can take a look at my talk
 [http://vimeo.com/103711300](http://vimeo.com/103711300) and slides [http://talks.artificial.io/sailing-with-ember/
@@ -26,6 +26,8 @@ To find out more about Sails and Ember and how they work together, you can take 
 ## Options
 
 `sane new project [--docker] [-d mongo|postgres|mysql]`
+
+>. Sets up a new project
 
 * `--docker` sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide simple container management.
 
