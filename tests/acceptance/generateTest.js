@@ -2,7 +2,6 @@
 
 'use strict';
 
-var path       = require('path');
 // var Promise          = require('../../lib/ext/promise');
 // var assertFile       = require('../helpers/assert-file');
 var assertFileEquals = require('../helpers/assertFileEquals');
@@ -40,11 +39,8 @@ describe('Acceptance: sane generate', function() {
   });
 
   afterEach(function() {
-    // this.timeout(10000);
-
     process.chdir(root);
     fs.removeSync(tmproot);
-    // return rimraf(tmproot);
   });
 
   function initApp() {
@@ -52,8 +48,7 @@ describe('Acceptance: sane generate', function() {
       'new',
       '.',
       '--skip-npm',
-      '--skip-bower',
-      '--verbose'
+      '--skip-bower'
     ]);
   }
 

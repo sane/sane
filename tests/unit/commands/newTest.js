@@ -1,7 +1,7 @@
 'use strict';
 
-var assert         = require('../../helpers/assert');
 // var commandOptions = require('../../factories/command-options');
+var {assert} = require('chai');
 
 var newCommand     = require('../../../lib/commands/new');
 

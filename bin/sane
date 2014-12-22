@@ -47,7 +47,7 @@ program
 .alias('n')
 .description('Creates a new sane project. Choose database via -db disk(default)|mongo|mysql|postgres')
 .option('-d, --database [type]', 'Options: disk (default), mongo, mysql, postgres', config.database || 'disk')
-.option('-c, --docker [boolean]', 'Setup Sails server and dependencies within docker containers.', config.docker || false)
+.option('-D, --docker [boolean]', 'Setup Sails server and dependencies within docker containers.', config.docker || false)
 .option('-v, --verbose [boolean]', 'Show more detailed command output.', config.verbose || false)
 .option('--skip-npm [boolean]', 'Skips npm installation for ember-cli project creation', config.skipNpm || false)
 .option('--skip-bower [boolean]', 'Skips bower installation for ember-cli project creation', config.skipBower || false)
@@ -61,9 +61,8 @@ program
 // Other than that it is just a simple substitue for 'fig up && cd client && ember server --proxy http://192.168.59.103:1337'
 program
 .command('up')
-.option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
+.option('-D, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
 .option('-l, --live-reload [boolean]', 'Controls the live-reload functionality for ember-cli', true)
-.option('-p, --port-forward [boolean]', 'Forwards port to localhost with docker', false)
   // .option('-v, --verbose', 'Show more detailed command output.')
   .alias('serve')
   .description('Starts the Sails and Ember server with a unified log.')
@@ -75,7 +74,7 @@ program
 // cd client && ember g resource <name> [options]
 program
 .command('generate <blueprint> [name] [attributes...]')
-.option('-d, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
+.option('-D, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
 .option('--pod [boolean]', 'Places newly generated resource in an Ember pod', config.pod || false)
 .alias('g')
 .description('Generates new code for client and server from blueprints')

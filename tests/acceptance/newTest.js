@@ -1,6 +1,5 @@
 'use strict';
 
-// var fs        = require('fs-extra');
 // var ember     = require('../helpers/ember');
 // var assert    = require('assert');
 // var forEach   = require('lodash-node/compat/collections/forEach');
@@ -9,12 +8,21 @@
 // var util      = require('util');
 // var conf      = require('../helpers/conf');
 // var EOL       = require('os').EOL;
+var fs           = require('fs-extra');
 var path         = require('path');
 var tmp          = require('tmp-sync');
-var root         = process.cwd();
 var {execFile}   = require('child-process-promise');
+require('shelljs/global');
 
-// describe('Acceptance: ember new', function() {
+var assertFile   = require('../helpers/assertFile');
+var assertFileEquals = require('../helpers/assertFileEquals');
+
+var root         = process.cwd();
+var tmproot      = path.join(root, 'tmp');
+var sane         = path.join(root, 'bin', 'sane');
+
+describe('Acceptance: sane new', function() {
+  var tmpdir;
 //   before(conf.setup);
 
 //   after(conf.restore);
@@ -25,12 +33,20 @@ var {execFile}   = require('child-process-promise');
 //         process.chdir('./tmp');
 //       });
 //   });
+  beforeEach(function() {
+    tmpdir = tmp.in(tmproot);
+    process.chdir(tmpdir);
+  });
 
-//   afterEach(function() {
-//     this.timeout(10000);
+  afterEach(function() {
+    process.chdir(root);
+    fs.removeSync(tmproot);
+  });
 
-//     return tmp.teardown('./tmp');
-//   });
+  function initApp(args) {
+    var args = args || ['new', '.', '--skip-npm', 'skip-bower'];
+    return execFile(sane, args);
+  }
 
 //   function confirmBlueprintedForDir(dir) {
 //     return function() {
@@ -56,14 +72,37 @@ var {execFile}   = require('child-process-promise');
 //     return confirmBlueprintedForDir('blueprints/app');
 //   }
 
-//   it('sane new testProject, where testProject does not yet exist, works and adds to server package.json', function() {
-//     return ember([
-//       'new',
-//       'foo',
-//       '--skip-npm',
-//       '--skip-bower'
-//     ]).then(confirmBlueprinted);
-//   });
+  it('sane new . in empty folder works and adds specified dependencies to server package.json', async function() {
+    await initApp();
+
+    //taken from lib/commands/new.js
+    var sailsPackages = ['sails-generate-ember-blueprints', 'lodash',
+      'morgan', 'pluralize', 'sails-disk'];
+
+    assertFile('server/package.json', {
+        contains: sailsPackages
+      });
+  });
+
+  it('sane new sanity -d postgres, where sanity does not yet exist, works and adds settings to fig.yml', async function() {
+    await initApp([
+      'new',
+      'sanity',
+      '--skip-npm',
+      '--skip-bower',
+      '-d',
+      'postgres'
+    ]);
+    console.log(process.cwd());
+    console.log(ls('-A', process.cwd()));
+    process.chdir('sanity');
+
+    var expectedFig = path.join(__dirname, '../fixtures/new/acceptance-test-fig-expected.yml');
+    var expectedConfig = path.join(__dirname, '../fixtures/new/acceptance-test-sane-cli-expected.js');
+
+    assertFileEquals('fig.yml', expectedFig);
+    assertFileEquals('.sane-cli', expectedConfig);
+  });
 
 //   it('ember new foo, where foo does not yet exist, works', function() {
 //     return ember([
@@ -182,4 +221,4 @@ var {execFile}   = require('child-process-promise');
 //       assert(!fs.existsSync(path.join(cwd, '.git')), 'does not create git in current directory');
 //     });
 //   });
-// });
+});
