@@ -12,12 +12,12 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 * To work on your frontend-app you work as you would normally do with ember-cli on `localhost:4200`.
 * You are now good to go.
 
-*Note: Make sure you have [fig](http://www.fig.sh/install.html) installed. If you are on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)*
+**Note: Make sure you have [fig](http://www.fig.sh/install.html) installed. If you are on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
 
 
 ## Overview
 
-* The cli creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly. To customize the created folders see [.sane-cli](#sane-stack-sane-cli)
+* The cli creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly.
 * Sets up your SailsJS project either locally or with a [sails-container](https://github.com/artificialio/docker-sails) and a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production.
 * Using the [ember-cli](https://github.com/stefanpenner/ember-cli) you have globally installed to set up an ember-frontend in a `client` sub-folder.
 
@@ -31,7 +31,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 > Sets up a new server/client project depending on your flags or your `.sane-cli` in your home-folder. Defaults to local setup with [sails-disk](https://github.com/balderdashy/sails-disk) for quick prototyping.
 
-* `--docker` or `-D`
+`--docker` or `-D`
 
 > Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide simple container management.
 
@@ -43,7 +43,10 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 **Why Docker?** It fully automates the setup of server dependencies and you can now develop in your production environment that you can deploy to your server as-is.
 
-`sane up [--docker]`, alias: `sane serve`  
+`sane up [--docker] [--live-reload]`, alias: `sane serve`  
+
+> Boots up your sails server (default on `localhost:1337`) as well as your ember-cli server (default on `localhost:4200`) displaying a unified log.
+
 `sane generate api|resource [--docker]`, alias: `sane g`
 
 * `--docker` is needed if you want to run the commands using docker/fig. Your sails container usually starts on `192.168.59.103:1337`, but that depends on your `$DOCKER_HOST` environment variable.
