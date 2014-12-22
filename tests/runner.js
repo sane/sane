@@ -11,7 +11,7 @@ require('traceur').require.makeDefault(function(filename) {
 }, {asyncFunctions: true});
 
 var mocha = new Mocha({
-  timeout: 10000,
+  timeout: 12000,
   reporter: 'spec'
 });
 

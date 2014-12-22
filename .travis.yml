@@ -8,5 +8,4 @@ before_install:
   - npm install -g npm@^2
   - npm install -g ember-cli
   - npm install -g sails
-  - export PATH=$PATH:/home/travis/.nvm/v0.11.14/bin/:/home/travis/.nvm/v0.10.34/bin/
-script: npm run-script test-all
+script: ember help
