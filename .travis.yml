@@ -8,4 +8,4 @@ before_install:
   - npm install -g npm@^2
   - npm install -g ember-cli
   - npm install -g sails
-script: ember help
+script: "npm run-script test-all"
