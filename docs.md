@@ -73,7 +73,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 ### Basics
 
 ### Data Format
-If you create a `user` (via `sane generate resource user`) you can access the model under `localhost:1337/api/v1/users` and to create a new Record send a POST request to that address.
+If you create a `user` resource (via `sane generate resource user`) you can access the api under `localhost:1337/api/v1/users` and to create a new Record send a POST request to that address. Ember is using it's `RESTAdapter` to conform to this standard and all you have to do is follow the guides here: http://emberjs.com/guides/models/persisting-records/
 
 ```js
 //POST request to localhost:1337/api/v1/users
