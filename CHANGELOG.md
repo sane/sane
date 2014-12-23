@@ -7,6 +7,7 @@
 * [FEATURE] Added [https://github.com/expressjs/morgan](morgan) hook to sails app so each http request gets logged
 * [FEATURE] Added `sane new --skip-npm --skip-bower` flags to skip npm and bower installation.
 * [FEATURE] You can now rename your client/server folders, by renaming them and then adding the new name to your .sane-cli `apps`. See Docs for details
+* [FEATURE] Added `--verbose` flag for `sane up`, which displays additional `boot2docker` output, only on windows & mac
 * [BREAKING ENHANCEMENT] On windows and mac your sails-container-server gets automatically forwarded to localhost. Right now only supports the fixed 1337 porty. Removed the `--port-forward/-p` flag.
 * [ENHANCEMENT] `pod` option is now supported in your `.sane-cli`
 * [BUGFIX] Changed tracking code to an GA App

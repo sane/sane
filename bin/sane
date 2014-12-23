@@ -63,6 +63,7 @@ program
 .command('up')
 .option('-D, --docker [boolean]', 'Run Sails server and dependencies within docker containers.', config.docker || false)
 .option('-l, --live-reload [boolean]', 'Controls the live-reload functionality for ember-cli', true)
+.option('-v, --verbose [boolean]', 'Show more detailed command output.', config.verbose || false)
   // .option('-v, --verbose', 'Show more detailed command output.')
   .alias('serve')
   .description('Starts the Sails and Ember server with a unified log.')
