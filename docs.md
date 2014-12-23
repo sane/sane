@@ -70,6 +70,8 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 ## Sails / Ember
 
+Ember.js guides are accssible at http://emberjs.com/guides/ and Sails.js documentation at http://sailsjs.org/#/documentation/concepts
+
 ### Basics
 
 ### Data Format
