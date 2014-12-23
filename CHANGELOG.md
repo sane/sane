@@ -3,6 +3,11 @@
 ### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
 
+### 0.0.15
+* [BUGFIX] Fixed some bug with `sails-disk`
+* [BUGFIX] Fixed a bug with `sane up`, using local install as well as recognizing a changed client folder
+* [BUGFIX] Showing the right `sails version` when running `sane new` with docker
+
 ### 0.0.14
 * [FEATURE] Added [https://github.com/expressjs/morgan](morgan) hook to sails app so each http request gets logged
 * [FEATURE] Added `sane new --skip-npm --skip-bower` flags to skip npm and bower installation.

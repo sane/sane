@@ -1,6 +1,6 @@
 {
   "name": "sane-cli",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "trackingCode": "UA-46963158-10",
   "description": "A command-line tool for creating full stack sails-ember applications using docker & fig",
   "main": "bin/sane",
