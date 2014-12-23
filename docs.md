@@ -18,7 +18,7 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 **Note: If you use Docker, make sure you have [fig](http://www.fig.sh/install.html) installed. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
 
 
-## Overview
+## CLI Overview
 
 * The cli creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly.
 * Sets up your SailsJS project either locally or with a [sails-container](https://github.com/artificialio/docker-sails) and a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production.
