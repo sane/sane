@@ -4,7 +4,7 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 
 > [![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) <br> [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-##Quickstart
+## Quickstart
 * `npm install -g sails ember-cli sane-cli`
 * `sane new project` creates a local project with [sails-disk](https://github.com/balderdashy/sails-disk). To install with [Docker](https://www.docker.com/) and production databases see [Options](#sane-stack-options).
 * `sane generate resource user name:string age:number` to generate a new API on the backend and models on the frontend
@@ -125,22 +125,25 @@ For more information on deployment and different strategies check out:
 * [Hardening NodeJS](http://blog.argteam.com/coding/hardening-node-js-for-production-part-2-using-nginx-to-avoid-node-js-load/) for a proper Nginx setup
 * [Deis](https://github.com/deis/deis) Heroku inspired workflow for your own servers built upon Docker
 
-##Troubleshooting
+## Troubleshooting
 
-###Installing sails npm packages
-If you are using docker you currently have to run `fig run server npm install <package>` in your root folder to correctly install an npm package for your sails container.
+### Installing sails npm packages
+If you are using docker, currently you have to run `fig run server npm install <package>` in your root folder to correctly install npm packages for your sails container.
 
-###Linux Support
-The sane-cli should mostly support linux as-is. If you use docker however, make sure that your `DOCKER_HOST` variable is set so there is an IP to connect to rather than a unix socket.
+### Linux Support
+The sane-cli should mostly support linux as-is. If you use docker however, make sure that your `DOCKER_HOST` variable is set so there is an IP to connect to rather than a unix socket. `localhost` is recommended, so you can access your sails-server through `localhost:1337`.
 
-###Docker/Fig issues
-If you generally have issues with your containers can try to remove all your docker containers via `docker rm 'docker ps --no-trunc -aq'` and then simply run `sane up --docker` (if it is not defaulted in your `.sane-cli`) to set up all the containers again.
+### Docker/Fig issues
+If you are stuck with an unknown issue can remove all your docker containers: <br>
+`docker rm 'docker ps --no-trunc -aq'` <br>
+then simply run and set up all the containers again: <br>
+`sane up --docker` (if it is not defaulted in your `.sane-cli`)
 
-###Problem:
+### Error: connect EHOSTUNREACH
 After launching the ember server and backend via `sane up` and accessing the web application the ember server crashes with the error `Error: connect EHOSTUNREACH`.
 
-###Solution:
-Deleting and re-installing the global node modules and bower components may fix the problem:
+**Solution**: <br>
+Deleting and re-installing the global node modules and bower components may fix the problem
 ```
 cd client
 rm -rf bower_components node_modules
@@ -148,22 +151,22 @@ npm i && bower i
 ```
 
 
-###Problem:
+### Grunt error
 Upon launching the server via `sane up` I get a `Fatal error: Unable to find local grunt.`
 
-###Solution:
 There are two possible solutions for this problem.
 
-**1. Delete the docker-containers**
+**Solution 1** <br>
+Setup your docker containers again.
 ```
 fig stop
 fig rm --force -v
 sane up
 ```
 
-If that by itself does not do the trick, try to re-create the project.
 
-**2. Start the Ember-server manually once**
+**Solution 2** <br>
+Start the Ember-server manually once
 ```
 cd client
 ember serve
@@ -177,11 +180,24 @@ sane up
 ```
 
 
-##Thanks
+## Thanks
 Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-ember-blueprints](https://github.com/mphasize/sails-generate-ember-blueprints) which overwrites the default SailsJS JSON response to the one that Ember Data's `RESTAdapter` and `RESTSerializer` expects.
 
-##Contribution
-Everyone is more than welcome to contribute in any way: Report a bug, request a feature or submit a pull request. Just keep things sensible, so we can easily reproduce bugs, have a clear explanation of your feature request, etc.
+## Development
+This is a tool for the community, so everyone is welcome to make Sane Stack a better product. It is easy to get started:
 
-##License
+* `git clone https://github.com/artificialio/sane.git`
+* `cd sane && npm install` to install the dependencies
+* `npm link` to make sure you can test the master version globally
+* If you add a new feature also add an according unit/acceptance test based on the others
+* `npm test` to run the test-suite
+* Create a lovely new PR
+
+The cli is developed with latest ES6/7 functionality, using [traceur](https://github.com/google/traceur-compiler) to provide a cleaner code as well as a nice experience for us the developers. So you can also take advantage of the latest lovely features, such as `template strings`, `async/await`, etc.
+
+
+## License
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).
+
+## Built by
+Build with love by [Artificial Labs](http://artificial.io/)
