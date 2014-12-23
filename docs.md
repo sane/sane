@@ -39,7 +39,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 `--docker` or `-D`
 
-> Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide powerful container management. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
+> Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide powerful container management.
 
 **Why Docker?** It fully automates the setup of server dependencies and you can now develop in your production environment that can be deployed to any server as-is.
 
@@ -64,6 +64,17 @@ To find out more about Sails and Ember and how they work together, you can take 
 `--pod`
 
 > Supports the `pod` structure for ember-cli
+
+## Docker
+
+Sane Stack has Docker support built in using [fig](http://www.fig.sh/) for container orchestration.
+
+### Setup
+Before installing [fig](http://www.fig.sh/install.html) make sure you have installed [boot2docker](http://boot2docker.io/) if you are on Mac or Windows and for Linux see [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/). Make sure you are running the latest versions, your boot2docker is running and your `$DOCKER_HOST` environemt variable is set before reporting any issues.
+
+### fig.yml
+That is where all your containers are defined and you can add more containers that will all get started automatically through the `sane up` command. If you are just getting started you should not have to modify this.
+
 
 ## .sane-cli
 A file always located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run. On `sane new` it gets filled with defaults based on your flags.
