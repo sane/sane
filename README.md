@@ -38,4 +38,4 @@ Thanks to [ember-cli](https://github.com/stefanpenner/ember-cli) contributors fo
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).
 
 ## Built by
-Build with love by [Artificial Labs](http://artificial.io/) and contributors <3
+Built with love by [Artificial Labs](http://artificial.io/) and contributors <3
