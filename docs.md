@@ -39,22 +39,22 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 `--docker` or `-D`
 
-> Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide powerful container management.
-
-**Note:** Make sure you have [fig](http://www.fig.sh/install.html) installed, on Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
+> Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide powerful container management. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)
 
 **Why Docker?** It fully automates the setup of server dependencies and you can now develop in your production environment that can be deployed to any server as-is.
 
 `--database <option>` or `-d`, options: `mongo|postgres|mysql|disk`, default: `disk`
 
-> Installs the right db-adapter. If used in combination with `--docker` automatically installs and sets up the chosen db and connection config.
+> Installs the right db-adapter. In combination with `--docker` automatically sets up the chosen db and connection config.
 
+<br />
 <hr />
 
 `sane up [--docker] [--live-reload]`, alias: `sane serve`
 
 > Boots up your sails server (default: localhost:1337) as well as your ember-cli server (default: localhost:4200) displaying a unified log.
 
+<br />
 <hr />
 
 `sane generate api|resource <name> [--pod] [attribute1:type1, attribute2:type2 ... ]`, alias: `sane g`
@@ -68,18 +68,24 @@ To find out more about Sails and Ember and how they work together, you can take 
 ## .sane-cli
 A file always located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run. On `sane new` it gets filled with defaults based on your flags.
 
+You can also put a `.sane-cli` in your home-directory, so you can persist some configuration that are automatically taken for newly generated projects.
+
 The currently supportet options are:
 
-`apps`: <br>
-Can be used to cuztomize your folder names via the following convention: <br>
-Clients either start with client then the full name is taken for logging and the foldername, or they end with -client and then that is truncated and merely serves identification. <br>
-Servers follow the same convention, just starting with server or ending with -server. <br>
-`disableAnalytics: true|false` can be used to deactivate anonymous analytics. <br>
-`database` <br>
-`docker` <br>
-`verbose` <br>
-`skipNpm` <br>
-`skipBower` <br>
+`apps: array` See: https://github.com/artificialio/sane/blob/master/lib/tasks/getAppNames.js<br>
+Examples: <br>
+'client' => Expected folder-name: client <br>
+'clientv1' => Expected folder-name: clientv1 <br>
+'admin-v1-client' => Expected folder-name: admin-v1 <br>
+'server' => Expected folder-name: server <br>
+'server2' => Expected folder-name: server2 <br>
+'api-v1-server' => Expected folder-name: api-v1 <br>
+`disableAnalytics: true|false` Used to disable the anonymous analytics.
+`database: postgres|mysql|mongo` Currently not in use.  <br>
+`docker` Runs all commands via [fig](http://www.fig.sh/) <br>
+`verbose: true|false` Shows extra output on some commands <br>
+`skipNpm: true|false` Only used if defined in your home-directory <br>
+`skipBower: true|false ` Only used if defined in your home-directory<br>
 
 ```
 //A sample .sane-cli
@@ -117,6 +123,7 @@ For more information on deployment and different strategies check out:
 * [PM2 Deploy](https://github.com/Unitech/pm2#deployment) gives you some nice command line tools to ease deployment
 * [Ember-CLI Deploy](https://github.com/achambers/ember-cli-deploy) for deployment via Redis and Amazon S3
 * [Hardening NodeJS](http://blog.argteam.com/coding/hardening-node-js-for-production-part-2-using-nginx-to-avoid-node-js-load/) for a proper Nginx setup
+* [Deis](https://github.com/deis/deis) Heroku inspired workflow for your own servers built upon Docker
 
 ##Troubleshooting
 
