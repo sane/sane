@@ -4,6 +4,8 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 
 > [![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) <br> [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+Check out the intro video at: http://youtu.be/zWU6dRNpNtc
+
 ## Quickstart
 * `npm install -g sails ember-cli sane-cli`
 * `sane new project` creates a local project with [sails-disk](https://github.com/balderdashy/sails-disk). To install with [Docker](https://www.docker.com/) and production databases see [Options](#sane-stack-options).
