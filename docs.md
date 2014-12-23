@@ -50,7 +50,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 <br />
 <hr />
 
-`sane up [--docker] [--live-reload]`, alias: `sane serve`
+`sane up [--docker]`, alias: `sane serve`
 
 > Boots up your sails server (default: localhost:1337) as well as your ember-cli server (default: localhost:4200) displaying a unified log.
 
@@ -75,14 +75,14 @@ The currently supportet options are:
 `apps: array` See: https://github.com/artificialio/sane/blob/master/lib/tasks/getAppNames.js<br>
 Examples: <br>
 *'client' => Expected folder-name: client* <br>
-'clientv1' => Expected folder-name: clientv1 <br>
-'admin-v1-client' => Expected folder-name: admin-v1 <br>
-'server' => Expected folder-name: server <br>
-'server2' => Expected folder-name: server2 <br>
-'api-v1-server' => Expected folder-name: api-v1 <br>
+*'clientv1' => Expected folder-name: clientv1* <br>
+*'admin-v1-client' => Expected folder-name: admin-v1* <br>
+*'server' => Expected folder-name: server* <br>
+*'server2' => Expected folder-name: server2* <br>
+*'api-v1-server' => Expected folder-name: api-v1* <br>
 `disableAnalytics: true|false` Used to disable the anonymous analytics.
 `database: postgres|mysql|mongo` Currently not in use.  <br>
-`docker` Runs all commands via [fig](http://www.fig.sh/) <br>
+`docker: true|false` Runs all commands via [fig](http://www.fig.sh/) <br>
 `verbose: true|false` Shows extra output on some commands <br>
 `skipNpm: true|false` Only used if defined in your home-directory <br>
 `skipBower: true|false ` Only used if defined in your home-directory<br>
@@ -179,10 +179,6 @@ cd ..
 sane up
 ```
 
-
-## Thanks
-Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-ember-blueprints](https://github.com/mphasize/sails-generate-ember-blueprints) which overwrites the default SailsJS JSON response to the one that Ember Data's `RESTAdapter` and `RESTSerializer` expects.
-
 ## Development
 This is a tool for the community, so everyone is welcome to make Sane Stack a better product. It is easy to get started:
 
@@ -195,9 +191,11 @@ This is a tool for the community, so everyone is welcome to make Sane Stack a be
 
 The cli is developed with latest ES6/7 functionality, using [traceur](https://github.com/google/traceur-compiler) to provide a cleaner code as well as a nice experience for us the developers. So you can also take advantage of the latest lovely features, such as `template strings`, `async/await`, etc.
 
+## Thanks
+Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-ember-blueprints](https://github.com/mphasize/sails-generate-ember-blueprints) which overwrites the default SailsJS JSON response to the one that Ember Data's `RESTAdapter` and `RESTSerializer` expects.
 
 ## License
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).
 
 ## Built by
-Build with love by [Artificial Labs](http://artificial.io/)
+Build with love by [Artificial Labs](http://artificial.io/) and contributors <3
