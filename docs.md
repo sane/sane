@@ -73,9 +73,10 @@ To find out more about Sails and Ember and how they work together, you can take 
 ### Basics
 
 ### Data Format
-If you create a `user` (via `sane generate resource user`) you can access the model under `localhost:1337/api/v1/users` and to create a new Record send a POST request using the following JSON:
+If you create a `user` (via `sane generate resource user`) you can access the model under `localhost:1337/api/v1/users` and to create a new Record send a POST request to that address.
 
 ```js
+//POST to `localhost:1337/api/v1/users`
 {
   "user": {
     "name": "sane",
