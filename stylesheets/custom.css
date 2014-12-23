@@ -18,3 +18,7 @@
 a img {
   width: 100%;
 }
+
+blockquote a img {
+  width: auto;
+}
