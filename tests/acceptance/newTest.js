@@ -47,7 +47,7 @@ describe('Acceptance: sane new', function() {
   });
 
   function initApp(args) {
-    var args = args || ['new', '.', '--skip-npm', 'skip-bower'];
+    var args = args || ['new', '.', '--skip-npm', '--skip-bower'];
     return execFile(sane, args);
   }
 
