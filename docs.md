@@ -74,7 +74,7 @@ The currently supportet options are:
 
 `apps: array` See: https://github.com/artificialio/sane/blob/master/lib/tasks/getAppNames.js<br>
 Examples: <br>
-'client' => Expected folder-name: client <br>
+*'client' => Expected folder-name: client* <br>
 'clientv1' => Expected folder-name: clientv1 <br>
 'admin-v1-client' => Expected folder-name: admin-v1 <br>
 'server' => Expected folder-name: server <br>
@@ -88,7 +88,7 @@ Examples: <br>
 `skipBower: true|false ` Only used if defined in your home-directory<br>
 
 ```
-//A sample .sane-cli
+//sample .sane-cli
 {
   "apps": [
     "client",
