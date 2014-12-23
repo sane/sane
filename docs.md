@@ -74,7 +74,7 @@ The currently supportet options are:
 Can be used to cuztomize your folder names via the following convention: <br>
 Clients either start with client then the full name is taken for logging and the foldername, or they end with -client and then that is truncated and merely serves identification. <br>
 Servers follow the same convention, just starting with server or ending with -server. <br>
-`disableAnalytics` <br>
+`disableAnalytics: true|false` can be used to deactivate anonymous analytics. <br>
 `database` <br>
 `docker` <br>
 `verbose` <br>
