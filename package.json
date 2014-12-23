@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/artificialio/sane/issues"
   },
-  "homepage": "http://artificialio.github.io/sane/",
+  "homepage": "http://sanestack.com",
   "dependencies": {
     "chalk": "^0.5.1",
     "child-process-promise": "^1.0.1",

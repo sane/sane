@@ -87,17 +87,17 @@ describe('Acceptance: sane new', function() {
       });
   });
 
-  it('sane new greatapp -d postgres, where greatapp does not yet exist, works and adds settings to fig.yml', async function() {
+  it('sane new facebook -d postgres, where facebook does not yet exist, works and adds settings to fig.yml', async function() {
     await initApp([
       'new',
-      'greatapp',
+      'facebook',
       '--skip-npm',
       '--skip-bower',
       '-d',
       'postgres'
     ]);
 
-    process.chdir('greatapp');
+    process.chdir('facebook');
 
     var expectedFig = path.join(__dirname, '../fixtures/new/acceptance-test-fig-expected.yml');
     var expectedConfig = path.join(__dirname, '../fixtures/new/acceptance-test-sane-cli-expected.js');
