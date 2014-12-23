@@ -8,7 +8,7 @@
 // var util      = require('util');
 // var conf      = require('../helpers/conf');
 // var EOL       = require('os').EOL;
-// var fs           = require('fs-extra');
+var fs           = require('fs-extra');
 var path         = require('path');
 var tmp          = require('tmp-sync');
 var {execFile}   = require('child-process-promise');
@@ -87,18 +87,17 @@ describe('Acceptance: sane new', function() {
       });
   });
 
-  it('sane new sanity -d postgres, where sanity does not yet exist, works and adds settings to fig.yml', async function() {
+  it('sane new greatapp -d postgres, where greatapp does not yet exist, works and adds settings to fig.yml', async function() {
     await initApp([
       'new',
-      'sanity',
+      'greatapp',
       '--skip-npm',
       '--skip-bower',
       '-d',
       'postgres'
     ]);
-    console.log(process.cwd());
-    console.log(ls('-A', process.cwd()));
-    process.chdir('sanity');
+
+    process.chdir('greatapp');
 
     var expectedFig = path.join(__dirname, '../fixtures/new/acceptance-test-fig-expected.yml');
     var expectedConfig = path.join(__dirname, '../fixtures/new/acceptance-test-sane-cli-expected.js');
