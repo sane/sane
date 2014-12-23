@@ -4,8 +4,8 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 
 > [![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) <br> [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**Watch intro to sane-cli:**
-[![Youtube](https://lh3.googleusercontent.com/FjSU80pYyJoo8SxLazjPfoVDYuqAUaRc6v9wIFkMxSs4BbSIoTUdKaEyUB0EI089J6DPksDQuhA=w2512-h1010)](https://www.youtube.com/watch?v=zWU6dRNpNtc)
+**Watch the intro to sane-cli:**
+[![Youtube](https://lh4.googleusercontent.com/-Gzbkj30rNvw/VJmk4dpVJ3I/AAAAAAAAfK4/u3ORJzofpoc/w1814-h1086-no/Screen%2BShot%2B2014-12-23%2Bat%2B05.00.50.png)](https://www.youtube.com/watch?v=zWU6dRNpNtc)
 
 ## Quickstart
 * `npm install -g sails ember-cli sane-cli`
@@ -67,6 +67,12 @@ To find out more about Sails and Ember and how they work together, you can take 
 `--pod`
 
 > Supports the `pod` structure for ember-cli
+
+## Sails / Ember
+
+### Basics
+
+### Data Format
 
 ## Docker
 
