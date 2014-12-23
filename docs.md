@@ -96,6 +96,10 @@ Once everything is set up make sure that your `$DOCKER_HOST` environemt variable
 ### fig.yml
 That is where your containers are defined, which ports you want to forward, how you want to link the containers etc. This conviniently gets generated for you on project-creation. You can add more containers that will all automatically get installed and started through the `sane up` command.
 
+### Port forwarding
+
+On Mac and Windows boot2docker usually runs on an IP defined via your `$DOCKER_HOST` variable, which means your sails server would only be accessible through that defined IP. To make your contianer accessible on localhost `sane up` automatically implements this Workaround: https://github.com/boot2docker/boot2docker/blob/master/doc/WORKAROUNDS.md#port-forwarding
+
 ## .sane-cli
 A file always located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run. On `sane new` it gets filled with defaults based on your flags.
 
