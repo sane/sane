@@ -14,3 +14,7 @@
     float: none;
   }
 }
+
+a > img {
+  width: 100%;
+}
