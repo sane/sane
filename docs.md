@@ -73,7 +73,7 @@ Sane Stack has Docker support built in using [fig](http://www.fig.sh/) for conta
 Before installing [fig](http://www.fig.sh/install.html) make sure you have installed [boot2docker](http://boot2docker.io/) if you are on Mac or Windows and for Linux see [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/). Make sure you are running the latest versions, your boot2docker is running and your `$DOCKER_HOST` environemt variable is set before reporting any issues.
 
 ### fig.yml
-That is where all your containers are defined and you can add more containers that will all get started automatically through the `sane up` command. If you are just getting started you should not have to modify this.
+That is where your containers are defined, which ports you want to forward, how you want to link the containers etc. This conviniently gets generated for you on project-creation. You can add more containers that will all automatically get installed and started through the `sane up` command.
 
 
 ## .sane-cli
