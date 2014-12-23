@@ -49,9 +49,13 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 > Installs the right db-adapter. If used in combination with `--docker` automatically installs and sets up the chosen db and connection config.
 
+<hr />
+
 `sane up [--docker] [--live-reload]`, alias: `sane serve`
 
 > Boots up your sails server (default: localhost:1337) as well as your ember-cli server (default: localhost:4200) displaying a unified log.
+
+<hr />
 
 `sane generate api|resource <name> [--pod] [attribute1:type1, attribute2:type2 ... ]`, alias: `sane g`
 
@@ -62,23 +66,35 @@ To find out more about Sails and Ember and how they work together, you can take 
 > Supports the `pod` structure for ember-cli
 
 ## .sane-cli
-`.sane-cli`: A file located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run.
+A file always located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run. On `sane new` it gets filled with defaults based on your flags.
 
-The currecntly supportet options are:
+The currently supportet options are:
 
-* `docker`
-* `database`
-* `verbose`
-* `disableAnalytics`
+`apps`: <br>
+Can be used to cuztomize your folder names via the following convention: <br>
+Clients either start with client then the full name is taken for logging and the foldername, or they end with -client and then that is truncated and merely serves identification. <br>
+Servers follow the same convention, just starting with server or ending with -server. <br>
+`disableAnalytics` <br>
+`database` <br>
+`docker` <br>
+`verbose` <br>
+`skipNpm` <br>
+`skipBower` <br>
 
-**Example:**  
 ```
-  {
-    "docker": true,
-    "database": "disk",
-    "verbose": false,
-    "disableAnalytics": false
-  }
+//A sample .sane-cli
+{
+  "apps": [
+    "client",
+    "server"
+  ],
+  "disableAnalytics": false,
+  "database": "postgresql",
+  "docker": false,
+  "verbose": false,
+  "skipNpm": true,
+  "skipBower": true
+}
 ```
 
 ##Deployment
