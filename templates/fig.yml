@@ -10,9 +10,10 @@ db:
   {{/if}}
 {{/if}}
 {{serverName}}:
-  #Right now docker-sails supports 3 different tags:
-  #0.10.32 (node 0.10.32), stable (latest node 0.10.x), latest (latest node 0.11.x)
-  image: artificial/docker-sails:stable
+  #Docker-sails supports several different tags:
+  #0.10.32/33/34 (node 0.10.32), stable (latest node 0.10.x), latest (latest node 0.11.x)
+  #0.10.32/33/34-pm2 (node 0.10.32), stable-pm2 (latest node 0.10.x), latest-pm2 (latest node 0.11.x)
+  image: artificial/docker-sails:stable-pm2
   command: sails lift
   volumes:
     - {{serverName}}/:/{{serverName}}
