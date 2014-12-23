@@ -73,17 +73,27 @@ To find out more about Sails and Ember and how they work together, you can take 
 ### Basics
 
 ### Data Format
+If you create a `user` (via `sane generate resource user`) you can access the model under `localhost:1337/api/v1/users` and to create a new Record send a POST request using the following JSON:
+
+```js
+{
+  "user": {
+    "name": "sane",
+    "age": "500"
+  }
+}
+```
 
 ## Docker
 
-Sane Stack has Docker support built in using [fig](http://www.fig.sh/) for container orchestration.
+Sane Stack has Docker support built-in using [fig](http://www.fig.sh/) for container orchestration.
 
 ### Setup
-Before installing [fig](http://www.fig.sh/install.html) make sure you have installed [boot2docker](http://boot2docker.io/) if you are on Mac or Windows and for Linux see [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/). Make sure you are running the latest versions, your boot2docker is running and your `$DOCKER_HOST` environemt variable is set before reporting any issues.
+On Mac or Windows first install [boot2docker](http://boot2docker.io/) via https://github.com/boot2docker/osx-installer or https://github.com/boot2docker/windows-installer. For Linux instructions see [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/). Then install [fig](http://www.fig.sh/install.html) based on the instructions.
+Once everything is set up make sure that your `$DOCKER_HOST` environemt variable is set correctly, also on Linux.
 
 ### fig.yml
 That is where your containers are defined, which ports you want to forward, how you want to link the containers etc. This conviniently gets generated for you on project-creation. You can add more containers that will all automatically get installed and started through the `sane up` command.
-
 
 ## .sane-cli
 A file always located in your root folder which can be used to persist parameters. For example you can use it to have `--docker` set as default for each `sane` command you run. On `sane new` it gets filled with defaults based on your flags.
