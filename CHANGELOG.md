@@ -3,6 +3,21 @@
 ### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
 
+### 0.0.15
+* [BUGFIX] Fixed some bug with `sails-disk`
+* [BUGFIX] Fixed a bug with `sane up`, using local install as well as recognizing a changed client folder
+* [BUGFIX] Showing the right `sails version` when running `sane new` with docker
+
+### 0.0.14
+* [FEATURE] Added [https://github.com/expressjs/morgan](morgan) hook to sails app so each http request gets logged
+* [FEATURE] Added `sane new --skip-npm --skip-bower` flags to skip npm and bower installation.
+* [FEATURE] You can now rename your client/server folders, by renaming them and then adding the new name to your .sane-cli `apps`. See Docs for details
+* [FEATURE] Added `--verbose` flag for `sane up`, which displays additional `boot2docker` output, only on windows & mac
+* [BREAKING ENHANCEMENT] On windows and mac your sails-container-server gets automatically forwarded to localhost. Right now only supports the fixed 1337 porty. Removed the `--port-forward/-p` flag.
+* [ENHANCEMENT] `pod` option is now supported in your `.sane-cli`
+* [BUGFIX] Changed tracking code to an GA App
+* [BREAKING BUGFIX] For consistency the short version of the `--docker` flag is now `-D` for all commands
+
 ### 0.0.13
 * [ENHANCEMENT] Updated `fs-extra` to 0.13.0
 * [ENHANCEMENT] Switched again to `traceur` so no compilation step is needed.
