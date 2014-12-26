@@ -3,6 +3,11 @@
 ### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
 
+### 0.0.16
+
+* [BUGFIX] Fixed bug with `sane new` not working without `--docker`
+* [BUGFIX] Possibly fixing the EHOSTUNREACH issue.
+
 ### 0.0.15
 * [BUGFIX] Fixed some bug with `sails-disk`
 * [BUGFIX] Fixed a bug with `sane up`, using local install as well as recognizing a changed client folder
