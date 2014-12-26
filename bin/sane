@@ -45,7 +45,7 @@ program
 program
 .command('new <name>')
 .alias('n')
-.description('Creates a new sane project. Choose database via -db disk(default)|mongo|mysql|postgres')
+.description('Creates a new sane project. Choose database via -d disk(default)|mongo|mysql|postgres')
 .option('-d, --database [type]', 'Options: disk (default), mongo, mysql, postgres', config.database || 'disk')
 .option('-D, --docker [boolean]', 'Setup Sails server and dependencies within docker containers.', config.docker || false)
 .option('-v, --verbose [boolean]', 'Show more detailed command output.', config.verbose || false)
