@@ -2,6 +2,7 @@
 
 ### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
+* [ENHANCEMENT] Update `leek` version which increases start-up time for commands that don't use tracking.
 
 ### 0.0.16
 
