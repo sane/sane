@@ -80,7 +80,6 @@ module.exports.connections = {
   *                                                                          *
   * Run: npm install sails-postgresql                                        *
   *                                                                          *
-  *                                                                          *
   ***************************************************************************/
 
   //docker host uses db, otherwise use localhost or the IP of your db
@@ -92,6 +91,24 @@ module.exports.connections = {
     user: 'postgres',
     password: '',
     database: 'postgres'
+  },
+
+  /***************************************************************************
+  *                                                                          *
+  * Redis is an open source, BSD licensed, advanced key-value cache and      *
+  * store.                                                                   *
+  *                                                                          *
+  * http://en.wikipedia.org/wiki/Redis                                       *
+  *                                                                          *
+  * Run: npm install sails-redis                                             *
+  *                                                                          *
+  ***************************************************************************/
+
+  redis: {
+    adapter: 'sails-redis',
+    port: 6379,
+    host: '{{host}}',
+    database: null
   }
 
   /***************************************************************************
