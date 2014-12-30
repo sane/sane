@@ -1,6 +1,6 @@
 {{#if database}}
 db:
-  image: {{database}}:latest #postgres, mysql, mongo. You can also specifiy a specific version instead of using latest.
+  image: {{database}}:latest #postgres, mysql, mongo, redis. You can also specifiy a specific version instead of using latest.
   ports:
     - "{{port}}:{{port}}" #for postgres "5432:5432", for mysql "3306:3306", for mongo "27017:27017", etc
   {{#if isMysql}}
