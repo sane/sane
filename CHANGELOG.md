@@ -2,7 +2,11 @@
 
 ### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
-* [ENHANCEMENT] Update `leek` version which increases start-up time for commands that don't use tracking.
+
+### 0.0.17
+* [ENHANCEMENT] Update `leek` version which improves start-up time for commands that don't use tracking.
+* [FEATURE] Added redis support.
+* [FEATURE] Added `--skip-sails` and `--skip-ember flags to the `up` command, if you want to only start the backend or frontend server.
 
 ### 0.0.16
 

@@ -17,7 +17,7 @@ Quickstart:
 
 ##Documentation
 
-The full documentation is available at: http://artificialio.github.io/sane
+The full documentation is available at: http://sanestack.com/
 
 ##Development
 

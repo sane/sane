@@ -106,6 +106,21 @@ describe('Acceptance: sane new', function() {
     assertFileEquals('.sane-cli', expectedConfig);
   });
 
+  it('sane new myspace -d redis, where myspace does not exist, works and creates myspace with redis', async function() {
+    await initApp([
+      'new',
+      'myspace',
+      '--skip-npm',
+      '--skip-bower',
+      '-d',
+      'redis'
+    ]);
+
+    process.chdir('myspace');
+
+    assertFile('.sane-cli');
+  });
+
 //   it('ember new foo, where foo does not yet exist, works', function() {
 //     return ember([
 //       'new',
