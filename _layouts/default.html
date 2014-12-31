@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    <meta name="author" content="{{ site.authors }}" />
+    <meta property="og:title" content="{{ site.name }}">
+    <meta name="description" content="{{ site.description }}">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Flatdoc -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/legacy.js'></script>
+    <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/flatdoc.js'></script>
+  
+  <!-- Flatdoc theme -->
+  <link  href='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/style.css' rel='stylesheet'>
+  <link  href='/stylesheets/custom.css' rel='stylesheet'>
+  <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/script.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/custom.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+<body class="large-brief" role='flatdoc'>
+
+  <div class='header'>
+    <div class='left'>
+      <h1><a href="{{ site.baseurl }}/" >{{site.name}}</a></h1>
+      <ul>
+        <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+        <li><a href="http://github.com/{{ site.footer-links.github }}">View on GitHub</a></li>
+        <li><a href="http://github.com/{{ site.footer-links.github }}/issues">Issues</a></li>
+      </ul>
+    </div>
+    <div class='right'>
+      <!-- GitHub buttons: see http://ghbtns.com -->
+      <iframe src="http://ghbtns.com/github-btn.html?user=artificialio&amp;repo=sane&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+    </div>
+  </div>
+
+  <div class='content-root'>
+  {{ content }}
+  </div>
+
+  {% include analytics.html %}
+</body>
+</html>

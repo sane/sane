@@ -1,0 +1,39 @@
+/* css custom to the blog */
+
+@media (min-width: 1180px) {
+
+  body:not(.no-literate) .content-root {
+    /*background-color: #fff;*/
+  /*  box-shadow: none; */
+    box-shadow: 880px 0px #FFF inset, 881px 0px #DFE2E7 inset, 890px 0px 5px -10px rgba(0, 0, 0, 0.1) inset;
+  }
+
+  body:not(.no-literate) .content {
+    width: 640px;
+  }
+}
+
+.post {
+  padding: 0 40px !important;
+}
+
+.post h1 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.date {
+  color: #8A8A8A;
+}
+
+.menu li.level-1{
+  color: #9090AA;
+  font-family: montserrat,sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.entry {
+  margin-bottom: 30px;
+}

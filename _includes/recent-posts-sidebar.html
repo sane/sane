@@ -1,0 +1,10 @@
+<div class='menubar'>
+  <div class='menu section' role='flatdoc-menu'>
+    <ul>
+      <li class="level-1">Recent Posts</li>
+      {% for post in site.posts %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<link  href='/stylesheets/blog.css' rel='stylesheet'>
+<link  href='/stylesheets/highlight.css' rel='stylesheet'>
+
+{% include recent-posts-sidebar.html %}
+<div class="content">
+  <article class="post">
+    <h1>{{ page.title }}</h1>
+    <div class="date">
+      Written on {{ page.date | date: "%b %e, %Y" }} by {% if page.twitter %} <a href="https://twitter.com/{{page.twitter}}">@{{page.author}}</a> {% else %} {{page.author}} {% endif %}
+    </div>
+    <hr>
+
+    <div class="entry">
+      {{ content }}
+    </div>
+
+    {% include disqus.html disqus_identifier=page.disqus_identifier %}
+  </article>
+</div>
