@@ -11,6 +11,7 @@
   body:not(.no-literate) .content {
     width: 640px;
   }
+
 }
 
 .post {
@@ -36,4 +37,6 @@
 
 .entry {
   margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 0.9rem;
 }
