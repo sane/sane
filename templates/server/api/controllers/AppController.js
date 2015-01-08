@@ -19,7 +19,7 @@ module.exports = {
    */
   serve: function(req, res) {
     var emberApp = __dirname + '/../../assets/index.html';
-    fs.exists(emberApp + '', function (exists) {
+    fs.exists(emberApp, function (exists) {
       if (!exists) {
         return res.notFound('The requested file does not exist.');
       }
