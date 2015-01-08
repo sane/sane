@@ -1,335 +1,340 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/blog/welcome-The-new-core-team/</loc>
-    <lastmod>2014-12-30T00:00:00+01:00</lastmod>
+    <loc>http://www.sanestack.com/blog/meeting-minutes/</loc>
+    <lastmod>2015-01-08T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2015-01-05T10:00:43+01:00</lastmod>
+    <loc>http://www.sanestack.com/blog/welcome-the-new-core-team/</loc>
+    <lastmod>2015-01-05T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/blog/</loc>
+    <lastmod>2015-01-08T15:03:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/</loc>
-    <lastmod>2015-01-05T10:00:43+01:00</lastmod>
+    <loc>http://www.sanestack.com/</loc>
+    <lastmod>2015-01-08T15:03:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/base.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/base.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/ast.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/ast.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/base.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/base.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/compiler.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/compiler.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/helpers.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/helpers.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/index.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/index.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/javascript-compiler.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/javascript-compiler.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/parser.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/parser.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/printer.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/printer.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/visitor.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/visitor.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/exception.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/exception.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/index.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/index.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/runtime.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/runtime.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/safe-string.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/safe-string.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/utils.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/utils.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars.runtime.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars.runtime.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/dist/cjs/index.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/index.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/index.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/index.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/lib/index.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/lib/index.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/lib/index.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/lib/index.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/lib/precompiler.js.html</loc>
-    <lastmod>2014-09-02T04:28:57+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/lib/precompiler.js.html</loc>
+    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/ast.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/ast.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/basic.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/basic.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/blocks.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/blocks.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/builtins.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/builtins.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/data.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/data.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/env/browser.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/browser.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/env/common.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/common.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/env/index.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/index.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/env/node.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/node.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/env/runner.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/runner.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/env/runtime.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/runtime.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/helpers.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/helpers.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/index.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/index.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/javascript-compiler.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/javascript-compiler.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/parser.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/parser.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/partials.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/partials.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/precompiler.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/precompiler.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/regressions.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/regressions.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/require.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/require.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/runtime.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/runtime.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/spec.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/spec.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/string-params.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/string-params.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/subexpressions.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/subexpressions.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/tokenizer.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/tokenizer.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/track-ids.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/track-ids.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/utils.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/utils.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/handlebars/coverage/lcov-report/spec/whitespace-control.js.html</loc>
-    <lastmod>2014-08-14T06:50:23+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/whitespace-control.js.html</loc>
+    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/mocha/lib/reporters/templates/script.html</loc>
-    <lastmod>2014-10-22T06:30:00+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha/lib/reporters/templates/script.html</loc>
+    <lastmod>2014-10-22T05:30:00+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/mocha/lib/reporters/templates/style.html</loc>
-    <lastmod>2014-10-22T06:30:00+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha/lib/reporters/templates/style.html</loc>
+    <lastmod>2014-10-22T05:30:00+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/mocha/lib/template.html</loc>
-    <lastmod>2014-10-22T06:30:00+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha/lib/template.html</loc>
+    <lastmod>2014-10-22T05:30:00+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/mocha-jshint/node_modules/jshint/node_modules/console-browserify/node_modules/date-now/test/static/index.html</loc>
-    <lastmod>2013-01-23T01:55:00+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha-jshint/node_modules/jshint/node_modules/console-browserify/node_modules/date-now/test/static/index.html</loc>
+    <lastmod>2013-01-23T00:55:00+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/mocha-jshint/node_modules/jshint/node_modules/console-browserify/test/static/index.html</loc>
-    <lastmod>2014-04-08T04:54:11+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha-jshint/node_modules/jshint/node_modules/console-browserify/test/static/index.html</loc>
+    <lastmod>2014-04-08T03:54:11+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/mocha-jshint/node_modules/jshint/node_modules/htmlparser2/test/Documents/Attributes.html</loc>
-    <lastmod>2014-11-05T00:45:01+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha-jshint/node_modules/jshint/node_modules/htmlparser2/test/Documents/Attributes.html</loc>
+    <lastmod>2014-11-04T23:45:01+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/mocha-jshint/node_modules/jshint/node_modules/htmlparser2/test/Documents/Basic.html</loc>
-    <lastmod>2014-11-05T00:45:01+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha-jshint/node_modules/jshint/node_modules/htmlparser2/test/Documents/Basic.html</loc>
+    <lastmod>2014-11-04T23:45:01+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/node-uuid/test/test.html</loc>
-    <lastmod>2014-08-14T20:09:47+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/node-uuid/test/test.html</loc>
+    <lastmod>2014-08-14T19:09:47+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/regenerator/node_modules/commoner/node_modules/install/docs/install.html</loc>
-    <lastmod>2013-11-02T23:31:41+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/regenerator/node_modules/commoner/node_modules/install/docs/install.html</loc>
+    <lastmod>2013-11-02T22:31:41+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/regenerator/node_modules/defs/build/index.html</loc>
-    <lastmod>2014-11-28T11:10:25+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/regenerator/node_modules/defs/build/index.html</loc>
+    <lastmod>2014-11-28T10:10:25+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/traceur/node_modules/source-map-support/amd-test/index.html</loc>
-    <lastmod>2014-10-22T09:13:51+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/traceur/node_modules/source-map-support/amd-test/index.html</loc>
+    <lastmod>2014-10-22T08:13:51+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/traceur/node_modules/source-map-support/browser-test/index.html</loc>
-    <lastmod>2014-10-22T09:44:19+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/traceur/node_modules/source-map-support/browser-test/index.html</loc>
+    <lastmod>2014-10-22T08:44:19+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/traceur/node_modules/source-map-support/header-test/index.html</loc>
-    <lastmod>2014-10-22T09:13:51+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/traceur/node_modules/source-map-support/header-test/index.html</loc>
+    <lastmod>2014-10-22T08:13:51+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/node_modules/yam/node_modules/findup/node_modules/colors/example.html</loc>
-    <lastmod>2013-07-26T07:36:07+02:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/yam/node_modules/findup/node_modules/colors/example.html</loc>
+    <lastmod>2013-07-26T06:36:07+01:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

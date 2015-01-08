@@ -1,2 +1,9 @@
 node_modules
 tmp
+_site
+.DS_Store
+.jekyll
+.bundle
+.sass-cache
+Gemfile
+Gemfile.lock

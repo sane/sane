@@ -18,6 +18,10 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 **Note: If you use Docker, make sure you have [fig](http://www.fig.sh/install.html) installed. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
 
 
+## Tutorials
+
+Check out our offical tutorials at http://www.100percentjs.com/introducing-new-series-tutorials-sane/ as well as the github repository where all the latest parts get released: https://github.com/mgenev/how-to-sane
+
 ## Overview
 
 * The cli creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly.

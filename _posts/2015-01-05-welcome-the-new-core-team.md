@@ -7,6 +7,8 @@ twitter: mpadourek
 
 A new year has arrived, one that comes with a lot of exciting news for Sane Stack. People are starting to take notice of the project and the feature set is continuously growing. It has now reached a level of complexity that calls for structure, clarity and good planning to ensure success. I am happy to introduce the two new members of our core team. Martin Genev ([@cyberseer](https://twitter.com/cyberseer)) the author of <a href="http://www.100percentjs.com/">100percentjs.com</a>, Senior Fullstack Developer of <a href="http://classmates.com">classmates.com</a> and co-founder of <a href="http://www.geminiconnect.com/">geminiconnect.com</a>. Kris Williams ([@kris_will](https://twitter.com/kris_will)), with an impressive range of experience having been Lead Developer at Disney, Senior Developer at myspace and now working at his own startup, <a href="http://creativegig.com/">creativegig.com</a>, utilising Sane Stack.
 
+<!-- more -->
+
 Our first core meeting was at the end of the year and in an open fashion we are going to utilise this blog to open up our plans and the development to everyone.
 
 The Javascript and NodeJS world is a jungle. A few years back jQuery was popular, now most people try to avoid jQuery dependencies. There are multiple package managers for the frontend as well as the backend. New frameworks have popped up, other frameworks have ceased to exist;  there are a lot of different solutions trying to achieve similar things but no definitively ‘best’ practise has surfaced.

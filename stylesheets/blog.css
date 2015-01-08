@@ -12,10 +12,13 @@
     width: 640px;
   }
 
+  .post {
+    padding: 0 40px !important;
+  }
 }
 
-.post {
-  padding: 0 40px !important;
+.entry {
+  word-wrap: break-word;
 }
 
 .post h1 {
@@ -35,8 +38,11 @@
   font-weight: bold;
 }
 
-.entry {
-  margin-bottom: 30px;
+.entry, .read-more {
   font-weight: 300;
   font-size: 0.9rem;
+}
+
+p.read-more {
+  padding-top: 0;
 }

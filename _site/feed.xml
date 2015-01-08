@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sane Stack</title>
+    <description>The JS Fullstack to get you productive instantly.</description>
+    <link>http://www.sanestack.com</link>
+    <atom:link href="http://www.sanestack.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Meeting Minutes</title>
+        <description>&lt;p&gt;The last year ended on a good note: The Sane core team came together for our first meeting to plan and discuss some foundational questions as well as future plans of the stack.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Authentication&lt;/strong&gt; &lt;br /&gt;
+Without much ado we went straight into one of the most important topics of every Web application: Security - namely authentication.&lt;/p&gt;
+
+&lt;p&gt;One thing that was clear for all of us quite quickly, the best solution to authenticate the API itself is using a stateless server that hands out &lt;a href=&quot;http://jwt.io/&quot;&gt;JWT tokens&lt;/a&gt; to the client. (For a good description see &lt;a href=&quot;http://stackoverflow.com/questions/3105296/if-rest-applications-are-supposed-to-be-stateless-how-do-you-manage-sessions&quot;&gt;stackoverflow.com/questions/3105296/if-rest-applications-are-supposed-to-be-stateless-how-do-you-manage-sessions&lt;/a&gt;). &lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;The solutions we found out there would either be the the most commonly used &lt;a href=&quot;http://passportjs.org/&quot;&gt;passport&lt;/a&gt;, custom solutions and &lt;a href=&quot;http://waterlock.ninja/&quot;&gt;waterlock&lt;/a&gt;, an authentication library using JWTs specifically made for sails. On a side note, I had the honour to become an official member of the new, community led waterlock organisation. It is a very promising library, but is still a bit immature and in the need for some improvements to smoothly work with ember and some more use-case. We invited &lt;a href=&quot;http://davidrivera.github.io/&quot;&gt;David Rivera&lt;/a&gt;, the brain behind this package, to the meeting to talk about a few of the issues we ran into as well as his future plans of waterlock - so we could potentially use it as the go-to solution for Sane Stack.&lt;/p&gt;
+
+&lt;p&gt;It was great to have a chat with him and he is soon planning to rewrite and improve some major parts of waterlock using generators and hooks. Hopefully there will also be more contributors joining in on that effort. We would have loved to adopt waterlock, but we need something that smoothly works now, so for that we have decided to base our go-to solution on two different approaches &lt;a href=&quot;https://twitter.com/kris_will&quot;&gt;Kris&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/cyberseer&quot;&gt;Martin&lt;/a&gt; have been working on separately.&lt;/p&gt;
+
+&lt;p&gt;Martin’s solution is probably the more commonly used approach. It is based on &lt;a href=&quot;https://github.com/ryanwebber/sails-authorization&quot;&gt;github.com/ryanwebber/sails-authorization&lt;/a&gt;, utilises passports on the backend, implementing a stateless JWT approach and using ember-cli-simple-auth on the frontend. You can find the current solution in our official tutorial repository: &lt;a href=&quot;https://github.com/mgenev/how-to-sane&quot;&gt;github.com/mgenev/how-to-sane&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kris’ solution is based on using auth0 as a separate authentication provider. It takes away the issue of storing sensitive user data, setting up your server to handle authentication and hands it over to the same company that came up with JWTs. So if you do not have the resources or simply don’t want to think too much about the extra steps it requires securing your user data, this approach will likely be the right one for you. There is a tutorial &lt;a href=&quot;https://auth0.com/docs/ember-tutorial&quot;&gt;auth0.com/docs/ember-tutorial&lt;/a&gt; as well as some libraries, but it is not a completely smooth process yet to integrate auth0 with ember-simple-auth. Kris is working on an ember-cli addon so stay tuned for that.&lt;/p&gt;
+
+&lt;p&gt;Furthermore work will soon start on a Sane addon system, which will allow to install the necessary packages as well as generate the boilerplate code needed to get authentication working with one simple command: &lt;code&gt;sane addon install auth-local&lt;/code&gt; or similar. This will also ensure that we can easily add different authentication packages in the future. We will of course course utilise npm as our favourite package manager for Sane addons. More about that soon.&lt;/p&gt;
+
+&lt;h3 id=&quot;roadmap&quot;&gt;Roadmap&lt;/h3&gt;
+&lt;p&gt;Other topics we discussed and touched upon included an official roadmap, which has been implemented as a simple github issue: &lt;a href=&quot;https://github.com/artificialio/sane/issues/49&quot;&gt;github.com/artificialio/sane/issues/49&lt;/a&gt;. This might see some changes and updates if it proves to be a bit too simple.&lt;/p&gt;
+
+&lt;p&gt;To give you a further glimpse about which topics we are talking and thinking about in the Sane Stack future:&lt;/p&gt;
+
+&lt;h3 id=&quot;micro-services&quot;&gt;Micro Services&lt;/h3&gt;
+&lt;p&gt;We just touched upon this topic, but if you are interested in what we are looking into, check out &lt;a href=&quot;http://12factor.net/&quot;&gt;12factor.net&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/watch?v=nMTaS07i3jk&quot;&gt;www.youtube.com/watch?v=nMTaS07i3jk&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;deployment&quot;&gt;Deployment&lt;/h3&gt;
+&lt;p&gt;Nothing conclusive has been decided yet for the &lt;code&gt;sane deploy&lt;/code&gt; command but it will probably ship in the form of different addons for different deployment strategies. &lt;a href=&quot;https://github.com/deis/deis&quot;&gt;github.com/deis/deis&lt;/a&gt; as well as &lt;a href=&quot;https://github.com/jwilder/docker-gen&quot;&gt;github.com/jwilder/docker-gen&lt;/a&gt; are some of the interesting projects we have been and are looking into.&lt;/p&gt;
+
+&lt;h3 id=&quot;configuration-via-environment-variables&quot;&gt;Configuration via Environment Variables&lt;/h3&gt;
+&lt;p&gt;It is nice to have a .sane-cli file for configuration but it would be very useful to be able to configure exactly the same settings via Environment Variables. So we will implement this feature either by switching to &lt;a href=&quot;https://github.com/dominictarr/rc&quot;&gt;github.com/dominictarr/rc&lt;/a&gt; or improving &lt;a href=&quot;https://github.com/twokul/yam&quot;&gt;github.com/twokul/yam&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h3 id=&quot;testing&quot;&gt;Testing&lt;/h3&gt;
+&lt;p&gt;Testing on the ember-site works pretty well via ember-cli, but SailsJS does not come with a default testing environment and end-to-end testing for the whole app is another important feature currently not supported. This topic we will probably talk more about in the next meeting.
+Projects we have been looking at so far: &lt;a href=&quot;https://github.com/bredikhin/sailsjs-mocha-testing-barrels-fixtures-example&quot;&gt;github.com/bredikhin/sailsjs-mocha-testing-barrels-fixtures-example&lt;/a&gt; and &lt;a href=&quot;https://github.com/fdvj/wolfpack&quot;&gt;github.com/fdvj/wolfpack&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;I hope this provides you a with good idea of the areas we find important, want improve, smoothen out and make simple to use. If you know of any other projects in any of these areas, have any thoughts or want to get involved just use the comment section or visit us on gitter: &lt;a href=&quot;https://gitter.im/artificialio/sane&quot;&gt;gitter.im/artificialio/sane&lt;/a&gt; &lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
+        <link>http://www.sanestack.com/blog/meeting-minutes/</link>
+        <guid isPermaLink="true">http://www.sanestack.com/blog/meeting-minutes/</guid>
+      </item>
+    
+      <item>
+        <title>Welcome the new Core Team!</title>
+        <description>&lt;p&gt;A new year has arrived, one that comes with a lot of exciting news for Sane Stack. People are starting to take notice of the project and the feature set is continuously growing. It has now reached a level of complexity that calls for structure, clarity and good planning to ensure success. I am happy to introduce the two new members of our core team. Martin Genev (&lt;a href=&quot;https://twitter.com/cyberseer&quot;&gt;@cyberseer&lt;/a&gt;) the author of &lt;a href=&quot;http://www.100percentjs.com/&quot;&gt;100percentjs.com&lt;/a&gt;, Senior Fullstack Developer of &lt;a href=&quot;http://classmates.com&quot;&gt;classmates.com&lt;/a&gt; and co-founder of &lt;a href=&quot;http://www.geminiconnect.com/&quot;&gt;geminiconnect.com&lt;/a&gt;. Kris Williams (&lt;a href=&quot;https://twitter.com/kris_will&quot;&gt;@kris_will&lt;/a&gt;), with an impressive range of experience having been Lead Developer at Disney, Senior Developer at myspace and now working at his own startup, &lt;a href=&quot;http://creativegig.com/&quot;&gt;creativegig.com&lt;/a&gt;, utilising Sane Stack.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Our first core meeting was at the end of the year and in an open fashion we are going to utilise this blog to open up our plans and the development to everyone.&lt;/p&gt;
+
+&lt;p&gt;The Javascript and NodeJS world is a jungle. A few years back jQuery was popular, now most people try to avoid jQuery dependencies. There are multiple package managers for the frontend as well as the backend. New frameworks have popped up, other frameworks have ceased to exist;  there are a lot of different solutions trying to achieve similar things but no definitively ‘best’ practise has surfaced.&lt;/p&gt;
+
+&lt;p&gt;This is a curated document about different frontend-/backend-/fullstack solutions underlining my point:&lt;br /&gt;
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1r8rJy2Q5p5QORYKcye93UECwOlSgFL24c5fyF7dqhaM/edit#gid=1607194899&quot;&gt;https://docs.google.com/spreadsheets/d/1r8rJy2Q5p5QORYKcye93UECwOlSgFL24c5fyF7dqhaM/edit#gid=1607194899&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Most of these stacks are based on Angular, with slightly different nuances, a slightly different folder structure and a different backend. Some choices are left to the user but ultimately these stacks have very closely related goals.&lt;/p&gt;
+
+&lt;p&gt;Imagine you want to write your first JS fullstack app. You are carefully trying to evaluate which tools to use. Just taking a look at the document mentioned above shows how confusing and tedious this can be. Or perhaps you have already made your choice of stack but alternatives are released, insisting that they offer slightly different or more effective functionality. How do you find the best practices in the midst of this jungle? How do make sure you are getting structured code, the best packages for testing, authentication, frontend styling, etc. without having to spend hours sifting through all these options? What if you work with other people who use their own slightly different stacks? This makes it harder not only for consistency between projects but also in terms of collaboration - developers have to spend energy and time learning which specific choices you made.&lt;/p&gt;
+
+&lt;p&gt;That is where Sane Stack comes in. A tool that gives you the best of the Javascript world from the frontend to the backend and takes a step further by providing a solution to test, secure and deploy your apps.&lt;/p&gt;
+
+&lt;p&gt;The basis of all this is two excellent Javascript frameworks: &lt;a href=&quot;http://sailsjs.org/#/&quot;&gt;Sails.js&lt;/a&gt; for the backend and &lt;a href=&quot;http://emberjs.com/&quot;&gt;Ember.js&lt;/a&gt; (via ember-cli) for the frontend. ‘Sails’ is developing and maturing and ‘Ember’ has one of the most supportive and open communities I have encountered for any frontend framework. &lt;/p&gt;
+
+&lt;p&gt;Both frameworks are founded on shared principles, ensuring that you don’t have to spend your time curating all these tools and practices. Instead you can start developing your new app with the confidence that other people will find it easier to understand your code and you yourself will have an easier job of maintaining multiple projects with consistent conventions. Additionally, as apps are more than mere coding or prototyping, we are planning to offer the simplicity of a single command to test, secure and deploy your apps.&lt;/p&gt;
+
+&lt;p&gt;One thing to note: you will be able to choose to exchange certain parts if you have a very strong, differing opinion, e.g. you want to use another database, another testing framework or another deployment solution. We will keep everything open through a modular system with a set of choices made for you.&lt;/p&gt;
+
+&lt;p&gt;This post turned out to be a bit longer than originally planned, so stay tuned for the next one to read about our first meetings and our plans for the future!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
+        <link>http://www.sanestack.com/blog/welcome-the-new-core-team/</link>
+        <guid isPermaLink="true">http://www.sanestack.com/blog/welcome-the-new-core-team/</guid>
+      </item>
+    
+  </channel>
+</rss>

@@ -1,3 +1,7 @@
+body, td, textarea, input {
+  font-size: 0.9em;
+}
+
 hr {
   background-color: #ddd;
   border: medium none;
@@ -29,4 +33,14 @@ blockquote a img {
 iframe {
   max-width: 100%;
   max-height: 325px;
+}
+
+@media (max-width: 480px) {
+  .header .left li {
+    padding: 5px 0;
+  }
+
+  .header .left h1 {
+    padding: 0 0 5px;
+  }
 }

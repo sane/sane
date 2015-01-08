@@ -14,11 +14,13 @@ permalink: /blog/
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="entry">
-        {{ post.content | truncatewords: 90}}
+        {% if post.content contains "<!-- more -->" %}
+          {{ post.content | split:"<!-- more -->" | first % }}
+        {% else %}
+          {{ post.content | strip_html | truncatewords: 90 }}
+        {% endif %}
       </div>
-      <br>
-      <br>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More...</a>
+      <p class="read-more"><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More...</a></p>
     </article>
   {% endfor %}
 </div>

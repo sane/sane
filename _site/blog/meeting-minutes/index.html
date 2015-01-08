@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <title>Meeting Minutes – Sane Stack – The JS Fullstack to get you productive instantly.</title>
+
+    <meta name="author" content="Markus Padourek" />
+    <meta property="og:title" content="Sane Stack">
+    <meta name="description" content="The JS Fullstack to get you productive instantly.">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Flatdoc -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/legacy.js'></script>
+    <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/flatdoc.js'></script>
+  
+  <!-- Flatdoc theme -->
+  <link  href='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/style.css' rel='stylesheet'>
+  <link  href='/stylesheets/custom.css' rel='stylesheet'>
+  <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/script.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="/custom.css" />
+    <link rel="alternate" type="application/rss+xml" title="Sane Stack - The JS Fullstack to get you productive instantly." href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+<body class="large-brief" role='flatdoc'>
+
+  <div class='header'>
+    <div class='left'>
+      <h1><a href="/" >Sane Stack</a></h1>
+      <ul>
+        <li><a href="http://github.com/artificialio/sane">View on GitHub</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </div>
+    <div class='right'>
+      <!-- GitHub buttons: see http://ghbtns.com -->
+      <iframe src="http://ghbtns.com/github-btn.html?user=artificialio&amp;repo=sane&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+    </div>
+  </div>
+
+  <div class='content-root'>
+  <link  href='/stylesheets/blog.css' rel='stylesheet'>
+<link  href='/stylesheets/highlight.css' rel='stylesheet'>
+
+<div class='menubar'>
+  <div class='menu section' role='flatdoc-menu'>
+    <ul>
+      <li class="level-1">Recent Posts</li>
+      
+        <li><a href="/blog/meeting-minutes/">Meeting Minutes</a></li>
+      
+        <li><a href="/blog/welcome-the-new-core-team/">Welcome the new Core Team!</a></li>
+      
+    </ul>
+  </div>
+</div>
+<div class="content">
+  <article class="post">
+    <h1>Meeting Minutes</h1>
+    <div class="date">
+      Written on Jan  8, 2015 by  <a href="https://twitter.com/mpadourek">Markus Padourek</a> 
+    </div>
+    <hr>
+
+    <div class="entry">
+      <p>The last year ended on a good note: The Sane core team came together for our first meeting to plan and discuss some foundational questions as well as future plans of the stack.</p>
+
+<p><strong>Authentication</strong> <br />
+Without much ado we went straight into one of the most important topics of every Web application: Security - namely authentication.</p>
+
+<p>One thing that was clear for all of us quite quickly, the best solution to authenticate the API itself is using a stateless server that hands out <a href="http://jwt.io/">JWT tokens</a> to the client. (For a good description see <a href="http://stackoverflow.com/questions/3105296/if-rest-applications-are-supposed-to-be-stateless-how-do-you-manage-sessions">stackoverflow.com/questions/3105296/if-rest-applications-are-supposed-to-be-stateless-how-do-you-manage-sessions</a>). </p>
+
+<!-- more -->
+
+<p>The solutions we found out there would either be the the most commonly used <a href="http://passportjs.org/">passport</a>, custom solutions and <a href="http://waterlock.ninja/">waterlock</a>, an authentication library using JWTs specifically made for sails. On a side note, I had the honour to become an official member of the new, community led waterlock organisation. It is a very promising library, but is still a bit immature and in the need for some improvements to smoothly work with ember and some more use-case. We invited <a href="http://davidrivera.github.io/">David Rivera</a>, the brain behind this package, to the meeting to talk about a few of the issues we ran into as well as his future plans of waterlock - so we could potentially use it as the go-to solution for Sane Stack.</p>
+
+<p>It was great to have a chat with him and he is soon planning to rewrite and improve some major parts of waterlock using generators and hooks. Hopefully there will also be more contributors joining in on that effort. We would have loved to adopt waterlock, but we need something that smoothly works now, so for that we have decided to base our go-to solution on two different approaches <a href="https://twitter.com/kris_will">Kris</a> and <a href="https://twitter.com/cyberseer">Martin</a> have been working on separately.</p>
+
+<p>Martin’s solution is probably the more commonly used approach. It is based on <a href="https://github.com/ryanwebber/sails-authorization">github.com/ryanwebber/sails-authorization</a>, utilises passports on the backend, implementing a stateless JWT approach and using ember-cli-simple-auth on the frontend. You can find the current solution in our official tutorial repository: <a href="https://github.com/mgenev/how-to-sane">github.com/mgenev/how-to-sane</a>.</p>
+
+<p>Kris’ solution is based on using auth0 as a separate authentication provider. It takes away the issue of storing sensitive user data, setting up your server to handle authentication and hands it over to the same company that came up with JWTs. So if you do not have the resources or simply don’t want to think too much about the extra steps it requires securing your user data, this approach will likely be the right one for you. There is a tutorial <a href="https://auth0.com/docs/ember-tutorial">auth0.com/docs/ember-tutorial</a> as well as some libraries, but it is not a completely smooth process yet to integrate auth0 with ember-simple-auth. Kris is working on an ember-cli addon so stay tuned for that.</p>
+
+<p>Furthermore work will soon start on a Sane addon system, which will allow to install the necessary packages as well as generate the boilerplate code needed to get authentication working with one simple command: <code>sane addon install auth-local</code> or similar. This will also ensure that we can easily add different authentication packages in the future. We will of course course utilise npm as our favourite package manager for Sane addons. More about that soon.</p>
+
+<h3 id="roadmap">Roadmap</h3>
+<p>Other topics we discussed and touched upon included an official roadmap, which has been implemented as a simple github issue: <a href="https://github.com/artificialio/sane/issues/49">github.com/artificialio/sane/issues/49</a>. This might see some changes and updates if it proves to be a bit too simple.</p>
+
+<p>To give you a further glimpse about which topics we are talking and thinking about in the Sane Stack future:</p>
+
+<h3 id="micro-services">Micro Services</h3>
+<p>We just touched upon this topic, but if you are interested in what we are looking into, check out <a href="http://12factor.net/">12factor.net</a> and <a href="https://www.youtube.com/watch?v=nMTaS07i3jk">www.youtube.com/watch?v=nMTaS07i3jk</a></p>
+
+<h3 id="deployment">Deployment</h3>
+<p>Nothing conclusive has been decided yet for the <code>sane deploy</code> command but it will probably ship in the form of different addons for different deployment strategies. <a href="https://github.com/deis/deis">github.com/deis/deis</a> as well as <a href="https://github.com/jwilder/docker-gen">github.com/jwilder/docker-gen</a> are some of the interesting projects we have been and are looking into.</p>
+
+<h3 id="configuration-via-environment-variables">Configuration via Environment Variables</h3>
+<p>It is nice to have a .sane-cli file for configuration but it would be very useful to be able to configure exactly the same settings via Environment Variables. So we will implement this feature either by switching to <a href="https://github.com/dominictarr/rc">github.com/dominictarr/rc</a> or improving <a href="https://github.com/twokul/yam">github.com/twokul/yam</a>. </p>
+
+<h3 id="testing">Testing</h3>
+<p>Testing on the ember-site works pretty well via ember-cli, but SailsJS does not come with a default testing environment and end-to-end testing for the whole app is another important feature currently not supported. This topic we will probably talk more about in the next meeting.
+Projects we have been looking at so far: <a href="https://github.com/bredikhin/sailsjs-mocha-testing-barrels-fixtures-example">github.com/bredikhin/sailsjs-mocha-testing-barrels-fixtures-example</a> and <a href="https://github.com/fdvj/wolfpack">github.com/fdvj/wolfpack</a> </p>
+
+<p>I hope this provides you a with good idea of the areas we find important, want improve, smoothen out and make simple to use. If you know of any other projects in any of these areas, have any thoughts or want to get involved just use the comment section or visit us on gitter: <a href="https://gitter.im/artificialio/sane">gitter.im/artificialio/sane</a> </p>
+
+    </div>
+
+    
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+    
+	    var disqus_shortname = 'sanestack'; 
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+  </article>
+</div>
+  </div>
+
+  
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-46963158-6', 'auto');
+		ga('require', 'linkid', 'linkid.js');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+</body>
+</html>
