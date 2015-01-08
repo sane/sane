@@ -21,6 +21,10 @@
   word-wrap: break-word;
 }
 
+.entry h3 {
+  padding-top: 20px;
+}
+
 .post h1 {
   padding-left: 0;
   padding-right: 0;
