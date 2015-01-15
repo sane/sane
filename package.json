@@ -52,7 +52,8 @@
     "shelljs": "~0.3.0",
     "traceur": "0.0.79",
     "walk-sync": "~0.1.3",
-    "yam": "0.0.17"
+    "yam": "0.0.17",
+    "ember-cli": "~0.1.7"
   },
   "devDependencies": {
     "chai": "^1.9.1",
