@@ -3,6 +3,11 @@
 ### master
 * [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
 
+### 0.0.18
+* [FEATURE] Added support for local sane-cli (so you can have a fixed sane-cli per project)
+* [ENHANCEMENT] Improved boot2docker running check
+* [BUGFIX] explicit `sane up --docker=false` now working
+
 ### 0.0.17
 * [ENHANCEMENT] Update `leek` version which improves start-up time for commands that don't use tracking.
 * [FEATURE] Added redis support.
