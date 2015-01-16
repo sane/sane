@@ -7,6 +7,7 @@
 * [FEATURE] Added support for local sane-cli (so you can have a fixed sane-cli per project)
 * [ENHANCEMENT] Improved boot2docker running check
 * [BUGFIX] explicit `sane up --docker=false` now working
+* [ENHANCEMENT] No analytics for tests anymore by adding undocumented `--skip-analytics` flag
 
 ### 0.0.17
 * [ENHANCEMENT] Update `leek` version which improves start-up time for commands that don't use tracking.

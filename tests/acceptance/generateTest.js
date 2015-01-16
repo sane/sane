@@ -48,17 +48,16 @@ describe('Acceptance: sane generate', function() {
       'new',
       '.',
       '--skip-npm',
-      '--skip-bower'
+      '--skip-bower',
+      '--skip-analytics'
     ]);
   }
 
   async function generate(args) {
     var generateArgs = ['generate'].concat(args.split(' '));
 
-    console.log('execFile sane new');
     await initApp();
 
-    console.log(`execFile sane generate ${args}`);
     return execFile(sane, generateArgs);
   }
 
