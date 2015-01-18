@@ -8,8 +8,8 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 [![Youtube](https://lh4.googleusercontent.com/-Gzbkj30rNvw/VJmk4dpVJ3I/AAAAAAAAfK4/u3ORJzofpoc/w1814-h1086-no/Screen%2BShot%2B2014-12-23%2Bat%2B05.00.50.png)](https://www.youtube.com/watch?v=zWU6dRNpNtc)
 
 ## Quickstart
-* `npm install -g sails ember-cli sane-cli`
-* `sane new project` creates a local project with [sails-disk](https://github.com/balderdashy/sails-disk). To install with [Docker](https://www.docker.com/) and production databases see [Options](#sane-stack-cli-options).
+* `npm install -g sails sane-cli`
+* `sane new project --docker` creates project with [sails-disk](https://github.com/balderdashy/sails-disk) and [Docker](https://www.docker.com/). For production databases see [Options](#sane-stack-cli-options).
 * `sane generate resource user name:string age:number` to generate a new API on the backend and models on the frontend
 * `sane up` to start the sails server on `localhost:1337` as well as the ember dev server on `localhost:4200`.
 * To work on your frontend-app you work as you would normally do with ember-cli on `localhost:4200`.
