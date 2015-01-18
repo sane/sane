@@ -6,6 +6,5 @@ node_js:
 before_install:
   - npm config set spin false
   - npm install -g npm@^2
-  - npm install -g ember-cli
   - npm install -g sails
 script: "npm run-script test-all"

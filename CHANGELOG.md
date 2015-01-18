@@ -5,6 +5,7 @@
 
 ### 0.0.18
 * [FEATURE] Added support for local sane-cli (so you can have a fixed sane-cli per project)
+* [ENHANCEMENT] Dropped need for global ember-cli. When both are installed and have a different version it will ask which ones to use. So far this only really regards the `sane new` command.
 * [ENHANCEMENT] Improved boot2docker running check
 * [BUGFIX] explicit `sane up --docker=false` now working
 * [ENHANCEMENT] No analytics for tests anymore by adding undocumented `--skip-analytics` flag

@@ -7,6 +7,7 @@ process.title = 'sane';
 
 var exit = require('exit');
 var resolve = require('resolve');
+var path = require('path');
 
 //transforms all following require's to parse ES6/7 code
 require('traceur').require.makeDefault(function(filename) {
@@ -28,9 +29,8 @@ resolve('sane-cli', {
   var cli;
   if (error) {
     //require global sane-cli
-    cli = require('../lib/cli');
+    cli = require(path.join('..', 'lib', 'cli'));
   } else {
-    var path = require('path');
     cli = require(path.join(localCliPath, '..', '..', 'lib', 'cli'));
   }
   cli(process.argv);
