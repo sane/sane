@@ -2,6 +2,12 @@
 
 ### master
 
+### 0.0.20
+* [BUGFIX] Forgot a change to `superspawn` to fix the windows issues.
+
+### 0.0.19
+* [BUGFIX] Changed to `superspawn` to fix issues on windows
+
 ### 0.0.18
 * [FEATURE] Added support for local sane-cli (so you can have a fixed sane-cli per project)
 * [ENHANCEMENT] Improved boot2docker running check
