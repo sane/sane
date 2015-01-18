@@ -1,7 +1,12 @@
 # SANE Stack Changelog
 
 ### master
-* [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
+
+### 0.0.18
+* [BUGFIX] Fixed installation for certain Unix platforms
+* [BUGFIX] Fixed installation for Windows: Traceur was not loading modules properly.
+* [BUGFIX] Fixed sails assets path for usage without grunt
+* [ENHANCEMENT] Creating a new project now cleans up Sails to be API only (still including assets folder for easy deployment)
 
 ### 0.0.17
 * [ENHANCEMENT] Update `leek` version which improves start-up time for commands that don't use tracking.

@@ -26,14 +26,5 @@ module.exports = {
 
       fs.createReadStream(emberApp).pipe(res);
     });
-  },
-
-  /**
-   * `AppController.serveView()`
-   * Serves your Ember App through the index.ejs, otherwise same as above
-   *
-   */
-  serveView: function(req, res) {
-    return res.view('index');
-  },
+  }
 };

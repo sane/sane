@@ -8,6 +8,7 @@ var program = require('commander');
 var Yam = require('yam');
 var packageConfig = require('../package.json');
 var chalk = require('chalk');
+var path = require('path');
 
 var version = packageConfig.version;
 var name = packageConfig.name;
@@ -16,10 +17,11 @@ var trackingCode = packageConfig.trackingCode;
 
 //transforms all following require's to parse ES6/7 code
 require('traceur').require.makeDefault(function(filename) {
-// don't transpile our dependencies, just our app
-//The first check is if you develop locally, the second for the globally installed moduel
+  // don't transpile our dependencies, just our app
+  //The first check is if you develop locally, the second for the globally installed moduel
   return (filename.indexOf('node_modules') === -1) ||
-    (filename.indexOf('/node_modules/sane-cli/') > -1 && filename.indexOf('/node_modules/sane-cli/node_modules') === -1);
+    (filename.indexOf(path.join('node_modules', 'sane-cli')) > -1 &&
+      filename.indexOf(path.join('node_modules', 'sane-cli', 'node_modules')) === -1);
 }, {asyncFunctions: true});
 
 
