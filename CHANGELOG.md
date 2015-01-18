@@ -1,14 +1,15 @@
 # SANE Stack Changelog
 
 ### master
-* [ENHANCEMENT] After installing `sane-cli` it now checks for presence of `ember-cli` and `sails` automatically
 
 ### 0.0.18
 * [FEATURE] Added support for local sane-cli (so you can have a fixed sane-cli per project)
-* [ENHANCEMENT] Dropped need for global ember-cli. When both are installed and have a different version it will ask which ones to use. So far this only really regards the `sane new` command.
 * [ENHANCEMENT] Improved boot2docker running check
 * [BUGFIX] explicit `sane up --docker=false` now working
 * [ENHANCEMENT] No analytics for tests anymore by adding undocumented `--skip-analytics` flag
+* [BUGFIX] Fixed installation on some Unix systems.
+* [BUGFIX] Fixed installtion on Windows: Traceur setup was not cross-platform.
+* [BUGFIX] Fixed sails path to assets folder
 
 ### 0.0.17
 * [ENHANCEMENT] Update `leek` version which improves start-up time for commands that don't use tracking.
