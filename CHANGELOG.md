@@ -7,9 +7,10 @@
 * [ENHANCEMENT] Improved boot2docker running check
 * [BUGFIX] explicit `sane up --docker=false` now working
 * [ENHANCEMENT] No analytics for tests anymore by adding undocumented `--skip-analytics` flag
-* [BUGFIX] Fixed installation on some Unix systems.
-* [BUGFIX] Fixed installtion on Windows: Traceur setup was not cross-platform.
-* [BUGFIX] Fixed sails path to assets folder
+* [BUGFIX] Fixed installation for certain Unix platforms
+* [BUGFIX] Fixed installation for Windows: Traceur was not loading modules properly.
+* [BUGFIX] Fixed sails assets path for usage without grunt
+* [ENHANCEMENT] Creating a new project now cleans up Sails to be API only (still including assets folder for easy deployment)
 
 ### 0.0.17
 * [ENHANCEMENT] Update `leek` version which improves start-up time for commands that don't use tracking.
