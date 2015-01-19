@@ -7,11 +7,42 @@
     <atom:link href="http://www.sanestack.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Meeting Minutes</title>
+        <title>New Release &amp; Meeting Minutes</title>
+        <description>&lt;p&gt;Turns out it is not that easy to coordinate people from different sides of the ocean who also happen to have have busy jobs. But it is great to see how the open source world connects people and as planned we had our second meeting on 13/01/2015. Also after a few weeks of break finally a new version of the sane-cli got released.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;addons&quot;&gt;Addons&lt;/h3&gt;
+
+&lt;p&gt;One of the hot topics right now. Ember has it, Sails people wanted it for quite some time and will, very soon with 0.11, have an ecosystem for addons in place using &lt;a href=&quot;http://sailsjs.org/#/documentation/concepts/extending-sails&quot;&gt;generators and hooks&lt;/a&gt;. Another interesting development on the Node side is &lt;a href=&quot;http://node-machine.org/&quot;&gt;node machine&lt;/a&gt;, which is an open standard for Javascript functions, written by the team behind SailsJS. It is a standard that utilises npm and allows for functions to be self-documenting as well as making their success and error behaviour clear to developers. What does this have to do with Addons you might ask? Apart from the fact that it is written by the Sails team there is also a &lt;a href=&quot;https://github.com/node-machine/sails-hook-machines&quot;&gt;Sails Machine Hook&lt;/a&gt; which automatically makes machines (or machinepacks as they are called) available to Sails. Furthermore we have been thinking to use this standard for the Sane Stack addon system.&lt;/p&gt;
+
+&lt;p&gt;As a first step I have extracted the resource generator to test the possible addon API. You can find the project here: &lt;a href=&quot;https://github.com/Globegitter/sane-generate-resource&quot;&gt;github.com/Globegitter/sane-generate-resource&lt;/a&gt;. Using node machine has one benefits: It provides us with a structure for addons and you immediately get to understand the behaviour of an addon better. On the flipside it is quite verbose and might lead to a few other limitations in real-world scenarios.&lt;/p&gt;
+
+&lt;p&gt;To get a better idea on the benefits and limitations, the next steps are to write an authentication addon. We will then use that as a first example to implement addons in the Sane core itself. Another step missing is a testing strategy for addons themselves, so stay tuned to here more about the progress over the next few weeks.&lt;/p&gt;
+
+&lt;h3 id=&quot;tests&quot;&gt;Tests&lt;/h3&gt;
+
+&lt;p&gt;Even though some people are not big fans of &lt;a href=&quot;http://qunitjs.com/&quot;&gt;QUnit&lt;/a&gt; Ember with ember-cli has tests covered pretty well now. The bigger testing strategies to improve are Sails which only comes with &lt;a href=&quot;http://sailsjs.org/#/documentation/concepts/Testing&quot;&gt;basic testing guidance&lt;/a&gt; as well as end-to-end testing.&lt;/p&gt;
+
+&lt;p&gt;We have already started talking about that in the last meeting and one of the example projects on github was &lt;a href=&quot;https://github.com/bredikhin/sailsjs-mocha-testing-barrels-fixtures-example&quot;&gt;github.com/bredikhin/sailsjs-mocha-testing-barrels-fixtures-example&lt;/a&gt;. We are now officially recommending this project’s strategy and going to integrate it into Sane Stack (or possibly Sails itself). It uses &lt;a href=&quot;http://mochajs.org/&quot;&gt;Mocha&lt;/a&gt; as the testing framework with &lt;a href=&quot;https://github.com/bredikhin/barrels/&quot;&gt;Barrels&lt;/a&gt; providing testing fixtures for your database. Give it a try. &lt;a href=&quot;https://twitter.com/cyberseer&quot;&gt;Martin&lt;/a&gt; pointed out another very interesting library, &lt;a href=&quot;https://github.com/pgte/nock&quot;&gt;nock&lt;/a&gt;, which is an HTTP mocking library for NodeJS. I am not going to go into much detail, but the most interesting feature is the possibility to record HTTP calls and their response. So you could for example use nock to test your own API, record the JSON response and forward it to Barrels to test your backend. You should be hearing more about this as well over the coming weeks and months.&lt;/p&gt;
+
+&lt;p&gt;End-to-end testing has just briefly been touched upon, but is another topic we are interested to investigate and smoothen out in the future. For current approaches look at &lt;a href=&quot;https://github.com/angular/protractor&quot;&gt;Protractor&lt;/a&gt; in the AngularJS world, as well as this short but helpful stackoverflow on EmberJS &lt;a href=&quot;http://stackoverflow.com/questions/27950579/end-to-end-testing-emberjs-using-selenium-webdriverjs&quot;&gt;stackoverflow.com/questions/27950579/end-to-end-testing-emberjs-using-selenium-webdriverjs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;release-0020&quot;&gt;Release 0.0.20&lt;/h3&gt;
+
+&lt;p&gt;As you may have noticed you are now able to update sane-cli from &lt;a href=&quot;https://github.com/artificialio/sane/releases/tag/0.0.17&quot;&gt;0.0.17&lt;/a&gt; straight to &lt;a href=&quot;https://github.com/artificialio/sane/releases/tag/0.0.20&quot;&gt;0.0.20&lt;/a&gt;, which is due to some sloppy fixing and commiting on my side, so make sure to use the latest version. Positively though, thanks to &lt;a href=&quot;https://github.com/albertosouza&quot;&gt;Alberto Souza&lt;/a&gt;, we fixed a crucial bug for some Linux distibutions and Windows support smoothened out a lot as well. &lt;code&gt;sane up&lt;/code&gt; still needs to be fixed, so please run &lt;code&gt;sails lift&lt;/code&gt;/&lt;code&gt;fig up&lt;/code&gt; and &lt;code&gt;ember serve --proxy http://127.0.0.1:1337&lt;/code&gt; manually in the meantime. Fruthermore you can specify a local &lt;code&gt;sane-cli&lt;/code&gt; to use a fixed version per project, &lt;code&gt;ember-cli&lt;/code&gt; is not a global dependency anymore and Sails will be cleaned up on every new project generation to be an API-only framework.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Jan 2015 00:00:00 +0000</pubDate>
+        <link>http://www.sanestack.com/blog/new-release-and-meeting-minutes/</link>
+        <guid isPermaLink="true">http://www.sanestack.com/blog/new-release-and-meeting-minutes/</guid>
+      </item>
+    
+      <item>
+        <title>Meeting Minutes - 30/12/2014</title>
         <description>&lt;p&gt;The last year ended on a good note: The Sane core team came together for our first meeting to plan and discuss some foundational questions as well as future plans of the stack.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Authentication&lt;/strong&gt; &lt;br /&gt;
-Without much ado we went straight into one of the most important topics of every Web application: Security - namely authentication.&lt;/p&gt;
+&lt;h3 id=&quot;authentication&quot;&gt;Authentication&lt;/h3&gt;
+&lt;p&gt;Without much ado we went straight into one of the most important topics of every Web application: Security - namely authentication.&lt;/p&gt;
 
 &lt;p&gt;One thing that was clear for all of us quite quickly, the best solution to authenticate the API itself is using a stateless server that hands out &lt;a href=&quot;http://jwt.io/&quot;&gt;JWT tokens&lt;/a&gt; to the client. (For a good description see &lt;a href=&quot;http://stackoverflow.com/questions/3105296/if-rest-applications-are-supposed-to-be-stateless-how-do-you-manage-sessions&quot;&gt;stackoverflow.com/questions/3105296/if-rest-applications-are-supposed-to-be-stateless-how-do-you-manage-sessions&lt;/a&gt;). &lt;/p&gt;
 
@@ -36,7 +67,7 @@ Without much ado we went straight into one of the most important topics of every
 &lt;p&gt;We just touched upon this topic, but if you are interested in what we are looking into, check out &lt;a href=&quot;http://12factor.net/&quot;&gt;12factor.net&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/watch?v=nMTaS07i3jk&quot;&gt;www.youtube.com/watch?v=nMTaS07i3jk&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;deployment&quot;&gt;Deployment&lt;/h3&gt;
-&lt;p&gt;Nothing conclusive has been decided yet for the &lt;code&gt;sane deploy&lt;/code&gt; command but it will probably ship in the form of different addons for different deployment strategies. &lt;a href=&quot;https://github.com/deis/deis&quot;&gt;github.com/deis/deis&lt;/a&gt; as well as &lt;a href=&quot;https://github.com/jwilder/docker-gen&quot;&gt;github.com/jwilder/docker-gen&lt;/a&gt; are some of the interesting projects we have been and are looking into.&lt;/p&gt;
+&lt;p&gt;Nothing conclusive has been decided yet for the &lt;code&gt;sane deploy&lt;/code&gt; command but it will probably ship in the form of different addons for different deployment strategies. &lt;a href=&quot;https://github.com/deis/deis&quot;&gt;Deis&lt;/a&gt; as well as &lt;a href=&quot;https://github.com/jwilder/docker-gen&quot;&gt;Docker-Gen&lt;/a&gt;&amp;lt;/a&amp;gt; are two interesting projects we have been looking into.&lt;/p&gt;
 
 &lt;h3 id=&quot;configuration-via-environment-variables&quot;&gt;Configuration via Environment Variables&lt;/h3&gt;
 &lt;p&gt;It is nice to have a .sane-cli file for configuration but it would be very useful to be able to configure exactly the same settings via Environment Variables. So we will implement this feature either by switching to &lt;a href=&quot;https://github.com/dominictarr/rc&quot;&gt;github.com/dominictarr/rc&lt;/a&gt; or improving &lt;a href=&quot;https://github.com/twokul/yam&quot;&gt;github.com/twokul/yam&lt;/a&gt;. &lt;/p&gt;
@@ -48,8 +79,8 @@ Projects we have been looking at so far: &lt;a href=&quot;https://github.com/bre
 &lt;p&gt;I hope this provides you a with good idea of the areas we find important, want improve, smoothen out and make simple to use. If you know of any other projects in any of these areas, have any thoughts or want to get involved just use the comment section or visit us on gitter: &lt;a href=&quot;https://gitter.im/artificialio/sane&quot;&gt;gitter.im/artificialio/sane&lt;/a&gt; &lt;/p&gt;
 </description>
         <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
-        <link>http://www.sanestack.com/blog/meeting-minutes/</link>
-        <guid isPermaLink="true">http://www.sanestack.com/blog/meeting-minutes/</guid>
+        <link>http://www.sanestack.com/blog/meeting-minutes-30-12-2014/</link>
+        <guid isPermaLink="true">http://www.sanestack.com/blog/meeting-minutes-30-12-2014/</guid>
       </item>
     
       <item>
