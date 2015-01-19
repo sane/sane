@@ -1,4 +1,5 @@
 node_modules
+_site
 
 #client stuff
 # See client/.gitignore
@@ -6,7 +7,6 @@ node_modules
 # Server stuff
 # See server/.gitignore
 
-.vagrant/
 # Ignore configuration and automatically generated cruft
 dbconfig.php
 sitemap.xml

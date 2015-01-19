@@ -1,6 +1,7 @@
 # SANE Stack Changelog
 
 ### master
+* [BUGFIX] Fixed `cleanupSails()` procedure when creating a new project.
 
 ### 0.0.20
 * [BUGFIX] Forgot a change to `superspawn` to fix the windows issues.
