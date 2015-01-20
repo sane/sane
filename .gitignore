@@ -1,5 +1,6 @@
 node_modules
 _site
+_posts
 
 #client stuff
 # See client/.gitignore
