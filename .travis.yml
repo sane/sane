@@ -7,4 +7,10 @@ before_install:
   - npm config set spin false
   - npm install -g npm@^2
   - npm install -g sails
+  - npm install -g codeclimate-test-reporter
 script: "npm run-script test-all"
+# addons:
+#   code_climate:
+#     repo_token: c44929e370fd9994b6ea628ef65b13c87bb0c479903ef2740557adeab4e1500b
+# after_script:
+#   - cat lcov.info | codeclimate

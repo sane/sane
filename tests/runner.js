@@ -3,6 +3,7 @@
 var glob = require('glob');
 var Mocha = require('mocha');
 
+
 require('traceur').require.makeDefault(function(filename) {
 // don't transpile our dependencies, just our app
 //The first check is if you develop locally, the second for the globally installed moduel
