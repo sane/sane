@@ -23,7 +23,7 @@ install:
   - npm install -g sails
   - npm config set cache C:\nc
   - npm version
-  #- npm install
+  - npm install
 
 # Post-install test scripts.
 test_script:
