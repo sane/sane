@@ -35,12 +35,31 @@ iframe {
   max-height: 325px;
 }
 
+@media (min-width: 481px) and (max-width: 520px) {
+  .header .left li a{
+    padding: 0 5px;
+  }
+
+  .header .left ul {
+    margin-left: 5px;
+  }
+}
+
 @media (max-width: 480px) {
   .header .left li {
-    padding: 5px 0;
+    padding: 5px 15px;
   }
 
   .header .left h1 {
-    padding: 0 0 5px;
+    padding: 0 15px 5px;
+  }
+
+  .header .right {
+    display: block;
+  }
+
+  .header .right iframe:first-child {
+    display: block;
+    padding-bottom: 10px;
   }
 }
