@@ -1,6 +1,6 @@
 # Sane Stack
 
-A Javascript Fullstack and CLI that lets you rapidly create production-ready web apps using [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), giving you [Docker](https://www.docker.com/) support, generators and more.
+A Javascript Fullstack and CLI that lets you rapidly create production-ready web apps using [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/). Giving you [Docker](https://www.docker.com/) support, generators and more.
 
 > [![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) <br> [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
