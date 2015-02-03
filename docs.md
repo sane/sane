@@ -239,4 +239,4 @@ Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-e
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).
 
 ## Built by
-Build with love by [Artificial Labs](http://artificial.io/) and contributors <3
+Build with love by [Artificial Labs](http://artificial.io/) and [contributors](https://github.com/artificialio/sane/graphs/contributors) <3
