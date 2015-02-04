@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn.rawgit.com/artificialio/sane/gh-pages/_includes/sane-logo.svg" width="400"/>
+  <img src="https://camo.githubusercontent.com/b8ecf54b15f51c7c992d6fce003b661c96d8acec/68747470733a2f2f63646e2e7261776769742e636f6d2f6172746966696369616c696f2f73616e652f67682d70616765732f5f696e636c756465732f73616e652d6c6f676f2e737667" width="400"/>
 </p>
 # SANE Stack
 [![Build Status](https://travis-ci.org/artificialio/sane.svg?branch=master)](https://travis-ci.org/artificialio/sane) [![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) [![Dependency Status](https://img.shields.io/david/artificialio/sane.svg?style=flat)](https://david-dm.org/artificialio/sane) [![Bountysource](https://www.bountysource.com/badge/team?team_id=58969&style=raised)](https://www.bountysource.com/teams/sane-stack?utm_source=Sane%20Stack&utm_medium=shield&utm_campaign=raised) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
