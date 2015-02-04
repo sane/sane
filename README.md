@@ -1,5 +1,5 @@
 <p align="center">
-  ![Sane Logo][sane-logo-svg]
+  ![Sane Logo](https://cdn.rawgit.com/artificialio/sane/gh-pages/_includes/sane-logo.svg)
 </p>
 # SANE Stack
 [![Build Status](https://travis-ci.org/artificialio/sane.svg?branch=master)](https://travis-ci.org/artificialio/sane) [![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) [![Dependency Status](https://img.shields.io/david/artificialio/sane.svg?style=flat)](https://david-dm.org/artificialio/sane) [![Bountysource](https://www.bountysource.com/badge/team?team_id=58969&style=raised)](https://www.bountysource.com/teams/sane-stack?utm_source=Sane%20Stack&utm_medium=shield&utm_campaign=raised) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
@@ -42,5 +42,3 @@ SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter
 
 ## Built by
 Built with love by [Artificial Labs](http://artificial.io/) and contributors <3
-
-[sane-logo-svg]: https://raw.githubusercontent.com/artificialio/sane/gh-pages/_includes/sane-logo.svg "Sane Logo"
