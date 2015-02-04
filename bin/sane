@@ -4,7 +4,6 @@
 // Provide a title to the process in `ps`
 process.title = 'sane';
 
-
 var path = require('path');
 var resolve = require('resolve');
 

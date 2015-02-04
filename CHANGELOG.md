@@ -2,6 +2,12 @@
 
 ### master
 
+### 0.0.23
+* [BUGFIX] Fixed ember-cli version check on `sane new`.
+
+### 0.0.22
+* [BUGFIX] Reverted a planned windows change which fixed `sane up` on Mac/Linus
+
 ### 0.0.21
 * [BUGFIX] Fixed `cleanupSails()` procedure when creating a new project.
 * [BUGFIX] Installing `sane-cli` now locally on new project creation.
