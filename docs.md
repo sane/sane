@@ -81,8 +81,6 @@ Ember.js guides are accssible at http://emberjs.com/guides/ and Sails.js documen
 ### Data Format
 You create all your resources in singular form since Sails and Ember pluralize when needed for you. If you create a `user` resource (via `sane generate resource user`) you can access the api under `localhost:1337/api/v1/users`. To create a new Record send a POST request to this address. 
 
-Your Sails API and Ember App are already set up to communicate with each other in that expected standard: Ember uses it's [RESTAdapter](http://emberjs.com/guides/models/the-rest-adapter/) and Sails uses [Ember Blueprints](https://github.com/mphasize/sails-generate-ember-blueprints). If you don't plan to use websockets there is not much else you have to do on the server side; Sails is waiting for requests to come in. To get started saving your models on the frontend however, follow these simple guides: http://emberjs.com/guides/models/persisting-records/. 
-
 ```js
 //POST request to localhost:1337/api/v1/users
 {
@@ -92,6 +90,9 @@ Your Sails API and Ember App are already set up to communicate with each other i
   }
 }
 ```
+
+Your Sails API and Ember App are already set up to communicate with each other in that expected standard: Ember uses it's [RESTAdapter](http://emberjs.com/guides/models/the-rest-adapter/) and Sails uses [Ember Blueprints](https://github.com/mphasize/sails-generate-ember-blueprints). If you don't plan to use websockets there is not much else you have to do on the server side; Sails is waiting for requests to come in. To get started saving your models on the frontend however, follow these simple guides: http://emberjs.com/guides/models/persisting-records/. 
+
 
 ## Docker
 
