@@ -79,7 +79,7 @@ Ember.js guides are accssible at http://emberjs.com/guides/ and Sails.js documen
 ### Basics
 
 ### Data Format
-You create your resources in singular form, since Sails and Ember pluralize for you. If you create a `user` resource (via `sane generate resource user`) you can access the api under `localhost:1337/api/v1/users` and to create a new Record send a POST request to that address. Ember is using it's `RESTAdapter` to conform to this standard and all you have to do is follow the guides here: http://emberjs.com/guides/models/persisting-records/
+You create all your resources in singular form since Sails and Ember pluralize when needed for you. If you create a `user` resource (via `sane generate resource user`) you can access the api under `localhost:1337/api/v1/users`. To create a new Record send a POST request to this address. Ember is already set to use it's [RESTAdapter](http://emberjs.com/guides/models/the-rest-adapter/) to expect this standard. To get started saving your models to just follow the guides here: http://emberjs.com/guides/models/persisting-records/. Everything else for communicating with your Sails API is already set up.
 
 ```js
 //POST request to localhost:1337/api/v1/users
