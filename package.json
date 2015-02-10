@@ -48,6 +48,7 @@
     "handlebars": "~3.0.0",
     "leek": "0.0.18",
     "node-uuid": "^1.4.2",
+    "npm": "^2.5.0",
     "pleasant-progress": "^1.0.2",
     "readline-sync": "^0.7.3",
     "resolve": "^1.0.0",
