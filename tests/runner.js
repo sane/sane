@@ -3,13 +3,10 @@
 var glob = require('glob');
 var Mocha = require('mocha');
 
+require("6to5/register")({
+  experimental: true
+});
 
-require('traceur').require.makeDefault(function(filename) {
-// don't transpile our dependencies, just our app
-//The first check is if you develop locally, the second for the globally installed moduel
-  return (filename.indexOf('node_modules') === -1) ||
-    (filename.indexOf('/node_modules/sane-cli/') > -1 && filename.indexOf('/node_modules/sane-cli/node_modules') === -1);
-}, {asyncFunctions: true});
 
 var mocha = new Mocha({
   timeout: 18000,
