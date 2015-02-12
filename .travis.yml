@@ -1,15 +1,21 @@
 language: node_js
 sudo: false
 node_js:
-  - "0.10.34"
-  - "0.11.14"
+  - "0.12"
   - "iojs"
 before_install:
   - npm config set spin false
-  - npm install -g npm@^2
   - npm install -g sails
-  - npm install -g codeclimate-test-reporter
+#  - npm install -g codeclimate-test-reporter
 script: "npm run-script test-all"
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/aa208e58da24be802fcb
+    on_success: change
+    on_failure: always
+    on_start: false
+
 # addons:
 #   code_climate:
 #     repo_token: c44929e370fd9994b6ea628ef65b13c87bb0c479903ef2740557adeab4e1500b
