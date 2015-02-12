@@ -224,7 +224,7 @@ sane up
 ```
 
 ### Error when install 3 packages globally at once
-If you run `npm install -g sails sane-cli ember-cli` and when you try to create a new application with `sane new <app_name>` and encounter an error like this: `Cannot find module '/usr/local/lib/node_modules/sane-cli/node_modules/ember-cli/package.json'` follow these steps to fix it:
+If you run `npm install -g sails sane-cli ember-cli` (*Note: Since v0.0.18 you do not need to install `ember-cli` globally anymore*) and when you try to create a new application with `sane new <app_name>` and encounter an error like this: `Cannot find module '/usr/local/lib/node_modules/sane-cli/node_modules/ember-cli/package.json'` follow these steps to fix it:
 
 **Step 1** <br>
 `npm uninstall -g sails` <br>
