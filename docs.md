@@ -79,7 +79,7 @@ Ember.js guides are accssible at http://emberjs.com/guides/ and Sails.js documen
 ### Basics
 
 ### Data Format
-You create all your resources in singular form since Sails and Ember pluralize when needed for you. If you create a `user` resource (via `sane generate resource user`) you can access the api under `localhost:1337/api/v1/users`. To create a new Record send a POST request to this address. 
+You create all your resources in singular form since Sails and Ember pluralize when needed for you. If you create a `user` resource (via `sane generate resource user`) you can access the api under `localhost:1337/api/v1/users`. To create a new Record send a POST request to this address.
 
 ```js
 //POST request to localhost:1337/api/v1/users
@@ -91,7 +91,7 @@ You create all your resources in singular form since Sails and Ember pluralize w
 }
 ```
 
-Your Sails API and Ember App are already set up to communicate with each other in that expected standard: Ember uses it's [RESTAdapter](http://emberjs.com/guides/models/the-rest-adapter/) and Sails uses [Ember Blueprints](https://github.com/mphasize/sails-generate-ember-blueprints). If you don't plan to use websockets there is not much else you have to do on the server side; Sails is waiting for requests to come in. To get started saving your models on the frontend however, follow these simple guides: http://emberjs.com/guides/models/persisting-records/. 
+Your Sails API and Ember App are already set up to communicate with each other in that expected standard: Ember uses it's [RESTAdapter](http://emberjs.com/guides/models/the-rest-adapter/) and Sails uses [Ember Blueprints](https://github.com/mphasize/sails-generate-ember-blueprints). If you don't plan to use websockets there is not much else you have to do on the server side; Sails is waiting for requests to come in. To get started saving your models on the frontend however, follow these simple guides: http://emberjs.com/guides/models/persisting-records/.
 
 
 ## Docker
@@ -222,6 +222,20 @@ Go back to the project root and fire up sane.
 cd ..
 sane up
 ```
+
+### Error when install 3 packages globally at once
+If you run `npm install -g sails sane-cli ember-cli` and when you try to create a new application with `sane new <app_name>` and encounter an error like this: `Cannot find module '/usr/local/lib/node_modules/sane-cli/node_modules/ember-cli/package.json'` follow these steps to fix it:
+
+**Step 1** <br>
+`npm uninstall -g sails` <br>
+`npm uninstall -g ember-cli` <br>
+`npm uninstall -g sane-cli` <br>
+
+**Step 2** <br>
+`npm install -g sails` <br>
+`npm install -g ember-cli` <br>
+`npm install -g sane-cli` <br>
+
 
 ## Development
 This is a tool for the community, so everyone is welcome to make Sane Stack a better product. It is easy to get started:
