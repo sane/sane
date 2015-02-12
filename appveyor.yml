@@ -1,8 +1,8 @@
 # http://www.appveyor.com/docs/appveyor-yml
 
-# Leave line endings as-is
+# Fix line endings in Windows. (runs before repo cloning)
 init:
-  - git config --global core.autocrlf input
+  - git config --global core.autocrlf true
 
 # Test against these versions of Node.js.
 environment:
@@ -25,6 +25,8 @@ install:
   #- dir C:\tools\PhantomJS
   # Typical npm stuff.
   - md C:\nc
+  # Workaround https://github.com/npm/npm/wiki/Troubleshooting#upgrading-on-windows
+  - set PATH=%APPDATA%\npm;%PATH%
   - npm config set cache C:\nc
   - npm install -g sails
   - npm install
@@ -33,7 +35,7 @@ install:
 test_script:
   # Output useful info for debugging.
   - npm version
-  - npm run test-all
+  - cmd: npm run-script test-all
 
 # Don't actually build.
 build: off
