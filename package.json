@@ -37,7 +37,7 @@
   },
   "homepage": "http://sanestack.com",
   "dependencies": {
-    "6to5": "^3.5.3",
+    "6to5": "^3.6.0",
     "chalk": "^0.5.1",
     "child-process-promise": "^1.0.1",
     "commander": "~2.6.0",
