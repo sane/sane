@@ -9,7 +9,8 @@ environment:
   matrix:
     # appveyor doesn't know what node 0.12.0 is, don't test with node for now.
     #- nodejs_version: "0.12.0"
-    - nodejs_version: "1.2.0"
+    # io.js 1.x
+    - nodejs_version: "1"
 
 platform:
   - x64
