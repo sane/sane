@@ -55,7 +55,10 @@ describe('Acceptance: sane new', function() {
 
   function initApp(args) {
     var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
-    return execFile(sane, args, { cwd: process.cwd() });
+    if (process.platform === 'win32') {
+      return exec(`node ${sane} ${args.join(" ")}`);
+    }
+    return execFile(sane, args);
   }
 
 //   function confirmBlueprintedForDir(dir) {

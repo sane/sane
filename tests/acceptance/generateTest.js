@@ -12,15 +12,11 @@ var fs               = require('fs-extra');
 var path             = require('path');
 // var rimraf           = Promise.denodeify(require('rimraf'));
 var root             = process.cwd();
-var sane;
-if (process.platform === 'win32') {
-  sane = "node " + path.join(root, 'tests', 'fixtures', 'sane.bat');
-} else {
-  sane = path.join(root, 'bin', 'sane');
-}
+var sane             = path.join(root, 'bin', 'sane');
 var tmp              = require('tmp-sync');
 var tmproot          = path.join(root, 'tmp');
 var {execFile}       = require('child-process-promise');
+var {exec}           = require('child-process-promise');
 // var EOL              = require('os').EOL;
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 
@@ -49,13 +45,17 @@ describe('Acceptance: sane generate', function() {
   });
 
   function initApp() {
-    return execFile(sane, [
+    var args = [
       'new',
       '.',
       '--skip-npm',
       '--skip-bower',
       '--skip-analytics'
-    ]);
+    ];
+    if (process.platform === 'win32') {
+      return exec(`node ${sane} ${args.join(" ")}`);
+    }
+    return execFile(sane, args);
   }
 
   async function generate(args) {

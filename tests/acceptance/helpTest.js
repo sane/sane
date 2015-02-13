@@ -13,12 +13,7 @@ var {execFile} = require('child-process-promise');
 
 var root       = process.cwd();
 // var tmproot    = path.join(root, 'tmp');
-var sane;
-if (process.platform === 'win32') {
-  sane = "node " + path.join(root, 'tests', 'fixtures', 'sane.bat');
-} else {
-  sane = path.join(root, 'bin', 'sane');
-}
+var sane       = path.join(root, 'bin', 'sane');
 // var tmpdir;
 
 describe('Acceptance: sane help', function() {
@@ -33,7 +28,14 @@ describe('Acceptance: sane help', function() {
   // });
 
   it('displays commands, it\'s aliases and the correct cli version', async function() {
-    var output = await execFile(sane, ['help']);
+    var output;
+    var args = ['help'];
+    if (process.platform === 'win32') {
+      output await exec(`node ${sane} ${args.join(" ")}`);
+    } else {
+      output = await execFile(sane, args);
+    }
+
     output = output.stdout;
 
     assert.include(output, 'new|n');
