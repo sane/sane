@@ -13,7 +13,12 @@ var {execFile} = require('child-process-promise');
 
 var root       = process.cwd();
 // var tmproot    = path.join(root, 'tmp');
-var sane      = path.join(root, 'bin', 'sane');
+var sane;
+if (process.platform === 'win32') {
+  sane = path.join(root, 'tests', 'fixtures', 'sane.bat');
+} else {
+  sane = path.join(root, 'bin', 'sane');
+}
 // var tmpdir;
 
 describe('Acceptance: sane help', function() {

@@ -21,6 +21,7 @@ var assertFileEquals = require('../helpers/assertFileEquals');
 var root         = process.cwd();
 var tmproot      = path.join(root, 'tmp');
 var sane;
+
 if (process.platform === 'win32') {
   sane = path.join(root, 'tests', 'fixtures', 'sane.bat');
 } else {

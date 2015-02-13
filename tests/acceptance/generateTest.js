@@ -12,7 +12,12 @@ var fs               = require('fs-extra');
 var path             = require('path');
 // var rimraf           = Promise.denodeify(require('rimraf'));
 var root             = process.cwd();
-var sane             = path.join(root, 'bin', 'sane');
+var sane;
+if (process.platform === 'win32') {
+  sane = path.join(root, 'tests', 'fixtures', 'sane.bat');
+} else {
+  sane = path.join(root, 'bin', 'sane');
+}
 var tmp              = require('tmp-sync');
 var tmproot          = path.join(root, 'tmp');
 var {execFile}       = require('child-process-promise');
