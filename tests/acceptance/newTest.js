@@ -23,7 +23,8 @@ var tmproot      = path.join(root, 'tmp');
 var sane;
 
 if (process.platform === 'win32') {
-  sane = path.join(root, 'tests', 'fixtures', 'sane.bat');
+  // sane = path.join(root, 'tests', 'fixtures', 'sane.bat');
+  sane = "node " + path.join(root, 'tests', 'fixtures', 'sane.bat');
 } else {
   sane = path.join(root, 'bin', 'sane');
 }
