@@ -20,7 +20,12 @@ var assertFileEquals = require('../helpers/assertFileEquals');
 
 var root         = process.cwd();
 var tmproot      = path.join(root, 'tmp');
-var sane         = path.join(root, 'bin', 'sane');
+var sane;
+if (process.platform === 'win32') {
+  sane = path.join(root, 'tests', 'fixtures', 'sane.bat');
+} else {
+  sane = path.join(root, 'bin', 'sane');
+}
 
 describe('Acceptance: sane new', function() {
   var tmpdir;
@@ -48,7 +53,7 @@ describe('Acceptance: sane new', function() {
 
   function initApp(args) {
     var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
-    return execFile(sane, args);
+    return execFile(sane, args, { cwd: process.cwd() });
   }
 
 //   function confirmBlueprintedForDir(dir) {
