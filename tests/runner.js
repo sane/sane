@@ -19,7 +19,7 @@ if (process.platform === 'win32') {
 }
 
 var mocha = new Mocha({
-  timeout: 18000,
+  timeout: timeout,
   reporter: 'spec'
 });
 
