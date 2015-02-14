@@ -53,7 +53,8 @@ describe('Acceptance: sane generate', function() {
       '--skip-analytics'
     ];
     if (process.platform === 'win32') {
-      return exec(`node ${sane} ${args.join(" ")}`);
+      console.log(`Would exec: ${process.execPath} ${sane} ${args.join(" ")}`);
+      return exec(`${process.execPath} ${sane} ${args.join(" ")}`);
     }
     return execFile(sane, args);
   }

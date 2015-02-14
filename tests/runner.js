@@ -15,7 +15,7 @@ var timeout = 18000;
 
 if (process.platform === 'win32') {
   //apparently windows needs a lot of timeout
-  timeout = 30000;
+  timeout = 60000;
 }
 
 var mocha = new Mocha({
