@@ -50,7 +50,7 @@ describe('Acceptance: sane new', function() {
     var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
     if (process.platform === 'win32') {
       console.log(`Would exec: ${process.execPath} ${sane} ${args.join(" ")}`);
-      return exec(`${process.execPath} ${sane} ${args.join(" ")}`);
+      return exec(`'${process.execPath}' ${sane} ${args.join(" ")}`);
     }
     return execFile(sane, args);
   }

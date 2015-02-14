@@ -54,7 +54,7 @@ describe('Acceptance: sane generate', function() {
     ];
     if (process.platform === 'win32') {
       console.log(`Would exec: ${process.execPath} ${sane} ${args.join(" ")}`);
-      return exec(`${process.execPath} ${sane} ${args.join(" ")}`);
+      return exec(`'${process.execPath}' ${sane} ${args.join(" ")}`);
     }
     return execFile(sane, args);
   }
