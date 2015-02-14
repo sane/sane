@@ -1,6 +1,6 @@
 'use strict';
 
-var expect   = require('chai').expect;
+var { expect }   = require('chai');
 var contains = require('lodash/collection/contains');
 var flatten  = require('lodash/array/flatten');
 var fs       = require('fs-extra');

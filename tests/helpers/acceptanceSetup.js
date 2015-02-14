@@ -13,7 +13,7 @@ var self = {
 
   //TODO(Markus): Try to remove execFile/exec and call the cli directly, promisified
   initApp: function(args) {
-    var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
+    var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics', '--verbose'];
     return execFile(self.sane, args);
   }
 };
