@@ -16,16 +16,6 @@ var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 describe('Acceptance: sane install', function() {
   var tmpdir;
 
-//   before(function() {
-//     BlueprintNpmTask.disableNPM();
-//     conf.setup();
-//   });
-
-//   after(function() {
-//     BlueprintNpmTask.restoreNPM();
-//     conf.restore();
-//   });
-
   beforeEach(function() {
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
@@ -44,7 +34,7 @@ describe('Acceptance: sane install', function() {
     return execFile(sane, generateArgs);
   }
 
-  it('sane-auth installs rund generator', async function() {
+  it('sane-auth and runs generator', async function() {
     await install('sane-auth');
 
     //checks that addon has been installed
