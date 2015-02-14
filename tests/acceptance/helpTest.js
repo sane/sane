@@ -6,10 +6,10 @@ var path       = require('path');
 // var assert     = require('../helpers/assert');
 
 // var assert = require('chai').assert in ES6-style:
-var {assert} = require('chai');
+var { expect } = require('chai');
 // var runCommand = require('../helpers/runCommand');
 var version = require('../../package.json').version;
-var {execFile} = require('child-process-promise');
+var { execFile } = require('child-process-promise');
 
 var root       = process.cwd();
 // var tmproot    = path.join(root, 'tmp');
@@ -31,9 +31,9 @@ describe('Acceptance: sane help', function() {
     var output = await execFile(sane, ['help']);
     output = output.stdout;
 
-    assert.include(output, 'new|n');
-    assert.include(output, 'up|serve');
-    assert.include(output, 'generate|g');
-    assert.include(output, 'version: ' + version);
+    expect(output).to.include('new|n');
+    expect(output).to.include('up|serve');
+    expect(output).to.include('generate|g');
+    expect(output).to.include('version: ' + version);
   });
 });

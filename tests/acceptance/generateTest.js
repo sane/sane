@@ -2,20 +2,14 @@
 
 'use strict';
 
-// var Promise          = require('../../lib/ext/promise');
-// var assertFile       = require('../helpers/assert-file');
-var assertFileEquals = require('../helpers/assertFileEquals');
-// var conf             = require('../helpers/conf');
-// var ember            = require('../helpers/ember');
-var fs               = require('fs-extra');
-// var outputFile       = Promise.denodeify(fs.outputFile);
-var path             = require('path');
-// var rimraf           = Promise.denodeify(require('rimraf'));
-var root             = process.cwd();
-var sane             = path.join(root, 'bin', 'sane');
-var tmp              = require('tmp-sync');
-var tmproot          = path.join(root, 'tmp');
-var {execFile}       = require('child-process-promise');
+var assertFileEquals  = require('../helpers/assertFileEquals');
+var fs                = require('fs-extra');
+var path              = require('path');
+var tmp               = require('tmp-sync');
+var root              = process.cwd();
+var tmproot           = path.join(root, 'tmp');
+var { execFile }      = require('child-process-promise');
+var { initApp, sane } = require('../helpers/appSetup');
 // var EOL              = require('os').EOL;
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 

@@ -1,6 +1,6 @@
 {
   "name": "sane-cli",
-  "version": "0.0.24",
+  "version": "0.1.0",
   "trackingCode": "UA-46963158-10",
   "description": "A command-line tool for creating full stack sails-ember applications using docker & fig",
   "main": "bin/sane",
@@ -48,7 +48,6 @@
     "leek": "0.0.17",
     "machinepack-npm": "git://github.com/mikermcneil/machinepack-npm",
     "node-uuid": "^1.4.2",
-    "npm": "^2.5.0",
     "pleasant-progress": "^1.0.2",
     "readline-sync": "^0.5.2",
     "resolve": "^1.0.0",
@@ -59,11 +58,11 @@
     "yam": "0.0.17"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
+    "chai": "^2.0.0",
     "chai-as-promised": "^4.1.1",
     "glob": "4.0.5",
     "lodash-node": "^2.4.1",
-    "mocha": "^2.0.1",
+    "mocha": "^2.1.0",
     "mocha-jshint": "0.0.9",
     "node-require-timings": "0.0.2",
     "rsvp": "^3.0.14",

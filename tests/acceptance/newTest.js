@@ -35,14 +35,12 @@ describe('Acceptance: sane new', function() {
 //       });
 //   });
   beforeEach(function() {
-    // mock();
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
   });
 
   afterEach(function() {
     process.chdir(root);
-    // mock.restore;
     fs.removeSync(tmproot);
   });
 
