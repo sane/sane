@@ -1,26 +1,19 @@
-// /*jshint quotmark: false*/
-
+/*jshint quotmark: false*/
 'use strict';
 
-// var Promise          = require('../../lib/ext/promise');
-// var assertFile       = require('../helpers/assert-file');
-var assertFileEquals = require('../helpers/assertFileEquals');
-// var conf             = require('../helpers/conf');
-// var ember            = require('../helpers/ember');
-var fs               = require('fs-extra');
-// var outputFile       = Promise.denodeify(fs.outputFile);
-var path             = require('path');
-// var rimraf           = Promise.denodeify(require('rimraf'));
-var root             = process.cwd();
-var sane             = path.join(root, 'bin', 'sane');
-var tmp              = require('tmp-sync');
-var tmproot          = path.join(root, 'tmp');
-var {execFile}       = require('child-process-promise');
+var assertFileEquals  = require('../helpers/assertFileEquals');
+var assertFile        = require('../helpers/assertFile');
+var fs                = require('fs-extra');
+var path              = require('path');
+var tmp               = require('tmp-sync');
+require('shelljs/global');
+var { execFile }      = require('child-process-promise');
+var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 // var EOL              = require('os').EOL;
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 
 
-describe('Acceptance: sane generate', function() {
+describe('Acceptance: sane install', function() {
   var tmpdir;
 
 //   before(function() {
@@ -43,36 +36,30 @@ describe('Acceptance: sane generate', function() {
     fs.removeSync(tmproot);
   });
 
-  function initApp() {
-    return execFile(sane, [
-      'new',
-      '.',
-      '--skip-npm',
-      '--skip-bower',
-      '--skip-analytics'
-    ]);
-  }
-
-  async function generate(args) {
-    var generateArgs = ['generate'].concat(args.split(' '));
+  async function install(args) {
+    var generateArgs = ['install'].concat(args.split(' '));
 
     await initApp();
 
     return execFile(sane, generateArgs);
   }
 
-  it('resource/api user', async function() {
-    await generate('resource user');
-    var expected = path.join(__dirname, '../fixtures/generate/ember/acceptance-test-empty-user-expected.js');
+  it('sane-auth installs rund generator', async function() {
+    await install('sane-auth');
 
-    assertFileEquals('client/app/models/user.js', expected);
-  });
+    //checks that addon has been installed
+    assertFile(path.join('node_modules', 'sane-auth', 'package.json'));
+    //check that it also got save-deved
+    assertFile('package.json', {
+      contains: [
+        'devDependencies',
+        '"sane-auth": '
+      ]
+    });
 
-  it('resource/api user name:string age:number', async function() {
-    await generate('resource user name:string age:number');
-    var expected = path.join(__dirname, '../fixtures/generate/ember/acceptance-test-ember-user-expected.js');
-
-    assertFileEquals('client/app/models/user.js', expected);
+    //checks that templates have been copied over properly from the generator
+    assertFile(path.join('server', 'api', 'policies', 'hasToken.js'));
+    assertFile(path.join('client', 'node_modules', 'ember-cli-simple-auth', 'package.json'));
   });
 
 });

@@ -1,26 +1,15 @@
 'use strict';
 
-// var ember     = require('../helpers/ember');
-// var assert    = require('assert');
-// var forEach   = require('lodash-node/compat/collections/forEach');
-// var walkSync  = require('walk-sync');
-// var Blueprint = require('../../lib/models/blueprint');
-// var util      = require('util');
-// var conf      = require('../helpers/conf');
 // var EOL       = require('os').EOL;
 var fs           = require('fs-extra');
 var path         = require('path');
 var tmp          = require('tmp-sync');
-var {execFile}   = require('child-process-promise');
-// var mock         = require('mock-fs');
+var { execFile }   = require('child-process-promise');
+var { initApp, sane, tmproot, root } = require('../helpers/acceptanceSetup');
 require('shelljs/global');
 
 var assertFile   = require('../helpers/assertFile');
 var assertFileEquals = require('../helpers/assertFileEquals');
-
-var root         = process.cwd();
-var tmproot      = path.join(root, 'tmp');
-var sane         = path.join(root, 'bin', 'sane');
 
 describe('Acceptance: sane new', function() {
   var tmpdir;
@@ -43,11 +32,6 @@ describe('Acceptance: sane new', function() {
     process.chdir(root);
     fs.removeSync(tmproot);
   });
-
-  function initApp(args) {
-    var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
-    return execFile(sane, args);
-  }
 
 //   function confirmBlueprintedForDir(dir) {
 //     return function() {

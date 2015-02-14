@@ -1,15 +1,11 @@
-// /*jshint quotmark: false*/
-
 'use strict';
 
 var assertFileEquals  = require('../helpers/assertFileEquals');
 var fs                = require('fs-extra');
 var path              = require('path');
 var tmp               = require('tmp-sync');
-var root              = process.cwd();
-var tmproot           = path.join(root, 'tmp');
 var { execFile }      = require('child-process-promise');
-var { initApp, sane } = require('../helpers/appSetup');
+var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 // var EOL              = require('os').EOL;
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 
@@ -36,16 +32,6 @@ describe('Acceptance: sane generate', function() {
     process.chdir(root);
     fs.removeSync(tmproot);
   });
-
-  function initApp() {
-    return execFile(sane, [
-      'new',
-      '.',
-      '--skip-npm',
-      '--skip-bower',
-      '--skip-analytics'
-    ]);
-  }
 
   async function generate(args) {
     var generateArgs = ['generate'].concat(args.split(' '));

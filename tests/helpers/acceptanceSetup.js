@@ -2,10 +2,16 @@
 
 var { execFile }  = require('child-process-promise');
 var path = require('path');
+var root = process.cwd();
 
 var self = {
-  sane: path.join(process.cwd(), 'bin', 'sane'),
+  root: root,
 
+  tmproot: path.join(root, 'tmp'),
+
+  sane: path.join(root, 'bin', 'sane'),
+
+  //TODO(Markus): Try to remove execFile/exec and call the cli directly, promisified
   initApp: function(args) {
     var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
     return execFile(self.sane, args);
