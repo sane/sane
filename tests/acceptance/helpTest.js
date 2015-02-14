@@ -17,5 +17,5 @@ describe('Acceptance: sane help', function() {
     expect(output).to.include('generate|g');
     expect(output).to.include('version: ' + version);
   });
-  
+
 });

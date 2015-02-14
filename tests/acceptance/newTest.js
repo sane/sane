@@ -9,23 +9,15 @@ var sane             = require('../helpers/sane');
 var dockerCompose    = require('../../lib/helpers/dockerCompose')();
 var assertFile       = require('../helpers/assertFile');
 var assertFileEquals = require('../helpers/assertFileEquals');
-
+var { initApp, sane, tmproot, root } = require('../helpers/acceptanceSetup');
 
 var root    = process.cwd();
 var tmproot = path.join(root, 'tmp');
 
-describe('Acceptance: sane new', function () {
+
+describe('Acceptance: sane new', function() {
   var tmpdir;
-//   before(conf.setup);
 
-//   after(conf.restore);
-
-//   beforeEach(function() {
-//     return tmp.setup('./tmp')
-//       .then(function() {
-//         process.chdir('./tmp');
-//       });
-//   });
   beforeEach(function () {
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
@@ -35,12 +27,6 @@ describe('Acceptance: sane new', function () {
     process.chdir(root);
     fs.removeSync(tmproot);
   });
-
-  function initApp(args) {
-    args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics', '--verbose'];
-    var opts = { stdio: 'ignore' };
-    return spawn(sane, args, opts);
-  }
 
   it('sane new . in empty folder works and adds specified dependencies to server package.json', async function () {
     await initApp();

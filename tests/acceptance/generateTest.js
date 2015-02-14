@@ -10,20 +10,11 @@ var tmp        = require('tmp-sync');
 var tmproot    = path.join(root, 'tmp');
 var { spawn }  = require('child-process-promise');
 var { initApp, sane } = require('../helpers/appSetup');
+var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 
 
 describe('Acceptance: sane generate', function() {
   var tmpdir;
-
-  //   before(function () {
-  //     BlueprintNpmTask.disableNPM();
-  //     conf.setup();
-  //   });
-
-  //   after(function () {
-  //     BlueprintNpmTask.restoreNPM();
-  //     conf.restore();
-  //   });
 
   beforeEach(function () {
     tmpdir = tmp.in(tmproot);
@@ -34,18 +25,6 @@ describe('Acceptance: sane generate', function() {
     process.chdir(root);
     fs.removeSync(tmproot);
   });
-
-  function initApp() {
-    return spawn(sane, [
-      'new',
-      '.',
-      '--skip-npm',
-      '--skip-bower',
-      '--skip-analytics'
-      ],
-      {stdio: 'ignore'}
-    );
-  }
 
   async function generate(args) {
     await initApp();
