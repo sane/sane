@@ -9,9 +9,10 @@ var sane       = require('../helpers/sane');
 var tmp        = require('tmp-sync');
 var tmproot    = path.join(root, 'tmp');
 var { spawn }  = require('child-process-promise');
+var { initApp, sane } = require('../helpers/appSetup');
 
 
-describe('Acceptance: sane generate', function () {
+describe('Acceptance: sane generate', function() {
   var tmpdir;
 
   //   before(function () {
