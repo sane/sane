@@ -31,7 +31,8 @@ describe('Acceptance: sane help', function() {
     var output;
     var args = ['help'];
     if (process.platform === 'win32') {
-      output = await exec(`'${process.execPath}' ${sane} ${args.join(" ")}`);
+      return execFile('node.exe', [sane].concat(args), { cwd: process.execPath.slice(0, process.execPath.lastIndexOf('\\')) });
+      // output = await exec(`'${process.execPath}' ${sane} ${args.join(" ")}`);
     } else {
       output = await execFile(sane, args);
     }

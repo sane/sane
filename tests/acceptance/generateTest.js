@@ -53,8 +53,9 @@ describe('Acceptance: sane generate', function() {
       '--skip-analytics'
     ];
     if (process.platform === 'win32') {
-      console.log(`Would exec: ${process.execPath} ${sane} ${args.join(" ")}`);
-      return exec(`'${process.execPath}' ${sane} ${args.join(" ")}`);
+      //console.log(`Would exec: ${process.execPath} ${sane} ${args.join(" ")}`);
+      return execFile('node.exe', [sane].concat(args), { cwd: process.execPath.slice(0, process.execPath.lastIndexOf('\\')) });
+      // return exec(`'${process.execPath}' ${sane} ${args.join(" ")}`);
     }
     return execFile(sane, args);
   }
