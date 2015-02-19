@@ -1,6 +1,6 @@
 'use strict';
 
-var {assert} = require('chai');
+var expect = require('chai').expect;
 var contains = require('lodash-node/compat/collections/contains');
 var flatten  = require('lodash-node/compat/arrays/flatten');
 var fs       = require('fs-extra');
@@ -41,7 +41,7 @@ var EOL      = require('os').EOL;
 module.exports = function assertFile(file, options) {
   var filePath = path.join(process.cwd(), file);
 
-  assert(fs.existsSync(filePath), 'expected ' + file + ' to exist');
+  expect(fs.existsSync(filePath)).to.equal(true, 'expected ' + file + ' to exist');
 
   if (!options) {
     return;
@@ -59,7 +59,7 @@ module.exports = function assertFile(file, options) {
         pass = contains(actual, expected);
       }
 
-      assert(pass, EOL + EOL + 'expected ' + file + ':' + EOL + EOL +
+      expect(pass).to.equal(true, EOL + EOL + 'expected ' + file + ':' + EOL + EOL +
                    actual +
                    EOL + 'to contain:' + EOL + EOL +
                    expected + EOL);
@@ -76,7 +76,7 @@ module.exports = function assertFile(file, options) {
         pass = !contains(actual, unexpected);
       }
 
-      assert(pass, EOL + EOL + 'expected ' + file + ':' + EOL + EOL +
+      expect(pass).to.equal(true, EOL + EOL + 'expected ' + file + ':' + EOL + EOL +
                    actual + EOL +
                    'not to contain:' + EOL + EOL +
                    unexpected + EOL);
