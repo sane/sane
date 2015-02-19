@@ -25,7 +25,7 @@ var root         = process.cwd();
 var tmproot      = path.join(root, 'tmp');
 
 describe('Acceptance: sane new', function() {
-  this.timeout(30000);
+  this.timeout(90000);
   var tmpdir;
 //   before(conf.setup);
 

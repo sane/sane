@@ -21,7 +21,7 @@ var spawnPromise     = require('superspawn').spawn;
 
 
 describe('Acceptance: sane generate', function() {
-  this.timeout(30000);
+  this.timeout(90000);
   var tmpdir;
 
 //   before(function() {
