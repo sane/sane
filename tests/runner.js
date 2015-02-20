@@ -3,13 +3,20 @@
 var glob = require('glob');
 var Mocha = require('mocha');
 
-require("6to5/register")({
+require("babel/register")({
   experimental: true
 });
 
+var timeout = 18000;
+
+if (process.platform === 'win32') {
+  //apparently windows is taking its time...
+  //Well yeah look into performance improvements.
+  timeout = 90000;
+}
 
 var mocha = new Mocha({
-  timeout: 18000,
+  timeout: timeout,
   reporter: 'spec'
 });
 
