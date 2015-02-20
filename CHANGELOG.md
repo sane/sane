@@ -1,6 +1,7 @@
 # SANE Stack Changelog
 
 ### master
+* [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook
 
 ### 0.0.23
 * [BUGFIX] Fixed ember-cli version check on `sane new`.
