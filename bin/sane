@@ -7,7 +7,7 @@ process.title = 'sane';
 var path = require('path');
 var resolve = require('resolve');
 
-require("6to5/register")({
+require('babel/register')({
   experimental: true
 });
 
