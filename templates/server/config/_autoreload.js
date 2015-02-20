@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports.autoreload = {
-  active: true,
+  active: process.env.NODE_ENV === undefined || process.env.NODE_ENV ==='development',
   //use polling to watch file changes
   //slower but needed for the docker image
   usePolling: {{ pollingWatch }},
