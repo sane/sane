@@ -4,6 +4,7 @@
 * [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook
 * [BUGFIX] Fixed errors in `sane new --skip-npm`.
 * [BUGFIX] Fixed tests on Windows and AppVeyor.
+* * [BUGFIX] Full Windows support.
 * [ENHANCEMENT] Changed to using `expect` instead of `assert` from chai module to match ember-cli [commit 2435679](https://github.com/ember-cli/ember-cli/commit/24356790ba1a6aead425c8bddfd96f6cb06ab1cb).
 
 ### 0.0.23
