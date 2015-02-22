@@ -11,8 +11,7 @@
 var fs           = require('fs-extra');
 var path         = require('path');
 var tmp          = require('tmp-sync');
-// var {execFile}   = require('child-process-promise');
-var spawnPromise = require('superspawn').spawn;
+var {spawn}   = require('child-process-promise');
 var sane         = require('../helpers/sane');
 
 // var mock         = require('mock-fs');
@@ -25,7 +24,6 @@ var root         = process.cwd();
 var tmproot      = path.join(root, 'tmp');
 
 describe('Acceptance: sane new', function() {
-  this.timeout(90000);
   var tmpdir;
 //   before(conf.setup);
 
@@ -51,8 +49,8 @@ describe('Acceptance: sane new', function() {
 
   function initApp(args) {
     var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
-	var opts = { stdio: 'ignore', env: process.env };
-    return spawnPromise(sane, args, opts);
+	var opts = { stdio: 'ignore' };
+    return spawn(sane, args, opts);
   }
 
 //   function confirmBlueprintedForDir(dir) {

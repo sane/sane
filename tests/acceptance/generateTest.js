@@ -15,13 +15,11 @@ var root             = process.cwd();
 var sane             = require('../helpers/sane');
 var tmp              = require('tmp-sync');
 var tmproot          = path.join(root, 'tmp');
-// var {execFile}       = require('child-process-promise');
-var spawnPromise     = require('superspawn').spawn;
+var {spawn}       = require('child-process-promise');
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 
 
 describe('Acceptance: sane generate', function() {
-  this.timeout(90000);
   var tmpdir;
 
 //   before(function() {
@@ -45,21 +43,21 @@ describe('Acceptance: sane generate', function() {
   });
 
   function initApp() {
-    return spawnPromise(sane, [
+    return spawn(sane, [
       'new',
       '.',
       '--skip-npm',
       '--skip-bower',
       '--skip-analytics'
-    ], { stdio: 'ignore',  env: process.env });
+    ], { stdio: 'ignore' });
   }
 
   async function generate(args) {
     await initApp();
 
     var generateArgs = ['generate'].concat(args.split(' '));
-    var generateOpts = { stdio: 'ignore', env: process.env };
-    return spawnPromise(sane, generateArgs, generateOpts);
+    var generateOpts = { stdio: 'ignore' };
+    return spawn(sane, generateArgs, generateOpts);
   }
 
   it('resource/api user', async function() {
