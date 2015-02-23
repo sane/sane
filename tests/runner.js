@@ -12,7 +12,8 @@ require('traceur').require.makeDefault(function(filename) {
 }, {asyncFunctions: true});
 
 var mocha = new Mocha({
-  timeout: 18000,
+  // For some reason, tests take a long time on Windows (or at least AppVeyor)
+  timeout: (process.platform === 'win32') ? 90000 : 18000,
   reporter: 'spec'
 });
 

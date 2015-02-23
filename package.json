@@ -51,7 +51,6 @@
     "readline-sync": "^0.5.2",
     "resolve": "^1.0.0",
     "shelljs": "~0.3.0",
-    "superspawn": "^0.1.0",
     "traceur": "0.0.82",
     "walk-sync": "~0.1.3",
     "yam": "0.0.17"
