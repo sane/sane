@@ -10,6 +10,7 @@ var version = require('../../package.json').version;
 
 
 
+
 describe('Acceptance: sane help', function() {
   it('displays commands, it\'s aliases and the correct cli version', async function() {
     var output = await execFile(sane, ['help']);

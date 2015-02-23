@@ -1,27 +1,17 @@
 'use strict';
 
-var assertFileEquals  = require('../helpers/assertFileEquals');
+
 var fs                = require('fs-extra');
 var path              = require('path');
 var tmp               = require('tmp-sync');
 var { execFile }      = require('child-process-promise');
+var { spawn }       = require('child-process-promise');
 var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
-// var EOL              = require('os').EOL;
-// var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
+var assertFile       = require('../helpers/assertFile');
 
 
 describe('Acceptance: sane generate', function() {
   var tmpdir;
-
-//   before(function() {
-//     BlueprintNpmTask.disableNPM();
-//     conf.setup();
-//   });
-
-//   after(function() {
-//     BlueprintNpmTask.restoreNPM();
-//     conf.restore();
-//   });
 
   beforeEach(function() {
     tmpdir = tmp.in(tmproot);
@@ -34,25 +24,34 @@ describe('Acceptance: sane generate', function() {
   });
 
   async function generate(args) {
-    var generateArgs = ['generate'].concat(args.split(' '));
-
     await initApp();
 
-    return execFile(sane, generateArgs);
+    var generateArgs = ['generate'].concat(args.split(' '));
+    var generateOpts = { stdio: 'ignore' };
+    return spawn(sane, generateArgs, generateOpts);
   }
 
   it('resource/api user', async function() {
     await generate('resource user');
-    var expected = path.join(__dirname, '../fixtures/generate/ember/acceptance-test-empty-user-expected.js');
 
-    assertFileEquals('client/app/models/user.js', expected);
+    assertFile('client/app/models/user.js', {
+	  contains: [
+	    "import DS from 'ember-data';",
+		  "export default DS.Model.extend"
+	  ]
+    });
   });
 
   it('resource/api user name:string age:number', async function() {
     await generate('resource user name:string age:number');
-    var expected = path.join(__dirname, '../fixtures/generate/ember/acceptance-test-ember-user-expected.js');
 
-    assertFileEquals('client/app/models/user.js', expected);
+    assertFile('client/app/models/user.js', {
+	  contains: [
+	    "import DS from 'ember-data';",
+		  "name: DS.attr('string'),",
+		  "age: DS.attr('number')"
+	  ]
+    });
   });
 
 //   it('controller foo', function() {

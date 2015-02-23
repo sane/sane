@@ -1,28 +1,21 @@
 'use strict';
 
-// var EOL       = require('os').EOL;
 var fs           = require('fs-extra');
 var path         = require('path');
 var tmp          = require('tmp-sync');
 var { execFile }   = require('child-process-promise');
+var { spawn }   = require('child-process-promise');
 var { initApp, sane, tmproot, root } = require('../helpers/acceptanceSetup');
+
 require('shelljs/global');
 
 var assertFile   = require('../helpers/assertFile');
 var assertFileEquals = require('../helpers/assertFileEquals');
 
+
 describe('Acceptance: sane new', function() {
   var tmpdir;
-//   before(conf.setup);
 
-//   after(conf.restore);
-
-//   beforeEach(function() {
-//     return tmp.setup('./tmp')
-//       .then(function() {
-//         process.chdir('./tmp');
-//       });
-//   });
   beforeEach(function() {
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
@@ -32,30 +25,6 @@ describe('Acceptance: sane new', function() {
     process.chdir(root);
     fs.removeSync(tmproot);
   });
-
-//   function confirmBlueprintedForDir(dir) {
-//     return function() {
-//       var blueprintPath = path.join(root, dir, 'files');
-//       var expected      = walkSync(blueprintPath);
-//       var actual        = walkSync('.').sort();
-//       var folder        = path.basename(process.cwd());
-
-//       forEach(Blueprint.renamedFiles, function(destFile, srcFile) {
-//         expected[expected.indexOf(srcFile)] = destFile;
-//       });
-
-//       expected.sort();
-
-//       assert.equal(folder, 'foo');
-//       assert.deepEqual(expected, actual, EOL + ' expected: ' +  util.inspect(expected) +
-//                        EOL + ' but got: ' +  util.inspect(actual));
-
-//     };
-//   }
-
-//   function confirmBlueprinted() {
-//     return confirmBlueprintedForDir('blueprints/app');
-//   }
 
   it('sane new . in empty folder works and adds specified dependencies to server package.json', async function() {
     await initApp();

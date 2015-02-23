@@ -1,35 +1,39 @@
 # http://www.appveyor.com/docs/appveyor-yml
 
-# Fix line endings in Windows. (runs before repo cloning)
+# Leave line endings as-is
 init:
-  - git config --global core.autocrlf true
+  - git config --global core.autocrlf input
 
 # Test against these versions of Node.js.
 environment:
   matrix:
-    - nodejs_version: "0.10"
+    # appveyor doesn't know what node 0.12.0 is, don't test with node for now.
+    #- nodejs_version: "0.12.0"
+    # io.js 1.x
+    - nodejs_version: "1"
+
+platform:
+  - x64
 
 # Install scripts. (runs after repo cloning)
 install:
   # Get the latest stable version of Node 0.STABLE.latest
-  - ps: Install-Product node 0.10.30 x86
+  - ps: Install-Product node $env:nodejs_version $env:platform
   # Install PhantomJS
   #- cinst PhantomJS
   #- set path=%path%;C:\tools\PhantomJS\
   #- dir C:\tools\PhantomJS
   # Typical npm stuff.
   - md C:\nc
-  - npm install -g npm@^2"
-  - npm install -g sails
   - npm config set cache C:\nc
-  - npm version
+  - npm install -g sails
   - npm install
 
 # Post-install test scripts.
 test_script:
   # Output useful info for debugging.
   - npm version
-  - cmd: npm run-script test-all
+  - npm run test-all
 
 # Don't actually build.
 build: off
