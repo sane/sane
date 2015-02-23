@@ -47,7 +47,7 @@
     "fs-extra": "~0.16.3",
     "handlebars": "~3.0.0",
     "leek": "0.0.18",
-    "machinepack-npm": "git://github.com/mikermcneil/machinepack-npm",
+    "machinepack-npm": "^3.1.0",
     "node-uuid": "^1.4.2",
     "pleasant-progress": "^1.0.2",
     "readline-sync": "^0.7.3",
