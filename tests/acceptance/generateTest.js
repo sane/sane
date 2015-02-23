@@ -4,12 +4,8 @@
 var assertFile = require('../helpers/assertFile');
 var fs         = require('fs-extra');
 var path       = require('path');
-var root       = process.cwd();
-var sane       = require('../helpers/sane');
 var tmp        = require('tmp-sync');
-var tmproot    = path.join(root, 'tmp');
 var { spawn }  = require('child-process-promise');
-var { initApp, sane } = require('../helpers/appSetup');
 var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 
 
