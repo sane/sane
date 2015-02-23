@@ -4,7 +4,6 @@
 var fs                = require('fs-extra');
 var path              = require('path');
 var tmp               = require('tmp-sync');
-var { execFile }      = require('child-process-promise');
 var { spawn }       = require('child-process-promise');
 var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 var assertFile       = require('../helpers/assertFile');
