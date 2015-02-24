@@ -41,8 +41,9 @@
     "child-process-promise": "^1.0.1",
     "commander": "~2.6.0",
     "configstore": "^0.3.1",
-    "ember-cli": "~0.1.12",
+    "ember-cli": "~0.1.15",
     "exit": "^0.1.2",
+    "findup": "^0.1.5",
     "fs-extra": "~0.16.3",
     "handlebars": "~2.0.0",
     "leek": "0.0.17",
@@ -52,9 +53,10 @@
     "pleasant-progress": "^1.0.2",
     "readline-sync": "^0.5.2",
     "resolve": "^1.0.0",
+    "rsvp": "^3.0.17",
     "shelljs": "~0.3.0",
-    "verboser": "^1.0.3",
     "traceur": "0.0.85",
+    "verboser": "^1.0.3",
     "walk-sync": "~0.1.3",
     "yam": "0.0.17"
   },
@@ -65,7 +67,6 @@
     "mocha": "^2.1.0",
     "mocha-jshint": "0.0.9",
     "node-require-timings": "0.0.2",
-    "rsvp": "^3.0.14",
     "tmp-sync": "^1.0.1"
   }
 }

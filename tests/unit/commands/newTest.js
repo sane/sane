@@ -1,7 +1,7 @@
 'use strict';
 
 // var commandOptions = require('../../factories/command-options');
-var {expect} = require('chai');
+var { expect } = require('chai');
 
 var newCommand     = require('../../../lib/commands/new');
 
