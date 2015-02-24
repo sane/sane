@@ -42,6 +42,7 @@
     "child-process-promise": "^1.0.1",
     "commander": "~2.6.0",
     "configstore": "^0.3.1",
+    "diff": "^1.2.2",
     "ember-cli": "~0.2.1",
     "exit": "^0.1.2",
     "findup": "^0.1.5",
