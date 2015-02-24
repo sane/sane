@@ -4,8 +4,6 @@ var { expect } = require('chai');
 var Project = require('../../lib/tasks/Project');
 var pluck = require('lodash/collection/pluck');
 var path = require('path');
-// var { ember } = require('../helpers/acceptanceSetup');
-// var { spawn } = require('child-process-promise');
 var { spawn }   = require('child_process');
 var installNpmPackage = require('../../lib/tasks/installNpmPackage');
 var getTemplates = require('../../lib/tasks/getTemplates');
@@ -15,21 +13,15 @@ var fs = require('fs-extra');
 describe('getAddon tests', async function() {
 
   it('find closest project', async function() {
-    var project = await Project.closest('/Users/markus/Projects/Artificial/moneyflow');
-    console.log(project);
-    var addons = project.discoverAddons();
-    console.log(addons);
-    var supportedBlueprints = pluck(addons, 'name');
-    console.log(project.getBlueprintPath(supportedBlueprints[0]));
-    var blueprintPath = project.getBlueprintPath(supportedBlueprints[0]);
-    console.log(blueprintPath);
-    // console.log(project.root);
-    // process.exit(0);
-    // var generatePath = path.join(blueprintPath, 'generate');
-    // var client = require(path.join(generatePath, 'client'));
-    // var server = require(path.join(generatePath, 'client'));
-    // console.log(client.fn());
-
+    // var project = await Project.closest('/Users/markus/Projects/Artificial/moneyflow');
+    // console.log(project);
+    // var addons = project.discoverAddons();
+    // console.log(addons);
+    // var supportedBlueprints = pluck(addons, 'name');
+    // console.log(project.getBlueprintPath(supportedBlueprints[0]));
+    // var blueprintPath = project.getBlueprintPath(supportedBlueprints[0]);
+    // console.log(blueprintPath);
+    //
     // var blueprint = require(blueprintPath);
     // blueprint.client.exec({
     //   success: function(actions) {
@@ -62,13 +54,13 @@ describe('getAddon tests', async function() {
     //     }
     //   }
     // });
-
-    //now copy over templates
-    var templates = getTemplates(path.join(blueprintPath, 'generate'));
-    // console.log(templates);
-    console.log('Copy over templates...');
-    copyToProject(templates, project.root);
-    console.log('done');
+    //
+    // //now copy over templates
+    // var templates = getTemplates(path.join(blueprintPath, 'generate'));
+    // // console.log(templates);
+    // console.log('Copy over templates...');
+    // copyToProject(templates, project.root);
+    // console.log('done');
     // fs.outputFileSync(templateOutPath, fs.readFileSync(templateInPath));
     // // console.log();
     // console.log(addons.pkg);
