@@ -35,7 +35,7 @@ describe('Acceptance: sane install', function() {
   }
 
   it('sane-auth and runs generator', async function() {
-    await install('sane-auth');
+    await install('sane-auth --verbose');
 
     //checks that addon has been installed
     assertFile(path.join('node_modules', 'sane-auth', 'package.json'));
