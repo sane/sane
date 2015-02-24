@@ -6,6 +6,7 @@
 * [BUGFIX] Fixed tests on Windows and AppVeyor.
 * * [BUGFIX] Full Windows support.
 * [ENHANCEMENT] Changed to using `expect` instead of `assert` from chai module to match ember-cli [commit 2435679](https://github.com/ember-cli/ember-cli/commit/24356790ba1a6aead425c8bddfd96f6cb06ab1cb).
+* [FEATURE] Added sane install command that installs any sane addons published on npm with a 'sane-addon' keyword. These addons can add custom generators that are automatically tun by the install command.
 
 ### 0.0.23
 * [BUGFIX] Fixed ember-cli version check on `sane new`.
