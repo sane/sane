@@ -24,8 +24,8 @@ function addFiles(mocha, files) {
   glob.sync(root + files).forEach(mocha.addFile.bind(mocha));
 }
 
-// addFiles(mocha, '/**/*Test.js');
-addFiles(mocha, '/**/getAddonTest.js');
+addFiles(mocha, '/**/*Test.js');
+// addFiles(mocha, '/**/getAddonTest.js');
 
 // if (arg === 'all') {
 //   addFiles(mocha, '/**/*-slow.js');
