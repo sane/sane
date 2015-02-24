@@ -30,13 +30,16 @@ describe('Acceptance: sane install', function() {
     var generateArgs = ['install'].concat(args.split(' '));
 
     await initApp();
-
+    console.log('sane', sane);
+    console.log('generateArgs', generateArgs);
     return execFile(sane, generateArgs);
   }
 
   it('sane-auth and runs generator', async function() {
-    await install('sane-auth --verbose');
-
+    await install('sane-auth');
+    console.log('currDir', process.cwd());
+    console.log('ls -A', ls('-A', process.cwd()))
+    console.log('ls -A', ls('-A', path.join(process.cwd(), 'node_modules')))
     //checks that addon has been installed
     assertFile(path.join('node_modules', 'sane-auth', 'package.json'));
     //check that it also got save-deved

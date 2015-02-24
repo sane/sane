@@ -11,9 +11,10 @@ require('traceur').require.makeDefault(function(filename) {
     (filename.indexOf('/node_modules/sane-cli/') > -1 && filename.indexOf('/node_modules/sane-cli/node_modules') === -1);
 }, {asyncFunctions: true});
 
+
 var mocha = new Mocha({
   // For some reason, tests take a long time on Windows (or at least AppVeyor)
-  timeout: (process.platform === 'win32') ? 90000 : 18000,
+  timeout: (process.platform === 'win32') ? 90000 : 20000,
   reporter: 'spec'
 });
 
