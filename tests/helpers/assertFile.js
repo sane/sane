@@ -1,11 +1,11 @@
 'use strict';
 
-var { expect }   = require('chai');
-var contains = require('lodash/collection/contains');
-var flatten  = require('lodash/array/flatten');
-var fs       = require('fs-extra');
-var path     = require('path');
-var EOL      = require('os').EOL;
+var { expect }  = require('chai');
+var includes    = require('lodash/collection/includes');
+var flatten     = require('lodash/array/flatten');
+var fs          = require('fs-extra');
+var path        = require('path');
+var EOL         = require('os').EOL;
 
 /*
  * File originally taken from ember-cli code at:
