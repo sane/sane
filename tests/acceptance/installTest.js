@@ -8,6 +8,7 @@ var path              = require('path');
 var tmp               = require('tmp-sync');
 require('shelljs/global');
 var { execFile }      = require('child-process-promise');
+var { spawn }      = require('child-process-promise');
 var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 // var EOL              = require('os').EOL;
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
@@ -27,14 +28,15 @@ describe('Acceptance: sane install', function() {
   });
 
   async function install(args) {
-    var generateArgs = ['install'].concat(args.split(' '));
+    var installArgs = ['install'].concat(args.split(' '));
 
     await initApp();
-    return execFile(sane, generateArgs);
+    //to see output run spawn with { stdio: 'inherit' }
+    return execFile(sane, installArgs);
   }
 
   it('sane-auth and runs generator', async function() {
-    await install('sane-auth');
+    await install('sane-auth --verbose --force');
     //checks that addon has been installed
     assertFile(path.join('node_modules', 'sane-auth', 'package.json'));
     //check that it also got save-deved
