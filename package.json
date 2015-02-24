@@ -52,7 +52,7 @@
     "machinepack-npm": "^3.1.0",
     "node-uuid": "^1.4.2",
     "pleasant-progress": "^1.0.2",
-    "readline-sync": "^0.6.1",
+    "readline-sync": "0.5.2",
     "resolve": "^1.0.0",
     "rsvp": "^3.0.17",
     "shelljs": "~0.3.0",
@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "chai": "^2.0.0",
-    "chai-as-promised": "^4.1.1",
+    "chai-as-promised": "^4.2.0",
     "glob": "4.0.5",
     "mocha": "^2.1.0",
     "mocha-jshint": "0.0.9",

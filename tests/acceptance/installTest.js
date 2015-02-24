@@ -40,6 +40,8 @@ describe('Acceptance: sane install', function() {
     console.log('currDir', process.cwd());
     console.log('ls -A', ls('-A', process.cwd()))
     console.log('ls -A', ls('-A', path.join(process.cwd(), 'node_modules')))
+    console.log('ls -A', ls('-A', path.join(process.cwd(), 'server', 'api')))
+    console.log('ls -A', ls('-A', path.join(process.cwd(), 'server', 'api', 'policies')))
     //checks that addon has been installed
     assertFile(path.join('node_modules', 'sane-auth', 'package.json'));
     //check that it also got save-deved
