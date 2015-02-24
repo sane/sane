@@ -21,12 +21,20 @@ describe('getAddon tests', async function() {
     // var client = require(path.join(generatePath, 'client'));
     // var server = require(path.join(generatePath, 'client'));
     // console.log(client.fn());
-    var { client } = require(blueprintPath);
+    var { client, server } = require(blueprintPath);
     client.exec({
       success: function(actions){
         console.log(actions);
       }
     });
+
+    server.exec({
+      success: function(actions){
+        console.log(actions);
+      }
+    });
+
+    //now copy over templates
     // console.log();
     // console.log(addons.pkg);
     expect('1').to.equal('1');
