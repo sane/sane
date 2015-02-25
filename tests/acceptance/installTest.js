@@ -35,6 +35,7 @@ describe('Acceptance: sane install', function() {
     return execFile(sane, installArgs);
   }
 
+  //Note especially check the addToConfig functionality!
   it('sane-auth and runs generator', async function() {
     await install('sane-auth --verbose --force');
     //checks that addon has been installed
