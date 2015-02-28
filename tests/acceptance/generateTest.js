@@ -1,6 +1,4 @@
-// /*jshint quotmark: false*/
-
-'use strict';
+/* jshint quotmark: false */
 
 // var Promise          = require('../../lib/ext/promise');
 var assertFile = require('../helpers/assertFile');
@@ -15,9 +13,7 @@ var root = process.cwd();
 var sane = require('../helpers/sane');
 var tmp = require('tmp-sync');
 var tmproot = path.join(root, 'tmp');
-var {
-  spawn
-} = require('child-process-promise');
+var { spawn } = require('child-process-promise');
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 
 
@@ -51,13 +47,12 @@ describe('Acceptance: sane generate', function() {
       '--skip-npm',
       '--skip-bower',
       '--skip-analytics'
-    ], {
-      stdio: 'ignore'
-    });
+      ],
+      {stdio: 'ignore'}
+    );
   }
 
-  async
-  function generate(args) {
+  async function generate(args) {
     await initApp();
 
     var generateArgs = ['generate'].concat(args.split(' '));
@@ -67,8 +62,7 @@ describe('Acceptance: sane generate', function() {
     return spawn(sane, generateArgs, generateOpts);
   }
 
-  it('resource/api user', async
-    function() {
+  it('resource/api user', async function() {
       await generate('resource user');
 
       assertFile('client/app/models/user.js', {
@@ -79,8 +73,7 @@ describe('Acceptance: sane generate', function() {
       });
     });
 
-  it('resource/api user name:string age:number', async
-    function() {
+  it('resource/api user name:string age:number', async function() {
       await generate('resource user name:string age:number');
 
       assertFile('client/app/models/user.js', {
