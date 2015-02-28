@@ -1,5 +1,3 @@
-'use strict';
-
 var path       = require('path');
 // var rimraf     = require('fs-extra').remove;
 // var tmp        = require('tmp-sync');
