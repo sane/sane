@@ -90,7 +90,7 @@ describe('Acceptance: sane new', function() {
       });
   });
 
-  it('sane new facebook -d postgres, where facebook does not yet exist, works and adds settings to fig.yml', async function() {
+  it(`sane new facebook -d postgres, where facebook does not yet exist, works and adds settings to ${dockerCompose}.yml`, async function() {
     await initApp([
       'new',
       'facebook',
@@ -102,10 +102,10 @@ describe('Acceptance: sane new', function() {
 
     process.chdir('facebook');
 
-    var expectedFig = path.join(__dirname, '../fixtures/new/acceptance-test-fig-expected.yml');
+    var expectedDocker = path.join(__dirname, '../fixtures/new/acceptance-test-docker-expected.yml');
     var expectedConfig = path.join(__dirname, '../fixtures/new/acceptance-test-sane-cli-expected.js');
 
-    assertFileEquals(dockerCompose+'.yml', expectedFig);
+    assertFileEquals(`${dockerCompose}.yml`, expectedDocker);
     assertFileEquals('.sane-cli', expectedConfig);
   });
 
