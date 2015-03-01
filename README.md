@@ -1,12 +1,12 @@
 <p align="center">
   <img src="https://camo.githubusercontent.com/b8ecf54b15f51c7c992d6fce003b661c96d8acec/68747470733a2f2f63646e2e7261776769742e636f6d2f6172746966696369616c696f2f73616e652f67682d70616765732f5f696e636c756465732f73616e652d6c6f676f2e737667" width="400"/>
 </p>
-# SANE Stack [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
-[![Build Status](https://travis-ci.org/artificialio/sane.svg?branch=master)](https://travis-ci.org/artificialio/sane) [![Build status](https://ci.appveyor.com/api/projects/status/oku88ae3kxddbw14/branch/master?svg=true)](https://ci.appveyor.com/project/Globegitter/sane/branch/master) [![npm](https://img.shields.io/npm/dm/sane-cli.svg)](https://www.npmjs.com/package/sane-cli)  [![Dependency Status](https://img.shields.io/david/artificialio/sane.svg?style=flat)](https://david-dm.org/artificialio/sane) [![Bountysource](https://www.bountysource.com/badge/team?team_id=58969&style=raised)](https://www.bountysource.com/teams/sane-stack?utm_source=Sane%20Stack&utm_medium=shield&utm_campaign=raised) 
+# SANE Stack [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/artificialio/sane.svg?branch=master)](https://travis-ci.org/artificialio/sane) [![Build status](https://ci.appveyor.com/api/projects/status/oku88ae3kxddbw14/branch/master?svg=true)](https://ci.appveyor.com/project/Globegitter/sane/branch/master) [![npm](https://img.shields.io/npm/dm/sane-cli.svg)](https://www.npmjs.com/package/sane-cli)  [![Dependency Status](https://img.shields.io/david/artificialio/sane.svg?style=flat)](https://david-dm.org/artificialio/sane) [![Bountysource](https://www.bountysource.com/badge/team?team_id=58969&style=raised)](https://www.bountysource.com/teams/sane-stack?utm_source=Sane%20Stack&utm_medium=shield&utm_campaign=raised)
 
 **NOTE: This project, while exciting, is still an early prototype. While being mostly stable it is still being iterated with feature changes and improvements fairly regularly.**
 
-Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
+Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [Docker Compose](https://docs.docker.com/compose/), to automatically install dependencies such as your database and will make deployment easier.
 
 Quickstart:
 * `npm install -g sails sane-cli`
@@ -41,4 +41,4 @@ Thanks to [ember-cli](https://github.com/stefanpenner/ember-cli) contributors fo
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).
 
 ## Built by
-Built with love by [Artificial Labs](http://artificial.io/) and contributors <3
+Built with love by [Artificial Labs](http://artificial.io/) and [contributors](https://github.com/artificialio/sane/graphs/contributors) <3
