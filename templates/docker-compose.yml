@@ -1,0 +1,29 @@
+{{#if database}}
+db:
+  image: {{database}}:latest #postgres, mysql, mongo, redis. You can also specifiy a specific version instead of using latest.
+  ports:
+    - "{{port}}:{{port}}" #for postgres "5432:5432", for mysql "3306:3306", for mongo "27017:27017", etc
+  {{#if isMysql}}
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_DATABASE=sane
+  {{/if}}
+{{/if}}
+{{serverName}}:
+  #Docker-sails supports several different tags:
+  #0.10.32/33/34 (node 0.10.32), stable (latest node 0.10.x), latest (latest node 0.11.x)
+  #0.10.32/33/34-pm2 (node 0.10.32), stable-pm2 (latest node 0.10.x), latest-pm2 (latest node 0.11.x)
+  image: artificial/docker-sails:stable-pm2
+  command: sails lift
+  volumes:
+    - {{serverName}}/:/{{serverName}}
+  ports:
+    - "1337:1337"
+{{#if database}}
+  links:
+    - db
+{{/if}}
+  #For a future version
+  #environment:
+  #  - VIRTUAL_HOST=sails
+  #  - VIRTUAL_PORT=1337

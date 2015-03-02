@@ -13,6 +13,7 @@ var path         = require('path');
 var tmp          = require('tmp-sync');
 var {spawn}   = require('child-process-promise');
 var sane         = require('../helpers/sane');
+var dockerCompose= require('../../lib/helpers/dockerCompose')();
 
 // var mock         = require('mock-fs');
 require('shelljs/global');
@@ -49,7 +50,7 @@ describe('Acceptance: sane new', function() {
 
   function initApp(args) {
     var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
-	var opts = { stdio: 'ignore' };
+    var opts = { stdio: 'ignore' };
     return spawn(sane, args, opts);
   }
 
@@ -89,7 +90,7 @@ describe('Acceptance: sane new', function() {
       });
   });
 
-  it('sane new facebook -d postgres, where facebook does not yet exist, works and adds settings to fig.yml', async function() {
+  it(`sane new facebook -d postgres, where facebook does not yet exist, works and adds settings to ${dockerCompose}.yml`, async function() {
     await initApp([
       'new',
       'facebook',
@@ -101,10 +102,10 @@ describe('Acceptance: sane new', function() {
 
     process.chdir('facebook');
 
-    var expectedFig = path.join(__dirname, '../fixtures/new/acceptance-test-fig-expected.yml');
+    var expectedDocker = path.join(__dirname, '../fixtures/new/acceptance-test-docker-expected.yml');
     var expectedConfig = path.join(__dirname, '../fixtures/new/acceptance-test-sane-cli-expected.js');
 
-    assertFileEquals('fig.yml', expectedFig);
+    assertFileEquals(`${dockerCompose}.yml`, expectedDocker);
     assertFileEquals('.sane-cli', expectedConfig);
   });
 

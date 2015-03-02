@@ -7,7 +7,7 @@
 
 **NOTE: This project, while exciting, is still an early prototype. While being mostly stable it is still being iterated with feature changes and improvements fairly regularly.**
 
-Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [fig](http://www.fig.sh/), to automatically install dependencies such as your database and will make deployment easier.
+Sane - A Javascript fullstack and cli that uses two of the best frameworks, [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/), so you can rapidly create production-ready web applications. It takes away all the hassle setting up the full backend and frontend environment, embracing convention-over-configuration all the way, so you can focus just on shipping your app. Additionally this cli also supports Docker, using [Docker Compose](https://docs.docker.com/compose/), to automatically install dependencies such as your database and will make deployment easier.
 
 Quickstart:
 * `npm install -g sails sane-cli`
@@ -42,7 +42,6 @@ Thanks to [ember-cli](https://github.com/stefanpenner/ember-cli) contributors fo
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).
 
 ## Built by
-Built with love by [Artificial Labs](http://artificial.io/) and contributors <3
 
 [gitter-badge]: https://badges.gitter.im/Join+Chat.svg
 [gitter-badge-url]: https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
@@ -56,3 +55,5 @@ Built with love by [Artificial Labs](http://artificial.io/) and contributors <3
 [npm-badge-url]: https://www.npmjs.com/package/sane-cli
 [bounty-badge]: https://www.bountysource.com/badge/team?team_id=58969&style=raised
 [bounty-badge-url]: https://www.bountysource.com/teams/sane-stack?utm_source=Sane%20Stack&utm_medium=shield&utm_campaign=raised
+
+Built with love by [Artificial Labs](http://artificial.io/) and [contributors](https://github.com/artificialio/sane/graphs/contributors) <3
