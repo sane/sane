@@ -33,8 +33,8 @@ describe('Acceptance: sane install', function() {
     await initApp();
 
     //to see output run spawn with { stdio: 'inherit' }
-    // return spawn(sane, installArgs, { stdio: 'inherit' });
-    return execFile(sane, installArgs);
+    return spawn(sane, installArgs, { stdio: 'inherit' });
+    // return execFile(sane, installArgs);
   }
 
   //Note especially check the addToConfig functionality!

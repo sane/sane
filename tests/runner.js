@@ -33,7 +33,7 @@ function addFiles(mocha, files) {
   glob.sync(root + files).forEach(mocha.addFile.bind(mocha));
 }
 
-addFiles(mocha, '/**/*Test.js');
+addFiles(mocha, '/**/installTest.js');
 // addFiles(mocha, '/**/getAddonTest.js');
 
 mocha.run(function (failures) {
