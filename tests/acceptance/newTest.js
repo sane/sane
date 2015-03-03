@@ -49,7 +49,7 @@ describe('Acceptance: sane new', function() {
   });
 
   function initApp(args) {
-    var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics'];
+    var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics', '--verbose'];
     var opts = { stdio: 'ignore' };
     return spawn(sane, args, opts);
   }
