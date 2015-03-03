@@ -2,6 +2,8 @@
 
 ### master
 
+* [BUGFIX] Fixed docker root issue for linux
+
 ### 0.0.24
 * [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook
 * [ENHANCEMENT] Added [sails-hook-dev](https://github.com/balderdashy/sails-hook-dev) and removed morgan request logging.
