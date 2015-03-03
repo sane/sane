@@ -1,10 +1,16 @@
 # SANE Stack Changelog
 
 ### master
+
+### 0.0.24
 * [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook
+* [ENHANCEMENT] Added [sails-hook-dev](https://github.com/balderdashy/sails-hook-dev) and removed morgan request logging.
+* [ENHANCEMENT] Bumped lodash to latest `3.x` version because of latest blueprints.
+* [BUGFIX] Improved `sane new` command in certain edge cases
+* [BUGFIX] Fixed a sails response bug that view is missing.
 * [BUGFIX] Fixed errors in `sane new --skip-npm`.
 * [BUGFIX] Fixed tests on Windows and AppVeyor.
-* * [BUGFIX] Full Windows support.
+* [BUGFIX] Full Windows support.
 * [ENHANCEMENT] Changed to using `expect` instead of `assert` from chai module to match ember-cli [commit 2435679](https://github.com/ember-cli/ember-cli/commit/24356790ba1a6aead425c8bddfd96f6cb06ab1cb).
 
 ### 0.0.23
