@@ -177,6 +177,9 @@ If you are using docker, currently you have to run `fig run server npm install <
 ### Linux Support
 The sane-cli should mostly support linux as-is. If you use docker however, make sure that your `DOCKER_HOST` variable is set so there is an IP to connect to rather than a unix socket. `localhost` is recommended, so you can access your sails-server through `localhost:1337`.
 
+### Giving Docker non-root access
+Another issues on Linux that you might run into, is that docker requires root access. If docker is set up for you that way, sane will not work properly. So please follow the instuctions here: [docs.docker.com/installation/ubuntulinux/#giving-non-root-access](https://docs.docker.com/installation/ubuntulinux/#giving-non-root-access)
+
 ### Docker/Fig issues
 If you are stuck with an unknown issue can remove all your docker containers: <br>
 `docker rm 'docker ps --no-trunc -aq'` <br>
