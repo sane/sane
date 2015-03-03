@@ -82,8 +82,8 @@ describe('Acceptance: sane new', function() {
     await initApp();
 
     //taken from lib/commands/new.js
-    var sailsPackages = ['sails-generate-ember-blueprints', 'lodash',
-      'morgan', 'pluralize', 'sails-disk'];
+    var sailsPackages = ['sails-generate-ember-blueprints', 'lodash', 'sails-hook-autoreload',
+    'sails-hook-dev', 'pluralize', 'sails-disk'];
 
     assertFile('server/package.json', {
         contains: sailsPackages
