@@ -39,6 +39,7 @@
   "dependencies": {
     "captains-log": "^0.11.11",
     "chalk": "~1.0.0",
+    "babel": "^4.6.6",
     "child-process-promise": "^1.0.1",
     "commander": "~2.6.0",
     "configstore": "^0.3.1",

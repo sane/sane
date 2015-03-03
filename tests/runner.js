@@ -5,13 +5,9 @@ var glob  = require('glob');
 var Mocha = require('mocha');
 var chalk = require('chalk');
 
-
-require('traceur').require.makeDefault(function (filename) {
-// don't transpile our dependencies, just our app
-//The first check is if you develop locally, the second for the globally installed moduel
-  return (filename.indexOf('node_modules') === -1) ||
-    (filename.indexOf('/node_modules/sane-cli/') > -1 && filename.indexOf('/node_modules/sane-cli/node_modules') === -1);
-}, {asyncFunctions: true});
+require('babel/register')({
+  experimental: true
+});
 
 var mocha = new Mocha({
   // For some reason, tests take a long time on Windows (or at least AppVeyor)
