@@ -180,8 +180,9 @@ The sane-cli should mostly support linux as-is. If you use docker however, make 
 ### Giving Docker non-root access
 Another issues on Linux that you might run into, is that docker requires root access. If docker is set up for you that way, sane will not work properly. So please follow the instuctions here: [docs.docker.com/installation/ubuntulinux/#giving-non-root-access](https://docs.docker.com/installation/ubuntulinux/#giving-non-root-access)
 
-### Docker/Fig issues
-If you are stuck with an unknown issue can remove all your docker containers: <br>
+### Docker/Compose issues
+If you are on Mac/Windows, often a `boot2docker restart` can help fix issues. <br>
+Otherwise you can go down the hard route and remove all your docker containers: <br>
 `docker rm 'docker ps --no-trunc -aq'` <br>
 then simply run and set up all the containers again: <br>
 `sane up --docker` (if it is not defaulted in your `.sane-cli`)
