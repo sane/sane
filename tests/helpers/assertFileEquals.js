@@ -8,7 +8,9 @@ var fs = require('fs');
   @param {String} pathToExpected
 */
 module.exports = function assertFileEquals(pathToActual, pathToExpected) {
-  var actual = fs.readFileSync(pathToActual, { encoding: 'utf-8' });
-  var expected = fs.readFileSync(pathToExpected, { encoding: 'utf-8' });
+  // Strip leading and trailing whitespace from files
+  // to avoid problems with some OS adding newlines at end of files
+  var actual = fs.readFileSync(pathToActual, { encoding: 'utf-8' }).toString().replace(/^(\s*)((\S+\s*?)*)(\s*)$/,"$2");
+  var expected = fs.readFileSync(pathToExpected, { encoding: 'utf-8' }).toString().replace(/^(\s*)((\S+\s*?)*)(\s*)$/,"$2");
   expect(actual).to.equal(expected);
 };
