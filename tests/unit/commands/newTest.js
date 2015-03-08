@@ -5,10 +5,10 @@ var {assert} = require('chai');
 
 var newCommand     = require('../../../lib/commands/new');
 
-describe('new command', function() {
+describe('new command', function () {
   var options; //, command
 
-  beforeEach(function() {
+  beforeEach(function () {
     options = {
       database: 'disk'
     };
@@ -43,7 +43,7 @@ describe('new command', function() {
   //   });
   // });
 
-  it('doesn\'t allow to create an application with a period in the name', async function() {
+  it('doesn\'t allow to create an application with a period in the name', async function () {
     try {
       await newCommand('i.love.dots', options);
       assert.ok(false, 'should have rejected with period in the application name');

@@ -19,16 +19,16 @@ module.exports = function run(/* command, args, options */) {
   options = defaults(options, {
     verbose: true,
 
-    onOutput: function(string) {
+    onOutput: function (string) {
       if (options.verbose) { console.log(string); }
     },
 
-    onError: function(string) {
+    onError: function (string) {
       if (options.verbose) { console.error(chalk.red(string)); }
     }
   });
 
-  return new RSVP.Promise(function(resolve, reject) {
+  return new RSVP.Promise(function (resolve, reject) {
     console.log('      Running: ' + command + ' ' + args.join(' '));
 
     var opts = {};

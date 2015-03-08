@@ -14,18 +14,18 @@ var root       = process.cwd();
 var sane       = require('../helpers/sane');
 // var tmpdir;
 
-describe('Acceptance: sane help', function() {
-  // beforeEach(function() {
+describe('Acceptance: sane help', function () {
+  // beforeEach(function () {
   //   tmpdir = tmp.in(tmproot);
   //   process.chdir(tmpdir);
   // });
 
-  // afterEach(function(done) {
+  // afterEach(function (done) {
   //   process.chdir(root);
   //   rimraf(tmproot, done);
   // });
 
-  it('displays commands, it\'s aliases and the correct cli version', async function() {
+  it('displays commands, it\'s aliases and the correct cli version', async function () {
     var output = await execFile(sane, ['help']);
     output = output.stdout;
 

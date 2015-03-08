@@ -24,7 +24,7 @@ var assertFileEquals = require('../helpers/assertFileEquals');
 var root         = process.cwd();
 var tmproot      = path.join(root, 'tmp');
 
-describe('Acceptance: sane new', function() {
+describe('Acceptance: sane new', function () {
   var tmpdir;
 //   before(conf.setup);
 
@@ -36,13 +36,13 @@ describe('Acceptance: sane new', function() {
 //         process.chdir('./tmp');
 //       });
 //   });
-  beforeEach(function() {
+  beforeEach(function () {
     // mock();
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
   });
 
-  afterEach(function() {
+  afterEach(function () {
     process.chdir(root);
     // mock.restore;
     fs.removeSync(tmproot);
@@ -78,7 +78,7 @@ describe('Acceptance: sane new', function() {
 //     return confirmBlueprintedForDir('blueprints/app');
 //   }
 
-  it('sane new . in empty folder works and adds specified dependencies to server package.json', async function() {
+  it('sane new . in empty folder works and adds specified dependencies to server package.json', async function () {
     await initApp();
 
     //taken from lib/commands/new.js
@@ -90,7 +90,7 @@ describe('Acceptance: sane new', function() {
       });
   });
 
-  it(`sane new facebook -d postgres, where facebook does not yet exist, works and adds settings to ${dockerCompose}.yml`, async function() {
+  it(`sane new facebook -d postgres, where facebook does not yet exist, works and adds settings to ${dockerCompose}.yml`, async function () {
     await initApp([
       'new',
       'facebook',
@@ -109,7 +109,7 @@ describe('Acceptance: sane new', function() {
     assertFileEquals('.sane-cli', expectedConfig);
   });
 
-  it('sane new myspace -d redis, where myspace does not exist, works and creates myspace with redis', async function() {
+  it('sane new myspace -d redis, where myspace does not exist, works and creates myspace with redis', async function () {
     await initApp([
       'new',
       'myspace',

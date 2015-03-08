@@ -17,7 +17,7 @@ module.exports = {
    * That can be useful for limited feature roll-out or A/B Testing, etc.
    *
    */
-  serve: function(req, res) {
+  serve: function (req, res) {
     var emberApp = __dirname + '/../../assets/index.html';
     fs.exists(emberApp, function (exists) {
       if (!exists) {

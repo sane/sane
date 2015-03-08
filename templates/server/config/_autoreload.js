@@ -7,12 +7,12 @@ module.exports.autoreload = {
   usePolling: {{ pollingWatch }},
   // Set dirs to watch
   dirs: [
-    path.resolve('api','blueprints'),
-    path.resolve('api','controllers'),
-    path.resolve('api','models'),
-    path.resolve('api','policies'),
-    path.resolve('api','responses'),
-    path.resolve('api','services'),
+    path.resolve('api', 'blueprints'),
+    path.resolve('api', 'controllers'),
+    path.resolve('api', 'models'),
+    path.resolve('api', 'policies'),
+    path.resolve('api', 'responses'),
+    path.resolve('api', 'services'),
     path.resolve('config')
   ]
 };
