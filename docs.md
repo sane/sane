@@ -89,12 +89,11 @@ You create all your resources in singular form since Sails and Ember pluralize w
 }
 ```
 
+Your Sails API and Ember App are already set up to communicate with each other in that expected standard: Ember uses it's [RESTAdapter](http://emberjs.com/guides/models/the-rest-adapter/) and Sails uses [Ember Blueprints](https://github.com/mphasize/sails-generate-ember-blueprints). If you don't plan to use websockets there is not much else you have to do on the server side; Sails is waiting for requests to come in. To get started saving your models on the frontend however, follow these simple guides: http://emberjs.com/guides/models/persisting-records/.
+
 ### Websockets
 
 To get websocket support for your Sane App check out: https://github.com/huafu/ember-data-sails, which should be working as-is and hopefully will soon come as a generator option in sane.
-
-Your Sails API and Ember App are already set up to communicate with each other in that expected standard: Ember uses it's [RESTAdapter](http://emberjs.com/guides/models/the-rest-adapter/) and Sails uses [Ember Blueprints](https://github.com/mphasize/sails-generate-ember-blueprints). If you don't plan to use websockets there is not much else you have to do on the server side; Sails is waiting for requests to come in. To get started saving your models on the frontend however, follow these simple guides: http://emberjs.com/guides/models/persisting-records/.
-
 
 ## Docker
 
