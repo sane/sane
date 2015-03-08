@@ -17,7 +17,7 @@ Quickstart:
 * To work on your frontend-app you work as you would normally do with ember-cli on `localhost:4200`.
 * You are now good to go.
 
-**Note: If you use Docker, make sure you have [fig](http://www.fig.sh/install.html) installed. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
+**Note: If you use Docker, make sure you have [Docker Compose](http://docs.docker.com/compose/) installed. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
 
 ##Documentation
 
