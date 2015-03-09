@@ -4,7 +4,7 @@ var glob = require('glob');
 var Mocha = require('mocha');
 
 
-require('traceur').require.makeDefault(function(filename) {
+require('traceur').require.makeDefault(function (filename) {
 // don't transpile our dependencies, just our app
 //The first check is if you develop locally, the second for the globally installed moduel
   return (filename.indexOf('node_modules') === -1) ||
@@ -30,8 +30,8 @@ addFiles(mocha, '/**/*Test.js');
 //   addFiles(mocha, '/**/*-slow.js');
 // }
 
-mocha.run(function(failures) {
-  process.on('exit', function() {
+mocha.run(function (failures) {
+  process.on('exit', function () {
     process.exit(failures);
   });
 });

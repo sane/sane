@@ -17,25 +17,25 @@ var { spawn } = require('child-process-promise');
 // var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 
 
-describe('Acceptance: sane generate', function() {
+describe('Acceptance: sane generate', function () {
   var tmpdir;
 
-  //   before(function() {
+  //   before(function () {
   //     BlueprintNpmTask.disableNPM();
   //     conf.setup();
   //   });
 
-  //   after(function() {
+  //   after(function () {
   //     BlueprintNpmTask.restoreNPM();
   //     conf.restore();
   //   });
 
-  beforeEach(function() {
+  beforeEach(function () {
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
   });
 
-  afterEach(function() {
+  afterEach(function () {
     process.chdir(root);
     fs.removeSync(tmproot);
   });
@@ -62,7 +62,7 @@ describe('Acceptance: sane generate', function() {
     return spawn(sane, generateArgs, generateOpts);
   }
 
-  it('resource/api user', async function() {
+  it('resource/api user', async function () {
       await generate('resource user');
 
       assertFile('client/app/models/user.js', {
@@ -73,7 +73,7 @@ describe('Acceptance: sane generate', function() {
       });
     });
 
-  it('resource/api user name:string age:number', async function() {
+  it('resource/api user name:string age:number', async function () {
       await generate('resource user name:string age:number');
 
       assertFile('client/app/models/user.js', {

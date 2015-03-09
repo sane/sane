@@ -50,7 +50,7 @@ module.exports = function assertFile(file, options) {
   var actual = fs.readFileSync(filePath, { encoding: 'utf-8' });
 
   if (options.contains) {
-    flatten([options.contains]).forEach(function(expected) {
+    flatten([options.contains]).forEach(function (expected) {
       var pass;
 
       if (expected.test) {
@@ -67,7 +67,7 @@ module.exports = function assertFile(file, options) {
   }
 
   if (options.doesNotContain) {
-    flatten([options.doesNotContain]).forEach(function(unexpected) {
+    flatten([options.doesNotContain]).forEach(function (unexpected) {
       var pass;
 
       if (unexpected.test) {
