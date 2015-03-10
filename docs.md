@@ -93,7 +93,7 @@ Your Sails API and Ember App are already set up to communicate with each other i
 
 ### Websockets
 
-To get websocket support for your Sane App simply install https://github.com/huafu/ember-data-sails. This will turned into an addon soon. In the meantime just add `app.import('vendor/js/sails.io.js');` to your `Brocfile.js` and the following lines to your `ApplicationAdapter`.
+To get websocket support for your Sane App simply install https://github.com/huafu/ember-data-sails. This will turned into an addon soon. In the meantime just add the following lines to your `ApplicationAdapter`.
 
 ```js
 //client/app/adapters/application.js
