@@ -64,7 +64,7 @@ the bug and the faster a fix can start being worked on.
 
 3. If the feature is complex, consider writing some initial documentation for
    it. If the feature is accepted it will need to be documented and
-   this will also help reviewers to understand it better.  Submitting a 
+   this will also help reviewers to understand it better. Submitting a 
    feature request with documentation will help shape the implemented API.
 
 4. Attempt a Pull Request. If you are willing to help the project out, you can
