@@ -2,6 +2,7 @@
 
 ### master
 
+* [ENHANCEMENT] Added [eslint](http://eslint.org/) through [mocha-eslint](https://github.com/BadgeLabs/mocha-eslint)
 * [BUGFIX] Fixed docker root issue for linux
 
 ### 0.0.24
