@@ -195,10 +195,18 @@ Another issues on Linux that you might run into, is that docker requires root ac
 
 ### Docker/Compose issues
 If you are on Mac/Windows, often a `boot2docker restart` can help fix issues. <br>
-Otherwise you can go down the hard route and remove all your docker containers: <br>
-`docker rm 'docker ps --no-trunc -aq'` <br>
-then simply run and set up all the containers again: <br>
-`sane up --docker` (if it is not defaulted in your `.sane-cli`)
+Otherwise you can go down the hard route and remove all your docker containers and simply set them all up again:
+
+```sh
+#Set up aliases in your .bashrc, .zshrc or config.fish
+alias docker.clean='docker rm $(docker ps --no-trunc -aq)'
+#deletes all your downloaded images
+alias docker.cleanimages='docker rmi $(docker images --filter dangling=true --quiet)'
+#in your project root folder run
+docker.clean
+docker.cleanimages
+sane up --docker #(if it is not defaulted in your `.sane-cli`)
+```
 
 ### Error: connect EHOSTUNREACH
 After launching the ember server and backend via `sane up` and accessing the web application the ember server crashes with the error `Error: connect EHOSTUNREACH`.
