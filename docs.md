@@ -15,7 +15,7 @@ A Javascript Fullstack and CLI that lets you rapidly create production-ready web
 * To work on your frontend-app you work as you would normally do with ember-cli on `localhost:4200`.
 * You are now good to go.
 
-**Note: If you use Docker, make sure you have [fig](http://www.fig.sh/install.html) installed. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
+**Note: If you use Docker, make sure you have [compose](http://docs.docker.com/compose/) installed. On Mac or Windows also [boot2docker](http://boot2docker.io/) and for Linux see: [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/)**
 
 
 ## Tutorials
@@ -25,7 +25,7 @@ Check out our offical tutorials at http://www.100percentjs.com/introducing-new-s
 ## Overview
 
 * The cli creates a sane folder structure so you can develop server and client seperately, but they integrate smoothly.
-* Sets up your SailsJS project either locally or with a [sails-container](https://github.com/artificialio/docker-sails) and a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [Fig](https://github.com/artificialio/docker-sails) to provide an isolated development environment that can be used in production.
+* Sets up your SailsJS project either locally or with a [sails-container](https://github.com/artificialio/docker-sails) and a database of choice (sails-disk, mongoDB, MySQL or Postgres) using [compose](http://docs.docker.com/compose/) to provide an isolated development environment that can be used in production.
 * Using the [ember-cli](https://github.com/stefanpenner/ember-cli) you have globally installed to set up an ember-frontend in a `client` sub-folder.
 
 To find out more about Sails and Ember and how they work together, you can take a look at my talk
@@ -46,7 +46,7 @@ To find out more about Sails and Ember and how they work together, you can take 
 
 `--docker` or `-D`
 
-> Sets up your whole backend envrionment using [fig](http://www.fig.sh/) to provide powerful container management.
+> Sets up your whole backend envrionment using [compose](http://docs.docker.com/compose/) to provide powerful container management.
 
 **Why Docker?** It fully automates the setup of server dependencies and you can now develop in your production environment that can be deployed to any server as-is.
 
@@ -109,13 +109,13 @@ export default DS.RESTAdapter.extend({
 
 ## Docker
 
-Sane Stack has Docker support built-in using [fig](http://www.fig.sh/) for container orchestration.
+Sane Stack has Docker support built-in using [compose](http://docs.docker.com/compose/) for container orchestration.
 
 ### Setup
-On Mac or Windows first install [boot2docker](http://boot2docker.io/) via https://github.com/boot2docker/osx-installer or https://github.com/boot2docker/windows-installer. For Linux instructions see [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/). Then install [fig](http://www.fig.sh/install.html) based on the instructions.
+On Mac or Windows first install [boot2docker](http://boot2docker.io/) via https://github.com/boot2docker/osx-installer or https://github.com/boot2docker/windows-installer. For Linux instructions see [https://docs.docker.com/installation/ubuntulinux/](https://docs.docker.com/installation/ubuntulinux/). Then install [compose](http://docs.docker.com/compose/#installation-and-set-up) based on the instructions.
 Once everything is set up make sure that your `$DOCKER_HOST` environemt variable is set correctly, also on Linux.
 
-### fig.yml
+### docker-compose.yml
 That is where your containers are defined, which ports you want to forward, how you want to link the containers etc. This conviniently gets generated for you on project-creation. You can add more containers that will all automatically get installed and started through the `sane up` command.
 
 ### Port forwarding
@@ -139,7 +139,7 @@ Examples: <br>
 *'api-v1-server' => Expected folder-name: api-v1* <br>
 `disableAnalytics: true|false` Used to disable the anonymous analytics.
 `database: postgres|mysql|mongo` Currently not in use.  <br>
-`docker: true|false` Runs all commands via [fig](http://www.fig.sh/) <br>
+`docker: true|false` Runs all commands via [compose](http://docs.docker.com/compose/) <br>
 `verbose: true|false` Shows extra output on some commands <br>
 `skipNpm: true|false` Only used if defined in your home-directory <br>
 `skipBower: true|false ` Only used if defined in your home-directory<br>
@@ -185,7 +185,7 @@ For more information on deployment and different strategies check out:
 ## Troubleshooting
 
 ### Installing sails npm packages
-If you are using docker, currently you have to run `fig run server npm install <package>` in your root folder to correctly install npm packages for your sails container.
+If you are using docker, currently you have to run `docker-compose run server npm install <package>` in your root folder to correctly install npm packages for your sails container.
 
 ### Linux Support
 The sane-cli should mostly support linux as-is. If you use docker however, make sure that your `DOCKER_HOST` variable is set so there is an IP to connect to rather than a unix socket. `localhost` is recommended, so you can access your sails-server through `localhost:1337`.
@@ -228,8 +228,8 @@ There are two possible solutions for this problem.
 **Solution 1** <br>
 Setup your docker containers again.
 ```
-fig stop
-fig rm --force -v
+docker-compose stop
+docker-compose rm --force -v
 sane up
 ```
 
