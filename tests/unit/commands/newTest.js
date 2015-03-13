@@ -1,9 +1,9 @@
+/*eslint-env node, mocha, es6 */
 'use strict';
 
-// var commandOptions = require('../../factories/command-options');
-var {assert} = require('chai');
+var { assert } = require('chai');
+var newCommand = require('../../../lib/commands/new');
 
-var newCommand     = require('../../../lib/commands/new');
 
 describe('new command', function () {
   var options; //, command
@@ -12,8 +12,15 @@ describe('new command', function () {
     options = {
       database: 'disk'
     };
+  });
 
-    // command = new NewCommand(name, options);
+  it('doesn\'t allow to create an application with a period in the name', async function () {
+    try {
+      await newCommand('i.love.dots', options);
+      assert.ok(false, 'should have rejected with period in the application name');
+    } catch (ex) {
+      assert.equal(ex.message, `Sane currently does not support a projectname of 'i.love.dots'.`);
+    }
   });
 
   // it('doesn\'t allow to create an application named `test`', function() {
@@ -42,15 +49,6 @@ describe('new command', function () {
   //     assert.equal(error.message, 'We currently do not support a name of `vendor`.');
   //   });
   // });
-
-  it('doesn\'t allow to create an application with a period in the name', async function () {
-    try {
-      await newCommand('i.love.dots', options);
-      assert.ok(false, 'should have rejected with period in the application name');
-    } catch (ex) {
-      assert.equal(ex.message, `Sane currently does not support a projectname of 'i.love.dots'.`);
-    }
-  });
 
   // it('doesn\'t allow to create an application with a name beginning with a number', function() {
   //   return command.validateAndRun(['123-my-bagel']).then(function() {

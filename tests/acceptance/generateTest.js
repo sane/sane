@@ -1,20 +1,14 @@
-/* jshint quotmark: false */
+/*eslint-env node, mocha, es6 */
+'use strict';
 
-// var Promise          = require('../../lib/ext/promise');
 var assertFile = require('../helpers/assertFile');
-// var assertFileEquals = require('../helpers/assertFileEquals');
-// var conf             = require('../helpers/conf');
-// var ember            = require('../helpers/ember');
-var fs = require('fs-extra');
-// var outputFile       = Promise.denodeify(fs.outputFile);
-var path = require('path');
-// var rimraf           = Promise.denodeify(require('rimraf'));
-var root = process.cwd();
-var sane = require('../helpers/sane');
-var tmp = require('tmp-sync');
-var tmproot = path.join(root, 'tmp');
-var { spawn } = require('child-process-promise');
-// var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
+var fs         = require('fs-extra');
+var path       = require('path');
+var root       = process.cwd();
+var sane       = require('../helpers/sane');
+var tmp        = require('tmp-sync');
+var tmproot    = path.join(root, 'tmp');
+var { spawn }  = require('child-process-promise');
 
 
 describe('Acceptance: sane generate', function () {
@@ -67,8 +61,8 @@ describe('Acceptance: sane generate', function () {
 
       assertFile('client/app/models/user.js', {
         contains: [
-          "import DS from 'ember-data';",
-          "export default DS.Model.extend"
+          'import DS from \'ember-data\';',
+          'export default DS.Model.extend'
         ]
       });
     });
@@ -78,9 +72,9 @@ describe('Acceptance: sane generate', function () {
 
       assertFile('client/app/models/user.js', {
         contains: [
-          "import DS from 'ember-data';",
-          "name: DS.attr('string'),",
-          "age: DS.attr('number')"
+          'import DS from \'ember-data\';',
+          'name: DS.attr(\'string\'),',
+          'age: DS.attr(\'number\')'
         ]
       });
     });

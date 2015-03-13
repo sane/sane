@@ -1,28 +1,18 @@
+/*eslint-env node, mocha, es6 */
 'use strict';
 
-// var ember     = require('../helpers/ember');
-// var assert    = require('assert');
-// var forEach   = require('lodash-node/compat/collections/forEach');
-// var walkSync  = require('walk-sync');
-// var Blueprint = require('../../lib/models/blueprint');
-// var util      = require('util');
-// var conf      = require('../helpers/conf');
-// var EOL       = require('os').EOL;
-var fs           = require('fs-extra');
-var path         = require('path');
-var tmp          = require('tmp-sync');
-var {spawn}   = require('child-process-promise');
-var sane         = require('../helpers/sane');
-var dockerCompose= require('../../lib/helpers/dockerCompose')();
-
-// var mock         = require('mock-fs');
-require('shelljs/global');
-
-var assertFile   = require('../helpers/assertFile');
+var fs               = require('fs-extra');
+var path             = require('path');
+var tmp              = require('tmp-sync');
+var { spawn }        = require('child-process-promise');
+var sane             = require('../helpers/sane');
+var dockerCompose    = require('../../lib/helpers/dockerCompose')();
+var assertFile       = require('../helpers/assertFile');
 var assertFileEquals = require('../helpers/assertFileEquals');
 
-var root         = process.cwd();
-var tmproot      = path.join(root, 'tmp');
+
+var root    = process.cwd();
+var tmproot = path.join(root, 'tmp');
 
 describe('Acceptance: sane new', function () {
   var tmpdir;
@@ -49,34 +39,10 @@ describe('Acceptance: sane new', function () {
   });
 
   function initApp(args) {
-    var args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics', '--verbose'];
+    args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics', '--verbose'];
     var opts = { stdio: 'ignore' };
     return spawn(sane, args, opts);
   }
-
-//   function confirmBlueprintedForDir(dir) {
-//     return function() {
-//       var blueprintPath = path.join(root, dir, 'files');
-//       var expected      = walkSync(blueprintPath);
-//       var actual        = walkSync('.').sort();
-//       var folder        = path.basename(process.cwd());
-
-//       forEach(Blueprint.renamedFiles, function(destFile, srcFile) {
-//         expected[expected.indexOf(srcFile)] = destFile;
-//       });
-
-//       expected.sort();
-
-//       assert.equal(folder, 'foo');
-//       assert.deepEqual(expected, actual, EOL + ' expected: ' +  util.inspect(expected) +
-//                        EOL + ' but got: ' +  util.inspect(actual));
-
-//     };
-//   }
-
-//   function confirmBlueprinted() {
-//     return confirmBlueprintedForDir('blueprints/app');
-//   }
 
   it('sane new . in empty folder works and adds specified dependencies to server package.json', async function () {
     await initApp();
@@ -123,6 +89,30 @@ describe('Acceptance: sane new', function () {
 
     assertFile('.sane-cli');
   });
+
+//   function confirmBlueprintedForDir(dir) {
+//     return function() {
+//       var blueprintPath = path.join(root, dir, 'files');
+//       var expected      = walkSync(blueprintPath);
+//       var actual        = walkSync('.').sort();
+//       var folder        = path.basename(process.cwd());
+
+//       forEach(Blueprint.renamedFiles, function(destFile, srcFile) {
+//         expected[expected.indexOf(srcFile)] = destFile;
+//       });
+
+//       expected.sort();
+
+//       assert.equal(folder, 'foo');
+//       assert.deepEqual(expected, actual, EOL + ' expected: ' +  util.inspect(expected) +
+//                        EOL + ' but got: ' +  util.inspect(actual));
+
+//     };
+//   }
+
+//   function confirmBlueprinted() {
+//     return confirmBlueprintedForDir('blueprints/app');
+//   }
 
 //   it('ember new foo, where foo does not yet exist, works', function() {
 //     return ember([

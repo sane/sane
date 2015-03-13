@@ -7,7 +7,7 @@ before_install:
   - npm config set spin false
   - npm install -g sails
 #  - npm install -g codeclimate-test-reporter
-script: "npm run-script test-all"
+script: "npm test"
 notifications:
   webhooks:
     urls:
