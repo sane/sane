@@ -53,7 +53,7 @@ SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter
 [appveyor-badge-url]: https://ci.appveyor.com/project/Globegitter/sane/branch/master
 [npm-badge]: https://img.shields.io/npm/dm/sane-cli.svg
 [npm-badge-url]: https://www.npmjs.com/package/sane-cli
-[bounty-badge]: https://www.bountysource.com/badge/team?team_id=58969&style=raised
+[bounty-badge]: https://www.bountysource.com/badge/team?team_id=58969&amp;style=bounties_received
 [bounty-badge-url]: https://www.bountysource.com/teams/sane-stack?utm_source=Sane%20Stack&utm_medium=shield&utm_campaign=raised
 
 Built with love by [Artificial Labs](http://artificial.io/) and [contributors](https://github.com/artificialio/sane/graphs/contributors) <3
