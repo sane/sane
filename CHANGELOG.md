@@ -3,6 +3,7 @@
 ### master
 
 * [BUGFIX] Fixed docker root issue for linux
+* [ENHANCEMENT] Added stack trace to errors in `sane new`
 
 ### 0.0.24
 * [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook
