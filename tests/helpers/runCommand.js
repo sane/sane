@@ -7,6 +7,7 @@ var defaults       = require('lodash-node/modern/objects/defaults');
 var killCliProcess = require('./killCliProcess');
 var Promise        = require('./promise');
 
+
 module.exports = function run(/* command, args, options */) {
   var command = arguments[0];
   var args = Array.prototype.slice.call(arguments, 1);
@@ -20,11 +21,15 @@ module.exports = function run(/* command, args, options */) {
     verbose: true,
 
     onOutput: function (string) {
-      if (options.verbose) { console.log(string); }
+      if (options.verbose) {
+        console.log(string);
+      }
     },
 
     onError: function (string) {
-      if (options.verbose) { console.error(chalk.red(string)); }
+      if (options.verbose) {
+        console.error(chalk.red(string));
+      }
     }
   });
 

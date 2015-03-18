@@ -1,0 +1,4 @@
+tests/fixtures/**
+templates/**
+
+# Note: node_modules ignored by default

@@ -16,7 +16,7 @@ module.exports.denodeify = function () {
   var newFn = function () {
     return Constructor.resolve(fn.apply(null, arguments));
   };
-  newFn.__proto__ = arguments[0];
+  Object.setPrototypeOf(newFn, arguments[0]);
   return newFn;
 };
 
@@ -35,7 +35,7 @@ function PromiseExt(resolver, label) {
 PromiseExt.prototype = Object.create(Promise.prototype);
 PromiseExt.prototype.constructor = PromiseExt;
 PromiseExt.prototype._superConstructor = Promise;
-PromiseExt.__proto__ = Promise;
+Object.setPrototypeOf(PromiseExt, Promise);
 
 PromiseExt.prototype.returns = function (value) {
   return this.then(function () {
