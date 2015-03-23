@@ -1,5 +1,10 @@
 # SANE Stack Changelog
 
+### 0.1.0-alpha.7
+* [ENHANCEMENT] Switched from traceur to babeljs for better error messages
+* [ENHANCEMENT] Added diffing support to file generator
+* [BUGFIX] Fixed error with npmInstall
+
 ### master
 * [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook
 * [BUGFIX] Fixed errors in `sane new --skip-npm`.

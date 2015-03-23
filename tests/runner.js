@@ -4,7 +4,8 @@ var glob = require('glob');
 var Mocha = require('mocha');
 
 require('babel/register')({
-  experimental: true
+  experimental: true,
+  loose: true
 });
 
 var mocha = new Mocha({
