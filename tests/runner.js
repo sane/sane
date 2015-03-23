@@ -6,7 +6,8 @@ var Mocha = require('mocha');
 var chalk = require('chalk');
 
 require('babel/register')({
-  experimental: true
+  experimental: true,
+  loose: true
 });
 
 var mocha = new Mocha({

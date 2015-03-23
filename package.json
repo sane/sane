@@ -1,6 +1,6 @@
 {
   "name": "sane-cli",
-  "version": "0.1.0-alpha.6",
+  "version": "0.1.0-alpha.7",
   "trackingCode": "UA-46963158-10",
   "description": "A command-line tool for creating full stack sails-ember applications using docker",
   "main": "bin/sane",
@@ -38,6 +38,7 @@
   "homepage": "http://sanestack.com",
   "dependencies": {
     "captains-log": "^0.11.11",
+    "babel": "^4.7.16",
     "chalk": "^1.0.0",
     "babel": "^4.7.12",
     "child-process-promise": "^1.0.1",

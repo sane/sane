@@ -1,5 +1,10 @@
 # SANE Stack Changelog
 
+### 0.1.0-alpha.7
+* [ENHANCEMENT] Switched from traceur to babeljs for better error messages
+* [ENHANCEMENT] Added diffing support to file generator
+* [BUGFIX] Fixed error with npmInstall
+
 ### master
 
 * [ENHANCEMENT] Added [eslint](http://eslint.org/) through [mocha-eslint](https://github.com/BadgeLabs/mocha-eslint)
