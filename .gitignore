@@ -24,3 +24,6 @@ Thumbs.db
 
 #Broccoli folder
 tmp
+
+#Editor files
+*.sublime-*
