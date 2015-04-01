@@ -3,7 +3,7 @@
 var RSVP           = require('rsvp');
 var chalk          = require('chalk');
 var spawn          = require('child_process').spawn;
-var defaults       = require('lodash-node/modern/objects/defaults');
+var defaults       = require('lodash/object/defaults');
 var killCliProcess = require('./killCliProcess');
 var Promise        = require('./promise');
 

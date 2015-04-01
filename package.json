@@ -62,7 +62,7 @@
     "chai-as-promised": "^4.1.1",
     "eslint": "^0.16.2",
     "glob": "4.0.5",
-    "lodash-node": "^2.4.1",
+    "lodash": "^3.6.0",
     "mocha": "^2.0.1",
     "mocha-eslint": "^0.1.0",
     "node-require-timings": "0.0.2",
