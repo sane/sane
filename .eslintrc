@@ -16,7 +16,7 @@
     "no-multiple-empty-lines"          : [2, {"max": 2}],
     "quotes"                           : [2, "single"],
     "eqeqeq"                           : [2, "smart"],
-    "wrap-iife"                        : [2, "outside"],
+    "wrap-iife"                        : [2, "inside"],
     "indent"                           : [2, 2],
     "brace-style"                      : [2, "1tbs"],
     "spaced-line-comment"              : [2, "always", {"exceptions":["-","+"]}],
