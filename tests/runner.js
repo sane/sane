@@ -4,18 +4,18 @@
 var glob  = require('glob');
 var Mocha = require('mocha');
 var chalk = require('chalk');
-
+var root;
 
 require('traceur').require.makeDefault(function (filename) {
 // don't transpile our dependencies, just our app
-//The first check is if you develop locally, the second for the globally installed moduel
+// The first check is if you develop locally, the second for the globally installed moduel
   return (filename.indexOf('node_modules') === -1) ||
     (filename.indexOf('/node_modules/sane-cli/') > -1 && filename.indexOf('/node_modules/sane-cli/node_modules') === -1);
 }, {asyncFunctions: true});
 
 var mocha = new Mocha({
   // For some reason, tests take a long time on Windows (or at least AppVeyor)
-  timeout: (process.platform === 'win32') ? 90000 : 18000,
+  timeout : (process.platform === 'win32') ? 90000 : 18000,
   reporter: 'spec'
 });
 
@@ -26,7 +26,7 @@ if (!arg) {
 } else if (arg === 'unit') {
   var root = 'tests/unit';
 } else {
-  var root = 'tests/{unit,acceptance}';
+  root = 'tests/{unit,acceptance}';
 }
 
 function addFiles(mocha, files) {
