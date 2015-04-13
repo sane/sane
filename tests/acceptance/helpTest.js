@@ -1,13 +1,14 @@
 /*eslint-env node, mocha, es6 */
 'use strict';
 
-var { expect }   = require('chai');
-var version      = require('../../package.json').version;
+var { expect } = require('chai');
 var { execFile } = require('child-process-promise');
-var sane         = require('../helpers/sane');
+var { sane } = require('../helpers/acceptanceSetup');
 
-describe('Acceptance: sane help', function() {
+var version = require('../../package.json').version;
 
+
+describe('Acceptance: sane help', function () {
   it('displays commands, it\'s aliases and the correct cli version', async function () {
     var output = await execFile(sane, ['help']);
     output = output.stdout;

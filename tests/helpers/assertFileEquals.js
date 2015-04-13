@@ -1,8 +1,7 @@
 'use strict';
 
-var expect = require('chai').expect;
-var fs     = require('fs');
-
+var { expect } = require('chai');
+var fs = require('fs');
 
 /*
   Assert that a given file matches another.

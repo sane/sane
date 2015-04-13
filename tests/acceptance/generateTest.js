@@ -41,6 +41,7 @@ describe('Acceptance: sane generate', function() {
           'export default DS.Model.extend'
         ]
       });
+
     });
 
   it('resource/api user name:string age:number', async function () {
@@ -53,6 +54,7 @@ describe('Acceptance: sane generate', function() {
           'age: DS.attr(\'number\')'
         ]
       });
+      
     });
 
   //   it('controller foo', function() {

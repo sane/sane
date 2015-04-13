@@ -7,7 +7,7 @@ var tmp              = require('tmp-sync');
 var { spawn }        = require('child-process-promise');
 var sane             = require('../helpers/sane');
 var dockerCompose    = require('../../lib/helpers/dockerCompose')();
-var assertFile       = require('../helpers/assertFile');
+var assertFile   = require('../helpers/assertFile');
 var assertFileEquals = require('../helpers/assertFileEquals');
 var { initApp, sane, tmproot, root } = require('../helpers/acceptanceSetup');
 
@@ -29,6 +29,7 @@ describe('Acceptance: sane new', function() {
   });
 
   it('sane new . in empty folder works and adds specified dependencies to server package.json', async function () {
+
     await initApp();
 
     //taken from lib/commands/new.js
