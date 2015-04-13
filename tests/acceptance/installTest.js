@@ -39,7 +39,7 @@ describe('Acceptance: sane install', function() {
 
   //Note especially check the addToConfig functionality!
   it('sane-auth and runs generator', async function() {
-    await install('sane-auth --verbose --force');
+    await install('sane-auth --verbose --force --skip-npm');
     //checks that addon has been installed
     assertFile(path.join('node_modules', 'sane-auth', 'package.json'));
     //check that it also got save-deved
@@ -52,7 +52,15 @@ describe('Acceptance: sane install', function() {
 
     //checks that templates have been copied over properly from the generator
     assertFile(path.join('server', 'api', 'policies', 'hasToken.js'));
-    assertFile(path.join('client', 'node_modules', 'ember-cli-simple-auth', 'package.json'));
+
+    assertFile(path.join('server', 'package.json'), {
+      contains: [
+        'dependencies',
+        'jsonwebtoken'
+      ]
+    });
+
+    assertFile(path.join('client', 'app', 'models', 'user.js'));
   });
 
 });
