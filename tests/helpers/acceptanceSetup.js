@@ -11,7 +11,7 @@ var self = {
 
   tmproot: path.join(root, 'tmp'),
 
-  sane: path.join(root, 'bin', saneExec),,
+  sane: path.join(root, 'bin', saneExec),
 
   //TODO(Markus): Try to remove execFile/exec and call the cli directly, promisified
   initApp: function(args) {

@@ -56,7 +56,7 @@ module.exports = function assertFile(file, options) {
       if (expected.test) {
         pass = expected.test(actual);
       } else {
-        pass = contains(actual, expected);
+        pass = includes(actual, expected);
       }
 
       expect(pass).to.equal(true, EOL + EOL + 'expected ' + file + ':' + EOL + EOL +
@@ -73,7 +73,7 @@ module.exports = function assertFile(file, options) {
       if (unexpected.test) {
         pass = !unexpected.test(actual);
       } else {
-        pass = !contains(actual, unexpected);
+        pass = !includes(actual, unexpected);
       }
 
       expect(pass).to.equal(true, EOL + EOL + 'expected ' + file + ':' + EOL + EOL +
