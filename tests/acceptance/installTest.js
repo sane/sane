@@ -1,4 +1,3 @@
-/*jshint quotmark: false*/
 'use strict';
 
 var assertFileEquals  = require('../helpers/assertFileEquals');
@@ -6,12 +5,9 @@ var assertFile        = require('../helpers/assertFile');
 var fs                = require('fs-extra');
 var path              = require('path');
 var tmp               = require('tmp-sync');
-require('shelljs/global');
 var { execFile }      = require('child-process-promise');
 var { spawn }      = require('child-process-promise');
 var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
-// var EOL              = require('os').EOL;
-// var BlueprintNpmTask = require('../helpers/disable-npm-on-blueprint');
 
 
 describe('Acceptance: sane install', function() {
