@@ -49,6 +49,7 @@
     "leek": "0.0.18",
     "node-uuid": "^1.4.2",
     "pleasant-progress": "^1.0.2",
+    "pluralize": "^1.1.2",
     "readline-sync": "^0.7.3",
     "resolve": "^1.0.0",
     "traceur": "0.0.87",
