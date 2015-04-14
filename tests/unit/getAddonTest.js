@@ -1,14 +1,14 @@
 'use strict';
 
 var { expect } = require('chai');
-var Project = require('../../lib/tasks/Project');
-var pluck = require('lodash/collection/pluck');
-var path = require('path');
-var { spawn }   = require('child_process');
-var installNpmPackage = require('../../lib/tasks/installNpmPackage');
-var getTemplates = require('../../lib/tasks/getTemplates');
-var copyToProject = require('../../lib/tasks/copyToProject');
-var fs = require('fs-extra');
+// var Project = require('../../lib/tasks/Project');
+// var pluck = require('lodash/collection/pluck');
+// var path = require('path');
+// var { spawn }   = require('child_process');
+// var installNpmPackage = require('../../lib/tasks/installNpmPackage');
+// var getTemplates = require('../../lib/tasks/getTemplates');
+// var copyToProject = require('../../lib/tasks/copyToProject');
+// var fs = require('fs-extra');
 
 describe('getAddon tests', async function() {
 

@@ -4,18 +4,16 @@
 var fs               = require('fs-extra');
 var path             = require('path');
 var tmp              = require('tmp-sync');
-var { spawn }        = require('child-process-promise');
-var sane             = require('../helpers/sane');
 var dockerCompose    = require('../../lib/helpers/dockerCompose')();
 var assertFile   = require('../helpers/assertFile');
 var assertFileEquals = require('../helpers/assertFileEquals');
-var { initApp, sane, tmproot, root } = require('../helpers/acceptanceSetup');
+var { initApp, tmproot, root } = require('../helpers/acceptanceSetup');
 
 var root    = process.cwd();
 var tmproot = path.join(root, 'tmp');
 
 
-describe('Acceptance: sane new', function() {
+describe('Acceptance: sane new', function () {
   var tmpdir;
 
   beforeEach(function () {

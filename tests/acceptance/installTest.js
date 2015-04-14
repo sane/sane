@@ -1,24 +1,23 @@
 'use strict';
 
-var assertFileEquals  = require('../helpers/assertFileEquals');
 var assertFile        = require('../helpers/assertFile');
 var fs                = require('fs-extra');
 var path              = require('path');
 var tmp               = require('tmp-sync');
-var { execFile }      = require('child-process-promise');
+// var { execFile }      = require('child-process-promise');
 var { spawn }      = require('child-process-promise');
 var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 
 
-describe('Acceptance: sane install', function() {
+describe('Acceptance: sane install', function () {
   var tmpdir;
 
-  beforeEach(function() {
+  beforeEach(function () {
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
   });
 
-  afterEach(function() {
+  afterEach(function () {
     process.chdir(root);
     fs.removeSync(tmproot);
   });
@@ -34,7 +33,7 @@ describe('Acceptance: sane install', function() {
   }
 
   //Note especially check the addToConfig functionality!
-  it('sane-auth and runs generator', async function() {
+  it('sane-auth and runs generator', async function () {
     await install('sane-auth --verbose --force --skip-npm');
     //checks that addon has been installed
     assertFile(path.join('node_modules', 'sane-auth', 'package.json'));

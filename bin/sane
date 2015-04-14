@@ -8,7 +8,7 @@ var path = require('path');
 var resolve = require('resolve');
 
 require('babel/register')({
-  experimental: true,
+  stage: 0,
   loose: true
 });
 

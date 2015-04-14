@@ -3,13 +3,12 @@
 
 var assertFile = require('../helpers/assertFile');
 var fs         = require('fs-extra');
-var path       = require('path');
 var tmp        = require('tmp-sync');
 var { spawn }  = require('child-process-promise');
 var { initApp, sane, root, tmproot } = require('../helpers/acceptanceSetup');
 
 
-describe('Acceptance: sane generate', function() {
+describe('Acceptance: sane generate', function () {
   var tmpdir;
 
   beforeEach(function () {
@@ -54,7 +53,7 @@ describe('Acceptance: sane generate', function() {
           'age: DS.attr(\'number\')'
         ]
       });
-      
+
     });
 
   //   it('controller foo', function() {

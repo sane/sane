@@ -6,7 +6,7 @@ var Mocha = require('mocha');
 var chalk = require('chalk');
 
 require('babel/register')({
-  experimental: true,
+  stage: 0,
   loose: true
 });
 
@@ -30,7 +30,7 @@ function addFiles(mocha, files) {
   glob.sync(root + files).forEach(mocha.addFile.bind(mocha));
 }
 
-addFiles(mocha, '/**/*Test.js');
+addFiles(mocha, '/**/InstallTest.js');
 // addFiles(mocha, '/**/getAddonTest.js');
 
 mocha.run(function (failures) {

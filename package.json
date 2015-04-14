@@ -37,8 +37,8 @@
   },
   "homepage": "http://sanestack.com",
   "dependencies": {
+    "babel": "^5.1.9",
     "captains-log": "^0.11.11",
-    "babel": "^4.7.16",
     "chalk": "^1.0.0",
     "child-process-promise": "^1.0.1",
     "commander": "~2.6.0",
@@ -61,14 +61,14 @@
     "yam": "0.0.18"
   },
   "devDependencies": {
-    "babel-eslint": "^2.0.2",
+    "babel-eslint": "^3.0.1",
     "chai": "^2.0.0",
     "chai-as-promised": "^4.2.0",
     "eslint": "^0.16.2",
     "glob": "4.0.5",
     "lodash": "^3.6.0",
-    "mocha-eslint": "^0.1.4",
     "mocha": "^2.1.0",
+    "mocha-eslint": "^0.1.4",
     "node-require-timings": "0.0.2",
     "tmp-sync": "^1.0.1"
   },
