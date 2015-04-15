@@ -22,9 +22,9 @@ var mocha = new Mocha({
 // Determine which tests to run based on argument passed to runner
 var arg = process.argv[2];
 if (!arg) {
-  var root = 'tests/{unit,acceptance,lint}';
-} else if (arg === 'lint') {
-  var root = 'tests/lint';
+  var root = 'tests/{unit,acceptance}';
+} else if (arg === 'unit') {
+  var root = 'tests/unit';
 } else {
   var root = 'tests/{unit,acceptance}';
 }
