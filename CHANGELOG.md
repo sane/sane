@@ -1,15 +1,19 @@
 # SANE Stack Changelog
 
+### master
+* [BREAKING BUGFIX] Only supports ember-cli 0.2.3 and above for the addon system
+* [ENHANCEMENT] Switched to `enpeem` module
+* [ENHANCEMENT] Running the generator is now completely synchronous, which means no jumbled output anymore
+* [ENHANCEMENT] Switch to babeljs for better debugging statements.
+* [BUGFIX] Fixed installTest
+* [ENHANCEMENT] Added [eslint](http://eslint.org/) through [mocha-eslint](https://github.com/BadgeLabs/mocha-eslint)
+* [BUGFIX] Fixed docker root issue for linux
+* [ENHANCEMENT] Added stack trace to errors in `sane new`
+
 ### 0.1.0-alpha.7
 * [ENHANCEMENT] Switched from traceur to babeljs for better error messages
 * [ENHANCEMENT] Added diffing support to file generator
 * [BUGFIX] Fixed error with npmInstall
-
-### master
-
-* [ENHANCEMENT] Added [eslint](http://eslint.org/) through [mocha-eslint](https://github.com/BadgeLabs/mocha-eslint)
-* [BUGFIX] Fixed docker root issue for linux
-* [ENHANCEMENT] Added stack trace to errors in `sane new`
 
 ### 0.0.24
 * [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook

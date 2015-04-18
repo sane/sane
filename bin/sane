@@ -8,8 +8,10 @@ var path = require('path');
 var resolve = require('resolve');
 
 require('babel/register')({
-  stage: 0,
-  loose: true
+  stage: 1,
+  loose: true,
+  ignore: false,
+  only:/sane\/lib|sane\/tests/
 });
 
 resolve('sane-cli', {
