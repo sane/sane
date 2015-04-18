@@ -1,7 +1,7 @@
 # SANE Stack Changelog
 
 ### master
-
+* [BUGFIX] Added logic to ensure case of resources generated through `sane generate` https://github.com/artificialio/sane/pull/143
 * [ENHANCEMENT] Added [eslint](http://eslint.org/) through [mocha-eslint](https://github.com/BadgeLabs/mocha-eslint)
 * [BUGFIX] Fixed docker root issue for linux
 * [ENHANCEMENT] Added stack trace to errors in `sane new`

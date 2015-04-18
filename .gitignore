@@ -1,4 +1,5 @@
 node_modules
+bower_components
 _site
 _posts
 
@@ -27,3 +28,4 @@ tmp
 
 #Editor files
 *.sublime-*
+*.idea
