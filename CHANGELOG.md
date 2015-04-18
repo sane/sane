@@ -5,6 +5,7 @@
 * [ENHANCEMENT] Added [eslint](http://eslint.org/) through [mocha-eslint](https://github.com/BadgeLabs/mocha-eslint)
 * [BUGFIX] Fixed docker root issue for linux
 * [ENHANCEMENT] Added stack trace to errors in `sane new`
+* [ENHANCEMENT] Use master version of [sails-hook-dev](https://github.com/balderdashy/sails-hook-dev) since `1.0.0` runs into issues on Linux
 
 ### 0.0.24
 * [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook
