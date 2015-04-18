@@ -108,7 +108,7 @@ describe('Acceptance: sane generate', function () {
   it('should generate a singular sails model when passed a plural value', async function () {
     await generate('resource bars');
 
-    assertFile('server/api/models/bar.js');
+    assertFile('server/api/models/Bar.js');
   });
   it('should generate a singular ember model when passed a singular value', async function () {
     await generate('resource foo');
