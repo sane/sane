@@ -20,12 +20,13 @@ var mocha = new Mocha({
 
 // Determine which tests to run based on argument passed to runner
 var arg = process.argv[2];
+var root;
 if (!arg) {
-  var root = 'tests/{unit,acceptance,lint}';
-} else if (arg === 'lint') {
-  var root = 'tests/lint';
+  root = 'tests/{unit,acceptance}';
+} else if (arg === 'unit') {
+  root = 'tests/unit';
 } else {
-  var root = 'tests/{unit,acceptance}';
+  root = 'tests/{unit,acceptance}';
 }
 
 function addFiles(mocha, files) {

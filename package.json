@@ -5,6 +5,8 @@
   "description": "A command-line tool for creating full stack sails-ember applications using docker",
   "main": "bin/sane",
   "scripts": {
+    "lint": "eslint bin/sane lib tests",
+    "pretest": "npm run lint",
     "test": "node tests/runner",
     "test-all": "node tests/runner all",
     "autotest": "mocha --watch --reporter spec tests/**/*Test.js"
@@ -52,8 +54,9 @@
     "handlebars": "~3.0.0",
     "leek": "0.0.18",
     "node-uuid": "^1.4.2",
+    "npm-which": "^2.0.0",
     "pleasant-progress": "^1.0.2",
-    "readline-sync": "^0.7.8",
+    "readline-sync": "^0.8.0",
     "resolve": "^1.0.0",
     "rsvp": "^3.0.18",
     "verboser": "^1.0.3",
@@ -69,7 +72,6 @@
     "glob": "4.0.5",
     "lodash": "^3.6.0",
     "mocha": "^2.1.0",
-    "mocha-eslint": "^0.1.4",
     "node-require-timings": "0.0.2",
     "tmp-sync": "^1.0.1"
   },
