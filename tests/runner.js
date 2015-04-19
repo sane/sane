@@ -14,7 +14,7 @@ require('babel/register')({
 
 var mocha = new Mocha({
   // For some reason, tests take a long time on Windows (or at least AppVeyor)
-  timeout: (process.platform === 'win32') ? 90000 : 90000,
+  timeout: (process.platform === 'win32') ? 90000 : 18000,
   reporter: 'spec'
 });
 
