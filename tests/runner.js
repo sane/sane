@@ -9,7 +9,7 @@ require('babel/register')({
   stage: 1,
   loose: true,
   ignore: false,
-  only:/sane[\/\\]lib|sane[\/\\]tests/
+  only:/[(sane)(sane-cli)][\/\\]lib|[(sane)(sane-cli)][\/\\]tests/
 });
 
 var mocha = new Mocha({
