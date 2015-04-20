@@ -4,20 +4,12 @@
 var glob  = require('glob');
 var Mocha = require('mocha');
 var chalk = require('chalk');
-var path = require('path');
 
-//transforms all following require's to parse ES6/7 code
-require('traceur').require.makeDefault(function (filename) {
-  // don't transpile our dependencies, just our app
-  //The first check is if you develop locally, the second for the globally installed module
-  if (filename.indexOf('bin/sane') > -1) {
-    return false;
-  }
-  //The first check is if you develop locally, the second for the globally installed moduel
-  return (filename.indexOf('node_modules') === -1) ||
-    (filename.indexOf(path.join('node_modules', 'sane-cli')) > -1 &&
-      filename.indexOf(path.join('node_modules', 'sane-cli', 'node_modules')) === -1);
-}, {asyncFunctions: true});
+require('babel/register')({
+  stage: 1,
+  loose: true,
+  only:/[(sane)(sane\-cli)][\/\\]lib|[(sane)(sane\-cli)][\/\\]tests/
+});
 
 var mocha = new Mocha({
   // For some reason, tests take a long time on Windows (or at least AppVeyor)
