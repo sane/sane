@@ -4,6 +4,7 @@
 var glob  = require('glob');
 var Mocha = require('mocha');
 var chalk = require('chalk');
+var path = require('path');
 
 //transforms all following require's to parse ES6/7 code
 require('traceur').require.makeDefault(function (filename) {
