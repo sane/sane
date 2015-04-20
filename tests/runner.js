@@ -8,13 +8,12 @@ var chalk = require('chalk');
 require('babel/register')({
   stage: 1,
   loose: true,
-  ignore: false,
   only:/[(sane)(sane\-cli)][\/\\]lib|[(sane)(sane\-cli)][\/\\]tests/
 });
 
 var mocha = new Mocha({
   // For some reason, tests take a long time on Windows (or at least AppVeyor)
-  timeout: (process.platform === 'win32') ? 90000 : 18000,
+  timeout: (process.platform === 'win32') ? 90000 : 40000,
   reporter: 'spec'
 });
 
