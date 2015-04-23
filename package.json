@@ -5,8 +5,8 @@
   "description": "A command-line tool for creating full stack sails-ember applications using docker",
   "main": "bin/sane",
   "scripts": {
-    "prebuild": "npm run test",
-    "pretest": "npm run lint",
+    "pretest": "npm run lint && npm run build",
+    "prepublish": "npm run build",
 
     "build": "babel src --out-dir lib",
     "lint": "eslint bin/sane src tests",
