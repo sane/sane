@@ -5,11 +5,7 @@ var glob  = require('glob');
 var Mocha = require('mocha');
 var chalk = require('chalk');
 
-require('babel/register')({
-  stage: 1,
-  loose: true,
-  only:/[(sane)(sane\-cli)][\/\\]lib|[(sane)(sane\-cli)][\/\\]tests/
-});
+require('babel/register');
 
 var mocha = new Mocha({
   // For some reason, tests take a long time on Windows (or at least AppVeyor)
