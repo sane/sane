@@ -1,21 +1,21 @@
 'use strict';
 
-var path = require('path');
+var path  = require('path');
 var which = require('which').sync;
 
 //TODO(markus): Needs some refactoring
 //Try to implement these not as functions but as attributes of the object and set it at each sane call
 //BUG: projectRoot changes when we do a cd() command
 var self = {
-  binaryPath: function binaryPath() {
+  binaryPath: function () {
     return which('sane');
   },
 
-  sanePath: function sanePath() {
-    return path.resolve(__dirname, '../');
+  sanePath: function () {
+    return  path.resolve(__dirname, '../');
   },
 
-  version: function version() {
+  version: function () {
     return require(self.sanePath() + '/package.json').version;
   } //,
 

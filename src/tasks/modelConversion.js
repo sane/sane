@@ -7,7 +7,7 @@
  */
 
 module.exports = {
-  toEmber: function toEmber(attributes) {
+  toEmber: function (attributes){
     //create a deep copy so the original element does not get overwritten
     var attributesCopy = attributes.slice(0);
     for (var i in attributesCopy) {
@@ -50,7 +50,7 @@ module.exports = {
     }
     return attributesCopy;
   },
-  toSails: function toSails(attributes) {
+  toSails: function (attributes){
     //create a deep copy so the original element does not get overwritten
     var attributesCopy = attributes.slice(0);
     for (var i in attributesCopy) {

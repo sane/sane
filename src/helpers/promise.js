@@ -1,7 +1,7 @@
 /* eslint no-proto:0 */
 'use strict';
 
-var RSVP = require('rsvp');
+var RSVP    = require('rsvp');
 var Promise = RSVP.Promise;
 
 module.exports = PromiseExt;
@@ -14,7 +14,7 @@ module.exports.hash = function () {
 module.exports.denodeify = function () {
   var fn = RSVP.denodeify.apply(null, arguments);
   var Constructor = this;
-  var newFn = function newFn() {
+  var newFn = function () {
     return Constructor.resolve(fn.apply(null, arguments));
   };
   newFn.__proto__ = arguments[0];

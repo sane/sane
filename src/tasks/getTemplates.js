@@ -7,7 +7,7 @@
  */
 
 var walkSync = require('walk-sync');
-var path = require('path');
+var path     = require('path');
 // require('es6-shim');
 
 module.exports = function getTemplates(folderPath) {
@@ -15,13 +15,13 @@ module.exports = function getTemplates(folderPath) {
   var walked = walkSync(folderPath);
 
   //Only leave files (plus their relative path) in the walked array
-  var walkedFiles = walked.filter(function (element) {
+  var walkedFiles = walked.filter(function (element){
     return element.indexOf('.') > 0;
   });
 
   //remove any root files, since they will be copied over at the beginning
   //NOTE(markus): Not sure if that works on Windows
-  walkedFiles = walkedFiles.filter(function (element) {
+  walkedFiles = walkedFiles.filter(function (element){
     return element.indexOf('/') > 0;
   });
 

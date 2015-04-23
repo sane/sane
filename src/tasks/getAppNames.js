@@ -20,29 +20,27 @@
  * 'server2' => Expected folder-name: server2
  * 'api-v1-server' => Expected folder-name: api-v1
  */
-var Yam = require('yam');
+var Yam  = require('yam');
 var apps = new Yam('sane-cli').get('apps');
 
 var self = {
-  client: function client() {
+  client: function () {
     var client = self.getApp('client');
     return client;
   },
   //only use this function for windows and mac
-  server: function server() {
+  server: function () {
     var server = self.getApp('server');
     return server;
   },
-  getApp: function getApp(filter) {
+  getApp: function (filter) {
     if (apps === undefined) {
       return filter;
     }
 
-    var filteredApps = apps.filter(function (app) {
-      return app.startsWith(filter) || app.endsWith(filter);
-    });
+    var filteredApps = apps.filter(app => app.startsWith(filter) || app.endsWith(filter));
     // var filteredApps = apps.filter(app => app.beginsWith(filter) || app.endsWith(filter));
-    if (filteredApps[0].length > filter.length + 1 && filteredApps[0].endsWith(filter)) {
+    if (filteredApps[0].length > (filter.length + 1) && filteredApps[0].endsWith(filter)) {
       //slice off -client or -server at the end
       filteredApps[0] = filteredApps[0].slice(0, -(filter.length + 1));
     }

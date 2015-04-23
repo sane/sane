@@ -5,12 +5,8 @@ var path = require('path');
 var fs = require('fs-extra');
 var jsdiff = require('diff');
 var chalk = require('chalk');
-
-var _require = require('readline-sync');
-
-var question = _require.question;
-
-var EOL = require('os').EOL;
+var { question } = require('readline-sync');
+var EOL          = require('os').EOL;
 
 function highlightDiff(line) {
   if (line[0] === '+') {
@@ -55,19 +51,23 @@ module.exports = function copyToProject(templates, projectRoot, force) {
       var answer = '';
 
       while (['y', 'n', 'd'].indexOf(answer) === -1) {
-        answer = question(chalk.gray('File ' + template + ' already exists. Want to overwrite? (y/n/d):') + '  (y) ') || 'y';
+        answer = question(chalk.gray(`File ${template} already exists. Want to overwrite? (y/n/d):`) + '  (y) ') || 'y';
         if (answer === 'y') {
           //copySync just seems to copy over the file regardless if it exists or not.
           fs.copySync(sourcePath, destPath);
         } else if (answer === 'n') {
           task = 'ignore';
         } else if (answer === 'd') {
-          var diff = jsdiff.createPatch(destPath, destContent, templateContent);
+          var diff = jsdiff.createPatch(
+            destPath, destContent, templateContent
+          );
 
           var lines = diff.split('\n');
 
           for (var j = 0; j < lines.length; j++) {
-            process.stdout.write(highlightDiff(lines[j] + EOL));
+            process.stdout.write(
+              highlightDiff(lines[j] + EOL)
+            );
           }
           task = 'again';
         } else {
@@ -79,14 +79,14 @@ module.exports = function copyToProject(templates, projectRoot, force) {
       //now decide what to do
       switch (task) {
         case 'overwrite':
-          console.log('' + chalk.yellow('Overwriting') + ' ' + template);
+          console.log(`${chalk.yellow('Overwriting')} ${template}`);
           fs.copySync(sourcePath, destPath);
           break;
         case 'identical':
-          console.log('' + chalk.yellow('Identical') + ' ' + template);
+          console.log(`${chalk.yellow('Identical')} ${template}`);
           break;
         case 'ignore':
-          console.log('' + chalk.yellow('Ignoring') + ' ' + template);
+          console.log(`${chalk.yellow('Ignoring')} ${template}`);
           break;
         case 'again':
           i--;
