@@ -12,6 +12,7 @@
     "no-cond-assign"                   : 2,
     "space-after-keywords"             : 2,
     "space-infix-ops"                  : 2,
+    "key-spacing"                      : [2, {"align": "colon"}],
     "comma-dangle"                     : [2, "never"],
     "no-multiple-empty-lines"          : [2, {"max": 2}],
     "quotes"                           : [2, "single"],
