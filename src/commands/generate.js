@@ -14,6 +14,8 @@ var getTemplates      = require('../tasks/getTemplates');
 var runMachine        = require('../tasks/generate/runMachine');
 var path              = require('path');
 var log               = require('captains-log')();
+var { singular }      = require('pluralize');
+
 var serverName = getAppNames.server();
 var clientName = getAppNames.client();
 var defaultBlueprints = ['api', 'resource'];
@@ -53,11 +55,11 @@ module.exports = async function generate(blueprint, name, attributes, options, l
       }
 
       var emberOptions = prepEmberOptions.concat(modelConversion.toEmber(attributes));
-      var sailsOptions = ['generate', 'model', name].concat(modelConversion.toSails(attributes));
+      var sailsOptions = ['generate', 'model', singular(name)].concat(modelConversion.toSails(attributes));
 
       spawn(ember, emberOptions, { cwd: clientName, stdio: 'inherit' });
       spawn(sails, sailsOptions, { cwd: serverName, stdio: 'inherit' });
-      spawn(sails, ['generate', 'controller', name], { cwd: serverName, stdio: 'inherit' });
+      spawn(sails, ['generate', 'controller', singular(name)], { cwd: serverName, stdio: 'inherit' });
 
     } else {
       console.log(chalk.yellow('A resource/api name is required, e.g. sane g resource user'));
