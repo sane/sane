@@ -415,7 +415,7 @@ module.exports = async function newProject(name, options, leek) {
   if (!options.skipNpm) {
     //this is to install sane-cli locally
     try {
-      await spawn(npm, ['install', '--verbose']);
+      await spawn(npm, ['install']);
     } catch (err) {
       console.log('Could not install local sane-cli. Manuall run \'npm install\' and all should be fine.');
       log.verbose('Error Message to report:', err);
