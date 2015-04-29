@@ -4,47 +4,30 @@
 var fs               = require('fs-extra');
 var path             = require('path');
 var tmp              = require('tmp-sync');
-var { spawn }        = require('child-process-promise');
-var sane             = require('../helpers/sane');
 var dockerCompose    = require('../../lib/helpers/dockerCompose')();
-var assertFile       = require('../helpers/assertFile');
+var assertFile   = require('../helpers/assertFile');
 var assertFileEquals = require('../helpers/assertFileEquals');
-
+var { initApp, tmproot, root } = require('../helpers/acceptanceSetup');
 
 var root    = process.cwd();
 var tmproot = path.join(root, 'tmp');
 
+
 describe('Acceptance: sane new', function () {
   var tmpdir;
-//   before(conf.setup);
 
-//   after(conf.restore);
-
-//   beforeEach(function() {
-//     return tmp.setup('./tmp')
-//       .then(function() {
-//         process.chdir('./tmp');
-//       });
-//   });
   beforeEach(function () {
-    // mock();
     tmpdir = tmp.in(tmproot);
     process.chdir(tmpdir);
   });
 
   afterEach(function () {
     process.chdir(root);
-    // mock.restore;
     fs.removeSync(tmproot);
   });
 
-  function initApp(args) {
-    args = args || ['new', '.', '--skip-npm', '--skip-bower', '--skip-analytics', '--verbose'];
-    var opts = { stdio: 'ignore' };
-    return spawn(sane, args, opts);
-  }
-
   it('sane new . in empty folder works and adds specified dependencies to server package.json', async function () {
+
     await initApp();
 
     //taken from lib/commands/new.js

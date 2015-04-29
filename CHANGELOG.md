@@ -1,12 +1,22 @@
 # SANE Stack Changelog
 
-### master
+### 0.1.0-beta.1
+* [FEATURE] Added an `sane install` command that allows to install addons such as `sane install sane-auth`. More details on how to write addons comming soon!
+* [BREAKING BUGFIX] Only supports ember-cli 0.2.3 and above for the addon system
+* [ENHANCEMENT] Switched to `enpeem` module
+* [ENHANCEMENT] Switch to babeljs for better debugging statements.
+* [BUGFIX] Fixed installTest
 * [BUGFIX] Added logic to ensure case of resources generated through `sane generate` https://github.com/artificialio/sane/pull/143
 * [ENHANCEMENT] Added [eslint](http://eslint.org/) through [mocha-eslint](https://github.com/BadgeLabs/mocha-eslint)
 * [BUGFIX] Fixed docker root issue for linux
 * [ENHANCEMENT] Added stack trace to errors in `sane new`
 * [ENHANCEMENT] Use master version of [sails-hook-dev](https://github.com/balderdashy/sails-hook-dev) since `1.0.0` runs into issues on Linux
 * [BUGFIX] Enabled SANE to run without requiring a global ember-cli installation.
+
+### 0.1.0-alpha.7
+* [ENHANCEMENT] Switched from traceur to babeljs for better error messages
+* [ENHANCEMENT] Added diffing support to file generator
+* [BUGFIX] Fixed error with npmInstall
 
 ### 0.0.24
 * [FEATURE] Added autoreload of sails server using [sails-hook-autoreload](https://github.com/sgress454/sails-hook-autoreload) hook
@@ -18,6 +28,7 @@
 * [BUGFIX] Fixed tests on Windows and AppVeyor.
 * [BUGFIX] Full Windows support.
 * [ENHANCEMENT] Changed to using `expect` instead of `assert` from chai module to match ember-cli [commit 2435679](https://github.com/ember-cli/ember-cli/commit/24356790ba1a6aead425c8bddfd96f6cb06ab1cb).
+* [FEATURE] Added sane install command that installs any sane addons published on npm with a 'sane-addon' keyword. These addons can add custom generators that are automatically tun by the install command.
 
 ### 0.0.23
 * [BUGFIX] Fixed ember-cli version check on `sane new`.

@@ -1,11 +1,11 @@
 'use strict';
 
-var expect   = require('chai').expect;
-var contains = require('lodash/collection/contains');
-var flatten  = require('lodash/array/flatten');
-var fs       = require('fs-extra');
-var path     = require('path');
-var EOL      = require('os').EOL;
+var { expect }  = require('chai');
+var includes    = require('lodash/collection/includes');
+var flatten     = require('lodash/array/flatten');
+var fs          = require('fs-extra');
+var path        = require('path');
+var EOL         = require('os').EOL;
 
 /*
  * File originally taken from ember-cli code at:
@@ -56,7 +56,7 @@ module.exports = function assertFile(file, options) {
       if (expected.test) {
         pass = expected.test(actual);
       } else {
-        pass = contains(actual, expected);
+        pass = includes(actual, expected);
       }
 
       expect(pass).to.equal(true, EOL + EOL + 'expected ' + file + ':' + EOL + EOL +
@@ -73,7 +73,7 @@ module.exports = function assertFile(file, options) {
       if (unexpected.test) {
         pass = !unexpected.test(actual);
       } else {
-        pass = !contains(actual, unexpected);
+        pass = !includes(actual, unexpected);
       }
 
       expect(pass).to.equal(true, EOL + EOL + 'expected ' + file + ':' + EOL + EOL +

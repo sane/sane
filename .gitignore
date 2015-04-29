@@ -9,6 +9,7 @@ _posts
 # Server stuff
 # See server/.gitignore
 
+
 # Ignore configuration and automatically generated cruft
 dbconfig.php
 sitemap.xml
