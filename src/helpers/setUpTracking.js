@@ -19,10 +19,10 @@ module.exports = function setUpTracking(trackingCode, name, version, config) {
   //setup analytics
   var leekOptions = {
     trackingCode: trackingCode,
-    globalName: name,
-    name: clientId(),
-    version: version,
-    silent: config.disableAnalytics || false
+    globalName  : name,
+    name        : clientId(),
+    version     : version,
+    silent      : config.disableAnalytics || false
   };
 
   return new Leek(leekOptions);

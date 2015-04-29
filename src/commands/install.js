@@ -41,8 +41,8 @@ module.exports = async function install(addonNames, options, leek) {
       console.log(`${addonName} succesfully installed. Running it's default generator now...`);
 
       await generate(addonName, '', '', {
-        force: options.force || false,
-        docker: options.docker || false,
+        force  : options.force || false,
+        docker : options.docker || false,
         skipNpm: options.skipNpm || false
         }, leek);
 

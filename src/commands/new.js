@@ -72,11 +72,11 @@ function prepareDockerTemplate(name, option, user) {
   }
 
   return prepareTemplate(name, {
-    database: db,
-    port: port,
-    isMysql: isMysql,
+    database  : db,
+    port      : port,
+    isMysql   : isMysql,
     serverName: serverName,
-    user: dockerUser
+    user      : dockerUser
   });
 }
 

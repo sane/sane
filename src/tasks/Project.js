@@ -12,7 +12,7 @@ async function closestPackageJSON(pathName) {
   var directory = await findup(pathName, 'package.json');
   return {
     directory: directory,
-    pkg: require(path.join(directory, 'package.json'))
+    pkg      : require(path.join(directory, 'package.json'))
   };
 }
 
@@ -101,7 +101,7 @@ Project.prototype.getIfAddon = function (addonPath) {
       var addonInfo = {
         name: addonPkg.name,
         path: addonPath,
-        pkg: addonPkg
+        pkg : addonPkg
       };
       return addonInfo;
     } else {

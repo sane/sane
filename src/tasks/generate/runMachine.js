@@ -112,7 +112,7 @@ module.exports = {
               dependencies: packageSemVers,
               // skip: options.skip,
               dryRun: options.skipNpm,
-              save: true,
+              save  : true,
               // needed for optional docker
               cmdPrefix: cmdPrefix,
               // saves in the server file

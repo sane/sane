@@ -26,7 +26,7 @@ module.exports = function getTemplates(folderPath) {
   });
 
   return {
-    root: folderPath,
+    root     : folderPath,
     templates: walkedFiles
   };
 };
