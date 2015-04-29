@@ -13,6 +13,7 @@ var copyToProject     = require('../tasks/copyToProject');
 var getTemplates      = require('../tasks/getTemplates');
 var runMachine        = require('../tasks/generate/runMachine');
 var path              = require('path');
+var log               = require('captains-log')();
 var serverName = getAppNames.server();
 var clientName = getAppNames.client();
 var defaultBlueprints = ['api', 'resource'];
@@ -35,7 +36,7 @@ module.exports = async function generate(blueprint, name, attributes, options, l
   attributes = attributes || '';
   options = options || {};
   project = await Project.closest();
-  console.log('project is', project);
+  log.verbose('Your project details: ', project);
   addonBlueprints = project.getAddonBlueprints();
 
   if (typeof leek !== 'undefined') {
@@ -65,27 +66,26 @@ module.exports = async function generate(blueprint, name, attributes, options, l
     var blueprintPath = project.getBlueprintPath(blueprint);
 
     try {
-      console.log('starting client machine');
+      log.verbose('Starting client machine...');
       await runMachine.client(blueprintPath, project.root, clientName, options);
     } catch (error) {
-      console.log(chalk.red('The client-side generator failed, please report the error.'));
-      throw error;
+      console.log(chalk.red('The client-side generator errored, please report that.')
+        + chalk.yellow(' Finishing up your installation though.'));
     }
 
     try {
-      console.log('starting server machine');
+      log.verbose('Starting server machine...');
       await runMachine.server(blueprintPath, serverName, options);
     } catch (error) {
-      console.log(chalk.red('The server-side generator failed, please report the error.'));
-      throw error;
+      console.log(chalk.red('The server-side generator errored, please report that.')
+        + chalk.yellow(' Finishing up your installation though.'));
     }
 
-    console.log('machines done, copy over templates');
+    log.verbose('Machines done, copy over templates now...');
     //now copy over templates
     var templates = getTemplates(path.join(blueprintPath, 'generate'));
     copyToProject(templates, project.root, options.force);
 
-    console.log('all done!');
   } else {
     console.log(chalk.yellow('Blueprint ' + blueprint + ' is not supported'));
   }

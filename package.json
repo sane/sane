@@ -8,9 +8,10 @@
     "pretest": "npm run lint && npm run build",
     "prepublish": "npm run build",
 
-    "build": "babel src --out-dir lib",
-    "lint": "eslint bin/sane src tests",
-    "test": "node tests/runner",
+    "build"      : "babel src --out-dir lib",
+    "build:watch": "babel src --out-dir lib --watch",
+    "lint"       : "eslint bin/sane src tests",
+    "test"       : "node tests/runner",
 
     "test-all": "node tests/runner all",
     "autotest": "mocha --watch --reporter spec tests/**/*Test.js"
