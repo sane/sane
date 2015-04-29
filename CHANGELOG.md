@@ -1,11 +1,12 @@
 # SANE Stack Changelog
 
-### master
+### 0.1.0-beta.1
+* [FEATURE] Added an `sane install` command that allows to install addons such as `sane install sane-auth`. More details on how to write addons comming soon!
 * [BREAKING BUGFIX] Only supports ember-cli 0.2.3 and above for the addon system
 * [ENHANCEMENT] Switched to `enpeem` module
-* [ENHANCEMENT] Running the generator is now completely synchronous, which means no jumbled output anymore
 * [ENHANCEMENT] Switch to babeljs for better debugging statements.
 * [BUGFIX] Fixed installTest
+* [BUGFIX] Added logic to ensure case of resources generated through `sane generate` https://github.com/artificialio/sane/pull/143
 * [ENHANCEMENT] Added [eslint](http://eslint.org/) through [mocha-eslint](https://github.com/BadgeLabs/mocha-eslint)
 * [BUGFIX] Fixed docker root issue for linux
 * [ENHANCEMENT] Added stack trace to errors in `sane new`
