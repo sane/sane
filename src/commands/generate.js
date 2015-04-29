@@ -66,7 +66,7 @@ module.exports = async function generate(blueprint, name, attributes, options, l
     var blueprintPath = project.getBlueprintPath(blueprint);
 
     try {
-      log.verbose('Starting client machine...');
+      log.verbose('Running client machine...');
       await runMachine.client(blueprintPath, project.root, clientName, options);
     } catch (error) {
       console.log(chalk.red('The client-side generator errored, please report that.')
@@ -74,7 +74,7 @@ module.exports = async function generate(blueprint, name, attributes, options, l
     }
 
     try {
-      log.verbose('Starting server machine...');
+      log.verbose('Running server machine...');
       await runMachine.server(blueprintPath, serverName, options);
     } catch (error) {
       console.log(chalk.red('The server-side generator errored, please report that.')
