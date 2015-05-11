@@ -3,7 +3,7 @@
 </p>
 ## SANE Stack [![Bountysource][bounty-badge]][bounty-badge-url] [![Gitter][gitter-badge]][gitter-badge-url]
 
-[![Build Status][travis-badge]][travis-badge-url] [![Build status][appveyor-badge]][appveyor-badge-url]  [![Dependency Status][david-badge]][david-badge-url] [![npm][npm-badge]][npm-badge-url] [![Code Climate][code-climate-badge]][code-climate-badge-url]
+[![Build Status][travis-badge]][travis-badge-url] [![Build status][appveyor-badge]][appveyor-badge-url]  [![Dependency Status][david-badge]][david-badge-url] [![npm][npm-badge]][npm-badge-url]
 
 **NOTE: This project, while exciting, is still an early prototype. While being mostly stable it is still being iterated with feature changes and improvements fairly regularly.**
 
