@@ -184,28 +184,18 @@ function cleanUpSails(options, silent){
 
 module.exports = async function newProject(name, options, leek) {
   var ember = (process.platform === 'win32' ? 'ember.cmd' : 'ember');
-  // use global ember-cli if exists, otherwise the local one
-  // TODO(markus): If global version differs from local one, then ask which one to use
   var localEmber = path.join(__dirname, '..', '..', 'node_modules', '.bin', ember);
-  // take the local ember version from the package.json. Much faster
+  // take the local ember version from the package.json.
   var localEmberVersion = require(path.join(__dirname, '..', '..', 'node_modules', 'ember-cli', 'package.json')).version;
   if (!checkEnvironment.emberExists()) {
     ember = localEmber;
   } else {
-    // regex to get semantic version string including beta version
-    var semVer = new RegExp(/([0-9]+.[0-9]+.[0-9]+)(\-beta.[0-9])?/);
-
-    // Note(markus): Somehow do not seem to be able to get access to the globally installed ember-cli package.json
-    // var globalEmber = path.relative(process.cwd(), path.join(exec('npm root -g', { silent: true }).output, 'ember-cli', 'package.json'));
-    // var emberVersion = require(globalEmber).version;
-    // We could also try npm ls -g --depth=0. But for some reason the commands exits with error code 1 for me.
-    var emberVersion = await spawn(ember, ['version'], { capture: ['stdout']})
-      .then(function (result) {
-        //  Get the first version number that the global ember spits out.
-        return result.stdout.match(semVer)[0];
-      }, function (err) {
-        console.log(err);
-      });
+    // Get globally installed ember version
+    var emberVersion = await spawn(npm, ['ls', '--global', '--json', '--depth=0', 'ember-cli'], { capture: ['stdout']}).then(function (result) {
+      return result.dependencies['ember-cli'].version;
+    }, function (err) {
+      console.error(err);
+    });
 
     // compare the different ember versions
     if ( emberVersion !== localEmberVersion) {

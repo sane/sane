@@ -68,7 +68,7 @@ var self = {
 
   emberExists: function () {
     try {
-      which('ember');
+      execSync('npm', ['ls', '--global', '--depth=0', 'ember-cli']);
       return true;
     } catch (err) {
       return false;
