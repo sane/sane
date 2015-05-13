@@ -28,7 +28,7 @@ var self = {
     var client = self.getApp('client');
     return client;
   },
-  //only use this function for windows and mac
+  // only use this function for windows and mac
   server: function () {
     var server = self.getApp('server');
     return server;
@@ -41,7 +41,7 @@ var self = {
     var filteredApps = apps.filter(app => app.startsWith(filter) || app.endsWith(filter));
     // var filteredApps = apps.filter(app => app.beginsWith(filter) || app.endsWith(filter));
     if (filteredApps[0].length > (filter.length + 1) && filteredApps[0].endsWith(filter)) {
-      //slice off -client or -server at the end
+      // slice off -client or -server at the end
       filteredApps[0] = filteredApps[0].slice(0, -(filter.length + 1));
     }
     return filteredApps[0];

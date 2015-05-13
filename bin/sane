@@ -13,7 +13,7 @@ resolve('sane-cli', {
 }, function (error, localCliPath){
   var cli;
   if (error) {
-    //require global sane-cli
+    // require global sane-cli
     cli = require(path.join('..', 'lib', 'cli'));
   } else {
     cli = require(path.join(localCliPath, '..', '..', 'lib', 'cli'));

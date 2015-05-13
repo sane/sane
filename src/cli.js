@@ -8,12 +8,12 @@ var commands                        = require('./commands');
 var setUpTracking                   = require('./helpers/setUpTracking');
 
 
-//TODO(markus): Wrap everything into a promise, so you can call cli(args).then() or await cli(arg)
+// TODO(markus): Wrap everything into a promise, so you can call cli(args).then() or await cli(arg)
 module.exports = function cli(args) {
-  //load config/default parameters from .sane-cli file in current and home directory
+  // load config/default parameters from .sane-cli file in current and home directory
   var config = new Yam('sane-cli').getAll();
 
-  //support the undocumented flag --skip-analytics, really just for testing.
+  // support the undocumented flag --skip-analytics, really just for testing.
   var i = args.indexOf('--skip-analytics');
   var skipAnalytics = [];
   if (i !== -1) {
@@ -37,7 +37,7 @@ module.exports = function cli(args) {
   //   .description('Shows the help, optionally for a single command')
   //   .action(function (command){ commands.help(command) });
 
-  //new command
+  // new command
   program
   .command('new <name>')
   .alias('n')
@@ -98,7 +98,7 @@ module.exports = function cli(args) {
     });
   });
 
-  //TODO: sync command: Farily complex. Needs to check which models exist on the client-side, which on the server-side
+  // TODO: sync command: Farily complex. Needs to check which models exist on the client-side, which on the server-side
   // and then create all the one that don't exist on either side and the rest make sure they are the same.
   // For all attributes that only exist on the sails side (e.g. email) a substitute has to be found
   // Think if it makes sense to have some minimal settings (flags, or .sanerc file?) to ignore certain models/attrinutes
