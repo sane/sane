@@ -106,7 +106,7 @@ describe('Acceptance: sane generate', function () {
     await generate('resource bars');
     assertFile('server/api/controllers/BarController.js');
   });
-  //test ember route createion
+  // test ember route createion
   it('should generate a singular ember route when passed a singular value', async function () {
     await generate('resource foo');
     assertFile('client/app/routes/foo.js');
@@ -116,7 +116,7 @@ describe('Acceptance: sane generate', function () {
     await generate('resource bars');
     assertFile('client/app/routes/bars.js');
   });
-  //test ember template creation
+  // test ember template creation
   it('should generate a singular ember template when passed a singular value', async function () {
     await generate('resource foo');
     assertFile('client/app/templates/foo.hbs');

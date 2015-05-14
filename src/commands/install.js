@@ -2,22 +2,22 @@
 
 // var installNpmPackage = require('../tasks/installNpmPackage');
 var npmInstall    = require('enpeem').install;
-//automatically detects --verbose flag
+// automatically detects --verbose flag
 var generate      = require('./generate');
 var chalk         = require('chalk');
 
 module.exports = async function install(addonNames, options, leek) {
   // verbose.log(addonNames);
   // verbose.log(options);
-  //if (typeof leek !== 'undefined') {
-  //  trackCommand(`install ${addonName}`, options, leek);
-  //}
+  // if (typeof leek !== 'undefined') {
+  //   trackCommand(`install ${addonName}`, options, leek);
+  // }
   try {
-    //Note currently only supports installing one addon at a time.
+    // Note currently only supports installing one addon at a time.
     var npmOptions = {
       dependencies: addonNames,
       // dryRun: options.skipNpm,
-      saveDev: true
+      saveDev     : true
     };
 
     try {

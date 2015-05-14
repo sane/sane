@@ -1,4 +1,5 @@
 tests/fixtures/**
 templates/**
+lib
 
 # Note: node_modules ignored by default

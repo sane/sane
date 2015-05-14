@@ -16,7 +16,7 @@ module.exports = function setUpTracking(trackingCode, name, version, config) {
     }
   }
 
-  //setup analytics
+  // setup analytics
   var leekOptions = {
     trackingCode: trackingCode,
     globalName  : name,

@@ -26,7 +26,7 @@ module.exports = {
       blueprint.client.exec({
         success: async function (actions) {
           var addonErrors = [];
-          //only install ember-addons addons if --skip-npm is not set
+          // only install ember-addons addons if --skip-npm is not set
           if (!options.skipNpm) {
             for (let emberAddon of actions.addEmberAddons) {
               var addonSemVer = emberAddon.name + '@' + emberAddon.target;
@@ -58,9 +58,9 @@ module.exports = {
             }
           }
 
-          //if addToConfig exists parse the ember-cli environment.js and add the new variables
-          //to the end of the function just before the return ENV; statement
-          //UNIT/ACCEPTANCE TEST THAT!
+          // if addToConfig exists parse the ember-cli environment.js and add the new variables
+          // to the end of the function just before the return ENV; statement
+          // UNIT/ACCEPTANCE TEST THAT!
           if (actions.addToConfig) {
             var [environmentPath, newEnvironment] = createEmberConfig(projectRoot, actions.addToConfig);
             fs.writeFileSync(environmentPath, newEnvironment);
@@ -111,12 +111,12 @@ module.exports = {
             var installOptions = {
               dependencies: packageSemVers,
               // skip: options.skip,
-              dryRun: options.skipNpm,
-              save  : true,
+              dryRun      : options.skipNpm,
+              save        : true,
               // needed for optional docker
-              cmdPrefix: cmdPrefix,
+              cmdPrefix   : cmdPrefix,
               // saves in the server file
-              prefix: prefix
+              prefix      : prefix
             };
 
             try {

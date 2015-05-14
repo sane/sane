@@ -6,7 +6,7 @@ var newCommand = require('../../../lib/commands/new');
 
 
 describe('new command', function () {
-  var options; //, command
+  var options; // , command
 
   beforeEach(function () {
     options = {

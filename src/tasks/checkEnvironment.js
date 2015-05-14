@@ -29,14 +29,14 @@ var self = {
       return false;
     }
 
-    //check for windows or Mac OSX
+    // check for windows or Mac OSX
     if (['win32', 'darwin'].indexOf(process.platform) > -1) {
       return self.boot2dockerExists();
     }
     return true;
   },
 
-  //only use this function for windows and mac
+  // only use this function for windows and mac
   boot2dockerExists: function () {
     try {
       which('boot2docker');
@@ -87,9 +87,9 @@ var self = {
   getDockerIp: function () {
     if (self.dockerExists() && self.isDockerRunning()) {
       var ip = process.env.DOCKER_HOST;
-      //expects DOCKER_HOST to be of format: 'tcp://0.0.0.0:0'
+      // expects DOCKER_HOST to be of format: 'tcp://0.0.0.0:0'
       ip = ip.slice(ip.lastIndexOf('/') + 1, ip.lastIndexOf(':'));
-      //simple check for valid ip
+      // simple check for valid ip
       if (ip.length > 6) {
         return ip;
       }

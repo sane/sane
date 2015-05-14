@@ -98,13 +98,13 @@ function dockerExec(cmd, runsWithDocker, silent, dryRun) {
   } else {
     cmdMain = (process.platform === 'win32' ? cmds[0] + '.cmd' : cmds[0]);
     cmdArgs = cmds.slice(1);
-    //Note(markus): this assumes that dockerExec is only used for executing serverCommands
+    // Note(markus): this assumes that dockerExec is only used for executing serverCommands
     options.cwd = serverName;
   }
 
   if (dryRun) {
 
-    //simulate an npm i --save dry-run, since npm does not currently have that
+    // simulate an npm i --save dry-run, since npm does not currently have that
     if (cmds[0] === 'npm' && (cmds[1] === 'i' || cmds[1] === 'install')) {
       var filename = path.join(serverName, 'package.json');
       var packageInfo = fs.readFileSync(filename);
@@ -113,14 +113,14 @@ function dockerExec(cmd, runsWithDocker, silent, dryRun) {
         if (cmds[i] !== '--save') {
           var atPos = cmds[i].indexOf('@');
           if (atPos > -1) {
-            //cut out the @ and use the semVer instead of the *
+            // cut out the @ and use the semVer instead of the *
             content.dependencies[cmds[i].slice(0, atPos)] = cmds[i].slice(atPos + 1);
           } else {
             content.dependencies[cmds[i]] = '*';
           }
         }
       }
-      //have to return a promise
+      // have to return a promise
       return new Promise(
         function (resolve) {
           fs.writeFileSync(filename, JSON.stringify(content, null, 2));
@@ -129,7 +129,7 @@ function dockerExec(cmd, runsWithDocker, silent, dryRun) {
       );
     }
 
-    //return an empty promise
+    // return an empty promise
     return new Promise(
       function (resolve) {
         resolve();
@@ -168,7 +168,7 @@ function isWrongProjectName(name) {
 }
 
 function cleanUpSails(options, silent){
-  //clean up sails to be API only
+  // clean up sails to be API only
   fs.removeSync(path.join('server', 'views'));
   fs.removeSync(path.join('server', 'tasks'));
   fs.removeSync(path.join('server', 'Gruntfile.js'));
@@ -177,17 +177,17 @@ function cleanUpSails(options, silent){
   'grunt-contrib-copy', 'grunt-contrib-cssmin', 'grunt-contrib-jst', 'grunt-contrib-less',
   'grunt-contrib-uglify', 'grunt-contrib-watch', 'grunt-sails-linker', 'grunt-sync'];
 
-  //only runs simple unbuilds, so does not need to run in docker,
-  //since that only seems to cause errors if anything
+  // only runs simple unbuilds, so does not need to run in docker,
+  // since that only seems to cause errors if anything
   return dockerExec(`npm rm ${sailsPackages.join(' ')} --save`, false, silent);
 }
 
 module.exports = async function newProject(name, options, leek) {
   var ember = (process.platform === 'win32' ? 'ember.cmd' : 'ember');
-  //use global ember-cli if exists, otherwise the local one
-  //TODO(markus): If global version differs from local one, then ask which one to use
+  // use global ember-cli if exists, otherwise the local one
+  // TODO(markus): If global version differs from local one, then ask which one to use
   var localEmber = path.join(__dirname, '..', '..', 'node_modules', '.bin', ember);
-  //take the local ember version from the package.json. Much faster
+  // take the local ember version from the package.json. Much faster
   var localEmberVersion = require(path.join(__dirname, '..', '..', 'node_modules', 'ember-cli', 'package.json')).version;
   if (!checkEnvironment.emberExists()) {
     ember = localEmber;
@@ -195,7 +195,7 @@ module.exports = async function newProject(name, options, leek) {
     // regex to get semantic version string including beta version
     var semVer = new RegExp(/([0-9]+.[0-9]+.[0-9]+)(\-beta.[0-9])?/);
 
-    //Note(markus): Somehow do not seem to be able to get access to the globally installed ember-cli package.json
+    // Note(markus): Somehow do not seem to be able to get access to the globally installed ember-cli package.json
     // var globalEmber = path.relative(process.cwd(), path.join(exec('npm root -g', { silent: true }).output, 'ember-cli', 'package.json'));
     // var emberVersion = require(globalEmber).version;
     // We could also try npm ls -g --depth=0. But for some reason the commands exits with error code 1 for me.
@@ -207,7 +207,7 @@ module.exports = async function newProject(name, options, leek) {
         console.log(err);
       });
 
-    //compare the different ember versions
+    // compare the different ember versions
     if ( emberVersion !== localEmberVersion) {
       var answer = question(chalk.gray(
         `Detected different versions for sane's locally installed ` +
@@ -221,7 +221,7 @@ module.exports = async function newProject(name, options, leek) {
   }
 
   var installMsg;
-  //--docker is set
+  // --docker is set
   if (options.docker) {
     installMsg = 'Setting up Sails project and downloading latest Docker Containers.';
     if (!checkEnvironment.dockerExists()) {
@@ -248,8 +248,8 @@ module.exports = async function newProject(name, options, leek) {
     silent = false;
   }
 
-  //All checks are done, log command to analytics, then start command
-  //when running tests leek will be undefined
+  // All checks are done, log command to analytics, then start command
+  // when running tests leek will be undefined
   if (typeof leek !== 'undefined') {
     trackCommand(`new ${name}`, options, leek);
   }
@@ -289,7 +289,7 @@ module.exports = async function newProject(name, options, leek) {
 
   var cliConfig = {};
   for (var opt in options) {
-    //exclude properties that are not cli options
+    // exclude properties that are not cli options
     if (options.hasOwnProperty(opt) &&
       !opt.startsWith('_') &&
       ['commands', 'options', 'parent'].indexOf(opt) === -1) {
@@ -299,7 +299,7 @@ module.exports = async function newProject(name, options, leek) {
     cliConfig.disableAnalytics = false;
   }
 
-  //creating a default .sane-cli based on the parameters used in the new command
+  // creating a default .sane-cli based on the parameters used in the new command
   fs.writeFileSync(path.join('.sane-cli'), JSON.stringify(cliConfig, null, 2));
   try {
     fs.mkdirSync(serverName);
@@ -312,8 +312,8 @@ module.exports = async function newProject(name, options, leek) {
     }
   }
 
-  //TODO(markus): If we use spawn with stdio inherit we can print the proper output for fog
-  //should also fix the ember-cli output
+  // TODO(markus): If we use spawn with stdio inherit we can print the proper output for fog
+  // should also fix the ember-cli output
   console.log(chalk.green(installMsg));
   var sailsVersion;
   if (!options.docker) {
@@ -358,7 +358,7 @@ module.exports = async function newProject(name, options, leek) {
     console.log(chalk.yellow(`'sails-generate-ember-blueprints' (${chalk.underline('https://github.com/mphasize/sails-generate-ember-blueprints')})\n`));
   }
 
-  //Creating new ember project
+  // Creating new ember project
   console.log(chalk.green('Setting up Ember project locally.'));
 
   var emberArgs = ['new', clientName, '--skip-git'];
@@ -376,8 +376,8 @@ module.exports = async function newProject(name, options, leek) {
 
   progress.start(chalk.green('Running tooling scrips for Sane.'));
 
-  //copy over template files
-  //TODO(markus): Try to refactor with copyToProject.js
+  // copy over template files
+  // TODO(markus): Try to refactor with copyToProject.js
   var templates = getTemplates(projectMeta.sanePath());
   var templatesRoot = templates.root;
   templates = templates.templates;
@@ -413,7 +413,7 @@ module.exports = async function newProject(name, options, leek) {
   }
 
   if (!options.skipNpm) {
-    //this is to install sane-cli locally
+    // this is to install sane-cli locally
     try {
       await spawn(npm, ['install']);
     } catch (err) {

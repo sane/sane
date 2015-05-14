@@ -8,14 +8,14 @@
 
 module.exports = {
   toEmber: function (attributes){
-    //create a deep copy so the original element does not get overwritten
+    // create a deep copy so the original element does not get overwritten
     var attributesCopy = attributes.slice(0);
     for (var i in attributesCopy) {
       var attrArray = attributesCopy[i].split(':');
 
-      //if the given attribute does not have a colon, ignore
+      // if the given attribute does not have a colon, ignore
       if (attrArray.length > 1) {
-        //get the last element of the array
+        // get the last element of the array
         var attrType = attrArray.pop();
         switch (attrType) {
           case 'text':
@@ -34,13 +34,13 @@ module.exports = {
             attrArray.push('boolean');
             break;
           case 'array':
-            //no proper equivalent on the ember side
+            // no proper equivalent on the ember side
             break;
           case 'json':
-            //no proper equivalent on the ember side
+            // no proper equivalent on the ember side
             break;
           default:
-            //add popped element back
+            // add popped element back
             attrArray.push(attrType);
             break;
         }
@@ -51,18 +51,18 @@ module.exports = {
     return attributesCopy;
   },
   toSails: function (attributes){
-    //create a deep copy so the original element does not get overwritten
+    // create a deep copy so the original element does not get overwritten
     var attributesCopy = attributes.slice(0);
     for (var i in attributesCopy) {
       var attrArray = attributesCopy[i].split(':');
-      //if the given attribute does not have a colon, ignore
+      // if the given attribute does not have a colon, ignore
       if (attrArray.length > 1) {
         var attrType = attrArray.pop();
 
         if (attrType === 'number') {
           attrArray.push('float');
         } else {
-          //add popped element back
+          // add popped element back
           attrArray.push(attrType);
         }
 

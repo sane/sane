@@ -1,6 +1,6 @@
 'use strict';
 
-//with ES6 the same as: var spawn = require('child_process').spawn
+// with ES6 the same as: var spawn = require('child_process').spawn
 var { spawn }         = require('child_process');
 var chalk             = require('chalk');
 var modelConversion   = require('../tasks/modelConversion');
@@ -84,7 +84,7 @@ module.exports = async function generate(blueprint, name, attributes, options, l
     }
 
     log.verbose('Machines done, copy over templates now...');
-    //now copy over templates
+    // now copy over templates
     var templates = getTemplates(path.join(blueprintPath, 'generate'));
     copyToProject(templates, project.root, options.force);
 
