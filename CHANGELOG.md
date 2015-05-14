@@ -1,5 +1,8 @@
 # SANE Stack Changelog
 
+### Master
+* [BUGFIX] No longer requires global ember-cli
+
 ### 0.1.0-beta.1
 * [FEATURE] Added an `sane install` command that allows to install addons such as `sane install sane-auth`. More details on how to write addons comming soon! In the mean-time check out https://github.com/sane/sane-auth/
 * [BREAKING BUGFIX] Only supports ember-cli 0.2.3 and above for the addon system
