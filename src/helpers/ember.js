@@ -3,7 +3,7 @@
 var ember;
 var path             = require('path');
 var emberBin         = (process.platform === 'win32' ? 'ember.cmd' : 'ember');
-var localEmber       = path.normalize(path.join(__dirname, '..', '..', 'node_modules', '.bin', emberBin));
+var localEmber       = path.join(__dirname, '..', '..', 'node_modules', '.bin', emberBin);
 var checkEnvironment = require('../tasks/checkEnvironment');
 var which            = require('npm-which')(process.cwd());
 

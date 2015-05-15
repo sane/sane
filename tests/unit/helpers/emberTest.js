@@ -10,7 +10,7 @@ describe('Unit: ember helper', function () {
   });
 
   it('returns local ember by default', function () {
-    expect(ember).to.match(/sane[\/\\]node_modules[\/\\]\.bin[\/\\]ember(.CMD)?$/);
+    expect(ember).to.match(/sane[\/(\\)*]node_modules[\/(\\)*]\.bin[\/(\\)*]ember(.CMD)?$/);
   });
 
 });
