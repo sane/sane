@@ -35,6 +35,10 @@ iframe {
   max-height: 325px;
 }
 
+#disqus_thread iframe {
+  max-height: auto;
+}
+
 @media (min-width: 481px) and (max-width: 520px) {
   .header .left li a{
     padding: 0 5px;
