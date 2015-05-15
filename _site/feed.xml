@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sane Stack</title>
-    <description>The JS Fullstack to get you productive instantly.</description>
+    <description>The JS Fullstack to get you instantly productive.</description>
     <link>http://www.sanestack.com</link>
     <atom:link href="http://www.sanestack.com/feed.xml" rel="self" type="application/rss+xml" />
     

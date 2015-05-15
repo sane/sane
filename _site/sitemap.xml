@@ -17,24 +17,84 @@
   </url>
   <url>
     <loc>http://www.sanestack.com/blog/</loc>
-    <lastmod>2015-01-27T22:15:58+00:00</lastmod>
+    <lastmod>2015-05-15T12:57:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/</loc>
-    <lastmod>2015-01-27T22:15:58+00:00</lastmod>
+    <lastmod>2015-05-15T12:57:30+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.sanestack.com/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/commoner/node_modules/install/docs/install.html</loc>
+    <lastmod>2013-11-02T22:31:41+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/index.html</loc>
+    <lastmod>2014-11-28T10:10:25+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel/node_modules/babel-core/node_modules/source-map-support/amd-test/index.html</loc>
+    <lastmod>2014-10-22T08:13:51+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel/node_modules/babel-core/node_modules/source-map-support/browser-test/index.html</loc>
+    <lastmod>2014-10-22T08:44:19+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel/node_modules/babel-core/node_modules/source-map-support/header-test/index.html</loc>
+    <lastmod>2014-10-22T08:13:51+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel-eslint/node_modules/babel-core/node_modules/regenerator/node_modules/commoner/node_modules/install/docs/install.html</loc>
+    <lastmod>2013-11-02T22:31:41+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel-eslint/node_modules/babel-core/node_modules/regenerator/node_modules/defs/build/index.html</loc>
+    <lastmod>2014-11-28T10:10:25+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel-eslint/node_modules/babel-core/node_modules/source-map-support/amd-test/index.html</loc>
+    <lastmod>2014-10-22T08:13:51+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel-eslint/node_modules/babel-core/node_modules/source-map-support/browser-test/index.html</loc>
+    <lastmod>2014-10-22T08:44:19+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/babel-eslint/node_modules/babel-core/node_modules/source-map-support/header-test/index.html</loc>
+    <lastmod>2014-10-22T08:13:51+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/captains-log/node_modules/colors/example.html</loc>
+    <lastmod>2013-07-26T06:36:07+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/configstore/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/demo/angular.html</loc>
+    <lastmod>2014-10-20T12:25:26+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/blueprints/app/files/app/index.html</loc>
-    <lastmod>2015-01-13T16:40:01+00:00</lastmod>
+    <lastmod>2015-02-19T16:48:01+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/blueprints/app/files/tests/index.html</loc>
-    <lastmod>2015-01-13T16:40:01+00:00</lastmod>
+    <lastmod>2015-02-25T03:52:33+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -539,117 +599,12 @@
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli/templates/error.html</loc>
-    <lastmod>2014-03-29T00:37:26+00:00</lastmod>
+    <lastmod>2015-03-27T17:36:39+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test.html</loc>
-    <lastmod>2013-07-10T10:41:16+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test_standalone.html</loc>
-    <lastmod>2013-07-10T10:41:16+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test_underscore/index.html</loc>
-    <lastmod>2013-07-11T09:39:45+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/doc/index.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/index.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/test/benchmarks.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/test/compare.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/test/compat.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/test/coverage.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/test/esprima.js.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/test/index.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es3-safe-recast/node_modules/es3-safe-recast/node_modules/esprima/test/module.html</loc>
-    <lastmod>2013-11-20T03:03:50+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es6modules/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test.html</loc>
-    <lastmod>2013-07-10T10:41:16+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es6modules/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test_standalone.html</loc>
-    <lastmod>2013-07-10T10:41:16+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es6modules/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test_underscore/index.html</loc>
-    <lastmod>2013-07-11T09:39:45+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-jshint/node_modules/jshint/node_modules/console-browserify/node_modules/date-now/test/static/index.html</loc>
-    <lastmod>2013-01-23T00:55:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-jshint/node_modules/jshint/node_modules/console-browserify/test/static/index.html</loc>
-    <lastmod>2014-04-08T03:54:11+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-jshint/node_modules/jshint/node_modules/htmlparser2/test/Documents/Attributes.html</loc>
-    <lastmod>2014-11-04T23:45:01+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-jshint/node_modules/jshint/node_modules/htmlparser2/test/Documents/Basic.html</loc>
-    <lastmod>2014-11-04T23:45:01+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-sourcemap-concat/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test.html</loc>
-    <lastmod>2013-07-10T10:41:16+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-sourcemap-concat/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test_standalone.html</loc>
-    <lastmod>2013-07-10T10:41:16+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-sourcemap-concat/node_modules/broccoli-caching-writer/node_modules/quick-temp/node_modules/underscore.string/test/test_underscore/index.html</loc>
-    <lastmod>2013-07-11T09:39:45+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-es6modules/node_modules/esperanto/node_modules/sander/node_modules/es6-promise/dist/test/index.html</loc>
+    <lastmod>1429-09-19T09:00:00+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -663,23 +618,8 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-uglify-sourcemap/test/index.html</loc>
-    <lastmod>2014-12-14T05:53:02+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-writer/node_modules/quick-temp/node_modules/underscore.string/test/test.html</loc>
-    <lastmod>2013-07-10T10:41:16+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-writer/node_modules/quick-temp/node_modules/underscore.string/test/test_standalone.html</loc>
-    <lastmod>2013-07-10T10:41:16+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/broccoli-writer/node_modules/quick-temp/node_modules/underscore.string/test/test_underscore/index.html</loc>
-    <lastmod>2013-07-11T09:39:45+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/configstore/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/demo/angular.html</loc>
+    <lastmod>2014-10-20T12:25:26+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -688,1078 +628,1128 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/node-uuid/test/test.html</loc>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/leek/node_modules/request/node_modules/node-uuid/test/test.html</loc>
     <lastmod>2014-08-14T19:09:47+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/leek/node_modules/rsvp/dist/test/index.html</loc>
+    <lastmod>2015-02-18T06:59:06+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/markdown-it/node_modules/argparse/node_modules/sprintf-js/demo/angular.html</loc>
+    <lastmod>2014-10-20T12:25:26+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/markdown-it-terminal/node_modules/cardinal/node_modules/redeyed/examples/browser/index.html</loc>
+    <lastmod>2015-03-02T05:13:31+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/node-uuid/test/test.html</loc>
+    <lastmod>2015-03-05T19:29:36+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-bin.html</loc>
-    <lastmod>2014-11-07T01:20:01+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:59+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-bugs.html</loc>
-    <lastmod>2014-11-07T01:20:01+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:59+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-cache.html</loc>
-    <lastmod>2014-11-07T01:20:01+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:00+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-commands.html</loc>
-    <lastmod>2014-11-07T01:20:01+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:00+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-config.html</loc>
-    <lastmod>2014-11-07T01:20:01+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:00+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-deprecate.html</loc>
-    <lastmod>2014-11-07T01:20:01+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:00+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-docs.html</loc>
-    <lastmod>2014-11-07T01:20:01+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:01+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-edit.html</loc>
-    <lastmod>2014-11-07T01:20:03+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:01+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-explore.html</loc>
-    <lastmod>2014-11-07T01:20:03+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:01+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-help-search.html</loc>
-    <lastmod>2014-11-07T01:20:03+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:01+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-init.html</loc>
-    <lastmod>2014-11-07T01:20:03+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:01+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-install.html</loc>
-    <lastmod>2014-11-07T01:20:03+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:02+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-link.html</loc>
-    <lastmod>2014-11-07T01:20:03+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:02+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-load.html</loc>
-    <lastmod>2014-11-07T01:20:03+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:02+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-ls.html</loc>
-    <lastmod>2014-11-07T01:20:03+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:02+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-outdated.html</loc>
-    <lastmod>2014-11-07T01:20:05+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:02+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-owner.html</loc>
-    <lastmod>2014-11-07T01:20:05+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:02+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-pack.html</loc>
-    <lastmod>2014-11-07T01:20:04+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:03+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-prefix.html</loc>
-    <lastmod>2014-11-07T01:20:05+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:03+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-prune.html</loc>
-    <lastmod>2014-11-07T01:20:05+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:03+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-publish.html</loc>
-    <lastmod>2014-11-07T01:20:04+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:03+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-rebuild.html</loc>
-    <lastmod>2014-11-07T01:20:05+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:04+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-repo.html</loc>
-    <lastmod>2014-11-07T01:20:05+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:04+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-restart.html</loc>
-    <lastmod>2014-11-07T01:20:07+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:04+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-root.html</loc>
-    <lastmod>2014-11-07T01:20:07+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:04+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-run-script.html</loc>
-    <lastmod>2014-11-07T01:20:06+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:05+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-search.html</loc>
-    <lastmod>2014-11-07T01:20:06+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:05+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-shrinkwrap.html</loc>
-    <lastmod>2014-11-07T01:20:06+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:05+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-start.html</loc>
-    <lastmod>2014-11-07T01:20:07+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:05+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-stop.html</loc>
-    <lastmod>2014-11-07T01:20:07+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:05+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-submodule.html</loc>
-    <lastmod>2014-10-02T01:07:10+01:00</lastmod>
+    <lastmod>2015-02-26T21:49:11+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-tag.html</loc>
-    <lastmod>2014-11-07T01:20:07+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:06+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-test.html</loc>
-    <lastmod>2014-11-07T01:20:08+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:06+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-uninstall.html</loc>
-    <lastmod>2014-11-07T01:20:08+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:06+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-unpublish.html</loc>
-    <lastmod>2014-11-07T01:20:08+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:06+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-update.html</loc>
-    <lastmod>2014-11-07T01:20:08+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:07+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-version.html</loc>
-    <lastmod>2014-11-07T01:20:08+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:07+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-view.html</loc>
-    <lastmod>2014-11-07T01:20:08+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:07+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm-whoami.html</loc>
-    <lastmod>2014-11-07T01:20:08+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:07+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/api/npm.html</loc>
-    <lastmod>2014-11-07T01:20:08+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:08+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-access.html</loc>
+    <lastmod>2015-04-03T09:21:07+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-adduser.html</loc>
-    <lastmod>2014-11-07T01:20:10+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:07+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-bin.html</loc>
-    <lastmod>2014-11-07T01:20:10+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:08+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-bugs.html</loc>
-    <lastmod>2014-11-07T01:20:10+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:08+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-build.html</loc>
-    <lastmod>2014-11-07T01:20:10+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:09+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-bundle.html</loc>
-    <lastmod>2014-11-07T01:20:10+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:09+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-cache.html</loc>
-    <lastmod>2014-11-07T01:20:10+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:09+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-completion.html</loc>
-    <lastmod>2014-11-07T01:20:10+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:09+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-config.html</loc>
-    <lastmod>2014-11-07T01:20:10+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:09+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-dedupe.html</loc>
-    <lastmod>2014-11-07T01:20:12+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:09+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-deprecate.html</loc>
-    <lastmod>2014-11-07T01:20:11+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:09+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-dist-tag.html</loc>
+    <lastmod>2015-04-03T09:21:10+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-docs.html</loc>
-    <lastmod>2014-11-07T01:20:12+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:10+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-edit.html</loc>
-    <lastmod>2014-11-07T01:20:12+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:11+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-explore.html</loc>
-    <lastmod>2014-11-07T01:20:12+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:11+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-help-search.html</loc>
-    <lastmod>2014-11-07T01:20:12+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:10+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-help.html</loc>
-    <lastmod>2014-11-07T01:20:12+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:11+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-init.html</loc>
-    <lastmod>2014-11-07T01:20:12+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:11+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-install.html</loc>
-    <lastmod>2014-11-07T01:20:13+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:11+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-link.html</loc>
-    <lastmod>2014-11-07T01:20:14+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:12+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-logout.html</loc>
+    <lastmod>2015-04-03T09:21:12+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-ls.html</loc>
-    <lastmod>2014-11-07T01:20:14+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:12+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-outdated.html</loc>
-    <lastmod>2014-11-07T01:20:13+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:12+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-owner.html</loc>
-    <lastmod>2014-11-07T01:20:14+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:12+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-pack.html</loc>
-    <lastmod>2014-11-07T01:20:13+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:13+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-prefix.html</loc>
-    <lastmod>2014-11-07T01:20:13+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:12+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-prune.html</loc>
-    <lastmod>2014-11-07T01:20:13+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:13+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-publish.html</loc>
-    <lastmod>2014-11-07T01:20:15+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:14+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-rebuild.html</loc>
-    <lastmod>2014-11-07T01:20:15+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:14+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-repo.html</loc>
-    <lastmod>2014-11-07T01:20:15+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:14+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-restart.html</loc>
-    <lastmod>2014-11-07T01:20:15+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:14+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-rm.html</loc>
-    <lastmod>2014-11-07T01:20:15+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:14+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-root.html</loc>
-    <lastmod>2014-11-07T01:20:15+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:14+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-run-script.html</loc>
-    <lastmod>2014-11-07T01:20:15+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:14+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-search.html</loc>
-    <lastmod>2014-11-07T01:20:15+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:15+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-shrinkwrap.html</loc>
-    <lastmod>2014-11-07T01:20:17+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:15+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-star.html</loc>
-    <lastmod>2014-11-07T01:20:16+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:16+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-stars.html</loc>
-    <lastmod>2014-11-07T01:20:17+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:15+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-start.html</loc>
-    <lastmod>2014-11-07T01:20:16+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:15+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-stop.html</loc>
-    <lastmod>2014-11-07T01:20:17+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:15+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-submodule.html</loc>
-    <lastmod>2014-10-02T01:07:17+01:00</lastmod>
+    <lastmod>2015-02-26T21:49:11+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-tag.html</loc>
-    <lastmod>2014-11-07T01:20:17+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:16+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-test.html</loc>
-    <lastmod>2014-11-07T01:20:17+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:16+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-uninstall.html</loc>
-    <lastmod>2014-11-07T01:20:17+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-unpublish.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-update.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-version.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-view.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm-whoami.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/cli/npm.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/files/npm-folders.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:18+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/files/npm-global.html</loc>
-    <lastmod>2014-11-07T01:20:20+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:21+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/files/npm-json.html</loc>
-    <lastmod>2014-11-07T01:20:22+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:21+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/files/npmrc.html</loc>
-    <lastmod>2014-11-07T01:20:20+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:19+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/files/package.json.html</loc>
-    <lastmod>2014-11-07T01:20:20+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:19+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/index.html</loc>
-    <lastmod>2014-11-07T01:20:21+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:21+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-coding-style.html</loc>
-    <lastmod>2014-11-07T01:20:20+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:19+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-config.html</loc>
-    <lastmod>2014-11-07T01:20:20+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:19+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-developers.html</loc>
-    <lastmod>2014-11-07T01:20:20+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:19+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-disputes.html</loc>
-    <lastmod>2014-11-07T01:20:20+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:19+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-faq.html</loc>
-    <lastmod>2014-11-07T01:20:20+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:19+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-index.html</loc>
-    <lastmod>2014-11-07T01:20:21+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:20+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-registry.html</loc>
-    <lastmod>2014-11-07T01:20:21+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:20+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-scope.html</loc>
-    <lastmod>2014-11-07T01:20:21+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:21+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/npm-scripts.html</loc>
-    <lastmod>2014-11-07T01:20:21+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:20+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/removing-npm.html</loc>
-    <lastmod>2014-11-07T01:20:21+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:21+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/misc/semver.html</loc>
-    <lastmod>2014-11-07T01:20:21+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:21+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/doc/README.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/docfoot.html</loc>
-    <lastmod>2014-09-17T00:34:10+01:00</lastmod>
+    <lastmod>2015-02-26T21:49:11+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/dochead.html</loc>
-    <lastmod>2014-09-17T00:34:10+01:00</lastmod>
+    <lastmod>2015-02-26T21:49:11+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/index.html</loc>
-    <lastmod>2014-09-17T00:34:10+01:00</lastmod>
+    <lastmod>2015-03-23T21:01:53+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-bin.html</loc>
-    <lastmod>2014-11-07T01:19:33+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:27+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-bugs.html</loc>
-    <lastmod>2014-11-07T01:19:34+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:28+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-cache.html</loc>
-    <lastmod>2014-11-07T01:19:34+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:28+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-commands.html</loc>
-    <lastmod>2014-11-07T01:19:34+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:29+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-config.html</loc>
-    <lastmod>2014-11-07T01:19:34+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:29+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-deprecate.html</loc>
-    <lastmod>2014-11-07T01:19:35+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:29+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-docs.html</loc>
-    <lastmod>2014-11-07T01:19:35+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:30+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-edit.html</loc>
-    <lastmod>2014-11-07T01:19:36+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:30+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-explore.html</loc>
-    <lastmod>2014-11-07T01:19:36+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:30+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-help-search.html</loc>
-    <lastmod>2014-11-07T01:19:36+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:30+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-init.html</loc>
-    <lastmod>2014-11-07T01:19:36+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:31+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-install.html</loc>
-    <lastmod>2014-11-07T01:19:36+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:31+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-link.html</loc>
-    <lastmod>2014-11-07T01:19:36+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:32+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-load.html</loc>
-    <lastmod>2014-11-07T01:19:36+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:32+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-ls.html</loc>
-    <lastmod>2014-11-07T01:19:38+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:32+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-outdated.html</loc>
-    <lastmod>2014-11-07T01:19:38+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:32+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-owner.html</loc>
-    <lastmod>2014-11-07T01:19:38+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:32+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-pack.html</loc>
-    <lastmod>2014-11-07T01:19:38+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:32+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-prefix.html</loc>
-    <lastmod>2014-11-07T01:19:38+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:33+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-prune.html</loc>
-    <lastmod>2014-11-07T01:19:38+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:33+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-publish.html</loc>
-    <lastmod>2014-11-07T01:19:38+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:34+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-rebuild.html</loc>
-    <lastmod>2014-11-07T01:19:38+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:34+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-repo.html</loc>
-    <lastmod>2014-11-07T01:19:39+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:35+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-restart.html</loc>
-    <lastmod>2014-11-07T01:19:40+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:34+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-root.html</loc>
-    <lastmod>2014-11-07T01:19:40+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:35+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-run-script.html</loc>
-    <lastmod>2014-11-07T01:19:40+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:35+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-search.html</loc>
-    <lastmod>2014-11-07T01:19:40+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:35+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-shrinkwrap.html</loc>
-    <lastmod>2014-11-07T01:19:40+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:36+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-start.html</loc>
-    <lastmod>2014-11-07T01:19:40+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:36+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-stop.html</loc>
-    <lastmod>2014-11-07T01:19:40+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:37+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-submodule.html</loc>
-    <lastmod>2014-10-02T01:06:50+01:00</lastmod>
+    <lastmod>2015-02-26T21:49:11+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-tag.html</loc>
-    <lastmod>2014-11-07T01:19:41+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:36+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-test.html</loc>
-    <lastmod>2014-11-07T01:19:42+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:37+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-uninstall.html</loc>
-    <lastmod>2014-11-07T01:19:42+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:37+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-unpublish.html</loc>
-    <lastmod>2014-11-07T01:19:42+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:37+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-update.html</loc>
-    <lastmod>2014-11-07T01:19:42+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:38+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-version.html</loc>
-    <lastmod>2014-11-07T01:19:42+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:38+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-view.html</loc>
-    <lastmod>2014-11-07T01:19:42+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:39+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm-whoami.html</loc>
-    <lastmod>2014-11-07T01:19:42+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:39+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/api/npm.html</loc>
-    <lastmod>2014-11-07T01:19:42+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:39+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-access.html</loc>
+    <lastmod>2015-04-03T09:20:39+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-adduser.html</loc>
-    <lastmod>2014-11-07T01:19:45+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:40+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-bin.html</loc>
-    <lastmod>2014-11-07T01:19:45+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:40+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-bugs.html</loc>
-    <lastmod>2014-11-07T01:19:45+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:40+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-build.html</loc>
-    <lastmod>2014-11-07T01:19:45+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:40+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-bundle.html</loc>
-    <lastmod>2014-11-07T01:19:45+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:41+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-cache.html</loc>
-    <lastmod>2014-11-07T01:19:45+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:41+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-completion.html</loc>
-    <lastmod>2014-11-07T01:19:45+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:42+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-config.html</loc>
-    <lastmod>2014-11-07T01:19:45+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:42+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-dedupe.html</loc>
-    <lastmod>2014-11-07T01:19:47+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:42+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-deprecate.html</loc>
-    <lastmod>2014-11-07T01:19:47+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:42+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-dist-tag.html</loc>
+    <lastmod>2015-04-03T09:20:42+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-docs.html</loc>
-    <lastmod>2014-11-07T01:19:47+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:43+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-edit.html</loc>
-    <lastmod>2014-11-07T01:19:47+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:44+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-explore.html</loc>
-    <lastmod>2014-11-07T01:19:47+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:44+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-help-search.html</loc>
-    <lastmod>2014-11-07T01:19:47+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:44+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-help.html</loc>
-    <lastmod>2014-11-07T01:19:47+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:44+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-init.html</loc>
-    <lastmod>2014-11-07T01:19:47+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:44+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-install.html</loc>
-    <lastmod>2014-11-07T01:19:49+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:44+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-link.html</loc>
-    <lastmod>2014-11-07T01:19:49+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:45+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-logout.html</loc>
+    <lastmod>2015-04-03T09:20:45+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-ls.html</loc>
-    <lastmod>2014-11-07T01:19:49+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:46+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-outdated.html</loc>
-    <lastmod>2014-11-07T01:19:49+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:46+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-owner.html</loc>
-    <lastmod>2014-11-07T01:19:49+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:46+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-pack.html</loc>
-    <lastmod>2014-11-07T01:19:49+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:46+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-prefix.html</loc>
-    <lastmod>2014-11-07T01:19:49+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:47+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-prune.html</loc>
-    <lastmod>2014-11-07T01:19:49+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:47+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-publish.html</loc>
-    <lastmod>2014-11-07T01:19:51+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:47+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-rebuild.html</loc>
-    <lastmod>2014-11-07T01:19:51+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:48+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-repo.html</loc>
-    <lastmod>2014-11-07T01:19:52+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:48+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-restart.html</loc>
-    <lastmod>2014-11-07T01:19:51+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:49+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-rm.html</loc>
-    <lastmod>2014-11-07T01:19:51+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:49+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-root.html</loc>
-    <lastmod>2014-11-07T01:19:51+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:49+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-run-script.html</loc>
-    <lastmod>2014-11-07T01:19:51+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:49+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-search.html</loc>
-    <lastmod>2014-11-07T01:19:51+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:49+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-shrinkwrap.html</loc>
-    <lastmod>2014-11-07T01:19:53+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:50+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-star.html</loc>
-    <lastmod>2014-11-07T01:19:53+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:50+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-stars.html</loc>
-    <lastmod>2014-11-07T01:19:53+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:51+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-start.html</loc>
-    <lastmod>2014-11-07T01:19:53+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:51+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-stop.html</loc>
-    <lastmod>2014-11-07T01:19:53+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:51+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-submodule.html</loc>
-    <lastmod>2014-10-02T01:06:59+01:00</lastmod>
+    <lastmod>2015-02-26T21:49:11+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-tag.html</loc>
-    <lastmod>2014-11-07T01:19:53+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:52+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-test.html</loc>
-    <lastmod>2014-11-07T01:19:53+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:52+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-uninstall.html</loc>
-    <lastmod>2014-11-07T01:19:53+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:52+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-unpublish.html</loc>
-    <lastmod>2014-11-07T01:19:56+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:52+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-update.html</loc>
-    <lastmod>2014-11-07T01:19:56+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:53+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-version.html</loc>
-    <lastmod>2014-11-07T01:19:55+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:53+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-view.html</loc>
-    <lastmod>2014-11-07T01:19:56+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:53+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm-whoami.html</loc>
-    <lastmod>2014-11-07T01:19:56+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:55+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/cli/npm.html</loc>
-    <lastmod>2014-11-07T01:19:56+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:54+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/files/npm-folders.html</loc>
-    <lastmod>2014-11-07T01:19:56+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:55+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/files/npm-global.html</loc>
-    <lastmod>2014-11-07T01:19:56+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/files/npm-json.html</loc>
-    <lastmod>2014-11-07T01:20:18+00:00</lastmod>
+    <lastmod>2015-04-03T09:21:17+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/files/npmrc.html</loc>
-    <lastmod>2014-11-07T01:19:58+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:55+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/files/package.json.html</loc>
-    <lastmod>2014-11-07T01:19:58+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:55+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/index.html</loc>
-    <lastmod>2014-11-07T01:20:00+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:59+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-coding-style.html</loc>
-    <lastmod>2014-11-07T01:19:58+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:56+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-config.html</loc>
-    <lastmod>2014-11-07T01:19:58+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:56+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-developers.html</loc>
-    <lastmod>2014-11-07T01:19:58+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:56+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-disputes.html</loc>
-    <lastmod>2014-11-07T01:19:58+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-faq.html</loc>
-    <lastmod>2014-11-07T01:19:58+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-index.html</loc>
-    <lastmod>2014-11-07T01:19:58+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-registry.html</loc>
-    <lastmod>2014-11-07T01:20:00+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:57+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-scope.html</loc>
-    <lastmod>2014-11-07T01:20:00+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:58+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/npm-scripts.html</loc>
-    <lastmod>2014-11-07T01:20:00+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:58+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/removing-npm.html</loc>
-    <lastmod>2014-11-07T01:20:00+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:59+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/misc/semver.html</loc>
-    <lastmod>2014-11-07T01:20:00+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:59+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/html/partial/doc/README.html</loc>
-    <lastmod>2014-11-07T01:19:56+00:00</lastmod>
+    <lastmod>2015-04-03T09:20:54+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/npm/node_modules/request/node_modules/node-uuid/test/test.html</loc>
-    <lastmod>2013-08-17T13:49:35+01:00</lastmod>
+    <lastmod>2015-04-02T09:55:39+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -1778,13 +1768,8 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/testem/node_modules/colors/example.html</loc>
-    <lastmod>2013-07-26T06:36:07+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/testem/node_modules/http-proxy/node_modules/pkginfo/docs/pkginfo.html</loc>
-    <lastmod>2013-01-18T06:57:26+00:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/testem/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/demo/angular.html</loc>
+    <lastmod>2014-10-20T12:25:26+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -1805,6 +1790,11 @@
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/testem/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/utf8/tests/index.html</loc>
     <lastmod>2013-06-20T10:56:28+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/testem/node_modules/socket.io/node_modules/socket.io-adapter/node_modules/socket.io-parser/node_modules/json3/coverage/lcov-report/lib/json3.js.html</loc>
+    <lastmod>2013-11-17T22:21:36+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -1863,8 +1853,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/testem/public/testem/connection.html</loc>
+    <lastmod>2015-04-21T16:41:45+01:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/node_modules/tiny-lr/examples/express/index.html</loc>
-    <lastmod>2014-07-08T15:05:51+01:00</lastmod>
+    <lastmod>2015-01-26T11:47:09+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -1879,327 +1874,67 @@
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/tests/fixtures/express-server/index.html</loc>
-    <lastmod>2015-01-13T16:40:01+00:00</lastmod>
+    <lastmod>2015-02-19T16:48:01+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>http://www.sanestack.com/node_modules/ember-cli/tests/fixtures/express-server/tests/index.html</loc>
-    <lastmod>2015-01-13T16:40:01+00:00</lastmod>
+    <lastmod>2015-02-19T16:48:01+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/base.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/eslint/node_modules/doctrine/coverage/lcov-report/index.html</loc>
+    <lastmod>2015-02-23T17:28:53+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/ast.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/eslint/node_modules/doctrine/test/test.html</loc>
+    <lastmod>2013-05-31T17:35:24+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/base.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/eslint/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/demo/angular.html</loc>
+    <lastmod>2014-10-20T12:25:26+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/compiler.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/findup/node_modules/colors/example.html</loc>
+    <lastmod>2013-07-26T06:36:07+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/helpers.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/index.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/javascript-compiler.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/parser.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/printer.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/compiler/visitor.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/exception.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/index.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/runtime.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/safe-string.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars/utils.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/handlebars.runtime.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/dist/cjs/index.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/index.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/lib/index.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/lib/index.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/lib/precompiler.js.html</loc>
-    <lastmod>2014-09-02T03:28:57+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/ast.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/basic.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/blocks.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/builtins.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/data.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/browser.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/common.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/index.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/node.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/runner.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/env/runtime.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/helpers.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/index.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/javascript-compiler.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/parser.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/partials.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/precompiler.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/regressions.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/require.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/runtime.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/spec.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/string-params.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/subexpressions.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/tokenizer.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/track-ids.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/utils.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/handlebars/coverage/lcov-report/spec/whitespace-control.js.html</loc>
-    <lastmod>2014-08-14T05:50:23+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/mocha/lib/reporters/templates/script.html</loc>
-    <lastmod>2014-10-22T05:30:00+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/mocha/lib/reporters/templates/style.html</loc>
-    <lastmod>2014-10-22T05:30:00+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/mocha/lib/template.html</loc>
-    <lastmod>2014-10-22T05:30:00+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/mocha-jshint/node_modules/jshint/node_modules/console-browserify/node_modules/date-now/test/static/index.html</loc>
-    <lastmod>2013-01-23T00:55:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/mocha-jshint/node_modules/jshint/node_modules/console-browserify/test/static/index.html</loc>
-    <lastmod>2014-04-08T03:54:11+01:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/mocha-jshint/node_modules/jshint/node_modules/htmlparser2/test/Documents/Attributes.html</loc>
-    <lastmod>2014-11-04T23:45:01+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/mocha-jshint/node_modules/jshint/node_modules/htmlparser2/test/Documents/Basic.html</loc>
-    <lastmod>2014-11-04T23:45:01+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>http://www.sanestack.com/node_modules/node-uuid/test/test.html</loc>
+    <loc>http://www.sanestack.com/node_modules/leek/node_modules/request/node_modules/node-uuid/test/test.html</loc>
     <lastmod>2014-08-14T19:09:47+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/regenerator/node_modules/commoner/node_modules/install/docs/install.html</loc>
-    <lastmod>2013-11-02T22:31:41+00:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/leek/node_modules/rsvp/dist/test/index.html</loc>
+    <lastmod>2015-02-18T06:59:06+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/regenerator/node_modules/defs/build/index.html</loc>
-    <lastmod>2014-11-28T10:10:25+00:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha/lib/reporters/templates/script.html</loc>
+    <lastmod>2015-01-12T22:14:56+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/traceur/node_modules/source-map-support/amd-test/index.html</loc>
-    <lastmod>2014-10-22T08:13:51+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha/lib/reporters/templates/style.html</loc>
+    <lastmod>2015-04-07T19:43:48+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/traceur/node_modules/source-map-support/browser-test/index.html</loc>
-    <lastmod>2014-10-22T08:44:19+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/mocha/lib/template.html</loc>
+    <lastmod>2015-01-12T22:14:56+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/traceur/node_modules/source-map-support/header-test/index.html</loc>
-    <lastmod>2014-10-22T08:13:51+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/node-uuid/test/test.html</loc>
+    <lastmod>2015-03-05T19:29:36+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://www.sanestack.com/node_modules/yam/node_modules/findup/node_modules/colors/example.html</loc>
-    <lastmod>2013-07-26T06:36:07+01:00</lastmod>
+    <loc>http://www.sanestack.com/node_modules/rsvp/dist/test/index.html</loc>
+    <lastmod>2015-02-19T23:04:38+00:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
