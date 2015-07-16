@@ -364,7 +364,7 @@ module.exports = async function newProject(name, options, leek) {
   process.stdout.write('ember-cli ');
   await spawn(ember, emberArgs, { stdio: 'inherit' });
 
-  progress.start(chalk.green('Running tooling scrips for Sane.'));
+  progress.start(chalk.green('Running tooling scripts for Sane.'));
 
   // copy over template files
   // TODO(markus): Try to refactor with copyToProject.js
