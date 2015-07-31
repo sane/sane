@@ -20,7 +20,7 @@ db:
   ports:
     - "1337:1337"
 {{#if user}}
-  user: {{user}}
+  user: "{{user}}"
 {{/if}}
 {{#if database}}
   links:
