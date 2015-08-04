@@ -191,7 +191,11 @@ module.exports = async function newProject(name, options, leek) {
     ember = localEmber;
   } else {
     // Get globally installed ember version
-    var emberVersion = await spawn(npm, ['ls', '--global', '--json', '--depth=0', 'ember-cli'], { capture: ['stdout']}).then(function (result) {
+    var emberVersion = await spawn(npm, ['ls', '--global', '--json', '--depth=0', 'ember-cli'], { capture: ['stdout', 'stderr']}).then(function (result) {
+      if (options.verbose) {
+        console.log(`[spawn] stderr: ${result.stderr.toString()}`);
+        console.log(`[spawn] stdout: ${result.stdout.toString()}`);
+      }
       return result.dependencies['ember-cli'].version;
     }, function (err) {
       console.error(err);
@@ -307,15 +311,23 @@ module.exports = async function newProject(name, options, leek) {
   console.log(chalk.green(installMsg));
   var sailsVersion;
   if (!options.docker) {
-    sailsVersion = await spawn(sails, ['version'], { capture: ['stdout'] })
+    sailsVersion = await spawn(sails, ['version'], { capture: ['stdout', 'stderr'] })
       .then(function (result) {
+        if (options.verbose) {
+          console.log(`[spawn] stderr: ${result.stderr.toString()}`);
+          console.log(`[spawn] stdout: ${result.stdout.toString()}`);
+        }
         return result.stdout.toString();
       }, function (err) {
         console.log(err);
       });
   } else {
-    sailsVersion = await spawn(dockerCompose, ['run', 'server', 'sails', 'version'], { capture: ['stdout'] })
+    sailsVersion = await spawn(dockerCompose, ['run', 'server', 'sails', 'version'], { capture: ['stdout', 'stderr'] })
       .then(function (result) {
+        if (options.verbose) {
+          console.log(`[spawn] stderr: ${result.stderr.toString()}`);
+          console.log(`[spawn] stdout: ${result.stdout.toString()}`);
+        }
         return result.stdout.toString();
       }, function (err) {
         console.log(err);
