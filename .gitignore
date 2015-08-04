@@ -9,6 +9,8 @@ _posts
 # Server stuff
 # See server/.gitignore
 
+# Compiled code
+lib
 
 # Ignore configuration and automatically generated cruft
 dbconfig.php
