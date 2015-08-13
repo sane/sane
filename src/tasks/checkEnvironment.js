@@ -14,10 +14,12 @@ var self = {
    */
   dockerExists: function () {
     try {
-      which('fig');
+      // this should exist by default
+      which('docker-compose');
     } catch (err) {
       try {
-        which('docker-compose');
+        // legacy executable as fallback
+        which('fig');
       } catch (err) {
         return false;
       }
@@ -29,14 +31,11 @@ var self = {
       return false;
     }
 
-    // check for windows or Mac OSX
-    if (['win32', 'darwin'].indexOf(process.platform) > -1) {
-      return self.boot2dockerExists();
-    }
     return true;
   },
 
   // only use this function for windows and mac
+  // boot2docker is deprecated by docker-machine, however continue to check for legacy installations
   boot2dockerExists: function () {
     try {
       which('boot2docker');
@@ -46,14 +45,31 @@ var self = {
     }
   },
 
+  dockerMachineExists: function () {
+    try {
+      which('docker-machine');
+      return true;
+    } catch (err) {
+      return false;
+    }
+  },
+
   isDockerRunning: function () {
-    var running;
+    var running = false;
     if (['win32', 'darwin'].indexOf(process.platform) > -1) {
-      var stdout = execSync('boot2docker status', { encoding: 'utf-8' });
-      if (stdout.trim() === 'running') {
-        running = true;
-      } else {
-        running = false;
+      var command;
+      if (self.dockerMachineExists()) {
+        if (process.env.DOCKER_MACHINE_NAME === undefined) {
+          console.error('DOCKER environment variables are not set. see: https://docs.docker.com/machine/reference/env/');
+          return running;
+        }
+        command = 'docker-machine status ' + process.env.DOCKER_MACHINE_NAME;
+      } else if (self.boot2dockerExists()) {
+        command = 'boot2docker status';
+      }
+      if (command) {
+        var stdout = execSync(command, { encoding: 'utf-8' });
+        running = stdout.trim().toLowerCase() === 'running';
       }
     } else {
       try {

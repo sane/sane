@@ -219,11 +219,11 @@ module.exports = async function newProject(name, options, leek) {
   if (options.docker) {
     installMsg = 'Setting up Sails project and downloading latest Docker Containers.';
     if (!checkEnvironment.dockerExists()) {
-      throw new Error(`sane requires the latest docker/boot2docker/docker-compose to be installed. ` +
+      throw new Error(`sane requires the latest docker-compose to be installed. ` +
         `Check https://github.com/artificialio/sane/blob/master/README.md for more details.`);
     }
     if (!checkEnvironment.isDockerRunning()) {
-      throw new Error('Make sure your docker/boot2docker is running');
+      throw new Error('Make sure Docker is running and properly configured.');
     }
   } else {
     installMsg = 'Setting up Sails project locally.';
