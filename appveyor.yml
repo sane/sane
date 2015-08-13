@@ -33,8 +33,7 @@ platform:
 # build cache to preserve files/folders between builds
 cache:
   - node_modules -> **\package.json # preserve "node_modules" directory in the root of build folder but will reset it if package.json is modified
-  # hmm this is from their docs...  TODO: figure out why it's not working
-  #- %APPDATA%\npm-cache             # npm cache
+  - C:\nc                           # custom npm cache location
 
 # Install scripts. (runs after repo cloning)
 install:
