@@ -12,8 +12,28 @@ environment:
     # io.js 1.x
     - nodejs_version: "1.5.0"
 
+# immediately finish build if one of the jobs fails.
+matrix:
+  fast_finish: true
+
+# Do not build on tags (GitHub only)
+skip_tags: true
+
+# if "- no appveyor" appears, skip the commit
+skip_commits:
+  message: /\- no appveyor/
+
+branches:
+  except:
+    - gh-pages # blacklist
+
 platform:
   - x64
+
+# build cache to preserve files/folders between builds
+cache:
+  - node_modules -> **\package.json # preserve "node_modules" directory in the root of build folder but will reset it if package.json is modified
+  - %APPDATA%\npm-cache             # npm cache
 
 # Install scripts. (runs after repo cloning)
 install:
