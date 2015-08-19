@@ -86,15 +86,16 @@ module.exports = async function up(options, leek) {
       // running this on every fig up seems a bit wasteful. Try to find an automatic way that only needs to run once.
       // await spawnPromise('fig', ['run', 'server', 'rm', '-rf', 'node_modules'], { stdio: 'inherit', env: process.env });
       // await spawnPromise('fig', ['run', 'server', 'npm', 'i'], { stdio: 'inherit', env: process.env });
-
-      if (checkEnvironment.boot2dockerExists()){
+      if (checkEnvironment.dockerMachineExists()) {
+        emberProxy = 'http://' + checkEnvironment.getDockerIp();
+      } else if (checkEnvironment.boot2dockerExists()) {
         runAndOutput('boot2docker', ['ssh', '-L', '1337:localhost:1337'], { env: process.env },
           { prepend: 'boot2docker', color: 'yellow', verbose: options.verbose });
       }
       if (checkEnvironment.isDockerRunning()) {
         runAndOutput(dockerCompose, ['up'], { stdio: 'inherit', env: process.env }, serverPrintOptions);
       } else {
-        console.log('Please start docker/boot2docker and run the command again.');
+        console.error('Please start docker/boot2docker and run the command again.');
         exit();
       }
     } else {
