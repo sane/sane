@@ -16,7 +16,7 @@ db:
   image: artificial/docker-sails:stable-pm2
   command: sails lift
   volumes:
-    - {{serverName}}/:/{{serverName}}
+    - "./{{serverName}}/:/{{serverName}}"
   ports:
     - "1337:1337"
 {{#if user}}
