@@ -196,7 +196,7 @@ module.exports = async function newProject(name, options, leek) {
         console.log(`[spawn] stderr: ${result.stderr.toString()}`);
         console.log(`[spawn] stdout: ${result.stdout.toString()}`);
       }
-      return result.dependencies['ember-cli'].version;
+      return JSON.parse(result.stdout).dependencies['ember-cli'].version;
     }, function (err) {
       console.error(err);
     });

@@ -4,8 +4,9 @@
  * Check things like DOCKER_HOST is set, docker/boot2docker/fig (depending on OS), sails and/or ember installed
  * Also used to return the right docker IP if used
  */
-var which    = require('which').sync;
-var { execSync } = require('child_process');
+var which         = require('which').sync;
+var { execSync, spawnSync }  = require('child_process');
+var npm           = require('../helpers/npm');
 
 var self = {
   /*
@@ -83,12 +84,14 @@ var self = {
   },
 
   emberExists: function () {
-    try {
-      execSync('npm', ['ls', '--global', '--depth=0', 'ember-cli']);
+    var res = spawnSync(npm, ['ls', '--global', '--json', '--depth=0', 'ember-cli']);
+    var stdoutJSON = JSON.parse(res.stdout);
+
+    if (stdoutJSON.dependencies && stdoutJSON.dependencies['ember-cli']) {
       return true;
-    } catch (err) {
-      return false;
     }
+
+    return false;
   },
 
   sailsExists: function () {
