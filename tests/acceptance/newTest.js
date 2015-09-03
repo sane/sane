@@ -32,7 +32,7 @@ describe('Acceptance: sane new', function () {
 
     // taken from lib/commands/new.js
     var sailsPackages = ['sails-generate-ember-blueprints', 'lodash', 'sails-hook-autoreload',
-    'sails-hook-dev', 'pluralize', 'sails-disk'];
+    'pluralize', 'sails-disk'];
 
     assertFile('server/package.json', {
         contains: sailsPackages

@@ -347,7 +347,7 @@ module.exports = async function newProject(name, options, leek) {
   }
 
   var sailsPackages = ['sails-generate-ember-blueprints', 'lodash', 'pluralize',
-    'sails-hook-autoreload@~0.11.4', 'sails-hook-dev@balderdashy/sails-hook-dev', `sails-${options.database}`];
+    'sails-hook-autoreload@~0.11.4', `sails-${options.database}`];
 
   await dockerExec(`npm i ${sailsPackages.join(' ')} --save`, options.docker, silent, options.skipNpm);
   await dockerExec('sails generate ember-blueprints', options.docker, silent, options.skipNpm);
