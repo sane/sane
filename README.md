@@ -48,9 +48,9 @@ SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter
 ## Built by
 
 [gitter-badge]: https://badges.gitter.im/Join+Chat.svg
-[gitter-badge-url]: https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-[travis-badge]: https://travis-ci.org/artificialio/sane.svg?branch=master
-[travis-badge-url]: https://travis-ci.org/artificialio/sane
+[gitter-badge-url]: https://gitter.im/sane/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[travis-badge]: https://travis-ci.org/sane/sane.svg?branch=master
+[travis-badge-url]: https://travis-ci.org/sane/sane
 [david-badge]: https://img.shields.io/david/sane/sane.svg?style=flat
 [david-badge-url]: https://david-dm.org/sane/sane
 [appveyor-badge]: https://ci.appveyor.com/api/projects/status/oku88ae3kxddbw14/branch/master?svg=true
@@ -59,7 +59,7 @@ SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter
 [npm-badge-url]: https://www.npmjs.com/package/sane-cli
 [bounty-badge]: https://www.bountysource.com/badge/team?team_id=58969&amp;style=bounties_received
 [bounty-badge-url]: https://www.bountysource.com/teams/sane-stack?utm_source=Sane%20Stack&utm_medium=shield&utm_campaign=raised
-[code-climate-badge]: https://codeclimate.com/github/artificialio/sane/badges/gpa.svg
-[code-climate-badge-url]: https://codeclimate.com/github/artificialio/sane
+[code-climate-badge]: https://codeclimate.com/github/sane/sane/badges/gpa.svg
+[code-climate-badge-url]: https://codeclimate.com/github/sane/sane
 
 Built with love by [Artificial Labs](http://artificial.io/) and [contributors](https://github.com/artificialio/sane/graphs/contributors) <3
