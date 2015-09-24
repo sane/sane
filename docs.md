@@ -2,7 +2,7 @@
 
 A Javascript Fullstack and CLI that lets you rapidly create production-ready web apps using [Sails](http://sailsjs.org/) and [Ember](http://emberjs.com/). Get [Docker](https://www.docker.com/) support, generators and more.
 
-> [![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) <br> [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> [![npm version](https://badge.fury.io/js/sane-cli.svg)](https://npmjs.org/package/sane-cli) <br> [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sane/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 **Watch the intro to sane-cli:**
 [![Youtube](https://lh4.googleusercontent.com/-Gzbkj30rNvw/VJmk4dpVJ3I/AAAAAAAAfK4/u3ORJzofpoc/w1814-h1086-no/Screen%2BShot%2B2014-12-23%2Bat%2B05.00.50.png)](https://www.youtube.com/watch?v=zWU6dRNpNtc)
@@ -129,7 +129,7 @@ You can also put a `.sane-cli` in your home-directory, so you can persist some c
 
 The currently supportet options are:
 
-`apps: array` See: https://github.com/artificialio/sane/blob/master/lib/tasks/getAppNames.js<br>
+`apps: array` See: https://github.com/sane/sane/blob/master/lib/tasks/getAppNames.js<br>
 Examples: <br>
 *'client' => Expected folder-name: client* <br>
 *'clientv1' => Expected folder-name: clientv1* <br>
@@ -265,7 +265,7 @@ If you run `npm install -g sails sane-cli ember-cli` (*Note: Since v0.0.18 you d
 ## Development
 This is a tool for the community, so everyone is welcome to make Sane Stack a better product. It is easy to get started:
 
-* `git clone https://github.com/artificialio/sane.git`
+* `git clone https://github.com/sane/sane.git`
 * `cd sane && npm install` to install the dependencies
 * `npm link` to make sure you can test the master version globally
 * If you add a new feature also add an according unit/acceptance test based on the others
@@ -281,4 +281,4 @@ Thanks to [mphasize](https://github.com/mphasize) for creating [sails-generate-e
 SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter-kit/blob/master/LICENSE.md).
 
 ## Built by
-Build with love by [Artificial Labs](http://artificial.io/) and [contributors](https://github.com/artificialio/sane/graphs/contributors) <3
+Build with love by [Artificial Labs](http://artificial.io/) and [contributors](https://github.com/sane/sane/graphs/contributors) <3
