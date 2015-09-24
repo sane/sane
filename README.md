@@ -51,8 +51,8 @@ SANE Stack is [MIT Licensed](https://github.com/artificialio/sails-ember-starter
 [gitter-badge-url]: https://gitter.im/artificialio/sane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 [travis-badge]: https://travis-ci.org/artificialio/sane.svg?branch=master
 [travis-badge-url]: https://travis-ci.org/artificialio/sane
-[david-badge]: https://img.shields.io/david/artificialio/sane.svg?style=flat
-[david-badge-url]: https://david-dm.org/artificialio/sane
+[david-badge]: https://img.shields.io/david/sane/sane.svg?style=flat
+[david-badge-url]: https://david-dm.org/sane/sane
 [appveyor-badge]: https://ci.appveyor.com/api/projects/status/oku88ae3kxddbw14/branch/master?svg=true
 [appveyor-badge-url]: https://ci.appveyor.com/project/Globegitter/sane/branch/master
 [npm-badge]: https://img.shields.io/npm/v/sane-cli.svg
