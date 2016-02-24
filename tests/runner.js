@@ -5,7 +5,9 @@ var glob  = require('glob');
 var Mocha = require('mocha');
 var chalk = require('chalk');
 
-require('babel/register');
+require('babel-register');
+
+require("babel-polyfill");
 
 var mocha = new Mocha({
   // For some reason, tests take a long time on Windows (or at least AppVeyor)
