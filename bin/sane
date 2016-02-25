@@ -6,7 +6,7 @@ process.title = 'sane';
 
 var path = require('path');
 var resolve = require('resolve');
-require('babel/polyfill');
+require('babel-polyfill');
 
 resolve('sane-cli', {
   basedir: process.cwd()

@@ -30,3 +30,6 @@ tmp
 #Editor files
 *.sublime-*
 *.idea
+
+# ignore compiled files
+lib
