@@ -43,6 +43,7 @@
   "homepage": "http://sanestack.com",
   "dependencies": {
     "babel": "^6.5.2",
+    "babel-cli": "^6.5.1",
     "captains-log": "^0.11.11",
     "chalk": "^1.0.0",
     "child-process-promise": "^1.0.1",
@@ -60,8 +61,8 @@
     "node-uuid": "^1.4.2",
     "npm-which": "^2.0.0",
     "pleasant-progress": "^1.0.2",
-    "readline-sync": "^1.4.1",
     "pluralize": "^1.1.2",
+    "readline-sync": "^1.4.1",
     "resolve": "^1.0.0",
     "rsvp": "^3.0.18",
     "verboser": "^1.0.3",
